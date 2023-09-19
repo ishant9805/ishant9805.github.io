@@ -1,0 +1,120 @@
+hr {
+    width: 80%;
+    margin: auto !important;
+}
+
+.icons {
+    margin-right: 10px !important;
+}
+
+.sql {
+    margin-top: 25px !important;
+}
+
+.cxx {
+    margin-top: 15px !important;
+}
+
+.pr-nav {
+    background-color: #aaaaff;
+}
+
+ul {
+    list-style: none;
+}
+.links {
+    display: block;
+    font-size: 25px;
+}
+#welcome-section {
+    text-align: center;
+    background: #aaaaff;
+    height: 100vh;
+    padding: 19vh;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+}
+h1 {
+    text-transform: capitalize;
+    padding-top: 20px;
+}
+h3 {
+    text-transform: lowercase;
+    text-decoration: underline;
+    font-style: italic;
+}
+a {
+    text-decoration: none;
+    color: #f0f0f0;
+    transition: color 0.3s ease-out;
+}
+a:hover {
+    text-decoration: none;
+    color: #ff2211;
+}
+.nav-link {
+    padding: 18px;
+    font-weight: 400;
+}
+.img-proj {
+    height: 160px;
+    width: auto;
+}
+
+.pp {
+    position:absolute;
+    top:87vh;
+    left:43%;
+}
+.ppicon {
+    position:absolute;
+    top:92vh;
+}
+
+.ppmid {
+    position:absolute;
+    top:25vh;
+    left:35%;
+}
+
+.project-tile {
+    display: table;
+    padding: 20px;
+    background: #333;
+    align-items: center;
+    box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+    border-radius: 2px;
+    font-size: 1.5rem;
+    line-height: 0;
+}
+.code {
+    color: #333;
+    transition: color 0.3s ease-out;
+}
+#projects {
+    background-color: #45567d;
+    margin: 0;
+    padding: 0;
+}
+.project-tile:hover .code {
+    color: #ff2211;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 3rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+
+#project-hail {
+    text-decoration: underline;
+    margin-top: 0;
+    text-align: center;
+    font-size: 35px;
+}
+
