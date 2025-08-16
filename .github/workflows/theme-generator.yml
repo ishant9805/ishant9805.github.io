@@ -3,6 +3,12 @@ name: Generate CSS Theme Hourly
 on:
   schedule:
     - cron: '0 * * * *' # Every hour
+  workflow_dispatch: # Manual trigger
+  push:
+    branches: [ main ]
+    paths:
+      - 'scripts/generate-theme.js'
+      - '.github/workflows/theme-generator.yml'
 
 jobs:
   generate-css:
