@@ -8,6 +8,7 @@ on:
     branches: [ main ]
     paths:
       - 'scripts/generate-theme.js'
+      - 'scripts/project-theme-genrator.js'
       - '.github/workflows/theme-generator.yml'
 
 jobs:
@@ -25,10 +26,14 @@ jobs:
         run: node scripts/generate-theme.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      - name: Generate Project Theme CSS
+        run: node scripts/project-theme-genrator.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add css/themes/theme-hourly.css
-          git commit -m "Update theme CSS [auto]" || echo "No changes to commit"
+          git add css/themes/theme-hourly.css css/themes/theme-hourly-projects.css
+          git commit -m "Update theme CSS files [auto]" || echo "No changes to commit"
           git push

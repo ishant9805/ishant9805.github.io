@@ -4,7 +4,8 @@
   "description": "Portfolio of Ishant Kumar",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "python3 -m http.server 8000"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,5 @@
   "bugs": {
     "url": "https://github.com/ishant9805/ishant9805.github.io/issues"
   },
-  "homepage": "https://github.com/ishant9805/ishant9805.github.io#readme",
-  "dependencies": {
-    "node-fetch": "^3.3.2"
-  }
+  "homepage": "https://github.com/ishant9805/ishant9805.github.io#readme"
 }

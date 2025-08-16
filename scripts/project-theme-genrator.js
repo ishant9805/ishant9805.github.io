@@ -27,8 +27,8 @@ const themeModes = ["light", "dark"];
 const randomStyle = designStyles[Math.floor(Math.random() * designStyles.length)];
 const randomMode = themeModes[Math.floor(Math.random() * themeModes.length)];
 
-// Read your main HTML (e.g., index.html)
-const html = fs.readFileSync('index.html', 'utf8');
+// Read your main HTML (e.g., projects.html)
+const html = fs.readFileSync('projects.html', 'utf8');
 
 const prompt = `
 You are a creative CSS generator. Here is the HTML for a portfolio site:
@@ -40,6 +40,9 @@ Generate a unique, visually appealing CSS theme that styles all elements and cla
 DESIGN INSTRUCTION: ${randomStyle}
 
 THEME MODE: Create a ${randomMode} theme with appropriate colors for ${randomMode} mode.
+
+Also, if you thing certain styles should be applied to specific classes, do so.
+Use !important where necessary to override existing styles.
 
 Use only the provided class names and structure. Do NOT generate any HTML, only CSS. Make it modern and readable. Output only the CSS code without any markdown formatting or code blocks.
 `;
@@ -87,7 +90,7 @@ async function generateCSS() {
     fs.mkdirSync('css/themes', { recursive: true });
   }
   
-  fs.writeFileSync('css/themes/theme-hourly.css', css);
+  fs.writeFileSync('css/themes/theme-hourly-projects.css', css);
   console.log('Theme CSS generated successfully!');
 }
 generateCSS().catch(err => {
