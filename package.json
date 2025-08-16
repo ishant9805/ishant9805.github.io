@@ -1,0 +1,29 @@
+{
+  "name": "ishant9805.github.io",
+  "version": "2.0.0",
+  "description": "Portfolio of Ishant Kumar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishant9805/ishant9805.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "ishant9805",
+    "ishant",
+    "css",
+    "cssgenerator"
+  ],
+  "author": "Ishant Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishant9805/ishant9805.github.io/issues"
+  },
+  "homepage": "https://github.com/ishant9805/ishant9805.github.io#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}

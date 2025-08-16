@@ -19,6 +19,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Install dependencies
+        run: npm ci
       - name: Generate CSS via Gemini API
         run: node scripts/generate-theme.js
         env:
