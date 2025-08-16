@@ -50,6 +50,20 @@ h1 {
   font-weight: 700;
 }
 
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  line-height: 1.6;
+  color: #d0d0d0;
+}
+
+
 .lead {
   color: #555;
 }

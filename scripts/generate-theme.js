@@ -27,21 +27,75 @@ const themeModes = ["light", "dark"];
 const randomStyle = designStyles[Math.floor(Math.random() * designStyles.length)];
 const randomMode = themeModes[Math.floor(Math.random() * themeModes.length)];
 
-// Read your main HTML (e.g., index.html)
-const html = fs.readFileSync('index.html', 'utf8');
+// Read all HTML files to generate a unified theme
+const indexHtml = fs.readFileSync('index.html', 'utf8');
+const projectsHtml = fs.readFileSync('projects.html', 'utf8');
+const aboutHtml = fs.readFileSync('about.html', 'utf8');
+const contactHtml = fs.readFileSync('contact.html', 'utf8');
+
+// Combine all HTML content
+const allHtmlContent = `
+INDEX PAGE:
+${indexHtml}
+
+PROJECTS PAGE:
+${projectsHtml}
+
+ABOUT PAGE:
+${aboutHtml}
+
+CONTACT PAGE:
+${contactHtml}
+`;
 
 const prompt = `
-You are a creative CSS generator. Here is the HTML for a portfolio site:
+You are a creative CSS generator. Here are ALL the HTML pages for a portfolio website:
 
-${html}
+${allHtmlContent}
 
-Generate a unique, visually appealing CSS theme that styles all elements and classes used above. 
+Generate a unified, visually appealing CSS theme that styles ALL elements and classes used across ALL these pages. This single CSS file should work perfectly for the entire website.
 
 DESIGN INSTRUCTION: ${randomStyle}
 
 THEME MODE: Create a ${randomMode} theme with appropriate colors for ${randomMode} mode.
 
-Use only the provided class names and structure. Do NOT generate any HTML, only CSS. Make it modern and readable. Output only the CSS code without any markdown formatting or code blocks.
+IMPORTANT: Pay special attention to the PROJECTS page styling and CONTACT page layout. Make sure to include proper CSS for:
+
+PROJECTS PAGE SPECIFIC STYLING:
+- #welcome-section: Center the content, add proper spacing and background
+- #projects: Style the main projects section with good spacing
+- #project-hail: Style the main heading prominently 
+- .project-grid: Create a responsive grid layout (3 columns on desktop, 2 on tablet, 1 on mobile)
+- .project-tile: Style project cards with hover effects, borders, shadows
+- .project-img, .img-proj: Make images responsive and add border radius
+- .code: Style code brackets with accent colors
+- .pp: Style the paragraph text nicely
+- .ppicon: Style the scroll down icon
+- .pr-nav: Any special body styling for projects page
+
+CONTACT PAGE SPECIFIC STYLING:
+- .contact-wrapper: Create a flex container to center the contact form perfectly in the viewport
+- .card.ppmid: Center the contact form card on the page using margin auto and proper positioning
+- .card: Style the contact form card with appropriate width, padding, and centering
+- .card-header: Style the card header prominently
+- .card-body: Add proper padding and spacing
+- .form-control: Style all form inputs consistently
+- .form-label: Style form labels
+- .btn.btn-primary: Style the submit button
+- .form-text: Style help text
+- Center the entire contact form in the viewport both horizontally and vertically
+- Make the contact form responsive on mobile devices
+
+Make sure to style:
+- Navigation elements (nav, nav-pills, nav-link, etc.)
+- All Bootstrap classes and custom classes
+- Form elements (from contact page)
+- Project grid and cards with proper responsive layout
+- All text elements and headings
+- Icons and images
+- Hover effects and transitions
+
+Use only the provided class names and structure. Do NOT generate any HTML, only CSS. Make it modern, cohesive, and readable. Output only the CSS code without any markdown formatting or code blocks.
 `;
 
 console.log(`🎨 Generating ${randomMode} theme with: ${randomStyle}`);

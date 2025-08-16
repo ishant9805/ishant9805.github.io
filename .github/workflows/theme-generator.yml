@@ -8,8 +8,8 @@ on:
     branches: [ main ]
     paths:
       - 'scripts/generate-theme.js'
-      - 'scripts/project-theme-genrator.js'
       - '.github/workflows/theme-generator.yml'
+      - '*.html'
 
 jobs:
   generate-css:
@@ -30,14 +30,10 @@ jobs:
         run: node scripts/generate-theme.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      - name: Generate Project Theme CSS
-        run: node scripts/project-theme-genrator.js
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Update theme CSS files [auto]"
-          file_pattern: "css/themes/*.css"
+          commit_message: "Update unified theme CSS [auto]"
+          file_pattern: "css/themes/theme-hourly.css"
           commit_user_name: "github-actions[bot]"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
