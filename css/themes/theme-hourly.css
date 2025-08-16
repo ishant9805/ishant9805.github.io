@@ -1,92 +1,108 @@
 body {
-  background-color: #1e2732; /* Dark cosmic background */
-  color: #dfe2e5; /* Light text color */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: background-color 0.3s ease; /* Smooth transition for theme changes */
+  background-color: #222;
+  color: #eee;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.6;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-  background-color: #2b3a4e; /* Slightly darker header background */
+  background-color: #333;
+  padding: 1rem 0;
 }
 
 .nav-pills .nav-link {
-  color: #dfe2e5; /* Light text color for nav links */
-  border-radius: 5px; /* Rounded nav links */
-  padding: 10px 20px;
-  margin: 0 5px;
+  color: #eee;
+  background-color: #444;
+  border-radius: 0.25rem;
+  margin: 0 0.5rem;
+  transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #526a84; /* Darker background for active/hovered links */
+  background-color: #666;
 }
 
 .display-5 {
-  color: #dfe2e5; /* Light text color for h1 */
+  font-family: 'Playfair Display', serif;
 }
 
 .lead {
-  color: #c8d1d8; /* Slightly less bright text color for paragraph */
+  font-style: italic;
 }
 
 .btn-primary {
-  background-color: #526a84; /* Dark blue button */
-  border-color: #526a84;
-  color: #dfe2e5;
-  transition: background-color 0.2s ease;
+  background-color: #996633;
+  border-color: #996633;
 }
 
 .btn-primary:hover {
-  background-color: #718aa9;
+  background-color: #b37d4a;
+  border-color: #b37d4a;
 }
 
 .btn-outline-secondary {
-  color: #dfe2e5;
-  border-color: #6e7b8d;
+  color: #eee;
+  border-color: #555;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #555;
+  color: #eee;
+}
+
+#icon-grid h2 {
+  color: #ddd;
 }
 
 .icons {
-  fill: #dfe2e5; /* Icon fill color */
   width: 75px;
   height: 75px;
-  margin-right: 15px;
+  margin-right: 1rem;
 }
 
-
-#icon-grid h2 {
-  color: #dfe2e5; /* Heading Color */
+.icons.cxx {
+    width: 100px;
+    height: 100px;
 }
 
-#icon-grid .col {
-  text-align: left; /* Align icons and text to the left */
+.icons.sql {
+  width: 80px;
+  height: 80px;
+  margin-right: 1rem;
 }
-
 
 #welcome-section {
-  background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/dark_denim.png'); /*Add your background image here*/
-  background-size: cover;
-  background-position: center;
+  background-color: #444;
   text-align: center;
-  padding: 80px 0;
+  padding: 5rem 0;
 }
 
-#welcome-section h1, #welcome-section h3 {
-  color: #dfe2e5;
+#welcome-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-#welcome-section .pp {
-  color: #c8d1d8;
-  font-size: 1.2em;
-  margin-top: 15px;
+#welcome-section h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-#welcome-section .ppicon {
+.pp {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.ppicon {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
   display: block;
-  margin: 20px auto 0 auto;
   animation: spin 2s linear infinite;
 }
 
@@ -95,47 +111,46 @@ header {
   100% { transform: rotate(360deg); }
 }
 
-#projects {
-  padding: 40px 0;
+
+#projects h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
 }
 
-#project-hail {
-  color: #dfe2e5;
-  text-align: center;
-  font-size: 2.5em;
-  margin-bottom: 30px;
-}
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
 }
 
 .project-tile {
-  border: 1px solid #4e5e70;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 }
 
-.project-img, .img-proj {
+.project-img,
+.img-proj {
   width: 100%;
   height: auto;
-  border-radius: 8px 8px 0 0; /* Rounded top corners */
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .code {
-  color: #f06d06; /* Accent color for code brackets */
+  color: #f90;
 }
 
 .pr-nav {
-  padding-top: 20px;
+  padding-top: 2rem;
 }
 
 .contact-wrapper {
@@ -147,57 +162,68 @@ header {
 
 .card.ppmid {
   margin: auto;
-  max-width: 600px; /* Adjust card width as needed */
+  max-width: 600px;
+  width: 100%;
+  background-color: #333;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+  border-radius: 0.5rem;
 }
 
 .card {
-  background-color: #2b3a4e; /* Darker card background */
-  border: 1px solid #4e5e70;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  border: none;
 }
 
 .card-header {
-  color: #dfe2e5;
-  background-color: #526a84;
-  font-size: 1.5em;
-  border-radius: 8px 8px 0 0;
-  padding: 15px;
+  background-color: #555;
+  color: #eee;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .card-body {
-  padding: 20px;
+  padding: 2rem;
 }
 
 .form-control {
-  background-color: #28343c; /* Darker input background */
-  color: #dfe2e5;
-  border: 1px solid #4e5e70;
-  border-radius: 5px;
+  background-color: #444;
+  color: #eee;
+  border: 1px solid #555;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .form-label {
-  color: #dfe2e5;
+  color: #ddd;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.btn.btn-primary {
+  background-color: #996633;
+  border-color: #996633;
+}
+
+.btn.btn-primary:hover {
+  background-color: #b37d4a;
+  border-color: #b37d4a;
 }
 
 .form-text {
-  color: #c8d1d8;
-}
-
-.ppm {
-  text-align: center;
+  color: #888;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: 1fr; /* Single column on tablets */
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 576px) {
-  .contact-wrapper {
-    flex-direction: column; /* Stack form elements vertically on mobile */
+@media (max-width: 992px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
@@ -207,24 +233,11 @@ header {
 }
 
 mark {
-  background-color: #364a5f;
-  padding: 0.2em;
-  border-radius: 5px;
+    background-color: #555;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
 }
-
-a.text-muted {
-  color: #c8d1d8;
-}
-
-a.text-muted:hover {
-  text-decoration: underline;
-}
-
-.ppmid {
-  margin-top: 1rem;
-}
-
 
 .h-100 {
-  height: 100%;
+    height: 100%;
 }
