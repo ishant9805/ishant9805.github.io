@@ -1,12 +1,8 @@
 body {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-  font-family: 'Arial', sans-serif;
-  transition: background-color 0.3s ease;
-}
-
-.pr-nav {
-  background-color: #282828;
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
 }
 
 .container {
@@ -14,136 +10,157 @@ body {
 }
 
 header {
-  background-color: #282828;
+  background-color: #1a1a1a;
 }
 
 .nav-pills .nav-link {
-  color: #f0f0f0;
-  background-color: #383838;
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 0 10px;
-  transition: background-color 0.3s ease;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  margin: 0 0.5rem;
 }
 
-.nav-pills .nav-link.active {
-  background-color: #FF5733;
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: #4CAF50;
+  color: #121212;
 }
 
 .nav-pills .nav-link:hover {
-  background-color: #FF8C69;
+  background-color: #333;
 }
 
-.display-5 {
-  color: #FF5733;
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
 }
 
 .lead {
-  color: #d0d0d0;
+  font-size: 1.25rem;
 }
 
 .btn-primary {
-  background-color: #FF5733;
-  border-color: #FF5733;
-}
-
-.btn-primary:hover {
-  background-color: #FF8C69;
-  border-color: #FF8C69;
+  background-color: #4CAF50;
+  border-color: #4CAF50;
 }
 
 .btn-outline-secondary {
-  color: #FF5733;
-  border-color: #FF5733;
-}
-
-.btn-outline-secondary:hover {
   color: #fff;
-  background-color: #FF5733;
+  border-color: #fff;
 }
 
-#icon-grid .icons {
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
+.btn-primary:hover, .btn-outline-secondary:hover {
+  background-color: #333;
+  border-color: #333;
 }
 
-#icon-grid h2 {
-  color: #FF5733;
+
+#icon-grid {
+  text-align: center;
+}
+
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 1rem;
+}
+
+
+.icons, .img-fluid {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
 #welcome-section {
+  background-color: #222;
+  padding: 5rem 0;
   text-align: center;
-  padding: 50px 0;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 10 10"><path d="M0 0 L10 10 M10 0 L0 10" stroke="#FF5733" stroke-width="1"/></svg>');
-  background-size: 20px 20px;
 }
 
-#welcome-section h1 {
-  color: #FF5733;
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-#welcome-section h3 {
-  color: #d0d0d0;
-  font-size: 1.5em;
-  margin-bottom: 20px;
+#welcome-section h1, #welcome-section h3 {
+  margin-bottom: 1rem;
 }
 
 .pp {
-  color: #d0d0d0;
-  font-size: 1.2em;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 2rem;
 }
 
 .ppicon {
-  margin: 20px auto;
+  margin: 0 auto;
   display: block;
-  fill: #FF5733;
-  animation: rotate 2s linear infinite;
+  animation: bounce 1s infinite;
 }
 
-@keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
-#projects h1 {
-  color: #FF5733;
-  font-size: 2.5em;
-  margin-bottom: 40px;
+#projects {
+  padding: 4rem 0;
 }
+
+#project-hail {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 2rem;
 }
 
 .project-tile {
-  border: 2px solid #FF5733;
-  border-radius: 15px;
-  padding: 10px;
-  box-shadow: 0px 0px 20px rgba(255, 87, 51, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #333;
+  border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 0px 30px rgba(255, 87, 51, 0.7);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.project-img, .img-proj {
-  max-width: 100%;
+.project-img {
+  width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 .code {
-  color: #007bff;
+  color: #4CAF50;
 }
+
+.pr-nav {
+    padding-top: 2rem;
+}
+
 
 .contact-wrapper {
   display: flex;
@@ -153,100 +170,67 @@ header {
 }
 
 .card.ppmid {
-  margin: auto;
-  max-width: 600px;
-  position: relative;
-  background-color: #383838;
-  border-color: #FF5733;
-  border-radius: 15px;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
 }
 
 .card {
-  padding: 30px;
-  border-radius: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-  background-color: #FF5733;
-  color: #fff;
-  font-size: 1.5em;
+  background-color: #4CAF50;
+  color: #121212;
+  padding: 1rem 1.5rem;
   border-radius: 10px 10px 0 0;
 }
 
 .card-body {
-  padding: 20px;
-}
-
-.form-control {
-  background-color: #303030;
-  color: #fff;
-  border: 1px solid #FF5733;
-  border-radius: 5px;
+  padding: 2rem;
 }
 
 .form-label {
   color: #fff;
+  margin-bottom: 0.5rem;
 }
 
-.btn.btn-primary {
-  background-color: #FF5733;
-  border-color: #FF5733;
+.form-control {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #333;
   border-radius: 5px;
 }
 
-.btn.btn-primary:hover {
-  background-color: #FF8C69;
-  border-color: #FF8C69;
+.form-text {
+  color: #aaa;
+  font-size: 0.8rem;
 }
 
-.form-text {
-  color: #d0d0d0;
+#sub-btn {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 768px) {
   .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .project-grid {
     grid-template-columns: 1fr;
   }
-}
 
-@media (max-width: 992px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .contact-wrapper {
+    flex-direction: column;
   }
-}
-
-.cxx {
-  fill: #007bff;
-}
-
-.sql {
-  fill: #007bff;
-}
-
-mark {
-    background-color: #FF8C69;
-    color: #1e1e1e;
-    padding: 0.2em 0.4em;
-    border-radius: 0.2em;
-    font-weight: 600;
+  .card.ppmid{
+    max-width: 100%;
   }
 
-a{
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a:visited{
-    color: #f0f0f0;
-}
-
-a:link{
-    color: #f0f0f0;
-}
-
-a:active{
-    color: #f0f0f0;
 }
