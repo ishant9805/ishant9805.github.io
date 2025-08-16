@@ -1,40 +1,44 @@
 body {
   background-color: #1e1e1e;
-  color: #f5f5f5;
-  font-family: 'Times New Roman', serif; /* or a similar elegant font */
-  line-height: 1.6;
+  color: #eee;
+  font-family: 'Times New Roman', serif;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 header {
   background-color: #282828;
+  padding: 1rem 0;
+  border-radius: 10px;
 }
 
 .nav-pills .nav-link {
-  color: #f5f5f5;
-  border-radius: 20px;
-  padding: 10px 20px;
-  margin: 0 5px;
+  color: #eee;
+  background-color: #383838;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
   transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active,
-.nav-pills .nav-link:hover {
+.nav-pills .nav-link.active {
   background-color: gold;
   color: #1e1e1e;
 }
 
-.display-5 {
-  font-family: 'Times New Roman', serif;
-  color: gold;
+.nav-pills .nav-link:hover {
+  background-color: #585858;
 }
 
-.lead {
-  font-style: italic;
+.display-5, h1, h2, h3 {
+  color: gold;
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.6;
 }
 
 .btn-primary {
@@ -49,61 +53,103 @@ header {
 }
 
 .btn-outline-secondary {
-  color: gold;
   border-color: gold;
+  color: gold;
 }
 
 .btn-outline-secondary:hover {
   background-color: gold;
   color: #1e1e1e;
-}
-
-#icon-grid h2 {
-  color: gold;
+  border-color: gold;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
-  margin-bottom: 15px;
-  fill: white;
-}
-
-.icons.cxx{
+  margin-right: 1rem;
   fill: gold;
 }
 
-.icons.sql {
-  border-radius: 10px;
+.icons.cxx {
+    width: 100px;
+    height: 100px;
+}
+
+#icon-grid .icons {
+  margin-bottom: 0.5rem;
+}
+
+#icon-grid h2 {
+  color: gold;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  color: #ccc;
 }
 
 #welcome-section {
-  background-color: #282828;
   text-align: center;
-  padding: 50px 0;
-  border-radius: 20px;
+  background-image: linear-gradient(to bottom, #282828, #1e1e1e), url('https://source.unsplash.com/random/1920x1080/?artdeco');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 4rem 0;
 }
 
-#welcome-section h1,
-#welcome-section h3 {
-  color: gold;
-  font-family: 'Times New Roman', serif;
+#welcome-section h1, h3 {
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px #000;
 }
+
+#projects h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+}
+
+.project-tile {
+  background-color: #383838;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: #eee;
+}
+
+.project-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.project-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.code {
+  color: gold;
+}
+
 
 .pp {
-  color: #f5f5f5;
+  text-align: center;
   font-style: italic;
-  margin-bottom: 20px;
+  margin-top: 1rem;
 }
 
-
 .ppicon {
-  width: 30px;
-  height: 30px;
+  display: block;
+  margin: 1rem auto;
   fill: gold;
-  margin: 0 auto;
-  animation: rotate 2s infinite linear;
+  animation: rotate 2s linear infinite;
 }
 
 @keyframes rotate {
@@ -115,109 +161,111 @@ header {
   }
 }
 
-#projects h1 {
-  color: gold;
-  text-align: center;
-  margin-bottom: 30px;
-}
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-}
-
-.project-tile {
-  border: 2px solid gold;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
-}
-
-.project-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.code {
-  color: gold;
-}
-
-
-.pr-nav{
-  background-color: #282828;
+.pr-nav {
+  background-color: #1e1e1e; /* Dark background for projects page */
 }
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensure contact form is centered vertically */
 }
 
 .card.ppmid {
   margin: 0 auto;
   max-width: 500px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  width: 90%; /* Responsive width */
+  border-radius: 10px;
+  border: 1px solid gold;
 }
 
 .card {
-  background-color: #282828;
-  padding: 20px;
-  border: 2px solid gold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
 }
 
 .card-header {
   background-color: gold;
   color: #1e1e1e;
+  text-align: center;
   font-weight: bold;
-  padding: 10px;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0; /*Rounded corners for header */
 }
 
 .card-body {
-  padding: 20px;
+  padding: 2rem;
+}
+
+.form-control {
+  background-color: #282828;
+  border: 1px solid gold;
+  color: #eee;
+  border-radius: 5px; /* subtle rounding */
 }
 
 .form-label {
   color: gold;
+  font-weight: bold;
 }
 
-.form-control {
-  background-color: #383838;
-  color: #f5f5f5;
-  border: 1px solid gold;
-  border-radius: 5px;
+#sub-btn {
+  background-color: gold;
+  border-color: gold;
+  color: #1e1e1e;
+  border-radius: 5px; /* subtle rounding */
+  padding: 0.5rem 1rem;
+}
+
+#sub-btn:hover {
+  background-color: #d4af37;
+  border-color: #d4af37;
 }
 
 .form-text {
-  color: #a0a0a0;
-}
-
-.btn.btn-primary {
-  background-color: gold;
-  color: #1e1e1e;
-  border-radius: 10px;
+  color: #888;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 992px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+mark {
+    background-color: #383838;
+    padding: .2rem .4rem;
+    border-radius: 5px;
+    color: gold;
+    font-weight: bold;
+}
+
+a {
+  color: #eee;
+}
+
+a:hover{
+  color: gold;
+  text-decoration: underline;
+}
+
+a.text-muted:hover {
+  color: #ccc;
+  text-decoration: underline;
 }
 
 .h-100{
