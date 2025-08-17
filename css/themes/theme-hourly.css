@@ -1,247 +1,222 @@
 body {
-  background-color: #121212;
-  color: #f0f0f0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: background-color 0.3s ease;
+    background: linear-gradient(to right, #1e1e1e, #303030);
+    color: #eee;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease;
 }
 
 .pr-nav {
-  background-color: #1a1a1a;
+    background: linear-gradient(to right, #282828, #404040);
 }
 
 .container {
-  max-width: 1200px;
+    max-width: 1200px;
 }
 
 header {
-  background-color: #282828;
+    background: #222;
 }
 
 .nav-pills .nav-link {
-  color: #fff;
-  background-color: #333;
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 0 5px;
-  transition: background-color 0.3s ease;
+    color: #eee;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active {
-  background-color: #ff6347;
+    background-color: #4CAF50;
 }
+
 
 .nav-pills .nav-link:hover {
-  background-color: #ff8c69;
+    background-color: #555;
 }
 
-h1, h2, h3 {
-  font-weight: bold;
-  color: #fff;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
-  line-height: 1.6;
+.display-5 {
+    color: #ffcc00; /* Gold color for main headings */
 }
 
 .lead {
-  font-size: 1.25rem;
+    color: #bbb;
 }
 
 .btn-primary {
-  background-color: #ff6347;
-  border-color: #ff6347;
-}
-
-.btn-primary:hover {
-  background-color: #ff8c69;
-  border-color: #ff8c69;
+    background-color: #4CAF50;
+    border-color: #4CAF50;
 }
 
 .btn-outline-secondary {
-  color: #fff;
-  border-color: #fff;
+    color: #eee;
+    border-color: #777;
 }
 
-.btn-outline-secondary:hover {
-  background-color: #fff;
-  color: #121212;
+.btn-primary:hover, .btn-outline-secondary:hover {
+    opacity: 0.8;
 }
 
-#icon-grid {
-  background-color: #282828;
-  padding: 20px;
-  border-radius: 10px;
+#icon-grid h2 {
+    color: #ffcc00;
 }
 
 .icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 15px;
+    width: 75px;
+    height: 75px;
+    margin-right: 15px;
 }
 
 .icons.cxx {
-  width: 100px;
-  height: 100px;
-  margin-right: 15px;
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+}
+
+.icons.sql {
+    margin-right: 15px;
+}
+
+.icons:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+h3 {
+    color: #eee;
+}
+
+p {
+    color: #aaa;
 }
 
 #welcome-section {
-  text-align: center;
-  padding: 50px 0;
-  background-image: url("geometric-pattern.svg"); /* Replace with your geometric pattern */
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
+    background: linear-gradient(to bottom, #282828, #404040);
+    padding: 50px 0;
+    text-align: center;
+}
+
+#welcome-section h1, #welcome-section h3 {
+    color: #ffcc00;
 }
 
 .pp {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+    color: #ddd;
+    margin-bottom: 20px;
 }
 
 .ppicon {
-  display: block;
-  margin: 20px auto;
-  animation: rotate 2s infinite linear;
+    width: 30px;
+    height: 30px;
+    fill: #ffcc00;
+    animation: spin 2s linear infinite;
+    margin-left: 10px;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-#projects {
-  padding: 40px 0;
+
+#projects h1 {
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-#project-hail {
-  text-align: center;
-  margin-bottom: 30px;
-}
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
 }
 
+
 .project-tile {
-  border: 2px solid #ff6347;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
+    border: 2px solid #555;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .project-img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .code {
-  color: #00f0ff;
+    color: #4CAF50;
 }
 
 .contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .card.ppmid {
-  width: 80%;
-  max-width: 600px;
-  margin: 0 auto;
-  border-radius: 20px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
-  background-color: #282828;
-  color: #f0f0f0;
+    margin: auto;
+    max-width: 600px;
+    background: #282828;
+    border: 2px solid #555;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .card-header {
-  background-color: #ff6347;
-  color: #fff;
-  font-size: 1.5rem;
-  text-align: center;
-  border-radius: 10px 10px 0 0;
+    background-color: #4CAF50;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 5px 5px 0 0;
 }
 
 .card-body {
-  padding: 30px;
-}
-
-.form-label {
-  color: #fff;
-  font-weight: bold;
+    padding: 20px;
 }
 
 .form-control {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
+    background-color: #333;
+    color: #eee;
+    border: 1px solid #555;
+}
+
+.form-label {
+    color: #eee;
+}
+
+.btn.btn-primary {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
 }
 
 .form-text {
-  color: #888;
-  font-size: 0.8rem;
+    color: #aaa;
 }
 
-
-.btn.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.btn.btn-primary:hover {
-  background-color: #0069d9;
-  border-color: #0069d9;
-}
-
-/* Responsive Styles */
 @media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-  .contact-wrapper .card {
-    width: 90%;
-  }
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }
 
 @media (max-width: 576px) {
-  #welcome-section h1 {
-    font-size: 2rem;
-  }
-  #welcome-section h3 {
-    font-size: 1.2rem;
-  }
-  .pp {
-    font-size: 1rem;
-  }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .card.ppmid {
+        max-width: 90%;
+    }
 }
