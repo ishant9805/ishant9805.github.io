@@ -1,135 +1,116 @@
 body {
-  background-color: #1e1e1e;
-  color: #eee;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.pr-nav {
+  background-color: #222; /* Dark background for Projects page nav */
+  color: white;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 header {
-  background-color: #282828;
+  background-color: #333;
+  color: white;
 }
 
 .nav-pills .nav-link {
-  color: #eee;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 0 5px;
+  color: white;
+  border-radius: 10px;
 }
 
-.nav-pills .nav-link.active,
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #007bff;
+    color: white;
+}
+
 .nav-pills .nav-link:hover {
-  background-color: #ff5722;
-  color: #1e1e1e;
+  background-color: #555;
 }
 
-.display-5 {
-  color: #00ff00;
+.py-3 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
+
+h1, h2, h3 {
+  color: #007bff; /* Cosmic blue for headings */
+  font-weight: 700;
+}
+
 
 .lead {
-  color: #b3b3b3;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.btn-outline-secondary {
-  color: #fff;
-  border-color: #fff;
-}
-
-.btn-primary:hover,
-.btn-outline-secondary:hover {
-  background-color: #0069d9;
-  color: #fff;
-  border-color: #0069d9;
+  font-size: 1.2rem;
 }
 
 #icon-grid h2 {
-  color: #00ff00;
+    color: #007bff;
+    margin-bottom: 20px;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
-  fill: white; /*Default Fill*/
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 .icons.cxx {
-  fill: #007bff;
+    width: 100px;
+    height: 100px;
 }
-
 
 .icons.sql {
-  width: auto;
-  margin-right: 15px;
+  width: 80px;
+  height: 80px;
 }
 
-h3 {
-  color: #00ff00;
-}
-
-p {
-  color: #b3b3b3;
-}
-
-.pr-nav {
-  background-image: url('https://www.transparenttextures.com/patterns/dubstep.png'); /* Replace with your desired background */
-  background-size: cover;
-  background-repeat: repeat;
-  color: #eee;
-}
 
 #welcome-section {
   text-align: center;
-  padding: 100px 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); /* Cyberpunk Background */
+  padding: 50px 0;
+  background-image: url('https://source.unsplash.com/random/1920x1080/?space'); /* Replace with your space image */
   background-size: cover;
-  background-repeat: repeat;
+  background-position: center;
   color: white;
 }
 
-
-#welcome-section h1,
-#welcome-section h3{
-  color: #00ff00;
+#welcome-section h1, #welcome-section h3 {
+  color: white;
 }
 
-.pp{
-  color: #b3b3b3;
+.pp {
   font-size: 1.2rem;
+  color: white;
   margin-top: 20px;
 }
 
-
 .ppicon {
-  display: block;
-  margin: 20px auto;
-  animation: rotate 2s infinite linear;
-  transform: rotate(0deg);
+  fill: white;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
 
-@keyframes rotate{
-  from{
-    transform: rotate(0deg);
-  }
-  to{
-    transform: rotate(360deg);
-  }
+#projects {
+  padding: 50px 0;
 }
 
-
-
-#projects h1 {
-  color: #00ff00;
+#project-hail {
   text-align: center;
+  font-size: 2.5rem;
   margin-bottom: 30px;
 }
 
@@ -139,6 +120,27 @@ p {
   grid-gap: 20px;
 }
 
+.project-tile {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.project-tile:hover {
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+}
+
+.project-img, .img-proj {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.code {
+  color: #007bff;
+}
 
 @media (max-width: 768px) {
   .project-grid {
@@ -146,34 +148,10 @@ p {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
-}
-
-.project-tile {
-  border: 1px solid #555;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
-}
-
-.project-tile:hover {
-  transform: translateY(-5px);
-}
-
-.project-img,
-.img-proj {
-  width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0;
-}
-
-
-.code {
-  color: #ff5722; /* Neon Orange */
 }
 
 .contact-wrapper {
@@ -181,70 +159,67 @@ p {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); /* Cyberpunk Background */
-  background-size: cover;
-  background-repeat: repeat;
+  background-color: #f4f4f4;
 }
 
 .card.ppmid {
-  margin: auto;
-  max-width: 500px;
-  width: 100%;
+  margin: 0 auto;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
 
-
 .card {
-  background-color: #282828;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  width: 80%;
   padding: 20px;
 }
 
 .card-header {
-  background-color: #ff5722; /* Neon Orange */
-  color: #1e1e1e;
-  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.5rem;
   border-radius: 10px 10px 0 0;
-  text-align: center;
+  padding: 15px;
 }
 
 .card-body {
   padding: 30px;
 }
 
-.form-control {
-  background-color: #333;
-  color: #eee;
-  border: 1px solid #555;
-  border-radius: 5px;
+.form-label {
+  color: #333;
 }
 
-.form-label {
-  color: #00ff00;
-  font-weight: bold;
+.form-control {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 
 .btn.btn-primary {
-  background-color: #00ff00;
-  border: none;
-  padding: 10px 20px;
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+  padding: 12px 20px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  cursor: pointer;
 }
 
-
 .btn.btn-primary:hover {
-    background-color: #00cc00;
+  background-color: #0069d9;
 }
 
 .form-text {
-  color: #b3b3b3;
+  color: #666;
+  font-size: 0.9rem;
 }
 
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
 
-@media (max-width: 768px) {
-  .card.ppmid {
-    max-width: 90%;
-  }
+.mb-3{
+    margin-bottom: 1rem !important;
 }
