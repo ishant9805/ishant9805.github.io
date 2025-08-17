@@ -1,145 +1,138 @@
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  background-color: #f8f8f8;
-  color: #333;
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.pr-nav {
+  background-color: #1a1a1a;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
 }
 
 header {
-  background-color: #f0f0f0;
-  padding: 10px 0;
+  background-color: #282828;
 }
 
 .nav-pills .nav-link {
-  background-color: #e0e0e0;
-  color: #333;
+  color: #fff;
+  background-color: #333;
+  border-radius: 10px;
   padding: 10px 20px;
-  border-radius: 5px;
   margin: 0 5px;
   transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active {
-  background-color: #a0d0a0;
-  color: white;
+  background-color: #ff6347;
 }
 
 .nav-pills .nav-link:hover {
-  background-color: #b0e0b0;
+  background-color: #ff8c69;
 }
 
 h1, h2, h3 {
   font-weight: bold;
-  color: #4a704a;
+  color: #fff;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 p {
-  margin-bottom: 15px;
+  line-height: 1.6;
 }
 
 .lead {
-  font-weight: normal;
-  font-size: 1.2em;
+  font-size: 1.25rem;
 }
 
 .btn-primary {
-  background-color: #508050;
-  border-color: #508050;
+  background-color: #ff6347;
+  border-color: #ff6347;
 }
 
 .btn-primary:hover {
-  background-color: #609060;
-  border-color: #609060;
+  background-color: #ff8c69;
+  border-color: #ff8c69;
 }
 
 .btn-outline-secondary {
-  color: #508050;
-  border-color: #508050;
+  color: #fff;
+  border-color: #fff;
 }
 
 .btn-outline-secondary:hover {
-  background-color: #508050;
-  color: white;
+  background-color: #fff;
+  color: #121212;
 }
 
-.img-fluid {
-  max-width: 100%;
-  height: auto;
+#icon-grid {
+  background-color: #282828;
+  padding: 20px;
   border-radius: 10px;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .icons.cxx {
   width: 100px;
   height: 100px;
-  margin-right: 10px;
+  margin-right: 15px;
 }
-
-#icon-grid .icons {
-    vertical-align: middle;
-}
-
-#icon-grid h2 {
-  margin-bottom: 20px;
-}
-
-#icon-grid .row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#icon-grid .col {
-  margin-bottom: 20px;
-}
-
 
 #welcome-section {
-  background-image: url('nature-background.jpg'); /* Replace with your background image */
-  background-size: cover;
-  background-position: center;
-  color: white;
   text-align: center;
-  padding: 100px 0;
+  padding: 50px 0;
+  background-image: url("geometric-pattern.svg"); /* Replace with your geometric pattern */
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
 }
 
-#welcome-section h1,
-#welcome-section h3,
-#welcome-section p {
-  margin-bottom: 10px;
+.pp {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.ppicon {
+  display: block;
+  margin: 20px auto;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #projects {
-  padding: 50px 0;
+  padding: 40px 0;
 }
 
 #project-hail {
   text-align: center;
   margin-bottom: 30px;
-  color: #4a704a;
 }
 
 .project-grid {
@@ -149,18 +142,16 @@ p {
 }
 
 .project-tile {
-  border: 1px solid #ddd;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ff6347;
   border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
 }
-
 
 .project-img {
   width: 100%;
@@ -169,35 +160,7 @@ p {
 }
 
 .code {
-  color: #a0d0a0;
-}
-
-.pp {
-  text-align: center;
-  font-style: italic;
-  color: white;
-}
-
-.ppicon {
-  display: block;
-  margin: 20px auto;
-  animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
-}
-
-.pr-nav {
-  background-color: #f8f8f8;
+  color: #00f0ff;
 }
 
 .contact-wrapper {
@@ -205,26 +168,22 @@ p {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f8f8f8;
 }
 
 .card.ppmid {
-  margin: 0 auto;
-  max-width: 600px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-}
-
-.card {
   width: 80%;
-  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  background-color: #282828;
+  color: #f0f0f0;
 }
 
 .card-header {
-  background-color: #508050;
-  color: white;
-  font-weight: bold;
-  font-size: 1.5em;
+  background-color: #ff6347;
+  color: #fff;
+  font-size: 1.5rem;
   text-align: center;
   border-radius: 10px 10px 0 0;
 }
@@ -234,41 +193,55 @@ p {
 }
 
 .form-label {
+  color: #fff;
   font-weight: bold;
 }
 
-
 .form-control {
-  border: 1px solid #ccc;
+  background-color: #333;
+  color: #fff;
+  border: none;
   border-radius: 5px;
   padding: 10px;
-  margin-bottom: 15px;
-}
-
-.btn {
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .form-text {
-  font-size: 0.9em;
-  color: #666;
+  color: #888;
+  font-size: 0.8rem;
 }
 
 
+.btn.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0069d9;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
+  }
+  .contact-wrapper .card {
+    width: 90%;
   }
 }
 
 @media (max-width: 576px) {
-  .project-grid {
-    grid-template-columns: 1fr;
+  #welcome-section h1 {
+    font-size: 2rem;
   }
-  .card {
-    width: 95%;
+  #welcome-section h3 {
+    font-size: 1.2rem;
+  }
+  .pp {
+    font-size: 1rem;
   }
 }
