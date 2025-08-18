@@ -1,31 +1,126 @@
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
-  transition: background-color 0.3s ease; /* Add transition for smooth theme change */
+  transition: background-color 0.3s ease;
 }
 
 .pr-nav {
-  background-color: #f0f2f5; /* Light grey background for projects page */
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-pills .nav-link {
+  border-radius: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #673ab7;
+  color: white;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+h1, h3, h2, h4 {
+  font-weight: 500;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h4{
+  font-size: 1.2em;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #555;
+}
+
+.lead {
+  font-size: 1.2em;
+}
+
+.btn-primary {
+  background-color: #673ab7;
+  border-color: #512da8;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #7e57c2;
+}
+
+.btn-outline-secondary {
+  border-color: #ccc;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #eee;
+  color: #333;
+}
+
+
+#icon-grid .icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.icons {
+  fill: currentColor;
+}
+
+#icon-grid {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.img-fluid {
+  border-radius: 5px;
 }
 
 #welcome-section {
-  background-color: #e3f2fd; /* Light blue background */
   text-align: center;
-  padding: 5rem 0;
+  padding: 50px 0;
+  background-image: url('https://source.unsplash.com/random/1920x1080/?coding');
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
-#welcome-section h1, #welcome-section h3 {
-  margin-bottom: 1rem;
+.pp{
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: white;
 }
 
-#welcome-section .pp {
-  font-style: italic;
-  color: #546e7a; /* Grey text color */
-  margin-bottom: 2rem;
-}
-
-#welcome-section .ppicon {
-  animation: bounce 1s infinite; /* Add bounce animation to scroll icon */
+.ppicon {
+  animation: bounce 1s infinite;
 }
 
 @keyframes bounce {
@@ -40,168 +135,106 @@ body {
   }
 }
 
-#projects {
-  padding: 4rem 0;
-}
-
-#project-hail {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+#projects h1 {
+  margin-top: 20px;
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
-  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
 }
 
 .project-tile {
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition on hover */
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 
 .project-img, .img-proj {
   width: 100%;
   height: auto;
-  border-radius: 8px 8px 0 0; /* Rounded corners at the top */
-  object-fit: cover;
+  border-radius: 5px 5px 0 0;
 }
 
 .code {
-  color: #007bff; /* Blue accent color */
+  color: #673ab7;
   font-weight: bold;
-}
-
-.ppicon {
-  fill: #007bff; /* Blue fill for the scroll-down icon */
-  margin: 0 auto;
-  display: block;
-}
-
-
-nav {
-  background-color: #fff; /* White background for nav */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow to nav */
-}
-
-.nav-link {
-  color: #333; /* Dark grey text for nav links */
-  padding: 1rem 1.5rem; /* Add padding to nav links */
-  transition: color 0.3s ease; /* Smooth transition for color change on hover */
-}
-
-.nav-link:hover {
-  color: #007bff; /* Blue color on hover for nav links */
-}
-
-.nav-link.active {
-  background-color: #007bff; /* Blue background for active nav link */
-  color: #fff; /* White text for active nav link */
-}
-
-.container {
-  padding: 2rem 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 500; /* Semi-bold headings */
-}
-
-.lead {
-  font-weight: 300;
-}
-
-
-.icons {
-  width: 75px;
-  height: auto;
-  margin-right: 1rem;
 }
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ensure form is centered vertically */
+  min-height: 100vh;
+  background-color: #f0f0f0;
 }
 
 .card.ppmid {
-  margin: 0 auto; /* Center the card horizontally */
-  width: 80%;
-  max-width: 600px; /* Set a maximum width for responsiveness */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for elevation */
+  width: 500px;
+  max-width: 80%;
+  margin: 0 auto;
 }
-
 
 .card {
-  border-radius: 8px;
-  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
+
 .card-header {
-  background-color: #007bff; /* Blue background for card header */
-  color: #fff;
-  font-weight: bold;
-  padding: 1rem 1.5rem;
+  background-color: #673ab7;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  padding: 15px;
 }
 
 .card-body {
-  padding: 2rem;
-}
-
-.form-control {
-  border-radius: 4px; /* Rounded corners for form inputs */
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for form inputs */
-  padding: 1rem;
+  padding: 20px;
 }
 
 .form-label {
-  display: block; /* Form Labels are displayed as Block element*/
-  margin-bottom: 0.5rem;
+  font-weight: 500;
 }
 
-.btn.btn-primary {
-  background-color: #007bff; /* Blue background for button */
-  color: #fff;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition for button */
-}
-
-.btn.btn-primary:hover {
-  background-color: #0069d9; /* Darker blue on hover */
+.form-control {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
 }
 
 .form-text {
-  font-size: 0.8rem;
-  color: #546e7a; /* Grey color for help text */
-  margin-top: 0.5rem;
+  color: #888;
+  font-size: 0.8em;
 }
 
-/* Responsive adjustments */
+#sub-btn {
+  background-color: #673ab7;
+  border-color: #512da8;
+  transition: background-color 0.3s ease;
+}
+
+#sub-btn:hover {
+  background-color: #7e57c2;
+}
+
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-  .card.ppmid {
-    width: 90%;
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .project-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
