@@ -1,170 +1,186 @@
 body {
-  font-family: 'Playfair Display', serif;
-  line-height: 1.6;
-  background-color: #f8f9fa;
-  color: #343a40;
-}
-
-.pr-nav {
-  background-color: #f8f9fa; /* Light background for projects page */
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-  background-color: #f8f9fa;
-  padding: 20px 0;
+  background-color: #222;
 }
 
 .nav-pills .nav-link {
-  border-radius: 20px;
+  color: #ddd;
+  border-radius: 5px;
+  margin: 0 10px;
   padding: 10px 20px;
-  font-weight: 600;
-  color: #343a40;
-  background-color: #f8f9fa;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-
-.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
-  background-color: #FFD700; /* Gold hover effect */
-  color: #343a40;
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #555;
 }
 
-
-.display-5 {
-  font-family: 'Playfair Display', serif;
-  color: #343a40;
-}
-
-.lead {
-    font-family: 'Playfair Display', serif;
-}
-
-#icon-grid h2 {
-  font-family: 'Playfair Display', serif;
+.display-5, .display-4, h1, h2, h3 {
   font-weight: 700;
-  margin-bottom: 20px;
-  color: #343a40;
+  color: #f0f0f0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  line-height: 1.6;
+  color: #ddd;
+}
+
+
+.btn-primary {
+  background-color: #FF5722;
+  border-color: #FF5722;
+  color: #fff;
+}
+
+.btn-outline-secondary {
+  color: #FF5722;
+  border-color: #FF5722;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
-  margin-bottom: 10px;
+  margin-right: 1rem;
 }
 
-.icons.cxx {
-  width: 100px;
-  height: 100px;
+
+#icon-grid .icons {
+  margin-bottom: 1rem;
 }
 
-.icons.sql {
-  width: 75px;
-  height: 75px;
+#icon-grid h2 {
+  color: #f0f0f0;
 }
+
+.pr-nav {
+  background-color: #181818;
+}
+
 
 #welcome-section {
+  background-color: #282828;
   text-align: center;
-  padding: 100px 0;
-  background-color: #f8f9fa; /* Light background */
-  background-size: cover;
-}
-
-#welcome-section h1, #welcome-section h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #343a40;
-}
-
-.pp {
-  font-style: italic;
-  color: #868e96; /* Gray text color */
-  margin-bottom: 20px;
-}
-
-.ppicon {
-  margin: 30px auto;
-  display: block;
-  color: #FFD700;
-  transition: transform 0.3s ease;
-}
-
-
-#projects {
   padding: 50px 0;
 }
 
+#welcome-section h1, #welcome-section h3 {
+  color: #fff;
+}
+
+#welcome-section .pp {
+  font-size: 1.2rem;
+  color: #eee;
+  margin-top: 20px;
+}
+
+
+#welcome-section .ppicon {
+  margin: 20px auto 0;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+#projects {
+  padding: 40px 0;
+}
+
 #project-hail {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  margin-bottom: 40px;
-  color: #343a40;
   text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 30px;
+  grid-gap: 20px;
 }
 
 .project-tile {
-  border: 1px solid #dee2e6;
+  background-color: #282828;
+  border: 1px solid #444;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
+
 .project-img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
-  object-fit: cover;
+  border-radius: 8px;
 }
 
 .code {
-  color: #FFD700; /* Gold accent for code brackets */
-  font-weight: bold;
+  color: #FFD700;
 }
-
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 20px;
+  background-color: #181818; /* Darker background for contact page */
 }
 
 .card.ppmid {
+  margin: auto;
   max-width: 600px;
-  margin: 0 auto; /* Center the card horizontally */
+  background-color: #282828; /* Darker card background */
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+  border-radius: 15px; /* Rounded corners */
 }
 
 .card {
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .card-header {
-  background-color: #FFD700; /* Gold header */
+  background-color: #333;
   color: #fff;
-  font-weight: 700;
-  font-family: 'Playfair Display', serif;
-  border-radius: 10px 10px 0 0;
+  font-size: 1.5rem;
   padding: 15px;
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
 }
 
 .card-body {
@@ -172,47 +188,47 @@ header {
 }
 
 .form-control {
+  background-color: #222;
+  color: #ddd;
+  border: 1px solid #555;
   border-radius: 5px;
-  border-color: #ced4da;
-  box-shadow: none;
-  font-family: 'Playfair Display', serif;
 }
 
 .form-label {
-    font-family: 'Playfair Display', serif;
+  color: #fff;
   font-weight: 600;
 }
 
 .btn.btn-primary {
-  background-color: #FFD700; /* Gold button */
-  color: #343a40;
+  background-color: #FF5722;
+  color: white;
+  padding: 10px 20px;
   border-radius: 5px;
-  border: none;
   transition: background-color 0.3s ease;
 }
 
 .btn.btn-primary:hover {
-  background-color: #daa520;
+  background-color: #CC4C19;
 }
 
+
 .form-text {
-  font-style: italic;
-  color: #868e96;
+  color: #aaa;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
   .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .project-grid {
     grid-template-columns: 1fr;
   }
-}
 
-@media (max-width: 992px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .card {
+    width: 95%;
   }
-}
-
-.img-fluid {
-    max-width: 100%;
-    height: auto;
 }
