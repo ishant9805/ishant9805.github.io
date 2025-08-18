@@ -1,8 +1,11 @@
 body {
-  background-color: #1e1e1e;
-  color: #eee;
   font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
+  margin: 0;
+  transition: background-color 0.3s ease;
+}
+
+.pr-nav {
+  background-color: #f0f2f5; /* Light grey background for Projects page */
 }
 
 .container {
@@ -11,119 +14,91 @@ body {
 }
 
 header {
-  background-color: #282828;
-  padding: 1rem 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-pills .nav-link {
-  color: #eee;
+  padding: 1rem 1.5rem;
   border-radius: 0.25rem;
-  background-color: #383838;
-  margin: 0 0.5rem;
-  padding: 0.5rem 1rem;
+  color: #3f51b5; /* Material Design primary color */
   transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
-  background-color: #5c8dbc;
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #e3f2fd; /* Lighter shade of primary color on hover/active */
 }
 
-h1, h2, h3 {
-  font-weight: 700;
-  color: #eee;
+.nav-pills .nav-item {
+  margin: 0 0.5rem;
 }
 
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
-  margin-bottom: 1rem;
+.display-5 {
+  color: #3f51b5;
 }
 
 .lead {
-  font-size: 1.25rem;
+  color: #757575; /* Material Design secondary text color */
 }
 
 .btn-primary {
-  background-color: #5c8dbc;
-  border-color: #5c8dbc;
+  background-color: #3f51b5;
+  border-color: #3f51b5;
+  color: white;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #3c679d;
-  border-color: #3c679d;
+  background-color: #283593;
 }
 
 .btn-outline-secondary {
-  color: #eee;
-  border-color: #eee;
+  color: #3f51b5;
+  border-color: #3f51b5;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-outline-secondary:hover {
-  color: #5c8dbc;
-  border-color: #5c8dbc;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #e3f2fd;
+  color: #283593;
 }
 
 #icon-grid .icons {
   width: 75px;
   height: 75px;
   margin-right: 1rem;
-}
-
-.icons {
-  fill: #eee;
-}
-
-.icons.cxx {
-  fill: #eee;
-}
-
-.icons.sql {
-  width: 75px;
-  height: 75px;
-}
-
-
-#welcome-section {
-  text-align: center;
-  background-color: #282828;
-  padding: 4rem 0;
-}
-
-#welcome-section h1, #welcome-section h3 {
   margin-bottom: 1rem;
 }
 
-.pp {
-  font-style: italic;
-  color: #888;
-  margin-bottom: 2rem;
+#icon-grid h2 {
+  color: #3f51b5;
 }
 
-.ppicon {
-  margin: 0 auto;
-  display: block;
-  fill: #888;
-  animation: bounce 1s infinite;
+#icon-grid h3 {
+  color: #3f51b5;
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0) }
-  50% { transform: translateY(-10px) }
+#icon-grid p {
+  color: #757575;
+}
+
+#welcome-section {
+  text-align: center;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #673ab7, #9c27b0);
+  color: white;
+}
+
+#welcome-section h1,
+#welcome-section h3 {
+  margin-bottom: 1rem;
 }
 
 #projects h1 {
+  text-align: center;
   margin-bottom: 2rem;
+  color: #3f51b5;
 }
 
 .project-grid {
@@ -133,34 +108,49 @@ p {
 }
 
 .project-tile {
-  background-color: #383838;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  text-decoration: none;
-  color: #eee;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
 }
 
-
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
 .project-img {
-  max-width: 100%;
-  border-radius: 0.5rem;
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
 }
 
 .code {
-  color: #5c8dbc;
+  color: #ff9800; /* Orange accent color */
 }
 
-.pr-nav {
-  padding-top: 2rem;
+.pp {
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
+.ppicon {
+  display: block;
+  margin: 0 auto 1rem;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .contact-wrapper {
   display: flex;
@@ -170,73 +160,83 @@ p {
 }
 
 .card.ppmid {
-  margin: auto;
-  max-width: 600px;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+
+.card {
   width: 100%;
-  background-color: #383838;
-  color: #eee;
-  border-radius: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
 
 .card-header {
-  background-color: #5c8dbc;
-  color: #eee;
-  font-weight: 700;
-  padding: 1rem;
-  border-bottom: none;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-
+  background-color: #3f51b5;
+  color: white;
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  border-radius: 8px 8px 0 0;
 }
 
 .card-body {
-  padding: 2rem;
-}
-
-.form-control {
-  background-color: #282828;
-  color: #eee;
-  border: 1px solid #5c8dbc;
-  border-radius: 0.25rem;
-  padding: 0.5rem 1rem;
-  transition: border-color 0.3s ease;
-}
-
-.form-control:focus {
-  border-color: #5c8dbc;
-  box-shadow: 0 0 0 0.25rem rgba(92, 140, 188, 0.25);
+  padding: 2rem 1.5rem;
 }
 
 .form-label {
-  color: #eee;
-  font-weight: 600;
+  color: #3f51b5;
+  font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-.btn {
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.25rem;
-  transition: background-color 0.3s ease;
+.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .form-text {
-  color: #888;
+  color: #6c757d;
   font-size: 0.875rem;
   margin-top: 0.25rem;
 }
 
-@media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+#sub-btn {
+  background-color: #3f51b5;
+  border-color: #3f51b5;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-@media (max-width: 576px) {
+#sub-btn:hover {
+  background-color: #283593;
+}
+
+@media (max-width: 768px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
+}
 
-  .card.ppmid {
-    max-width: 100%;
+@media (max-width: 992px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+  .card.ppmid {
+    max-width: 90%;
+  }
+}
+
+.cxx {
+  width: 75px;
+  height: 75px;
+}
+
+.sql {
+  width: 75px;
+  height: 75px;
 }
