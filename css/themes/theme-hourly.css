@@ -1,36 +1,53 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  background-color: #f0f0f0;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #343a40;
 }
 
 .pr-nav {
-  background-color: #E6E6FA; /* Light Lavender */
+  background-color: #f8f9fa; /* Light background for projects page */
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 
 header {
-  background-color: #FFFFE0; /* Light Yellow */
-  padding: 10px 0;
+  background-color: #f8f9fa;
+  padding: 20px 0;
 }
 
 .nav-pills .nav-link {
-  color: #333;
-  font-weight: bold;
-  border-radius: 10px;
-  padding: 10px 15px;
-  margin: 0 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: 600;
+  color: #343a40;
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-pills .nav-link.active,
-.nav-pills .nav-link:hover {
-  background-color: #FFDAB9; /* Peach Puff */
+
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
+  background-color: #FFD700; /* Gold hover effect */
+  color: #343a40;
+}
+
+
+.display-5 {
+  font-family: 'Playfair Display', serif;
+  color: #343a40;
+}
+
+.lead {
+    font-family: 'Playfair Display', serif;
+}
+
+#icon-grid h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #343a40;
 }
 
 .icons {
@@ -41,169 +58,112 @@ header {
 }
 
 .icons.cxx {
+  width: 100px;
+  height: 100px;
+}
+
+.icons.sql {
   width: 75px;
   height: 75px;
 }
-
-.icons.sql{
-  width: 75px;
-  height: 75px;
-}
-
-h1, h2, h3 {
-  font-weight: 700;
-  color: #333;
-}
-
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-p {
-  line-height: 1.6;
-  color: #555;
-}
-
-.lead {
-  font-size: 1.2em;
-}
-
-#icon-grid h2{
-  font-size: 1.8em;
-}
-
-.row {
-  margin-bottom: 20px;
-}
-
-.btn-primary {
-  background-color: #FF69B4; /* Hot Pink */
-  border-color: #FF69B4;
-  font-weight: bold;
-}
-
-.btn-outline-secondary {
-  background-color: white;
-  border-color: #FF69B4;
-  color: #FF69B4;
-  font-weight: bold;
-}
-
 
 #welcome-section {
   text-align: center;
   padding: 100px 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z' fill='%23FF69B4'/%3E%3Cpath d='M10 14C6.68629 14 4 11.3137 4 8C4 4.68629 6.68629 2 10 2C13.3137 2 16 4.68629 16 8C16 11.3137 13.3137 14 10 14Z' fill='%23FFA07A'/%3E%3C/svg%3E");
-  background-size: 100px 100px;
-  background-repeat: repeat;
-  color: white;
+  background-color: #f8f9fa; /* Light background */
+  background-size: cover;
 }
 
-#welcome-section h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-}
-
-#welcome-section h3 {
-  font-size: 1.8em;
+#welcome-section h1, #welcome-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
   margin-bottom: 20px;
+  color: #343a40;
 }
 
 .pp {
-  font-size: 1.2em;
+  font-style: italic;
+  color: #868e96; /* Gray text color */
   margin-bottom: 20px;
 }
 
 .ppicon {
-  margin: 0 auto;
+  margin: 30px auto;
   display: block;
-  animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% {transform: translateY(0);}
-  50% {transform: translateY(-10px);}
+  color: #FFD700;
+  transition: transform 0.3s ease;
 }
 
 
 #projects {
-  padding: 40px 0;
+  padding: 50px 0;
 }
 
 #project-hail {
-  font-size: 2.5em;
-  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #343a40;
   text-align: center;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 30px;
 }
 
 .project-tile {
-  border: 2px solid #FF69B4;
+  border: 1px solid #dee2e6;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .project-img {
   width: 100%;
   height: auto;
   border-radius: 10px 10px 0 0;
+  object-fit: cover;
 }
 
 .code {
-  color: #FF69B4; /* Hot Pink */
+  color: #FFD700; /* Gold accent for code brackets */
   font-weight: bold;
 }
+
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #F0FFF0; /*Honeydew*/
+  padding: 20px;
 }
 
 .card.ppmid {
-  width: 60%;
-  margin: 0 auto;
-  max-width: 500px;
-  border-radius: 20px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto; /* Center the card horizontally */
 }
 
-
 .card {
-  border: 2px solid #FF69B4;
-  border-radius: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 
 .card-header {
-  background-color: #FF69B4;
-  color: white;
-  font-weight: bold;
-  font-size: 1.2em;
-  border-radius: 20px 20px 0 0;
+  background-color: #FFD700; /* Gold header */
+  color: #fff;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  border-radius: 10px 10px 0 0;
   padding: 15px;
 }
 
@@ -211,30 +171,33 @@ p {
   padding: 20px;
 }
 
-.form-label {
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
+.form-control {
+  border-radius: 5px;
+  border-color: #ced4da;
+  box-shadow: none;
+  font-family: 'Playfair Display', serif;
 }
 
-.form-control {
-  border: 1px solid #FF69B4;
+.form-label {
+    font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+.btn.btn-primary {
+  background-color: #FFD700; /* Gold button */
+  color: #343a40;
   border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #daa520;
 }
 
 .form-text {
-  font-size: 0.9em;
-  color: #555;
-}
-
-#sub-btn {
-    background-color: #FF69B4;
-    border-color: #FF69B4;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 5px;
+  font-style: italic;
+  color: #868e96;
 }
 
 @media (max-width: 768px) {
@@ -247,7 +210,9 @@ p {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .card.ppmid {
-    width: 80%;
-  }
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
 }
