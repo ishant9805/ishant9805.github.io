@@ -1,129 +1,139 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
-  margin:0;
-  padding: 0;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  font-family: 'Playfair Display', serif; /* Or a similar elegant serif font */
+  line-height: 1.6;
+  transition: background-color 0.3s ease;
+}
+
+.pr-nav {
+  background-color: #282828;
+}
+
+header {
+  background-color: #282828;
+}
+
+.nav-pills .nav-link {
+  color: #f0f0f0;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: gold;
+  color: #1e1e1e;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
-
-header {
-  background-color: #f0f0f0;
-  padding: 10px 0;
-  border-radius: 10px;
-}
-
-.nav-pills .nav-link {
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 0 5px;
-  background-color: #fff;
-  color: #333;
-  transition: background-color 0.3s ease;
-}
-
-.nav-pills .nav-link:hover {
-  background-color: #e0e0e0;
-}
-
-.nav-pills .nav-link.active {
-  background-color: #e0e0e0;
-  color: #fff;
-}
-
-.nav-pills.justify-content-center {
-  display: flex;
-  justify-content: center;
-}
-
 
 h1, h2, h3 {
-  font-weight: 600;
-  color: #333;
+  font-weight: 700;
+  color: gold;
+  text-shadow: 2px 2px 4px #000; /* Add a subtle shadow for emphasis */
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.8rem;
 }
 
-p {
-  line-height: 1.6;
-  margin-bottom: 1em;
+
+.lead {
+  font-size: 1.2rem;
+  color: #d3d3d3;
 }
 
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 15px;
+.btn-primary {
+  background-color: gold;
+  border-color: gold;
+  color: #1e1e1e;
+  padding: 15px 30px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
 }
 
-.icons.cxx {
-  width: 100px;
-  height: 100px;
+
+.btn-primary:hover {
+  background-color: #e6d500;
 }
 
-.icons.sql {
-    width: 75px;
-    height: 75px;
+.btn-outline-secondary {
+  border-color: gold;
+  color: gold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: gold;
+  color: #1e1e1e;
 }
 
 #icon-grid .icons {
-  margin-right: 1em;
+  width: 75px;
+  height: 75px;
+  margin-right: 20px;
 }
 
-.lead {
-    font-size: 1.2rem;
+#icon-grid h2 {
+  margin-bottom: 30px;
+}
+
+#icon-grid .col {
+  border-radius: 10px;
+  background-color: #282828;
+  padding: 20px;
 }
 
 #welcome-section {
-  background-color: #f5f5dc;
   text-align: center;
-  padding: 50px 0;
-  border-radius: 20px;
+  padding: 100px 0;
+  background: linear-gradient(to bottom, #282828, #1e1e1e);
 }
 
 #welcome-section h1, #welcome-section h3 {
-  margin-bottom: 10px;
-}
-
-#welcome-section .pp {
-  font-style: italic;
-  color: #777;
   margin-bottom: 20px;
 }
 
-#welcome-section .ppicon {
-  margin: 0 auto;
-  display: block;
+.pp {
+  font-style: italic;
+  color: #a0a0a0;
+  margin-bottom: 30px;
+}
+
+.ppicon {
   animation: bounce 1s infinite;
 }
 
 @keyframes bounce {
-  0%, 100% {transform: translateY(0);}
-  50% {transform: translateY(-10px);}
-}
-
-
-#projects {
-  padding: 50px 0;
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
 }
 
 #project-hail {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .project-grid {
@@ -133,100 +143,102 @@ p {
 }
 
 .project-tile {
-  background-color: #fff;
+  border: 2px solid gold;
   border-radius: 15px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-.project-img {
-  max-width: 100%;
+.project-img, .img-proj {
+  width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 15px 15px 0 0; /* Rounded top corners only */
 }
 
 .code {
-  color: #e74c3c;
-  font-weight: bold;
-}
-
-.pr-nav {
-  padding-top: 50px;
+  color: gold;
 }
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100vh; /* ensures the form is centered even on shorter screens */
 }
-
 
 .card.ppmid {
-  width: 60%;
-  margin: 0 auto;
+  margin: auto;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
-
 
 .card {
-  border-radius: 15px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  max-width: 600px;
+  background-color: #282828;
+  border: 2px solid gold;
 }
-
 
 .card-header {
-  background-color: #ffc107;
-  color: #fff;
+  background-color: gold;
+  color: #1e1e1e;
+  padding: 15px;
+  border-radius: 15px 15px 0 0;
   font-weight: bold;
   text-align: center;
-  padding: 10px;
-  border-radius: 10px 10px 0 0;
 }
 
+
 .card-body {
-  padding: 20px;
+  padding: 30px;
 }
 
 .form-control {
+  background-color: #333;
+  color: #f0f0f0;
+  border: 1px solid gold;
   border-radius: 10px;
-  padding: 10px;
 }
 
 .form-label {
+  color: gold;
   margin-bottom: 5px;
 }
 
-.btn.btn-primary {
-  background-color: #28a745;
-  border-color: #28a745;
-  border-radius: 10px;
+.form-text {
+  color: #a0a0a0;
 }
 
-.form-text {
-  color: #777;
-  font-size: 0.8em;
+#sub-btn {
+  background-color: gold;
+  border-color: gold;
+  color: #1e1e1e;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
 }
+
+#sub-btn:hover {
+  background-color: #e6d500;
+}
+
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column width for tablets */
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 576px) {
   .project-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr; /* Single column for mobile */
   }
-
   .card.ppmid {
-    width: 80%;
+    max-width: 90%; /* Adjust width for mobile */
   }
 }
