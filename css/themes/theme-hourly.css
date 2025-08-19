@@ -1,116 +1,136 @@
 body {
-  background-color: #121212;
-  color: #f0f0f0;
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
+  margin: 0;
+  background-color: #f8f8f8;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.pr-nav {
+  background-color: #f2f2f2; /* Light background for Projects page */
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 15px;
 }
 
 header {
-  background-color: #181818;
-  padding: 10px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-pills .nav-link {
-  color: #f0f0f0;
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 10px 20px;
   margin: 0 5px;
-  transition: background-color 0.3s ease;
+  background-color: #fff;
+  color: #666;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-pills .nav-link.active,
+.nav-pills .nav-link.active {
+  background-color: #e7976b; /* Warm accent color for active links */
+  color: #fff;
+}
+
+
 .nav-pills .nav-link:hover {
-  background-color: #303030;
-}
-
-.display-5 {
+  background-color: #e7976b; /* Warm accent color on hover */
   color: #fff;
 }
 
-.btn-primary {
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-  color: #fff;
-}
-
-.btn-outline-secondary {
-  color: #fff;
-  border-color: #fff;
-}
-
-.btn-outline-secondary:hover {
-  background-color: #333;
-  color: #fff;
-}
-
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 15px;
-}
-
-.icons.cxx{
-    width: 75px;
-    height: 75px;
-    margin-right: 15px;
-}
-
-.icons.sql {
-  width: 75px;
-  height: 75px;
-  margin-right: 15px;
-}
 
 h1, h2, h3 {
-  color: #fff;
-  font-weight: 700;
+  font-weight: 600;
+  color: #333;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 3em;
+  margin-bottom: 0.5em;
 }
 
 h2 {
   font-size: 2em;
+  margin-bottom: 1em;
 }
 
 h3 {
   font-size: 1.5em;
+  margin-bottom: 0.5em;
 }
 
-#icon-grid {
-  margin-top: 40px;
+p {
+  margin-bottom: 1em;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.lead {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+
+.btn-primary {
+  background-color: #e7976b; /* Warm accent color for buttons */
+  border-color: #e7976b;
+  color: #fff;
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+
+.btn-primary:hover {
+  background-color: #c77752; /* Darker shade of accent color on hover */
+  border-color: #c77752;
+}
+
+
+.btn-outline-secondary {
+  border-color: #ccc;
+  color: #666;
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #eee;
+  color: #555;
+}
+
+#icon-grid .icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 
 #welcome-section {
-  background-color: #282c34;
+  background-color: #f5e7d7; /* Soft background for Welcome Section */
   text-align: center;
-  padding: 80px 0;
+  padding: 50px 0;
 }
 
-#welcome-section h1,
-#welcome-section h3 {
+#welcome-section h1, #welcome-section h3 {
   margin-bottom: 10px;
 }
 
-#projects {
-  padding: 40px 0;
+#welcome-section .pp {
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #888;
 }
 
-#project-hail {
+#welcome-section .ppicon{
+  margin: 0 auto;
+  display: block;
+  margin-top: 10px;
+}
+
+
+#projects h1 {
   text-align: center;
   margin-bottom: 30px;
 }
@@ -122,127 +142,94 @@ h3 {
 }
 
 .project-tile {
-  background-color: #282c34;
+  border: 1px solid #ccc;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-.project-img,
-.img-proj {
-  max-width: 100%;
+.project-img {
+  width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 10px 10px 0 0;
 }
 
 .code {
-  color: #5cb85c;
-}
-
-.pp {
-  font-style: italic;
-  margin-bottom: 20px;
-}
-
-.ppicon {
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
-  display: block;
-  animation: rotate 2s infinite linear;
-}
-
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-.pr-nav {
-  padding-top: 50px;
+  color: #e7976b; /* Warm accent color for code brackets */
+  font-weight: bold;
 }
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 80vh; /* Ensure the form is centered vertically */
 }
 
 .card.ppmid {
   margin: auto;
-  max-width: 500px;
+  max-width: 600px;
+  width: 100%;
 }
 
 .card {
-  background-color: #282c34;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
 
 .card-header {
-  text-align: center;
-  font-size: 1.5em;
-  font-weight: bold;
+  background-color: #e7976b; /* Warm accent color for card header */
   color: #fff;
-  margin-bottom: 20px;
+  border-radius: 15px 15px 0 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 15px;
+  border-bottom: none;
 }
 
 .card-body {
-  padding: 20px;
-}
-
-.form-control {
-  background-color: #212529;
-  color: #f0f0f0;
-  border: 1px solid #333;
-  border-radius: 5px;
+  padding: 30px;
 }
 
 .form-label {
-  color: #f0f0f0;
+  font-weight: bold;
+  color: #555;
   margin-bottom: 5px;
 }
 
-.btn.btn-primary {
-  width: 100%;
-  margin-top: 20px;
+.form-control {
+  border-radius: 10px;
+  border-color: #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .form-text {
   color: #888;
+  font-size: 0.9em;
+  margin-top: 5px;
 }
+
+#sub-btn{
+    border-radius: 15px;
+}
+
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-wrapper {
-    flex-direction: column;
-  }
-
-  .card.ppmid {
-    max-width: 90%;
-    margin: 20px auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
