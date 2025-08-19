@@ -1,160 +1,197 @@
 body {
-  background-color: #1e1e1e;
-  color: #eee;
   font-family: 'Roboto', sans-serif;
-  transition: background-color 0.3s ease;
-}
-
-.pr-nav {
-  background-color: #282c34;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-  background-color: #282c34;
+  background-color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-pills .nav-link {
-  color: #eee;
-  background-color: #343a40;
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 0 10px;
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  border-radius: 0.25rem;
   transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active,
-.nav-pills .nav-link:hover {
-  background-color: #6c757d;
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
+  background-color: #6563ff;
+  color: #fff;
 }
 
-.display-5 {
-  color: #f06292;
+.nav-pills .nav-link.active {
+  background-color: #6563ff;
+  color: white;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: #222;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  line-height: 1.6;
 }
 
 .lead {
-  color: #bbb;
+  font-weight: 500;
 }
 
 .btn-primary {
-  background-color: #f06292;
-  border-color: #f06292;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #e55180;
+  background-color: #6563ff;
+  border-color: #6563ff;
+  color: #fff;
 }
 
 .btn-outline-secondary {
-  color: #eee;
-  border-color: #6c757d;
-  transition: color 0.3s ease;
+  background-color: transparent;
+  border-color: #ccc;
+  color: #333;
 }
 
-.btn-outline-secondary:hover {
-  color: #fff;
-  background-color: #6c757d;
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 1rem;
+  fill: #fff;
+  background-color: #333;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.icons.cxx{
+  background-color: #444;
+}
+
+.icons.sql {
+  background-color: #444;
 }
 
 #icon-grid .icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 10px;
+  margin-bottom: 0.5rem;
 }
 
-#icon-grid h2 {
-  color: #f06292;
+#icon-grid h2{
+  font-size: 2rem;
 }
 
-#icon-grid .fw-bold {
-  color: #eee;
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
 }
 
-#icon-grid p {
-  color: #bbb;
+.pr-nav {
+  padding-right: 20px;
 }
+
 
 #welcome-section {
-  background-image: url('memphis-pattern.svg'); /* Replace with your Memphis pattern SVG */
-  background-size: cover;
-  background-position: center;
-  color: #eee;
-  padding: 50px 0;
+  background-color: #6563ff;
+  color: white;
   text-align: center;
+  padding: 5rem 0;
+  border-radius: 10px;
+  margin-bottom: 3rem;
 }
 
-#welcome-section h1,
+#welcome-section h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
 #welcome-section h3 {
-  color: #f06292;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
 }
 
-#welcome-section p {
-  color: #bbb;
+.pp {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
-#projects h1 {
-  color: #f06292;
+.ppicon {
+  display: block;
+  margin: 2rem auto;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#projects {
+  margin-bottom: 3rem;
+}
+
+#project-hail {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
   text-align: center;
-  padding-bottom: 30px;
+  color: #222;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-gap: 20px;
 }
 
 .project-tile {
-  background-color: #282c34;
-  border: 2px solid #f06292;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ccc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.project-img,
-.img-proj {
+.project-img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
-  object-fit: cover;
+  border-radius: 0.5rem;
 }
 
 .code {
-  color: #67e5ff;
+  color: #6563ff;
+  font-weight: bold;
 }
-
-.pp {
-  font-style: italic;
-  color: #bbb;
-  text-align: center;
-}
-
-.ppicon {
-  margin-top: 20px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40px;
-  fill: #67e5ff;
-}
-
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .card.ppmid {
@@ -163,49 +200,46 @@ header {
 }
 
 .card {
-  background-color: #282c34;
-  border: 2px solid #f06292;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
 }
 
 .card-header {
-  background-color: #f06292;
-  color: #fff;
+  font-size: 1.8rem;
   font-weight: bold;
-  border-radius: 10px 10px 0 0;
-  padding: 10px;
+  color: #222;
+  margin-bottom: 1.5rem;
 }
 
 .card-body {
-  padding: 20px;
-}
-
-.form-label {
-  color: #eee;
-  margin-bottom: 5px;
+  padding: 1.5rem;
 }
 
 .form-control {
-  background-color: #343a40;
-  color: #eee;
-  border: 1px solid #6c757d;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .form-text {
-  color: #bbb;
+  color: #888;
+  font-size: 0.8rem;
 }
 
-
-.btn.btn-primary {
-  background-color: #f06292;
-  border-color: #f06292;
-  border-radius: 5px;
-  padding: 10px 20px;
+#sub-btn{
+  background-color: #6563ff;
+  border-color: #6563ff;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
 }
 
 @media (max-width: 768px) {
@@ -217,5 +251,8 @@ header {
 @media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
+  }
+  .card.ppmid {
+    max-width: 90%;
   }
 }
