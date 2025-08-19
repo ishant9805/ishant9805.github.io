@@ -1,127 +1,152 @@
 body {
-  background-color: #181818;
-  color: #f0f0f0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e1e;
+  color: #eee;
+  font-family: 'Roboto', sans-serif;
   transition: background-color 0.3s ease;
 }
 
 .pr-nav {
-  background-color: #282828;
+  background-color: #282c34;
+}
+
+.container {
+  max-width: 1200px;
 }
 
 header {
-  background-color: #282828;
+  background-color: #282c34;
 }
 
 .nav-pills .nav-link {
-  color: #f0f0f0;
-  border-radius: 0.5rem;
-  padding: 0.8rem 1.5rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #eee;
+  background-color: #343a40;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #5c6bc0;
-  color: #fff;
-}
-
-.container {
-    max-width: 1200px;
-}
-
-h1, h2, h3 {
-  font-weight: 700;
-  color: #fff;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #d0d0d0;
-}
-
-.lead {
-    font-size: 1.2rem;
+  background-color: #6c757d;
 }
 
 .display-5 {
-    font-size: 3rem;
+  color: #f06292;
+}
+
+.lead {
+  color: #bbb;
+}
+
+.btn-primary {
+  background-color: #f06292;
+  border-color: #f06292;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #e55180;
+}
+
+.btn-outline-secondary {
+  color: #eee;
+  border-color: #6c757d;
+  transition: color 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: #6c757d;
+}
+
+#icon-grid .icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 10px;
+}
+
+#icon-grid h2 {
+  color: #f06292;
+}
+
+#icon-grid .fw-bold {
+  color: #eee;
+}
+
+#icon-grid p {
+  color: #bbb;
 }
 
 #welcome-section {
-  text-align: center;
-  padding: 4rem 0;
-  background: linear-gradient(to bottom, #282828, #181818), url("background-image.jpg"); /* Replace with your background image */
+  background-image: url('memphis-pattern.svg'); /* Replace with your Memphis pattern SVG */
   background-size: cover;
   background-position: center;
-  color: #fff;
-}
-
-.pp {
-  font-style: italic;
-  color: #a0a0a0;
-  margin-top: 2rem;
-}
-
-.ppicon {
-  fill: #fff;
-  animation: spin 1.5s infinite linear;
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-#projects {
-  padding: 4rem 0;
-}
-
-#project-hail {
+  color: #eee;
+  padding: 50px 0;
   text-align: center;
-  margin-bottom: 3rem;
+}
+
+#welcome-section h1,
+#welcome-section h3 {
+  color: #f06292;
+}
+
+#welcome-section p {
+  color: #bbb;
+}
+
+#projects h1 {
+  color: #f06292;
+  text-align: center;
+  padding-bottom: 30px;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  gap: 20px;
 }
 
 .project-tile {
-  border: 1px solid #333;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  background-color: #282c34;
+  border: 2px solid #f06292;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.project-img, .img-proj {
-  width: 100%;
+.project-img,
+.img-proj {
+  max-width: 100%;
   height: auto;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 10px;
   object-fit: cover;
 }
 
 .code {
-  color: #5c6bc0;
+  color: #67e5ff;
+}
+
+.pp {
+  font-style: italic;
+  color: #bbb;
+  text-align: center;
+}
+
+.ppicon {
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40px;
+  fill: #67e5ff;
 }
 
 
@@ -129,73 +154,59 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
-  padding: 2rem;
+  min-height: 100vh;
 }
 
 .card.ppmid {
   margin: auto;
-  max-width: 500px;
-  width: 100%;
+  max-width: 600px;
 }
 
 .card {
-  background-color: #282828;
-  border: 1px solid #333;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  background-color: #282c34;
+  border: 2px solid #f06292;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card-header {
-  background-color: #5c6bc0;
+  background-color: #f06292;
   color: #fff;
   font-weight: bold;
-  padding: 1rem;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
 }
 
 .card-body {
-  padding: 2rem;
+  padding: 20px;
 }
 
 .form-label {
-  color: #fff;
-  font-weight: bold;
+  color: #eee;
+  margin-bottom: 5px;
 }
 
 .form-control {
-  background-color: #222;
-  color: #f0f0f0;
-  border: 1px solid #333;
-  border-radius: 0.3rem;
-}
-
-.btn.btn-primary {
-  background-color: #5c6bc0;
-  border: none;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 0.3rem;
-  transition: background-color 0.3s ease;
-}
-
-.btn.btn-primary:hover {
-  background-color: #424f9f;
+  background-color: #343a40;
+  color: #eee;
+  border: 1px solid #6c757d;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .form-text {
-  color: #a0a0a0;
-  font-size: 0.9rem;
+  color: #bbb;
 }
 
-.icons {
-    width: 75px;
-    height: auto;
-    margin-right: 1rem;
-    fill: white;
-}
 
+.btn.btn-primary {
+  background-color: #f06292;
+  border-color: #f06292;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
 
 @media (max-width: 768px) {
   .project-grid {
