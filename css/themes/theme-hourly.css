@@ -1,277 +1,247 @@
 body {
-  background: rgba(10, 10, 10, 0.8); /* Dark background with slight transparency */
-  color: #eee; /* Light text color */
-  font-family: 'Arial', sans-serif;
-  transition: background-color 0.3s ease;
+  font-family: 'Playfair Display', serif; /* Or a similar elegant serif font */
+  line-height: 1.6;
+  color: #333; /* Dark text for light theme */
+  background-color: #f8f8f8; /* Light background */
+  margin: 0;
+  padding: 0;
 }
 
 .pr-nav {
-  background: rgba(10, 10, 10, 0.8); /* Dark background for projects page nav */
-}
-
-header {
-  background: rgba(20, 20, 20, 0.5); /* Dark header background with transparency */
-  backdrop-filter: blur(10px); /* Glassmorphism effect */
-}
-
-.nav-pills .nav-link {
-  color: #eee;
-  background: rgba(20, 20, 20, 0.5);
-  border-radius: 5px;
-  padding: 10px 15px;
-  margin: 0 5px;
-  transition: background-color 0.3s ease;
-}
-
-.nav-pills .nav-link.active {
-  background-color: rgba(100, 100, 255, 0.4);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-
-.nav-pills .nav-link:hover {
-  background-color: rgba(50, 50, 255, 0.4);
+  background-color: #f0f0f0; /* Lighter background for projects page nav */
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-
-h1, h2, h3 {
-  font-weight: 600;
-  color: #fff;
+header {
+  background-color: #f5f5f5; /* Light gray header background */
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd; /* Subtle border */
 }
 
-h1 {
-  font-size: 2.5em;
+.nav-pills .nav-link {
+  color: #555; /* Dark gray nav links */
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-h2 {
-  font-size: 2em;
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #d9d9d9; /* Light gray hover/active state */
 }
 
-h3 {
-  font-size: 1.5em;
+.display-5 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #333; /* Dark header text */
 }
 
-p {
-  color: #eee;
-  line-height: 1.6;
-}
 
 .lead {
-  font-size: 1.2em;
+  font-weight: 300;
+  font-style: italic; /* Adds a touch of elegance */
 }
 
 .btn-primary {
-  background-color: rgba(100, 100, 255, 0.7); /* Lighter primary button */
-  border-color: rgba(100, 100, 255, 0.7);
-  color: #222;
-}
-
-.btn-primary:hover {
-  background-color: rgba(50, 50, 255, 0.9);
-  border-color: rgba(50, 50, 255, 0.9);
+  background-color: #a0522d; /* Rich brown button */
+  border-color: #a0522d;
+  color: white;
 }
 
 .btn-outline-secondary {
-  color: #eee;
-  border-color: #eee;
-}
-
-.btn-outline-secondary:hover {
-  background-color: rgba(100, 100, 100, 0.4);
-  color: #222;
-  border-color: rgba(100, 100, 100, 0.4);
-}
-
-#icon-grid {
-  background: rgba(20, 20, 20, 0.5);
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 10px;
+  color: #a0522d;
+  border-color: #a0522d;
 }
 
 .icons {
   width: 75px;
   height: 75px;
   margin-right: 15px;
-  fill: #fff;
+  fill: currentColor; /* Allows for easy color change */
+  vertical-align: middle;
 }
 
 .icons.cxx {
-  fill: #fff;
+  fill: #8B4513;
 }
 
+#icon-grid h2 {
+  color: #a0522d; /* Brown header for technologies */
+  font-weight: 700;
+  margin-bottom: 20px;
+}
 
-.icons.sql {
-  margin-right: 15px;
+#icon-grid .col {
+  text-align: center;
+}
+
+#icon-grid .col h3 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#icon-grid .col p {
+  font-size: 0.9em;
+  color: #555;
 }
 
 #welcome-section {
   text-align: center;
-  padding: 50px 0;
-  background: rgba(20, 20, 20, 0.5);
-  backdrop-filter: blur(10px);
+  padding: 100px 0;
+  background-color: #f0f0f0; /* Light gray background */
 }
 
-#project-hail {
-  text-align: center;
+#welcome-section h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#welcome-section h3 {
+  font-size: 1.5em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.pp {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.ppicon {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  animation: bounce 1s infinite;
+  display: block;
+}
+
+
+@keyframes bounce {
+  0%, 100% {transform: translateY(0)}
+  50% {transform: translateY(-20px)}
+}
+
+#projects h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  color: #a0522d;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  grid-gap: 30px;
 }
 
 .project-tile {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
-.project-img,
-.img-proj {
+.project-img {
   width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 5px 5px 0 0;
 }
-
 
 .code {
-  color: #6563ff; /* Accent color for code brackets */
+  color: #a0522d; /* Accent color for code brackets */
+  font-weight: bold;
 }
-
-
-.pp {
-  font-style: italic;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.ppicon {
-  display: block;
-  margin: 20px auto;
-  animation: bounce 1.5s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
-}
-
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensure form is centered vertically */
 }
 
 .card.ppmid {
   width: 80%;
   max-width: 600px;
-  margin: auto;
-  background: rgba(20, 20, 20, 0.6);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
 }
-
 
 .card {
   border-radius: 10px;
-  padding: 20px;
+  overflow: hidden;
 }
 
 .card-header {
-  background-color: rgba(100, 100, 255, 0.4);
-  color: #fff;
+  background-color: #a0522d;
+  color: white;
   font-weight: bold;
-  padding: 10px 15px;
-  border-radius: 10px 10px 0 0;
+  text-align: center;
+  padding: 15px;
 }
 
 .card-body {
-  padding: 20px;
-}
-
-
-.form-control {
-  background-color: rgba(20, 20, 20, 0.5);
-  color: #eee;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 30px;
 }
 
 .form-label {
-  color: #eee;
+  font-weight: 500;
+  color: #333;
   margin-bottom: 5px;
 }
 
-.form-text {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9em;
+.form-control {
+  border-radius: 5px;
+  border-color: #ddd;
+  padding: 10px;
 }
 
+.form-text {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 5px;
+}
+
+.btn.btn-primary {
+  background-color: #a0522d;
+  border-color: #a0522d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #8b4513; /* Darker brown on hover */
+}
 
 @media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 992px) {
   .project-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
-.row > * {
-    padding: 0.5rem;
-}
-
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
-
-mark {
-  background-color: rgba(100, 100, 255, 0.3);
-  padding: 2px 5px;
-  border-radius: 5px;
-}
-
-a {
-  color: #6563ff;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/*Added for responsiveness of Contact Page*/
-@media (max-width: 767px) {
+@media (max-width: 576px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
   .card.ppmid {
-    width: 95%; /* Adjust width for smaller screens */
+    width: 95%;
   }
 }
