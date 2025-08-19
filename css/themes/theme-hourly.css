@@ -1,30 +1,23 @@
 body {
-  background-color: #222831;
-  color: #e0e0e0;
+  background-color: #121212;
+  color: #f0f0f0;
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  margin: 0;
-  transition: background-color 0.3s ease;
-}
-
-.pr-nav {
-  background-color: #394851;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 20px;
 }
 
 header {
-  background-color: #222831;
+  background-color: #181818;
+  padding: 10px 0;
 }
 
-
 .nav-pills .nav-link {
-  color: #e0e0e0;
-  background-color: #394851;
+  color: #f0f0f0;
   border-radius: 5px;
   padding: 10px 20px;
   margin: 0 5px;
@@ -33,118 +26,92 @@ header {
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #458B00;
-  color: #222831;
+  background-color: #303030;
 }
 
-h1, h2, h3 {
-  font-weight: bold;
-  color: #e0e0e0;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
-  color: #e0e0e0;
-}
-
-.lead {
-    font-size: 1.2rem;
+.display-5 {
+  color: #fff;
 }
 
 .btn-primary {
-  background-color: #458B00;
-  border-color: #458B00;
-}
-
-.btn-primary:hover {
-  background-color: #38761D;
-  border-color: #38761D;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  color: #fff;
 }
 
 .btn-outline-secondary {
-  color: #e0e0e0;
-  border-color: #e0e0e0;
+  color: #fff;
+  border-color: #fff;
 }
 
 .btn-outline-secondary:hover {
-    color: #458B00;
-    border-color: #458B00;
-}
-
-
-#icon-grid {
-  text-align: center;
+  background-color: #333;
+  color: #fff;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  margin-right: 15px;
 }
-
 
 .icons.cxx{
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
+    margin-right: 15px;
 }
 
+.icons.sql {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+}
+
+h1, h2, h3 {
+  color: #fff;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+#icon-grid {
+  margin-top: 40px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
 #welcome-section {
-  background-image: url('nature-background.jpg'); /* Replace with your background image */
-  background-size: cover;
-  background-position: center;
-  color: #e0e0e0;
-  padding: 100px 0;
+  background-color: #282c34;
   text-align: center;
+  padding: 80px 0;
 }
 
 #welcome-section h1,
-#welcome-section h3,
-#welcome-section p {
-  margin-bottom: 1rem;
-}
-
-.pp {
-  font-style: italic;
-  font-size: 1.2rem;
-  color: #dcdcdc;
-}
-
-.ppicon {
-  display: block;
-  margin: 20px auto;
-  animation: rotate 2s linear infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#welcome-section h3 {
+  margin-bottom: 10px;
 }
 
 #projects {
-  padding: 50px 0;
-  text-align: center;
+  padding: 40px 0;
 }
 
-
 #project-hail {
-  font-size: 2.5rem;
+  text-align: center;
   margin-bottom: 30px;
 }
 
@@ -155,28 +122,56 @@ p {
 }
 
 .project-tile {
-  border: 1px solid #555;
+  background-color: #282c34;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
-  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 
 .project-img,
 .img-proj {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 8px;
 }
 
 .code {
-  color: #458B00;
+  color: #5cb85c;
+}
+
+.pp {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.ppicon {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  display: block;
+  animation: rotate 2s infinite linear;
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.pr-nav {
+  padding-top: 50px;
 }
 
 .contact-wrapper {
@@ -187,26 +182,23 @@ p {
 }
 
 .card.ppmid {
-  width: 80%;
-  max-width: 600px;
-  margin: 0 auto;
-  position: relative;
+  margin: auto;
+  max-width: 500px;
 }
 
-
 .card {
-  background-color: #394851;
+  background-color: #282c34;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
 
 .card-header {
-  background-color: #458B00;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
   color: #fff;
-  font-size: 1.5rem;
-  border-radius: 10px 10px 0 0;
-  padding: 15px;
+  margin-bottom: 20px;
 }
 
 .card-body {
@@ -214,79 +206,43 @@ p {
 }
 
 .form-control {
-  background-color: #333;
-  color: #e0e0e0;
-  border: 1px solid #555;
+  background-color: #212529;
+  color: #f0f0f0;
+  border: 1px solid #333;
   border-radius: 5px;
 }
 
 .form-label {
-  color: #e0e0e0;
-  font-weight: bold;
+  color: #f0f0f0;
+  margin-bottom: 5px;
+}
+
+.btn.btn-primary {
+  width: 100%;
+  margin-top: 20px;
 }
 
 .form-text {
-  color: #aaa;
+  color: #888;
 }
-
 
 @media (max-width: 768px) {
   .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .project-grid {
     grid-template-columns: 1fr;
   }
-}
 
-@media (max-width: 992px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  .contact-wrapper {
+    flex-direction: column;
   }
-}
 
-.row > div {
-  padding: 1rem;
-}
-
-img {
-  border-radius: 10px;
-}
-
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
-
-mark{
-    background-color: #458B00;
-    color: #222831;
-    padding: 0.2rem 0.4rem;
-    border-radius: 5px;
-}
-
-a{
-    text-decoration: none;
-}
-
-a:hover{
-    text-decoration: underline;
-}
-
-.h-100 {
-    height: 100%;
-}
-
-.d-none {
-  display: none;
-}
-
-.d-lg-block {
-  display: block;
-}
-
-@media (min-width: 992px) {
-  .d-none {
-    display: block;
-  }
-  .d-lg-block {
-    display: block;
+  .card.ppmid {
+    max-width: 90%;
+    margin: 20px auto;
   }
 }
