@@ -1,13 +1,8 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f8f9fa;
-  color: #343a40;
-  transition: background-color 0.3s ease;
-}
-
-.pr-nav {
-  background-color: #212529;
-  color: white;
+  font-family: 'Merriweather', serif;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  line-height: 1.6;
 }
 
 .container {
@@ -15,199 +10,102 @@ body {
 }
 
 header {
-  background-color: #212529;
-  color: #ffffff;
+  background-color: #282828;
 }
 
 .nav-pills .nav-link {
-  color: #ffffff;
-  border-radius: 0.25rem;
-  padding: 0.5rem 1rem;
-  margin: 0 0.5rem;
+  color: #f0f0f0;
+  background-color: #383838;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 5px;
   transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #66CDAA;
-  color: #212529;
+  background-color: #505050;
 }
 
-.display-5 {
-  color: #66CDAA;
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #f0f0f0;
 }
 
-.btn-primary {
-  background-color: #66CDAA;
-  border-color: #66CDAA;
-  color: #212529;
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1rem;
 }
 
 
-#icon-grid h2 {
-  color: #66CDAA;
+#icon-grid {
+  text-align: center;
 }
 
 .icons {
   width: 75px;
   height: 75px;
   margin-right: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.icons:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
+.icons.cxx {
+    width: 75px;
+    height: 75px;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
 }
 
+.icons.sql{
+    width: 75px;
+    height: 75px;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
 
 #welcome-section {
+  background-color: #383838;
   text-align: center;
-  padding: 5rem 0;
-  background: linear-gradient(to bottom, #000000, #212529);
-  color: white;
+  padding: 50px 0;
 }
-
 
 #welcome-section h1,
-#welcome-section h3{
-  font-weight: 700;
-}
-
-#welcome-section h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
 #welcome-section h3 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 10px;
 }
-
-.pp {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #e0e0e0;
-}
-
-.ppicon{
-  fill: white;
-  margin: 0 auto;
-  display: block;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 
 #projects {
-  padding: 4rem 0;
+  padding: 50px 0;
+  text-align: center;
 }
 
 #project-hail {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #66CDAA;
-  margin-bottom: 3rem;
+  margin-bottom: 30px;
+  color: #d3b896;
 }
-
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 20px;
 }
 
-.project-tile {
-  border: 2px solid #66CDAA;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-}
-
-.project-tile:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
-}
-
-.project-img, .img-proj {
-  width: 100%;
-  height: auto;
-  border-radius: 0.5rem 0.5rem 0 0;
-}
-
-.code {
-  color: #66CDAA;
-  font-weight: bold;
-}
-
-.contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(to bottom, #000000, #212529);
-}
-
-
-.card.ppmid {
-  max-width: 400px;
-  margin: auto;
-  border: 2px solid #66CDAA;
-}
-
-.card {
-  border-radius: 1rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
-
-.card-header {
-  background-color: #66CDAA;
-  color: #212529;
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 1rem;
-  border-radius: 1rem 1rem 0 0;
-}
-
-.card-body {
-  padding: 2rem;
-}
-
-.form-label {
-  color: #ffffff;
-}
-
-.form-control {
-  background-color: #212529;
-  color: #ffffff;
-  border: 1px solid #66CDAA;
-  border-radius: 0.3rem;
-}
-
-.form-text {
-  color: #e0e0e0;
-}
-
-.btn.btn-primary {
-  background-color: #66CDAA;
-  border-color: #66CDAA;
-  color: #212529;
-  border-radius: 0.3rem;
-  padding: 0.5rem 1.5rem;
-}
-
-.btn-primary:hover {
-  background-color: #4CAF50;
-}
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
@@ -217,11 +115,127 @@ header {
   }
 }
 
-@media (max-width: 576px) {
-  .contact-wrapper {
-    flex-direction: column;
+
+.project-tile {
+  border: 2px solid #505050;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-img,
+.img-proj {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.code {
+  color: #a67c52;
+}
+
+
+.pp {
+    text-align: center;
+    font-style: italic;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.ppicon {
+  display: block;
+  margin: 20px auto;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
   }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.pr-nav {
+  padding-top: 50px;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card.ppmid {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #383838;
+  border: 2px solid #505050;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.card-header {
+  font-size: 2rem;
+  color: #d3b896;
+  text-align: center;
+  border-bottom: 2px solid #505050;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.form-control {
+  background-color: #282828;
+  color: #f0f0f0;
+  border: 1px solid #505050;
+  border-radius: 5px;
+}
+
+.form-label {
+  color: #f0f0f0;
+  font-weight: 600;
+}
+
+.btn.btn-primary {
+  background-color: #505050;
+  color: #f0f0f0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #a67c52;
+}
+
+.form-text {
+  color: #808080;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 576px) {
   .card.ppmid {
-    max-width: 90%;
+    max-width: 100%;
+    margin: 20px;
   }
 }
