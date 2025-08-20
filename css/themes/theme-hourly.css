@@ -1,103 +1,110 @@
 body {
-  background: rgba(20, 20, 20, 0.8); /* Dark background with transparency */
-  color: #fff; /* Light text color */
-  font-family: 'Arial', sans-serif;
-  transition: background-color 0.3s ease; /* Smooth transition for background change */
-}
-
-.pr-nav {
-  background: rgba(20, 20, 20, 0.8); /* Dark background with transparency */
-}
-
-
-header {
-  background: rgba(20, 20, 20, 0.6); /* Dark background with transparency for header */
-  backdrop-filter: blur(10px); /* Glassmorphism effect */
-}
-
-.nav-pills .nav-link {
-  color: #fff; /* Light text color for navigation */
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 0 5px; /* Added margin for better spacing */
-}
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  background-color: rgba(255, 255, 255, 0.1); /* Subtle highlight for active link */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Glassmorphism effect */
+  background-color: #1e1e1e;
+  color: #eee;
+  font-family: 'Times New Roman', serif;
 }
 
 .container {
-  padding: 20px;
+  max-width: 1200px;
 }
 
-.display-5 {
-  color: #fff; /* Light text color for large headings */
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+header {
+  background-color: #282828;
+}
+
+.nav-pills .nav-link {
+  color: #eee;
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  background-color: #383838;
+  transition: background-color 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #ffcc66;
+  color: #1e1e1e;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: #ffcc66;
+  color: #1e1e1e;
+}
+
+h1, h2, h3 {
+  color: #ffcc66;
+  font-weight: bold;
 }
 
 .lead {
-  color: #eee; /* Slightly darker light color for body text */
+  color: #ccc;
 }
 
 .btn-primary {
-  background-color: rgba(255, 255, 255, 0.1); /* Light button background */
-  color: white; /* White text */
-  border: 1px solid white; /* White border */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Glassmorphism effect */
+  background-color: #ffcc66;
+  border-color: #ffcc66;
+  color: #1e1e1e;
+}
+
+.btn-primary:hover {
+  background-color: #ffd700;
+  border-color: #ffd700;
 }
 
 .btn-outline-secondary {
-  color: white; /* White text */
-  border: 1px solid white; /* White border */
+  border-color: #ffcc66;
+  color: #ffcc66;
 }
 
-#icon-grid {
-    background: rgba(20, 20, 20, 0.6); /* Dark background with transparency */
-    backdrop-filter: blur(10px); /* Glassmorphism effect */
-    padding: 20px;
-    border-radius: 10px;
+.btn-outline-secondary:hover {
+  background-color: #ffcc66;
+  color: #1e1e1e;
+  border-color: #ffcc66;
 }
 
 .icons {
   width: 75px;
   height: 75px;
   margin-right: 10px;
-  fill: white; /* Ensures icons are white */
 }
 
-.icons.cxx{
-  width: 75px;
-  height: 75px;
-  margin-right: 10px;
+.icons:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
 }
 
-h1, h2, h3 {
-  color: #fff;
+#icon-grid h2 {
+  color: #ffcc66;
   text-align: center;
-  margin-bottom: 10px; /* Adds some margin below headings */
 }
 
 #welcome-section {
   text-align: center;
-  padding: 100px 0;
-  background: linear-gradient(to bottom, rgba(20,20,20,0.8), rgba(40,40,40,0.8)), url('background.jpg'); /* Replace background.jpg with your actual image */
+  padding: 50px 0;
+  background-image: url("https://www.transparenttextures.com/patterns/subtle-linen.png"); /* Example background, replace with your image */
   background-size: cover;
-  background-position: center;
-  color: #fff;
+  color: #eee;
+}
+
+#welcome-section h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+#welcome-section h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
 }
 
 .pp {
-  font-style: italic;
-  color: #ddd;
+  font-size: 1.2em;
   margin-bottom: 20px;
 }
 
 .ppicon {
-  margin: 20px auto; /* Center the icon horizontally */
-  display: block; /* Makes it a block-level element for centering */
-  fill: #fff; /* Sets the icon fill color */
-  animation: bounce 1s infinite; /* Adds bouncing animation */
+  margin: 0 auto;
+  display: block;
+  animation: bounce 1s infinite;
 }
 
 @keyframes bounce {
@@ -105,112 +112,115 @@ h1, h2, h3 {
   50% { transform: translateY(-10px); }
 }
 
-#projects {
-  padding: 50px 0;
-}
-
-#project-hail {
+#projects h1 {
   text-align: center;
-  font-size: 3em;
   margin-bottom: 30px;
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
 }
 
 .project-tile {
-  border: 1px solid #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Glassmorphism effect */
-  transition: box-shadow 0.3s ease;
+  border: 2px solid #ffcc66;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align:center;
 }
 
 .project-tile:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.project-img {
-  width: 100%;
+.project-img,
+.img-proj {
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
-  object-fit: cover;
+  display:block;
+  margin: 0 auto;
+
 }
 
 .code {
-  color: #007bff; /* Blue color for code brackets */
+  color: #ffcc66;
+  font-weight: bold;
+}
+
+.pr-nav {
+  padding-top:20px;
 }
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ensure the form is centered in the viewport */
+  min-height: 100vh;
+  background-image: url("https://www.transparenttextures.com/patterns/subtle-linen.png");
+  background-size: cover;
 }
 
 .card.ppmid {
-  width: 80%;
-  margin: auto;
-  background: rgba(20, 20, 20, 0.6);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  max-width: 600px;
+  border-radius: 20px;
+  border: 2px solid #ffcc66;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
 }
 
 .card {
-  max-width: 500px; /* Adjust the maximum width as needed */
+  background-color: #282828;
   padding: 20px;
 }
 
 .card-header {
-  background-color: #007bff;
-  color: #fff;
-  text-align: center;
-  font-size: 2em;
+  background-color: #ffcc66;
+  color: #1e1e1e;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
 }
 
 .card-body {
-  padding: 30px; /* Added more padding for better spacing */
+  padding: 20px;
 }
 
 .form-control {
-  background-color: rgba(255, 255, 255, 0.1); /* Light background with transparency */
-  color: #fff;
-  border: 1px solid #fff; /* White border */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Glassmorphism effect */
+  background-color: #383838;
+  border: 1px solid #ffcc66;
+  color: #eee;
+  border-radius: 10px;
 }
 
 .form-label {
-  color: #fff;
+  color: #ffcc66;
+  font-weight: bold;
 }
 
 .btn.btn-primary {
-  background-color: #007bff; /* Blue color for the button */
-  color: #fff;
-  border: none; /* Remove default button border */
-  padding: 10px 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: #ffcc66;
+  color: #1e1e1e;
+  border-radius: 10px;
 }
 
 .form-text {
-  color: #eee; /* Slightly darker light color for help text */
+  color: #ccc;
 }
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column width for tablets */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
 @media (max-width: 576px) {
   .project-grid {
-    grid-template-columns: 1fr; /* Single column layout for mobile */
-  }
-  .card {
-    max-width: 90%; /* Adjust width for smaller screens */
+    grid-template-columns: 1fr;
   }
 }
