@@ -1,229 +1,216 @@
 body {
-    font-family: 'Merriweather', serif; /* Example elegant serif font */
-    line-height: 1.6;
-    color: #333; /* Dark text color */
-    background-color: #f8f8f8; /* Light background */
-    margin: 0;
-    padding: 0;
+  background: rgba(20, 20, 20, 0.8); /* Dark background with transparency */
+  color: #fff; /* Light text color */
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease; /* Smooth transition for background change */
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+.pr-nav {
+  background: rgba(20, 20, 20, 0.8); /* Dark background with transparency */
 }
+
 
 header {
-    background-color: #f2f2f2; /* Light header background */
-    padding: 1rem 0;
+  background: rgba(20, 20, 20, 0.6); /* Dark background with transparency for header */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
 }
 
 .nav-pills .nav-link {
-    padding: 0.8rem 1.5rem;
-    font-weight: 500;
-    border-radius: 0.25rem;
-    transition: background-color 0.3s ease;
+  color: #fff; /* Light text color for navigation */
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 0 5px; /* Added margin for better spacing */
 }
 
-.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
-    background-color: #a67c52; /* Dark academia accent color */
-    color: white;
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle highlight for active link */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Glassmorphism effect */
 }
 
+.container {
+  padding: 20px;
+}
 
 .display-5 {
-    font-family: 'Playfair Display', serif; /* Example elegant display font */
-    color: #a67c52; /* Dark academia accent color */
-    font-weight: bold;
+  color: #fff; /* Light text color for large headings */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .lead {
-    font-style: italic;
+  color: #eee; /* Slightly darker light color for body text */
 }
 
 .btn-primary {
-    background-color: #a67c52; /* Dark academia accent color */
-    border-color: #a67c52;
+  background-color: rgba(255, 255, 255, 0.1); /* Light button background */
+  color: white; /* White text */
+  border: 1px solid white; /* White border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Glassmorphism effect */
 }
 
 .btn-outline-secondary {
-    border-color: #a67c52;
-    color: #a67c52;
+  color: white; /* White text */
+  border: 1px solid white; /* White border */
 }
 
-.btn-primary:hover, .btn-outline-secondary:hover {
-    background-color: #8a623d; /* Darker accent for hover */
-    color: white;
-    border-color: #8a623d;
+#icon-grid {
+    background: rgba(20, 20, 20, 0.6); /* Dark background with transparency */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    padding: 20px;
+    border-radius: 10px;
 }
-
-#icon-grid h2 {
-    color: #a67c52; /* Dark academia accent color */
-    font-weight: bold;
-}
-
 
 .icons {
-    width: 75px;
-    height: 75px;
-    margin-right: 1rem;
+  width: 75px;
+  height: 75px;
+  margin-right: 10px;
+  fill: white; /* Ensures icons are white */
 }
 
+.icons.cxx{
+  width: 75px;
+  height: 75px;
+  margin-right: 10px;
+}
 
-.pr-nav {
-    padding-right: 20px; /*add padding to projects page navigation */
+h1, h2, h3 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px; /* Adds some margin below headings */
 }
 
 #welcome-section {
-    text-align: center;
-    background-image: url('https://source.unsplash.com/random/1920x1080/?darkacademia'); /* Replace with a suitable image */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 100px 0;
-}
-
-#welcome-section h1, #welcome-section h3 {
-    font-family: 'Playfair Display', serif;
+  text-align: center;
+  padding: 100px 0;
+  background: linear-gradient(to bottom, rgba(20,20,20,0.8), rgba(40,40,40,0.8)), url('background.jpg'); /* Replace background.jpg with your actual image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
 
 .pp {
-    font-style: italic;
-    color: #f2f2f2;
-    margin-top: 20px;
+  font-style: italic;
+  color: #ddd;
+  margin-bottom: 20px;
 }
 
 .ppicon {
-    fill: white; /* Icon fill color */
-    margin-top: 15px;
-    animation: bounce 1s infinite; /*Animation */
+  margin: 20px auto; /* Center the icon horizontally */
+  display: block; /* Makes it a block-level element for centering */
+  fill: #fff; /* Sets the icon fill color */
+  animation: bounce 1s infinite; /* Adds bouncing animation */
 }
 
 @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 #projects {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 
 #project-hail {
-    font-family: 'Playfair Display', serif;
-    color: #a67c52;
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 30px;
 }
 
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+  grid-gap: 20px;
 }
 
 .project-tile {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Glassmorphism effect */
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
 }
 
 .project-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .code {
-    color: #a67c52; /* Accent color for code brackets */
+  color: #007bff; /* Blue color for code brackets */
 }
 
 .contact-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure the form is centered in the viewport */
 }
 
 .card.ppmid {
-    margin: 0 auto;
-    max-width: 600px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /*added box shadow */
+  width: 80%;
+  margin: auto;
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .card {
-    border-radius: 10px;
-    border: none;
-    padding: 20px;
+  max-width: 500px; /* Adjust the maximum width as needed */
+  padding: 20px;
 }
 
 .card-header {
-    font-family: 'Playfair Display', serif;
-    background-color: #a67c52; /* Accent color for header */
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 8px 8px 0 0;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
 }
 
 .card-body {
-    padding: 2rem;
-}
-
-.form-label {
-    font-weight: bold;
-    color: #555;
+  padding: 30px; /* Added more padding for better spacing */
 }
 
 .form-control {
-    border-radius: 0.25rem;
-    border: 1px solid #ccc;
-    padding: 0.6rem 0.75rem;
+  background-color: rgba(255, 255, 255, 0.1); /* Light background with transparency */
+  color: #fff;
+  border: 1px solid #fff; /* White border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Glassmorphism effect */
 }
 
-.form-control:focus {
-    box-shadow: none;
-    border-color: #a67c52; /* Accent color on focus */
+.form-label {
+  color: #fff;
 }
 
 .btn.btn-primary {
-    background-color: #a67c52;
-    border-color: #a67c52;
-    padding: 0.75rem 2rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.btn.btn-primary:hover{
-    background-color: #8a623d;
+  background-color: #007bff; /* Blue color for the button */
+  color: #fff;
+  border: none; /* Remove default button border */
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .form-text {
-    font-style: italic;
-    color: #777;
+  color: #eee; /* Slightly darker light color for help text */
 }
 
 @media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column width for tablets */
+  }
 }
 
 @media (max-width: 576px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-    .card.ppmid {
-        max-width: 90%;
-    }
+  .project-grid {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+  }
+  .card {
+    max-width: 90%; /* Adjust width for smaller screens */
+  }
 }
