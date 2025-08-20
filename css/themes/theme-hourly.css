@@ -1,224 +1,131 @@
 body {
-  background-color: #121212;
-  color: #fff;
   font-family: 'Arial', sans-serif;
-  transition: background-color 0.3s ease;
-}
-
-.pr-nav {
-  background-color: #222;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 header {
-  background-color: #282c34;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-pills .nav-link {
-  color: #fff;
-  background-color: #333;
-  border-radius: 20px;
-  padding: 10px 20px;
-  margin: 0 5px;
+  color: #333;
+  background-color: transparent;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active {
-  background-color: #ff5733;
+  background-color: #007bff;
+  color: #fff;
 }
 
 .nav-pills .nav-link:hover {
-  background-color: #ff9966;
+  background-color: #0069d9;
 }
 
-.display-5 {
-  font-weight: 900;
-  color: #ff5733;
+.nav-item {
+  margin: 0 5px;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  color: #007bff;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+.lead {
+  font-size: 1.2em;
 }
 
 .btn-primary {
-  background-color: #ff5733;
-  border-color: #ff5733;
-}
-
-.btn-primary:hover {
-  background-color: #ff9966;
-  border-color: #ff9966;
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
 .btn-outline-secondary {
-  color: #ff5733;
-  border-color: #ff5733;
+  color: #333;
+  border-color: #333;
 }
 
-.btn-outline-secondary:hover {
-  background-color: #ff5733;
-  color: #121212;
+
+.btn-primary:hover, .btn-outline-secondary:hover{
+  background-color: #0069d9;
+  border-color: #0069d9;
 }
 
-#icon-grid h2 {
-  color: #ff5733;
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
-.icons.cxx {
-  width: 100px;
-  height: 100px;
-  margin-right: 15px;
+#icon-grid {
+  text-align: center;
 }
 
-.icons.sql {
-  width: 100px;
-  height: 75px;
-  margin-right: 15px;
-}
-
-.icons path {
-  transition: fill 0.3s ease;
-}
-
-.icons:hover path {
-  fill: #ff5733;
+#icon-grid .row{
+    justify-content: center;
 }
 
 #welcome-section {
   text-align: center;
-  padding: 100px 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cpolygon points='100,10 10,190 190,190' fill='%23ff5733'/%3E%3C/svg%3E");
-  background-size: 30px 30px;
-  background-repeat: repeat;
+  padding: 50px 0;
+  background-color: #007bff;
   color: #fff;
 }
 
-#welcome-section h1 {
-  font-size: 3em;
-  margin-bottom: 0.5em;
+#welcome-section h1, #welcome-section h3 {
+    color: white;
 }
 
-#welcome-section h3 {
-  font-size: 1.5em;
-  margin-bottom: 1em;
+#projects {
+  padding: 50px 0;
 }
 
-.pp {
-  font-style: italic;
-  font-size: 1.2em;
-}
-
-.ppicon {
-  width: 30px;
-  height: 30px;
-  margin-left: 0.5em;
-  fill: #fff;
-  animation: rotate 2s infinite linear;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-#projects h1 {
-  font-size: 2.5em;
-  margin-bottom: 2em;
-  color: #ff5733;
+#project-hail {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #007bff;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
-}
-
-.project-tile {
-  border: 2px solid #ff5733;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 87, 51, 0.5);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(255, 87, 51, 0.8);
-}
-
-.project-img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0;
-}
-
-.code {
-  color: #00ffff;
-}
-
-.contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-
-.ppmid {
-  width: 80%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.card {
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255,87,51,0.5);
-}
-
-.card-header {
-  background-color: #ff5733;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 20px 20px 0 0;
-}
-
-.card-body {
-  padding: 30px;
-}
-
-.form-label {
-  color: #fff;
-}
-
-.form-control {
-  background-color: #222;
-  color: #fff;
-  border-color: #ff5733;
-  border-radius: 10px;
-}
-
-.form-text {
-  color: #888;
-}
-
-#sub-btn {
-  background-color: #ff5733;
-  border-color: #ff5733;
-  border-radius: 10px;
-}
-
-#sub-btn:hover {
-  background-color: #ff9966;
-  border-color: #ff9966;
 }
 
 
@@ -232,7 +139,104 @@ header {
   .project-grid {
     grid-template-columns: 1fr;
   }
-  .ppmid {
-    width: 90%;
+}
+
+.project-tile {
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.project-tile:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.code {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.pp {
+  text-align: center;
+  font-style: italic;
+  color: #555;
+}
+
+
+.ppicon {
+    margin: 20px auto;
+    display: block;
+}
+
+.pr-nav {
+    background-color: #f4f4f4;
+}
+
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card.ppmid {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+
+.card {
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.card-header {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.form-control {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.form-text {
+  color: #555;
+  font-size: 0.9em;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+@media (max-width: 768px) {
+  .card.ppmid {
+    max-width: 90%;
   }
 }
