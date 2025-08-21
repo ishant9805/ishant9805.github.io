@@ -1,233 +1,208 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  line-height: 1.6;
-  color: #333;
+  transition: background-color 0.3s ease; /* Smooth transition for theme change */
+}
+
+.pr-nav {
+  background-color: #f0f0f0; /* Light gray background for Projects page */
+}
+
+#welcome-section {
+  background-color: #e0e0e0; /* Light gray background */
+  text-align: center;
+  padding: 5rem 0;
+}
+
+#welcome-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#welcome-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.pp {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+
+.ppicon {
+  fill: #555; /* Gray fill color for scroll icon */
+  animation: bounce 1s infinite; /* Add bounce animation */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-20px);}
+    60% {transform: translateY(-10px);}
+}
+
+#projects {
+  padding: 4rem 0;
+}
+
+#project-hail {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  grid-gap: 2rem;
+}
+
+.project-tile {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project-tile:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.project-img,
+.img-proj {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+  display: block; /* Prevents extra space below the image */
+}
+
+.code {
+  color: #007bff; /* Blue accent color for code brackets */
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  max-width: 1200px; /* Adjust as needed */
 }
 
 header {
-  background-color: #f8f9fa;
-  padding: 1rem 0;
+  background-color: #fff; /* White background for header */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-.nav-pills .nav-link {
-  border-radius: 0.25rem;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease;
+.nav-link {
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
+.nav-link:hover {
+  color: #007bff;
+}
+
+.nav-link.active {
   background-color: #007bff;
   color: #fff;
-}
-
-.nav-pills .nav-link:focus, .nav-pills .nav-link:hover{
-  box-shadow: none;
 }
 
 .icons {
   width: 75px;
   height: 75px;
   margin-right: 1rem;
-  margin-bottom: 1rem;
 }
 
-.icons.cxx{
-  width: 50px;
-  height: 50px;
-}
-
-.icons.sql{
-  width: 75px;
-  height: 75px;
-}
-
-h1, h2, h3 {
-  font-weight: 600;
-  color: #212529;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.btn-outline-secondary {
-  color: #6c757d;
-  border-color: #6c757d;
-}
-
-.btn-primary:hover, .btn-outline-secondary:hover {
-  box-shadow: none;
-}
-
-#icon-grid .icons {
-  margin-bottom: 0;
-}
-
-#icon-grid h2 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-#welcome-section {
-  text-align: center;
-  padding: 4rem 0;
-  background-color: #f8f9fa;
-}
-
-#welcome-section h1 {
-  margin-bottom: 1rem;
-  font-size: 3rem;
-}
-
-#welcome-section h3 {
-  margin-bottom: 2rem;
-  font-size: 1.75rem;
-}
-
-.pp {
-  font-style: italic;
-  color: #6c757d;
-  margin-bottom: 2rem;
-}
-
-.ppicon {
-  display: inline-block;
-  margin: 0 auto;
-  animation: spin 2s linear infinite;
-}
-
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-#projects h1 {
-  text-align: center;
-  margin-bottom: 3rem;
-  font-size: 2.5rem;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
-}
-
-.project-tile {
-  border: 1px solid #ddd;
-  border-radius: 0.25rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-}
-
-.project-tile:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.project-img {
-  width: 100%;
-  height: auto;
-  border-radius: 0.25rem;
-}
-
-.code {
-  color: #007bff;
-}
-
-
-.pr-nav {
-  padding-top: 2rem;
+.icons:hover {
+    transform: scale(1.1); /* Add a subtle hover effect to icons */
 }
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 2rem 0;
+  min-height: 80vh; /* Ensure form is centered even on smaller screens */
 }
 
 .card.ppmid {
-  max-width: 500px;
-  margin: 0 auto;
+  margin: auto;
+  max-width: 600px; /* Adjust as needed */
 }
 
 .card {
-  border-radius: 0.25rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .card-header {
-  font-size: 1.75rem;
+  background-color: #007bff;
+  color: #fff;
   font-weight: bold;
-  margin-bottom: 1rem;
+  padding: 1.5rem;
+  text-align: center;
 }
 
 .card-body {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .form-label {
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
 .form-control {
-  border-radius: 0.25rem;
-  border: 1px solid #ced4da;
-  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.btn.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .form-text {
-  font-size: 0.875rem;
-  color: #6c757d;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
 }
 
-#sub-btn {
-  padding: 0.5rem 2rem;
-  font-size: 1rem;
-}
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 992px) {
   .project-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
+
+@media (max-width: 576px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .card.ppmid {
+    max-width: 100%;
+  }
+}
+
+
+/*Material Design Elevations (Example - Adjust as needed)*/
+.elevation-1 {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.elevation-2 {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.14), 0 4px 2px -2px rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* Add more elevation classes as needed */
