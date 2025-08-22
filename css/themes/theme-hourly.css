@@ -1,58 +1,136 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f8f9fa;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-pills .nav-link {
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+  color: #333;
+}
+
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
+  background-color: gold;
+  color: #fff;
+}
+
+.display-5 {
+  font-weight: 700;
+  color: #333;
+}
+
+.lead {
+  font-weight: 300;
+}
+
+.btn-primary {
+  background-color: gold;
+  border-color: gold;
+  color: #fff;
   transition: background-color 0.3s ease;
 }
 
+.btn-primary:hover {
+  background-color: #d4ac0d;
+}
+
+.btn-outline-secondary {
+  color: gold;
+  border-color: gold;
+  transition: color 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  color: #d4ac0d;
+}
+
+
+#icon-grid .icons {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+#icon-grid h2 {
+  color: gold;
+}
+
+.icons {
+  fill: gold;
+}
+
+.cxx {
+  fill: gold;
+}
+
+
 .pr-nav {
-  background-color: #f0f2f5; /* Light background for Projects page */
+  background-color: #f8f8f8;
 }
 
 #welcome-section {
+  background-image: url("https://www.transparenttextures.com/patterns/subtle-linen.png"); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
   text-align: center;
-  padding: 50px 0;
-  background: linear-gradient(135deg, #f0f2f5, #e9ecef); /* Subtle gradient background */
+  padding: 100px 0;
 }
 
+
+#welcome-section h1, h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+  color:gold;
+}
 #welcome-section h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #343a40;
+  font-size: 3em;
 }
-
 #welcome-section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  color: #6c757d;
+  font-size: 2em;
 }
 
 .pp {
-  font-size: 1.2rem;
-  color: #6c757d;
-  margin-bottom: 2rem;
+  font-style: italic;
+  color: #ddd;
+  font-size:1.2em;
+  margin-bottom: 20px;
+
 }
 
 .ppicon {
-  margin: 2rem auto;
+  fill: gold;
+  margin: 0 auto;
   display: block;
-  fill: #343a40;
   transition: transform 0.3s ease;
 }
 
 .ppicon:hover {
-  transform: translateY(5px);
+  transform: translateY(-5px);
 }
 
-
-#projects {
-  padding: 40px 0;
-}
-
-#project-hail {
+#projects h1 {
+  color: gold;
+  font-size: 3em;
+  margin-bottom: 40px;
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #343a40;
 }
 
 .project-grid {
@@ -62,26 +140,26 @@ body {
 }
 
 .project-tile {
-  border: 1px solid #dee2e6;
-  border-radius: 8px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.2); /* Neumorphism shadow */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15), -4px -4px 10px rgba(255, 255, 255, 0.3); /* Enhanced hover shadow */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.project-img, .img-proj {
+.project-img {
   width: 100%;
   height: auto;
-  border-radius: 8px 8px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 
 .code {
-  color: #28a745; /* Green accent color */
+  color: gold;
+  font-weight: bold;
 }
 
 .contact-wrapper {
@@ -89,74 +167,67 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: #f8f8f8;
 }
 
 .card.ppmid {
-  margin: 0 auto;
-  width: 60%;
   max-width: 600px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.2); /* Neumorphism shadow */
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+
 .card {
-  border-radius: 8px;
-  overflow: hidden;
+  border: none;
 }
 
 .card-header {
-  background-color: #343a40;
+  background-color: gold;
   color: #fff;
-  font-size: 1.5rem;
+  font-weight: bold;
   padding: 15px;
-  text-align: center;
-  border-bottom: none;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-body {
-  padding: 30px;
+  padding: 20px;
 }
-
-.form-control {
-  border: 1px solid #ced4da;
-  border-radius: 5px;
-  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.2); /* Neumorphism shadow */
-}
-
 
 .form-label {
   font-weight: bold;
-  margin-bottom: 5px;
-  color: #343a40;
+  color: #333;
+}
+
+.form-control {
+  border: 1px solid gold;
+  border-radius: 5px;
+  padding: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #d4ac0d;
+  box-shadow: 0 0 5px rgba(212, 172, 13, 0.5);
+}
+
+.form-text {
+  color: #666;
+  font-size: 0.9em;
 }
 
 .btn.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.2); /* Neumorphism shadow */
+    background-color: gold;
+    border-color: gold;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight:bold;
 }
 
 .btn.btn-primary:hover {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15), -4px -4px 10px rgba(255, 255, 255, 0.3); /* Enhanced hover shadow */
-}
-
-
-.form-text {
-  color: #6c757d;
-  font-size: 0.9rem;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  background-color: #007bff;
-  color: #fff;
-  border-radius: 5px;
-}
-
-
-.icons {
-  width: 75px;
-  height: auto;
-  margin-right: 1rem;
-  fill: #343a40;
+    background-color: #d4ac0d;
 }
 
 
@@ -170,33 +241,10 @@ body {
   .project-grid {
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 576px) {
   .card.ppmid {
-    width: 90%;
+    max-width: 90%;
   }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #343a40;
-}
-
-p {
-  color: #6c757d;
-}
-
-mark {
-  background-color: #e9ecef;
-  padding: .2em;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.container {
-  max-width: 1200px; /* Adjust as needed */
 }
