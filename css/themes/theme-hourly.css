@@ -1,159 +1,173 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Times New Roman', serif;
   line-height: 1.6;
   margin: 0;
   background-color: #f8f8f8;
   color: #333;
 }
 
-.pr-nav {
-  background-color: #e0f2f7; /* Light blue background for Projects page */
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 15px;
 }
 
 header {
-  background-color: #e0f7fa; /* Light teal header background */
+  background-color: #f0f0f0;
   padding: 10px 0;
 }
 
 .nav-pills .nav-link {
-  background-color: #fff; /* White nav-link background */
-  border-radius: 5px;
+  border-radius: 20px;
   padding: 10px 20px;
+  background-color: #fff;
   margin: 0 5px;
   transition: background-color 0.3s ease;
+  color: #333;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #66bb6a; /* Green background on hover and active */
+  background-color: gold;
   color: #fff;
 }
 
-.nav-link {
-  color: #333;
-  text-decoration: none;
-}
 
-h1, h2, h3 {
+.display-5 {
   font-weight: 700;
-  color: #222;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-h3 {
-  font-size: 1.8rem;
-}
-
-p {
-  margin-bottom: 1rem;
+  color: #333;
 }
 
 .lead {
-  font-size: 1.2rem;
+  font-style: italic;
 }
 
 
-.btn-primary {
-  background-color: #66bb6a; /* Green button */
-  border-color: #66bb6a;
-}
-
-.btn-outline-secondary {
-  border-color: #999;
-  color: #333;
-}
-
-.btn-outline-secondary:hover {
-  background-color: #f0f0f0;
+#icon-grid h2 {
+  font-size: 2em;
+  color: gold;
+  margin-bottom: 20px;
 }
 
 .icons {
   width: 75px;
   height: 75px;
   margin-right: 15px;
-  fill: #558b2f; /* Dark green fill for icons */
+  margin-bottom: 15px;
+  fill: white;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: inline-block;
 }
 
-#icon-grid .icons {
-  fill: #558b2f;
+.icons.cxx {
+  background-color: #555;
+  fill: white;
 }
 
-#icon-grid {
-  background-color: #f0f7f7;
+.icons.sql {
+  background-color: #4285f4;
+}
+
+h3 {
+  color: gold;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+.btn-primary {
+  background-color: gold;
+  border-color: gold;
+  color: #fff;
+}
+
+.btn-outline-secondary {
+  border-color: gold;
+  color: gold;
+}
+
+.btn-primary:hover,
+.btn-outline-secondary:hover{
+  background-color: #ffd700;
+  color: #fff;
+}
+
+.pr-nav {
+  background-image: linear-gradient(to bottom, #f8f8f8, #e0e0e0);
 }
 
 #welcome-section {
   text-align: center;
-  padding: 50px 0;
-  background-image: linear-gradient(to bottom, #c8e6c9, #a5d6a7);
-  color: #333;
+  padding: 100px 0;
+  background-image: url('https://i.imgur.com/07xG6yK.png'); /* Replace with your background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  border-radius: 10px;
 }
 
-#welcome-section h1,
-#welcome-section h3 {
+#welcome-section h1 {
+  font-size: 3em;
   margin-bottom: 10px;
 }
 
+#welcome-section h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
 .pp {
-  font-style: italic;
-  color: #558b2f;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  font-weight: bold;
 }
 
 .ppicon {
-  display: block;
-  margin: 20px auto;
-  animation: rotate 2s linear infinite;
+  fill: white;
+  animation: bounce 1s infinite;
+  margin-top: 20px;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-10px);
   }
 }
 
 #projects {
-  padding: 40px 0;
+  padding: 50px 0;
 }
 
 #project-hail {
   text-align: center;
+  font-size: 2.5em;
+  color: gold;
   margin-bottom: 30px;
-  font-size: 2.2rem;
 }
+
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  gap: 30px;
 }
 
 .project-tile {
-  border: 1px solid #ddd;
+  border: 2px solid gold;
   border-radius: 10px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .project-img {
@@ -163,59 +177,82 @@ p {
 }
 
 .code {
-  color: #66bb6a; /* Green for code brackets */
+  color: gold;
+  font-weight: bold;
 }
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /*Ensure contact form is centered vertically*/
-  background-color: #f0f7f7;
+  min-height: 100vh;
+  background-image: url('https://i.imgur.com/07xG6yK.png'); /* Replace with your background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+
 }
+
 
 .card.ppmid {
   margin: auto;
+  width: 60%;
   max-width: 600px;
-  width: 100%; /* Ensure responsive layout */
+  border-radius: 10px;
+  border: 2px solid gold;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  background-color: rgba(255, 255, 255, 0.8); /* Added background for readability */
 }
 
 .card {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
+  border-radius: 10px;
 }
 
 .card-header {
-  background-color: #66bb6a; /* Green card header */
+  background-color: gold;
   color: white;
-  font-size: 1.5rem;
+  font-weight: bold;
   text-align: center;
-  padding: 15px 0;
-  border-radius: 10px 10px 0 0; /*Rounded corners for header only*/
+  padding: 10px 0;
+  border-radius: 10px 10px 0 0;
 }
+
 
 .card-body {
-  padding: 25px;
-}
-
-.form-label {
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
+  padding: 20px;
 }
 
 .form-control {
-  border: 1px solid #ccc;
+  border: 2px solid gold;
   border-radius: 5px;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.form-label {
+  color: gold;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.btn.btn-primary {
+  background-color: gold;
+  border-color: gold;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #ffd700;
 }
 
 .form-text {
-  color: #777;
-  font-size: 0.9rem;
+  color: gray;
+  font-size: 0.9em;
 }
 
 
@@ -223,10 +260,16 @@ p {
   .project-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
+  .card.ppmid {
+    width: 80%;
+  }
 }
 
 @media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
+  }
+  .card.ppmid {
+    width: 90%;
   }
 }
