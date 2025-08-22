@@ -1,130 +1,116 @@
 body {
-  background-color: #121212;
-  color: #f5f5f5;
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 header {
-  background-color: #212121;
+  background-color: #e0e0e0;
   padding: 10px 0;
 }
 
 .nav-pills .nav-link {
-  color: #f5f5f5;
+  color: #333;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
   border-radius: 5px;
-  padding: 10px 20px;
   margin: 0 5px;
+  transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  background-color: #4CAF50;
-}
-
 .nav-pills .nav-link:hover {
-  background-color: #333;
+  background-color: #4CAF50;
+  color: white;
 }
 
-h1, h2, h3 {
-  font-weight: 700;
-  margin-bottom: 10px;
-}
 
-h1 {
+.display-5 {
+  font-weight: bold;
   font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
-  margin-bottom: 15px;
+  color: #333;
 }
 
 .lead {
-  font-size: 1.25rem;
-  font-weight: 300;
-}
-
-.btn {
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .btn-primary {
   background-color: #4CAF50;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #45a049;
+  border-color: #4CAF50;
 }
 
 .btn-outline-secondary {
-  border-color: #f5f5f5;
-  color: #f5f5f5;
+  color: #4CAF50;
+  border-color: #4CAF50;
 }
 
-.btn-outline-secondary:hover {
-  background-color: #333;
-  color: #f5f5f5;
+.btn-primary:hover,
+.btn-outline-secondary:hover{
+  background-color: #45a049;
+  border-color: #45a049;
+  color: white;
 }
 
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+#icon-grid h2 {
+  font-size: 2rem;
+  color: #333;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
-  vertical-align: middle;
+  margin-right: 10px;
 }
 
-#icon-grid .icons {
-  fill: white;
+.icons.cxx{
+  width: 75px;
+  height: 75px;
+  margin-right: 10px;
 }
 
-.cxx {
-  fill: white;
+
+.icons.sql{
+  width: 75px;
+  height: 75px;
+  margin-right: 10px;
 }
 
-.sql{
-    width: 75px;
-    height: 75px;
-    margin-right: 15px;
+
+h3.fw-bold {
+  color: #333;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Projects Page */
+.pr-nav {
+  background-color: #f4f4f4; /* Lighter background for projects page */
 }
 
 #welcome-section {
-  background-color: #212121;
-  padding: 100px 0;
+  background-color: #e0e0e0;
   text-align: center;
+  padding: 100px 0;
 }
 
 #welcome-section h1,
 #welcome-section h3 {
-  color: #f5f5f5;
+  color: #333;
 }
 
-#welcome-section p {
-    color: #f5f5f5;
-    font-size: 1.2rem;
-}
 
 #projects {
   padding: 50px 0;
@@ -133,57 +119,70 @@ p {
 #project-hail {
   text-align: center;
   font-size: 2.5rem;
+  color: #333;
   margin-bottom: 30px;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 30px;
+  grid-gap: 20px;
 }
 
 .project-tile {
-  border: 1px solid #333;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  padding: 10px;
+  text-align: center;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.project-img {
-  width: 100%;
+.project-img,
+.img-proj {
+  max-width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 5px;
 }
 
 .code {
   color: #4CAF50;
 }
 
-.ppicon {
-  margin-top: 20px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50px;
-  height: 50px;
-}
-
-.pr-nav {
-  padding-top: 10px;
-}
-
 .pp {
-  font-size: 1.2rem;
-  margin-top: 20px;
-  color: #f5f5f5;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
 }
 
+.ppicon {
+  display: block;
+  margin: 20px auto;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* About Page */
+
+.lead.text-muted{
+  font-size: 1.2rem;
+}
+
+
+/* Contact Page */
 .contact-wrapper {
   display: flex;
   justify-content: center;
@@ -193,61 +192,58 @@ p {
 
 .card.ppmid {
   margin: 0 auto;
-  max-width: 500px;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
 }
 
 .card {
-  background-color: #212121;
+  background-color: #e0e0e0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  border: none;
 }
 
 .card-header {
-  background-color: #4CAF50;
-  color: #121212;
   font-size: 1.5rem;
-  font-weight: 700;
-  padding: 15px;
-  border-radius: 5px 5px 0 0;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
 }
-
 
 .card-body {
   padding: 20px;
 }
 
+.form-control {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
 .form-label {
-  color: #f5f5f5;
-  font-weight: 600;
+  font-weight: bold;
+  color: #333;
   margin-bottom: 5px;
 }
 
-.form-control {
-  background-color: #212121;
-  color: #f5f5f5;
-  border: 1px solid #333;
+.btn.btn-primary {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
   border-radius: 5px;
-  padding: 10px;
+  cursor: pointer;
 }
 
 .form-text {
-  color: #999;
-  font-size: 0.875rem;
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 5px;
 }
 
-#sub-btn {
-  background-color: #4CAF50;
-  color: #121212;
-  border: none;
-}
 
-#sub-btn:hover {
-    background-color: #45a049;
-}
-
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .project-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -257,5 +253,8 @@ p {
 @media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
+  }
+  .card.ppmid {
+    max-width: 90%;
   }
 }
