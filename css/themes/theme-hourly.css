@@ -1,99 +1,89 @@
 body {
+  background: linear-gradient(to right, #1e1e1e, #303030);
+  color: #eee;
   font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  background-color: #f8f9fa;
-  color: #343a40;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 
 header {
-  background-color: #f8f9fa;
+  background: linear-gradient(to right, #282828, #404040);
+  padding: 1rem 0;
 }
 
-.nav {
-  background-color: #fff;
-  border-bottom: 1px solid #dee2e6;
-  padding: 0.5rem 0;
-}
-
-.nav-link {
-  color: #343a40;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+.nav-pills .nav-link {
+  color: #eee;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  margin: 0 0.5rem;
   transition: background-color 0.3s ease;
 }
 
-.nav-link.active, .nav-link:hover {
-  background-color: #e9ecef;
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
+
 .display-5 {
-  color: #14213d;
+  color: #ffcc66; /*gold color*/
 }
 
 .lead {
-  font-size: 1.1rem;
+    color: #b3b3b3;
 }
 
+
 .btn-primary {
-  background-color: #14213d;
-  border-color: #14213d;
-  color: #fff;
+  background-color: #ff9800; /*orange color*/
+  border-color: #ff9800;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #ffa500; /*darker orange*/
 }
 
 .btn-outline-secondary {
-  color: #14213d;
-  border-color: #14213d;
+  border-color: #eee;
+  color: #eee;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn-primary:hover, .btn-outline-secondary:hover{
-  background-color: #0e1a2d;
-  border-color: #0e1a2d;
-}
-
-#icon-grid h2 {
-  color: #14213d;
-  font-weight: bold;
+.btn-outline-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
 
 .icons {
   width: 75px;
   height: 75px;
   margin-right: 1rem;
-  vertical-align: middle;
-  fill: #fff;
+}
+
+#icon-grid h2 {
+  color: #ff9800;
+}
+
+.icons path {
+  transition: fill 0.3s ease;
+}
+
+.icons:hover path {
+  fill: #ffcc66;
 }
 
 .icons.sql {
-    fill: #fff;
-}
-
-
-.icons.cxx {
-    fill: #fff;
-}
-
-
-.icons.c {
-  fill: #fff;
-}
-
-.icons.c, .icons.cxx {
-  fill: white;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }
 
 #welcome-section {
+  background: linear-gradient(to bottom, #282828, #404040);
+  color: white;
   text-align: center;
   padding: 5rem 0;
-  background-color: #e6f2ff;
-  color: #14213d;
 }
 
 #welcome-section h1 {
@@ -112,34 +102,24 @@ header {
 }
 
 .ppicon {
-  margin: 0 auto;
-  display: block;
-  margin-bottom: 1rem;
-  animation: bounce 1.5s infinite;
+  margin-top: 2rem;
+  animation: rotate 2s infinite linear;
 }
 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
-  40% {
-    transform: translateY(-20px);
-  }
-  60% {
-    transform: translateY(-10px);
+  to {
+    transform: rotate(360deg);
   }
 }
 
-
-#projects {
-  padding: 4rem 0;
-}
-
-#project-hail {
-  text-align: center;
+#projects h1 {
+  color: #ff9800;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #14213d;
+  text-align: center;
 }
 
 .project-grid {
@@ -149,26 +129,27 @@ header {
 }
 
 .project-tile {
-  border: 1px solid #dee2e6;
-  border-radius: 0.25rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #555;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 }
 
-.project-img {
+.project-img,
+.img-proj {
   width: 100%;
   height: auto;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .code {
-  color: #14213d;
-  font-weight: bold;
+  color: #ff9800; /*orange color*/
 }
 
 .pr-nav {
@@ -183,95 +164,75 @@ header {
 }
 
 .card.ppmid {
-  margin: 0 auto;
+  margin: auto;
   max-width: 500px;
   width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .card {
-  border: 1px solid #dee2e6;
-  border-radius: 0.25rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  background-color: #303030;
+  border: none;
+  border-radius: 0.5rem;
 }
 
+
 .card-header {
-  background-color: #14213d;
+  background-color: #ff9800; /*orange color*/
   color: #fff;
-  font-size: 1.5rem;
   font-weight: bold;
   padding: 1rem;
-  border-bottom: none;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  text-align: center;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
+
 
 .card-body {
   padding: 2rem;
 }
 
-.form-control {
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  padding: 0.5rem 0.75rem;
-  color: #343a40;
-}
-
 .form-label {
-  font-weight: bold;
-  color: #343a40;
+  color: #fff;
+  margin-bottom: 0.5rem;
 }
 
-.btn.btn-primary {
-    background-color: #14213d;
-    border-color: #14213d;
-    color: #fff;
+.form-control {
+  background-color: #404040;
+  border: none;
+  color: #eee;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
 }
 
 .form-text {
-  font-size: 0.875rem;
-  color: #6c757d;
+  color: #888;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
 }
 
-@media (max-width: 992px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+#sub-btn {
+  background-color: #ffcc66; /*gold color*/
+  border: none;
+  color: #1e1e1e; /*dark grey*/
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s ease;
 }
+
+#sub-btn:hover{
+    background-color: #ffd700; /*light golden yellow*/
+}
+
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
-@media (max-width: 576px){
-    .card.ppmid {
-        max-width: 90%;
-    }
-}
-
-.img-fluid{
-    border-radius: 0.25rem;
-}
-
-.h-100{
-  min-height: 100vh;
-}
-
-mark {
-  background-color: #f7f7f7;
-  padding: 0.2rem;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.nav-item {
-  margin: 0 10px;
+@media (max-width: 576px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
