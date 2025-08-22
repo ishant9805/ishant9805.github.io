@@ -1,144 +1,155 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  transition: background-color 0.3s ease;
-}
-
-.pr-nav {
-  background-color: #002d4f; /* Dark blue background for projects page */
-  color: white;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #f8f9fa;
+  color: #212529;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-  background-color: #002d4f; /* Dark blue header background */
-  color: white;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-pills .nav-link {
-  color: white;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 0 5px;
+  color: #212529;
+  padding: 1rem 1.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  background-color: #fff;
-  color: #002d4f;
-}
-
-.nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #007bff;
+  color: #ffffff;
 }
 
 .display-5 {
-  color: #002d4f; /* Dark blue for main headings */
+  font-weight: 700;
+  color: #212529;
 }
 
 .lead {
-  color: #555;
+  font-weight: 400;
+  color: #212529;
 }
 
 .btn-primary {
-  background-color: #0056b3; /* Darker blue for primary buttons */
-  border-color: #0056b3;
-}
-
-.btn-primary:hover {
-  background-color: #004080;
-  border-color: #004080;
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #ffffff;
 }
 
 .btn-outline-secondary {
-  color: white;
-  border-color: white;
+  color: #007bff;
+  border-color: #007bff;
 }
 
+.btn-primary:hover,
 .btn-outline-secondary:hover {
-  color: #002d4f;
-  background-color: white;
+  background-color: #0069d9;
+  border-color: #0069d9;
+}
+
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 1rem;
+  fill: #ffffff;
+  background-color: #343a40;
+  border-radius: 50%;
+  padding: 10px;
 }
 
 #icon-grid .icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 15px;
-  margin-bottom: 10px;
+  fill: currentColor;
+  background-color: transparent;
 }
 
+#icon-grid h2 {
+  font-weight: bold;
+  color: #212529;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
 
 #welcome-section {
+  background-color: #ffffff;
+  padding: 5rem 0;
   text-align: center;
-  padding: 50px 0;
-  background-image: url('https://www.setaswall.com/wp-content/uploads/2016/07/Purple-galaxy-stars-750x500.jpg'); /* Replace with your background image */
-  background-size: cover;
-  background-position: center;
-  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#welcome-section h1, #welcome-section h3 {
-  margin-bottom: 10px;
+#welcome-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #007bff;
 }
 
-#welcome-section .pp {
+#welcome-section h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #212529;
+}
+
+.pp {
   font-style: italic;
-  margin-bottom: 20px;
-  font-size: 1.2em;
+  color: #6c757d;
+}
+
+.ppicon {
+  margin: 0 auto;
+  display: block;
+  fill: #007bff;
 }
 
 
-#projects {
-  padding: 50px 0;
-}
-
-
-#project-hail {
-  font-size: 2.5em;
-  color: #002d4f;
-  margin-bottom: 30px;
+#projects h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #212529;
+  margin-bottom: 2rem;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 2rem;
 }
 
 .project-tile {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .project-img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 5px 5px 0 0;
+  border-radius: 0.25rem;
+  width: 100%;
 }
 
 .code {
-  color: #007bff; /* Blue for code brackets */
+  color: #007bff;
 }
 
-.ppicon {
-  margin-top: 20px;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.pr-nav {
+  padding-top: 20px;
 }
 
 
@@ -147,65 +158,78 @@ header {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f4f4f4;
 }
 
 .card.ppmid {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  max-width: 600px;
 }
 
-
 .card {
-  border-radius: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
 }
 
 .card-header {
-  background-color: #002d4f;
-  color: white;
+  background-color: #007bff;
+  color: #ffffff;
   font-weight: bold;
-  padding: 15px;
-  border-radius: 5px 5px 0 0;
+  padding: 1rem 1.5rem;
+  border-radius: 0.25rem 0.25rem 0 0;
 }
 
 .card-body {
-  padding: 20px;
-}
-
-.form-control {
-  border-radius: 5px;
-  border-color: #ccc;
-  padding: 10px;
+  padding: 2rem;
 }
 
 
 .form-label {
   font-weight: bold;
+  color: #212529;
+}
+
+.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
 }
 
 .form-text {
-  color: #777;
-  font-size: 0.9em;
+  color: #6c757d;
+}
+
+.btn.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0069d9;
 }
 
 
+@media (max-width: 992px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 576px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-  .contact-wrapper {
-    flex-direction: column;
-  }
   .card.ppmid {
-    max-width: 90%;
+    max-width: 100%;
+    width: 100%;
   }
 }
