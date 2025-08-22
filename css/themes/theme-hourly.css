@@ -1,237 +1,240 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f8f9fa;
-  color: #212529;
-  transition: background-color 0.3s ease;
-}
-
-.pr-nav {
-  background-color: #1a4674;
-  color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #f0f0f0, #ffffff);
+  color: #333;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 header {
-  background-color: #212529;
-  color: #f8f9fa;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background-color: #6563ff;
-    color: white;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-pills .nav-link {
-    color: #f8f9fa;
-}
-
-.nav-link {
-  padding: 1rem 1.5rem;
-  text-decoration: none;
-  border-radius: 5px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  color: #333;
   transition: background-color 0.3s ease;
 }
 
-.nav-link:hover {
-    background-color: rgba(101, 99, 255, 0.5);
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #66ccff;
+  color: white;
 }
 
-.display-5 {
-  color: #6563ff;
+h1, h2, h3 {
+  font-weight: 700;
+  color: #222;
 }
 
-.btn-primary {
-    background-color: #6563ff;
-    border-color: #6563ff;
+h1 {
+  font-size: 3em;
 }
 
-.btn-primary:hover {
-    background-color: #444;
-    border-color: #444;
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  line-height: 1.6;
+  color: #555;
 }
 
 .lead {
-  color: #212529;
+  font-size: 1.2em;
 }
 
-#icon-grid h2 {
-  color: #212529;
+.btn-primary {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+.btn-primary:hover {
+  background-color: #286090;
+  border-color: #204d74;
+}
+
+.btn-outline-secondary {
+  color: #333;
+  border-color: #ccc;
+}
+
+.btn-outline-secondary:hover {
+  color: white;
+  background-color: #ccc;
+  border-color: #aaa;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 1rem;
-  margin-bottom: 0.5rem;
+  margin-right: 10px;
+  fill: currentColor; /*For SVG Icons*/
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 
-.icons:hover {
-  transform: scale(1.1);
-  transition: all 0.3s ease;
+#icon-grid .icons {
+  margin-right: 20px;
 }
 
-.cxx:hover {
-  filter: drop-shadow(0px 0px 10px #6563ff);
+.code {
+  color: #007bff;
 }
 
 #welcome-section {
   text-align: center;
-  padding: 5rem 0;
-  background: linear-gradient(to bottom, #1a4674, #6563ff);
+  padding: 50px 0;
+  background: linear-gradient(to bottom, #66ccff, #66ccff); /* Gradient background */
   color: white;
 }
 
-#welcome-section h1, #welcome-section h3 {
-  margin-bottom: 1rem;
+.pp {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
-#projects h1 {
+.ppicon {
+  fill: white;
+  animation: bounce 1s infinite;
+  margin-top: 20px;
+}
+
+@keyframes bounce {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-20px);}
+}
+
+#projects {
+  padding: 40px 0;
+}
+
+#project-hail {
   text-align: center;
-  margin-bottom: 3rem;
-  color: #212529;
+  font-size: 2.5em;
+  margin-bottom: 30px;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 20px;
 }
 
 .project-tile {
   border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  text-decoration: none;
-  color: #212529;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.project-img, .img-proj {
+.project-img {
   width: 100%;
   height: auto;
   border-radius: 10px 10px 0 0;
-  transition: transform 0.3s ease;
 }
 
-.project-img:hover {
-  transform: scale(1.05);
+.pr-nav {
+  padding-top: 20px;
 }
-
-.code {
-  color: #6563ff;
-}
-
-.pp {
-  text-align: center;
-  margin-top: 2rem;
-  font-style: italic;
-  color: #f8f9fa;
-}
-
-.ppicon {
-  display: block;
-  margin: 1rem auto;
-  animation: rotate 2s infinite linear;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url('https://media.istockphoto.com/id/1425516748/photo/abstract-futuristic-cyber-city-background.jpg?s=612x612&w=0&k=20&c=i8O0v7nV4dU05e6y7i48R5Z8r9g-dG6QvC0_K_W0gI=') no-repeat center center;
-  background-size: cover;
+  padding-top: 50px;
 }
 
 .card.ppmid {
-  margin: auto;
   max-width: 500px;
-  width: 100%;
-  border-radius: 15px;
+  margin: 0 auto;
 }
+
 
 .card {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 2rem;
-  border: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
 }
 
-
 .card-header {
-  background-color: #6563ff;
+  background-color: #66ccff;
   color: white;
-  font-size: 1.5rem;
-  border-radius: 10px 10px 0 0;
+  font-size: 1.5em;
+  text-align: center;
+  border-bottom: 2px solid #44aadd;
+  border-radius: 15px 15px 0 0; /*Rounded top corners*/
+  padding: 15px 0;
 }
 
 .card-body {
-  padding: 2rem;
-}
-
-.form-label {
-  color: #212529;
-  font-weight: bold;
+  padding: 30px;
 }
 
 .form-control {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  padding: 10px;
 }
 
-.btn.btn-primary {
-  background-color: #6563ff;
-  color: white;
-  border: none;
-  padding: 0.8rem 2rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.btn.btn-primary:hover {
-  background-color: #444;
+.form-label {
+  font-weight: 600;
+  color: #333;
 }
 
 .form-text {
-  color: #6c757d;
-  font-size: 0.8rem;
+  font-size: 0.9em;
+  color: #666;
+}
+
+#sub-btn {
+  border-radius: 20px;
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+#sub-btn:hover {
+  background-color: #0069d9;
 }
 
 @media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-}
-
-@media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 576px) {
-  .card.ppmid {
-    max-width: 90%;
+@media (max-width: 992px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
