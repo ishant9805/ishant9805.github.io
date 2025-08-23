@@ -1,12 +1,12 @@
 body {
-  background-color: #121212;
-  color: #e0e0e0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #222;
+  color: #eee;
+  font-family: 'Arial', sans-serif;
   transition: background-color 0.3s ease;
 }
 
-.pr-nav {
-  background-color: #1e1e1e;
+body.pr-nav {
+  background-color: #333;
 }
 
 .container {
@@ -14,193 +14,162 @@ body {
 }
 
 header {
-  background-color: #1e1e1e;
+  background-color: #333;
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
 
 .nav-pills .nav-link {
-  color: #e0e0e0;
+  color: #eee;
   border-radius: 0.5rem;
   padding: 0.8rem 1.5rem;
   margin: 0 0.5rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-pills .nav-link.active,
-.nav-pills .nav-link:hover {
-  background-color: #34495e;
-  transform: translateY(-2px);
+.nav-pills .show>.nav-link {
+  background-color: #ff9800;
+  color: #222;
 }
 
 .display-5 {
-  color: #f0f0f0;
+  color: #ff9800;
 }
 
 .lead {
-  color: #c0c0c0;
+  color: #aaa;
 }
-
 
 .btn-primary {
-  background-color: #3498db;
-  border-color: #2980b9;
-  color: white;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #2980b9;
+  background-color: #ff9800;
+  border-color: #ff9800;
 }
 
 .btn-outline-secondary {
-  color: #e0e0e0;
-  border-color: #e0e0e0;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #ff9800;
+  border-color: #ff9800;
 }
 
+.btn-primary:hover,
 .btn-outline-secondary:hover {
-  background-color: #34495e;
-  color: #fff;
+  background-color: #e68a00;
+  border-color: #e68a00;
 }
 
-
-#icon-grid {
-  background-color: #222;
-  border-radius: 10px;
-  padding: 20px;
+#icon-grid h2 {
+  color: #ff9800;
 }
-
 
 .icons {
   width: 75px;
   height: 75px;
   margin-right: 1rem;
-  margin-bottom: 1rem;
 }
 
-.icons, .icons:hover {
-  fill: white;
-  border-radius: 5px;
+.icons.cxx {
+  width: 100px;
+  height: 100px;
 }
 
-h2 {
-  color: #fff;
-}
-
-h3 {
-  color: #d9d9d9;
-}
-
-p {
-  color: #b3b3b3;
-}
-
-.cxx{
-    fill: #3498db;
+svg {
+  fill: #eee;
 }
 
 #welcome-section {
-  background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/geometry.png');
-  background-size: cover;
-  color: #f0f0f0;
-  padding: 5rem 0;
   text-align: center;
+  padding: 5rem 0;
+  background: linear-gradient(to bottom, #444, #333);
+  color: #eee;
 }
 
 #welcome-section h1,
 #welcome-section h3 {
-  color: white;
-}
-
-#welcome-section p {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 #project-hail {
-  color: #fff;
+  text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #ff9800;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  gap: 2rem;
 }
 
 .project-tile {
-  border: 1px solid #34495e;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
+  border: 1px solid #555;
+  border-radius: 0.5rem;
   overflow: hidden;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
-  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-.project-img, .img-proj {
-  max-width: 100%;
+.project-img,
+.img-proj {
+  width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 0.5rem;
 }
 
 .code {
-  color: #3498db;
+  color: #ff9800;
 }
 
 .pp {
   font-style: italic;
-  color: #a0a0a0;
   margin-bottom: 2rem;
 }
 
 .ppicon {
-  display: block;
-  margin: 2rem auto 0;
-  animation: rotate 2s infinite linear;
+  margin-top: 1rem;
+  animation: bounce 1s infinite;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-10px);
   }
 }
-
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #1e1e1e;
 }
 
 .card.ppmid {
-  max-width: 600px;
   margin: auto;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 1rem;
 }
 
 .card {
-  background-color: #222;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  background-color: #333;
+  color: #eee;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   padding: 2rem;
 }
 
 .card-header {
-  color: white;
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #ff9800;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .card-body {
@@ -209,33 +178,24 @@ p {
 
 .form-control {
   background-color: #333;
+  color: #eee;
   border: 1px solid #555;
-  color: #e0e0e0;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 .form-label {
-  color: #d9d9d9;
-  font-weight: bold;
+  color: #eee;
   margin-bottom: 0.5rem;
 }
 
+.btn.btn-primary {
+  background-color: #ff9800;
+  border-color: #ff9800;
+  border-radius: 0.5rem;
+}
+
 .form-text {
-  color: #a0a0a0;
-  font-size: 0.9rem;
-}
-
-#sub-btn {
-  background-color: #3498db;
-  border-color: #2980b9;
-  color: white;
-  padding: 0.8rem 2rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-#sub-btn:hover {
-  background-color: #2980b9;
+  color: #aaa;
 }
 
 @media (max-width: 768px) {
@@ -247,5 +207,8 @@ p {
 @media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
+  }
+  .card.ppmid {
+    width: 95%;
   }
 }
