@@ -1,12 +1,21 @@
+:root {
+  --primary-color: #F28B44; /* Warm orange */
+  --secondary-color: #F2D6AD; /* Light beige */
+  --accent-color: #A0522D; /* Brown */
+  --text-color: #F5F5DC; /* Beige */
+  --dark-bg: #222831; /* Dark background */
+  --dark-text: #EEEEEE; /* Light text for dark mode */
+}
+
 body {
-  background-color: #222;
-  color: #eee;
   font-family: 'Arial', sans-serif;
-  transition: background-color 0.3s ease;
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.pr-nav {
-  background-color: #333;
+  background-color: var(--dark-bg);
 }
 
 .container {
@@ -14,132 +23,140 @@ body.pr-nav {
 }
 
 header {
-  background-color: #333;
-  border-radius: 0.5rem;
-  padding: 1rem;
+  background-color: var(--dark-bg);
 }
 
 .nav-pills .nav-link {
-  color: #eee;
-  border-radius: 0.5rem;
-  padding: 0.8rem 1.5rem;
-  margin: 0 0.5rem;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  color: var(--text-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active,
-.nav-pills .show>.nav-link {
-  background-color: #ff9800;
+.nav-pills .nav-link.active {
+  background-color: var(--primary-color);
   color: #222;
 }
 
+.nav-pills .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .display-5 {
-  color: #ff9800;
+  color: var(--primary-color);
 }
 
 .lead {
-  color: #aaa;
+  color: var(--secondary-color);
 }
 
 .btn-primary {
-  background-color: #ff9800;
-  border-color: #ff9800;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
 }
 
 .btn-outline-secondary {
-  color: #ff9800;
-  border-color: #ff9800;
-}
-
-.btn-primary:hover,
-.btn-outline-secondary:hover {
-  background-color: #e68a00;
-  border-color: #e68a00;
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 
 #icon-grid h2 {
-  color: #ff9800;
+  color: var(--primary-color);
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 1rem;
+  margin-right: 15px;
+  border-radius: 10px;
+  fill: white;
+  
 }
 
 .icons.cxx {
-  width: 100px;
-  height: 100px;
+  fill: white;
 }
 
-svg {
-  fill: #eee;
+.icons.sql {
+  margin-right: 15px;
+  border-radius: 10px;
 }
 
 #welcome-section {
   text-align: center;
-  padding: 5rem 0;
-  background: linear-gradient(to bottom, #444, #333);
-  color: #eee;
+  padding: 50px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(to bottom right, #222831, #393e46);
 }
 
-#welcome-section h1,
-#welcome-section h3 {
-  margin-bottom: 1rem;
+#welcome-section h1, #welcome-section h3 {
+  color: var(--text-color);
 }
 
-#project-hail {
+.pp {
+  font-style: italic;
+  color: var(--secondary-color);
+  padding-top: 10px;
+}
+
+.ppicon {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+#projects h1 {
+  color: var(--primary-color);
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #ff9800;
+  padding-bottom: 20px;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-gap: 20px;
 }
 
 .project-tile {
-  border: 1px solid #555;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--secondary-color);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-.project-img,
-.img-proj {
-  width: 100%;
+.project-img {
+  max-width: 100%;
   height: auto;
-  border-radius: 0.5rem;
+  border-radius: 10px;
 }
 
 .code {
-  color: #ff9800;
+  color: var(--accent-color);
 }
 
-.pp {
-  font-style: italic;
-  margin-bottom: 2rem;
-}
-
-.ppicon {
-  margin-top: 1rem;
-  animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
   }
-  50% {
-    transform: translateY(-10px);
+}
+
+@media (max-width: 992px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
@@ -151,64 +168,59 @@ svg {
 }
 
 .card.ppmid {
-  margin: auto;
-  width: 80%;
-  max-width: 500px;
-  border-radius: 1rem;
+  margin: 0 auto;
+  width: 50%;
+  max-width: 600px;
+  border-radius: 10px;
 }
+
 
 .card {
-  background-color: #333;
-  color: #eee;
-  border-radius: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
+
 .card-header {
-  font-size: 1.5rem;
-  color: #ff9800;
-  margin-bottom: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
   text-align: center;
+  padding: 15px 0;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-body {
-  padding: 1.5rem;
-}
-
-.form-control {
-  background-color: #333;
-  color: #eee;
-  border: 1px solid #555;
-  border-radius: 0.5rem;
+  padding: 20px;
 }
 
 .form-label {
-  color: #eee;
-  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
 }
 
-.btn.btn-primary {
-  background-color: #ff9800;
-  border-color: #ff9800;
-  border-radius: 0.5rem;
+.form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  border-radius: 5px;
+  border: 1px solid var(--secondary-color);
 }
 
 .form-text {
-  color: #aaa;
+  color: var(--secondary-color);
 }
 
-@media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+
+.btn.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+  border-radius: 5px;
 }
 
 @media (max-width: 576px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
   .card.ppmid {
-    width: 95%;
+    width: 90%;
   }
 }
