@@ -1,154 +1,161 @@
 body {
-  background-color: #1e1e1e;
-  color: #eee;
-  font-family: 'Playfair Display', serif; /* Example elegant font */
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 header {
-  background-color: #282828;
-  padding: 1rem 0;
+  background-color: #f9f9f9;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
 }
 
 .nav-pills .nav-link {
-  color: #eee;
-  background-color: #333;
-  border-radius: 0.5rem;
-  padding: 0.8rem 1.5rem;
-  margin: 0 0.5rem;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #FFD700; /* Golden accent */
-  color: #1e1e1e;
+  background-color: #e0e0e0;
 }
 
-.display-5 {
-  color: #FFD700; /* Golden accent */
+.nav-pills .nav-link.active {
+  color: #fff;
+}
+
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: #222;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  margin-bottom: 1rem;
 }
 
 .lead {
-  font-style: italic;
+  font-size: 1.25em;
 }
 
 .btn-primary {
-  background-color: #FFD700; /* Golden accent */
-  border-color: #FFD700;
-  color: #1e1e1e;
+  background-color: #4CAF50;
+  border-color: #4CAF50;
 }
 
 .btn-outline-secondary {
-  border-color: #FFD700; /* Golden accent */
-  color: #FFD700;
+  color: #333;
+  border-color: #ccc;
 }
 
-.btn-primary:hover,
-.btn-outline-secondary:hover {
-  background-color: #b8860b; /* Darker golden */
-  border-color: #b8860b;
-  color: #1e1e1e;
-
-}
 
 #icon-grid h2 {
-  color: #FFD700; /* Golden accent */
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 1rem;
-}
-
-.icons path {
-  transition: fill 0.3s ease;
-}
-
-.icons:hover path {
-  fill: #FFD700; /* Golden accent */
+  margin-right: 15px;
+  fill: currentColor;
 }
 
 
 #welcome-section {
-  background-image: url('artdeco-bg.jpg'); /* Replace with your art deco background */
+  text-align: center;
+  padding: 50px 0;
+  background-image: url('vintage-background.jpg'); /* Replace with your background image */
   background-size: cover;
   background-position: center;
   color: white;
-  text-align: center;
-  padding: 8rem 0;
 }
 
 #welcome-section h1,
-#welcome-section h3 {
-  font-family: 'Playfair Display', serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+#welcome-section h3,
+#welcome-section p {
+  margin-bottom: 15px;
 }
 
+.pp {
+  font-style: italic;
+  color: #ddd;
+}
 
-#projects h1 {
-  color: #FFD700; /* Golden accent */
+.ppicon {
+  fill: white;
+  margin-top: 10px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+#projects {
+  padding: 40px 0;
+}
+
+#project-hail {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 20px;
 }
 
 .project-tile {
-  border: 2px solid #FFD700; /* Golden accent */
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 .project-tile:hover {
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .project-img {
   width: 100%;
   height: auto;
-  border-radius: 0.5rem;
+  border-radius: 5px 5px 0 0;
 }
 
 .code {
-  color: #FFD700; /* Golden accent */
-}
-
-.pp {
-  text-align: center;
-  font-style: italic;
-  color: #FFD700; /* Golden accent */
-  margin-bottom: 2rem;
-}
-
-.ppicon {
-  display: block;
-  margin: 1rem auto;
-  animation: rotate 2s linear infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: #FF5733; /* Accent color */
+  font-weight: bold;
 }
 
 .pr-nav {
-  padding-top: 2rem;
+    background-color: #f4f4f4;
+    padding-top: 20px;
 }
 
 
@@ -156,81 +163,79 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensure form is vertically centered */
 }
 
 .card.ppmid {
   margin: auto;
-  max-width: 600px;
-  background-color: #333;
-  border-radius: 1rem;
+  max-width: 500px;
+  width: 100%;
+  text-align:center;
 }
+
 
 .card {
-  padding: 2rem;
-  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
+
 .card-header {
-  background-color: #FFD700; /* Golden accent */
-  color: #1e1e1e;
-  border-radius: 0.5rem 0.5rem 0 0;
-  padding: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  padding: 15px;
+  font-weight: bold;
 }
 
 .card-body {
-  padding: 2rem;
+  padding: 20px;
 }
 
+
 .form-control {
-  background-color: #222;
-  color: #eee;
-  border: 1px solid #FFD700; /* Golden accent */
-  border-radius: 0.5rem;
-  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .form-label {
-  color: #FFD700; /* Golden accent */
-  margin-bottom: 0.5rem;
+  margin-bottom: 5px;
+  font-weight: 600;
 }
 
+
 .btn.btn-primary {
-    background-color: #FFD700; /* Golden accent */
-    color: #1e1e1e;
-    border-radius: 0.5rem;
-    padding: 1rem 2rem;
+  background-color: #FF5733; /* Accent color */
+  border-color: #FF5733;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .form-text {
-  color: #aaa;
+  color: #666;
+  font-size: 0.9em;
 }
 
 @media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
-}
-
-@media (max-width: 992px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .contact-wrapper {
+    flex-direction: column; /* Stack form elements vertically on mobile */
   }
-}
-
-/* Responsive Contact Form */
-@media (max-width: 768px) {
   .card.ppmid {
-    max-width: 90%;
+      max-width: 100%;
+      width: 100%;
   }
-}
 
-/* Add this to make images round cornered and responsive */
-.img-proj {
-    border-radius: 10px;
-}
-
-.img-fluid {
-    max-width: 100%;
-    height: auto;
 }
