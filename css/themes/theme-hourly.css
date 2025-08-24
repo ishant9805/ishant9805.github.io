@@ -1,234 +1,259 @@
 body {
-    font-family: 'Merriweather', serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f8f9fa;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-    background-color: #f0f0f0;
-    padding: 10px;
+  background-color: #ffe9c5;
+  padding: 1rem 0;
 }
 
 .nav-pills .nav-link {
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: #333;
-    background-color: #fff;
-    transition: background-color 0.3s ease;
+  color: #333;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active,
+.nav-pills .nav-link.active {
+  background-color: #f08080;
+  color: white;
+}
+
 .nav-pills .nav-link:hover {
-    background-color: #e0dcdc; /* Light beige/cream color */
-    color: #333;
-}
-
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.lead {
-    font-style: italic;
-}
-
-.display-5 {
-    font-size: 3rem;
-}
-
-.btn-primary {
-    background-color: #a0522d; /*Sienna color*/
-    border-color: #a0522d;
-}
-.btn-primary:hover{
-    background-color: #8B4513; /*SaddleBrown color*/
-    border-color: #8B4513;
-}
-
-.btn-outline-secondary {
-    color: #a0522d;
-    border-color: #a0522d;
-}
-
-.btn-outline-secondary:hover {
-    background-color: #f0f0f0;
-    color: #8B4513;
-}
-
-#icon-grid {
-    background-color: #f0f0f0;
-    padding: 20px;
+  background-color: #ffc0cb;
 }
 
 .icons {
-    width: 75px;
-    height: 75px;
-    margin-right: 10px;
-    border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  margin-right: 1rem;
+  fill: #333;
 }
 
-
-.icons.cxx{
+.icons.cxx {
     width: 75px;
     height: 75px;
-    margin-right: 10px;
 }
 
 .icons.sql {
     width: 75px;
     height: 75px;
-    margin-right: 10px;
-    border-radius: 5px;
+}
+
+#icon-grid {
+  background-color: #f0f0f0;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.lead {
+  font-size: 1.2rem;
+}
+
+.btn-primary {
+  background-color: #ff4d4d;
+  border-color: #ff4d4d;
+}
+
+.btn-primary:hover {
+  background-color: #ff6347;
+  border-color: #ff6347;
+}
+
+.btn-outline-secondary {
+  color: #333;
+  border-color: #333;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 #welcome-section {
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 100px 0;
-}
-
-#welcome-section h1,
-#welcome-section h3 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.pp {
-    font-style: italic;
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.ppicon {
-    margin: 0 auto;
-    animation: bounce 1.2s infinite;
-    animation-delay: 0.2s;
-}
-
-@keyframes bounce {
-    0% {transform: translateY(0)}
-    50% {transform: translateY(-15px)}
-    100% {transform: translateY(0)}
+  text-align: center;
+  padding: 5rem 0;
+  background-image: url("geometric-pattern-background.png"); /* Replace with your actual pattern */
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
 }
 
 #projects {
-    padding: 50px 0;
+  padding: 3rem 0;
 }
 
 #project-hail {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
+
 .project-tile {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
 .project-img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
 }
 
 .code {
-    color: #a0522d;
+  color: #ff4d4d;
 }
 
+.pp {
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.ppicon {
+  fill: white;
+  margin: 0 auto;
+  display: block;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
 .pr-nav {
-    padding-top: 0;
+  background-color: #e9ecef; /* Light gray background */
 }
 
 .contact-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e9ecef; /* Light gray background */
 }
 
 .card.ppmid {
-    margin: 0 auto;
-    max-width: 500px;
-    width: 100%;
-    position: relative;
+  margin: auto;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .card {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-
 .card-header {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #333;
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
 }
 
 .card-body {
-    padding: 20px;
-}
-
-.form-label {
-    font-weight: 600;
-    color: #333;
+  padding: 2rem;
 }
 
 .form-control {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 0.5rem 1rem;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.btn.btn-primary {
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  background-color: #f08080;
+  color: white;
 }
 
 .form-text {
-    font-size: 0.9rem;
-    color: #555;
+  font-size: 0.8rem;
+  color: #777;
 }
 
 @media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 
 @media (max-width: 576px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-    .card.ppmid{
-        max-width: 90%;
-    }
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .card.ppmid {
+      max-width: 90%;
+  }
+}
+
+/* Add geometric pattern background image */
+body {
+  background-image: url("geometric-pattern-background.png"); /* Replace with your actual pattern */
+  background-size: 100px 100px; /* Adjust size as needed */
+  background-repeat: repeat; /* Repeat the pattern */
+}
+
+/*Adjust header background if needed*/
+header{
+    background-image: none; /*remove background image if it interferes*/
 }
