@@ -1,78 +1,59 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  background-color: #f8f9fa;
+  background-color: #1e1e1e;
+  color: #eee;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease;
+}
+
+.pr-nav {
+  background-color: #282828;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 header {
-  background-color: #ffe9c5;
-  padding: 1rem 0;
+  background-color: #282828;
 }
 
 .nav-pills .nav-link {
-  color: #333;
-  padding: 0.8rem 1.5rem;
-  border-radius: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #eee;
+  background-color: #333;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 0 5px;
   transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active {
-  background-color: #f08080;
-  color: white;
-}
-
+.nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #ffc0cb;
-}
-
-.icons {
-  width: 60px;
-  height: 60px;
-  margin-right: 1rem;
-  fill: #333;
-}
-
-.icons.cxx {
-    width: 75px;
-    height: 75px;
-}
-
-.icons.sql {
-    width: 75px;
-    height: 75px;
-}
-
-#icon-grid {
-  background-color: #f0f0f0;
+  background-color: #555;
 }
 
 h1, h2, h3 {
-  font-weight: bold;
-  color: #333;
+  font-weight: 700;
+  color: #eee;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 p {
-  line-height: 1.6;
-  color: #555;
+  margin-bottom: 1rem;
 }
 
 .lead {
@@ -80,101 +61,109 @@ p {
 }
 
 .btn-primary {
-  background-color: #ff4d4d;
-  border-color: #ff4d4d;
-}
-
-.btn-primary:hover {
-  background-color: #ff6347;
-  border-color: #ff6347;
+  background-color: #55aaff;
+  border-color: #55aaff;
 }
 
 .btn-outline-secondary {
-  color: #333;
-  border-color: #333;
+  border-color: #888;
+  color: #eee;
 }
 
-.btn-outline-secondary:hover {
-  background-color: #ddd;
-  color: #333;
+.btn:hover {
+  opacity: 0.8;
 }
 
-.img-fluid {
-  max-width: 100%;
-  height: auto;
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 1rem;
+}
+
+.icons, img {
   border-radius: 10px;
+}
+
+#icon-grid h2 {
+  color: #ddd;
 }
 
 #welcome-section {
   text-align: center;
-  padding: 5rem 0;
-  background-image: url("geometric-pattern-background.png"); /* Replace with your actual pattern */
+  background-image: url('vintage-background.jpg'); /* Replace with your vintage background image */
   background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
+  background-position: center;
+  color: #eee;
+  padding: 50px 0;
 }
 
-#projects {
-  padding: 3rem 0;
+#welcome-section h1,
+#welcome-section h3 {
+  margin-bottom: 0.5rem;
 }
+
+.pp {
+  font-style: italic;
+  color: #bbb;
+}
+
+.ppicon {
+  margin-top: 1rem;
+  animation: bounce 1s infinite;
+}
+
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
 
 #project-hail {
   text-align: center;
-  font-size: 2.5rem;
   margin-bottom: 2rem;
+  color: #ffa500;
+  text-shadow: 2px 2px 4px #000;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-gap: 20px;
 }
 
-
 .project-tile {
-  border: 1px solid #ddd;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #333;
+  border: 1px solid #555;
   border-radius: 10px;
-  overflow: hidden;
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
 }
 
+
 .project-img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
 }
 
 .code {
-  color: #ff4d4d;
-}
-
-.pp {
-  font-style: italic;
-  margin-bottom: 2rem;
-  color: white;
-}
-
-.ppicon {
-  fill: white;
-  margin: 0 auto;
-  display: block;
-  animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-
-.pr-nav {
-  background-color: #e9ecef; /* Light gray background */
+  color: #55aaff;
+  font-weight: bold;
 }
 
 .contact-wrapper {
@@ -182,53 +171,71 @@ p {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #e9ecef; /* Light gray background */
 }
 
 .card.ppmid {
   margin: auto;
-  max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
+
 .card {
-  border-radius: 10px;
-  overflow: hidden;
+  width: 80%;
+  margin: 2rem auto;
+  padding: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card-header {
-  background-color: #ff4d4d;
-  color: white;
+  background-color: #555;
+  color: #eee;
   font-weight: bold;
-  padding: 1rem;
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px solid #777;
 }
 
 .card-body {
-  padding: 2rem;
-}
-
-.form-control {
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 0.5rem 1rem;
+  padding: 20px;
 }
 
 .form-label {
+  color: #eee;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-.btn.btn-primary {
-  padding: 0.8rem 2rem;
-  border-radius: 20px;
-  background-color: #f08080;
-  color: white;
+.form-control {
+  background-color: #222;
+  color: #eee;
+  border: 1px solid #555;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 1rem;
 }
 
+
 .form-text {
+  color: #888;
   font-size: 0.8rem;
-  color: #777;
+  margin-bottom: 1rem;
+}
+
+.btn.btn-primary {
+  background-color: #55aaff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #3377bb;
 }
 
 @media (max-width: 768px) {
@@ -241,19 +248,7 @@ p {
   .project-grid {
     grid-template-columns: 1fr;
   }
-  .card.ppmid {
-      max-width: 90%;
+  .card {
+    width: 95%;
   }
-}
-
-/* Add geometric pattern background image */
-body {
-  background-image: url("geometric-pattern-background.png"); /* Replace with your actual pattern */
-  background-size: 100px 100px; /* Adjust size as needed */
-  background-repeat: repeat; /* Repeat the pattern */
-}
-
-/*Adjust header background if needed*/
-header{
-    background-image: none; /*remove background image if it interferes*/
 }
