@@ -1,223 +1,245 @@
 body {
-  font-family: 'Playfair Display', serif; /* Or a similar Art Deco font */
-  line-height: 1.6;
-  margin: 0;
-  background-color: #f8f8f8;
-  color: #333;
-}
-
-.pr-nav {
-  background-color: #f0e68c; /* Light gold background for projects page */
-}
-
-h1, h2, h3 {
-  font-weight: 700;
-  color: #333;
-}
-
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: 1.5em;
-}
-
-p {
-  font-size: 1em;
-}
-
-.nav-pills .nav-link {
-  border-radius: 20px; /* Art Deco rounded corners */
-  padding: 10px 20px;
-  background-color: #f0e68c; /* Light gold */
-  color: #333;
-  transition: background-color 0.3s ease;
-}
-
-.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
-  background-color: #ffd700; /* Darker gold */
+    background-color: #282c34;
+    color: #d8dee9;
+    font-family: 'Merriweather', serif;
+    line-height: 1.6;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+    max-width: 1200px;
+}
+
+header {
+    background-color: #343a40;
+    padding: 1rem 0;
+}
+
+.nav-pills .nav-link {
+    color: #d8dee9;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
+    background-color: #6c757d;
+}
+
+.nav-pills .nav-link.active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.lead {
+    font-weight: 300;
+    font-size: 1.25rem;
+}
+
+.btn-primary {
+    background-color: #826046;
+    border-color: #826046;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #a27f60;
+}
+
+.btn-outline-secondary {
+    color: #d8dee9;
+    border-color: #d8dee9;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+
+#icon-grid h2 {
+    color: #fff;
 }
 
 .icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 15px;
-  fill: #ffd700; /* Gold fill for icons */
+    width: 75px;
+    height: 75px;
+    margin-right: 1rem;
+    fill: white;
 }
 
+
 .icons.cxx {
-    fill: #fff;
+    fill: #FFD700;
 }
 
 .icons.sql {
-    width: 100%;
-    height: 100%;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px; /* Art Deco rounded corners */
-}
-
-#welcome-section {
-  background-color: #f0e68c; /* Light gold background */
-  text-align: center;
-  padding: 50px 0;
-}
-
-#welcome-section h1, #welcome-section h3 {
-  margin-bottom: 10px;
-}
-
-
-#projects h1 {
-  text-align: center;
-  margin-bottom: 30px;
+    fill: #d8dee9;
 }
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-  grid-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
 }
 
 .project-tile {
-  background-color: #fff;
-  border-radius: 10px; /* Art Deco rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.3s ease;
+    background-color: #343a40;
+    border: 1px solid #495057;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-.project-img {
-  border-radius: 10px;
+
+.project-img, .img-proj {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
 }
 
 .code {
-  color: #ffd700; /* Gold accent color for code brackets */
+    color: #ff9800;
+}
+
+#welcome-section {
+    background-color: #343a40;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+#welcome-section h1, #welcome-section h3 {
+    color: #d8dee9;
+}
+
+#projects {
+    padding: 4rem 0;
+}
+
+#project-hail {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .pp {
-  font-style: italic;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 2rem;
 }
 
 .ppicon {
-  display: block;
-  margin: 20px auto;
-  animation: rotate 2s linear infinite;
+    display: block;
+    margin: 2rem auto;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
+.pr-nav {
+    padding-top: 2rem;
+}
 
 .contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f8f8f8; /* Light background for contact page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .card.ppmid {
-  margin: auto;
-  max-width: 500px;
-  border-radius: 20px; /* Art Deco rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .card {
-  width: 80%;
-  padding: 30px;
+    background-color: #343a40;
+    border: 1px solid #495057;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
 }
 
 .card-header {
-  background-color: #ffd700; /* Darker gold */
-  color: #fff;
-  font-size: 1.8em;
-  border-radius: 10px 10px 0 0; /* Art Deco rounded corners */
-  padding: 15px;
+    background-color: #826046;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .card-body {
-  padding: 20px;
-}
-
-.form-control {
-  border-radius: 10px; /* Art Deco rounded corners */
-  border-color: #ffd700; /* Gold border */
-  padding: 10px;
-  margin-bottom: 15px;
+    padding: 2rem;
 }
 
 .form-label {
-  font-weight: 600;
-  color: #333;
+    color: #d8dee9;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
-.btn.btn-primary {
-  background-color: #ffd700; /* Gold button */
-  border-color: #ffd700;
-  border-radius: 20px; /* Art Deco rounded corners */
-  padding: 10px 20px;
-  font-weight: 600;
+
+.form-control {
+    background-color: #343a40;
+    border: 1px solid #495057;
+    color: #d8dee9;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
 }
 
 .form-text {
-  font-size: 0.9em;
-  color: #555;
+    color: #868e96;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
 }
 
+#sub-btn {
+    background-color: #826046;
+    border-color: #826046;
+    color: #fff;
+}
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
 
 @media (max-width: 576px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-  .card {
-    width: 90%;
-  }
-}
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
 
-/*Added Styling for the About page*/
-.lead {
-    font-size: 1.2rem;
-}
-
-.lead mark {
-    background-color: #f0e68c; /* Light gold */
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.2rem;
+    .card.ppmid {
+        width: 95%;
+    }
 }
