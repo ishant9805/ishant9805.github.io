@@ -1,263 +1,262 @@
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
-  color: #333;
-}
+    font-family: 'Lora', serif; /* Or a similar elegant serif font */
+    line-height: 1.6;
+    color: #333; /* Dark text for better contrast */
+    background-color: #f8f8f8; /* Light background */
+    margin:0;
+    padding:0;
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-header {
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.nav-pills .nav-link {
-  padding: 1rem 1.5rem;
-  border-radius: 0.25rem;
-  color: #333;
-  background-color: #f8f9fa;
-  transition: background-color 0.3s ease;
-}
-
-.nav-pills .nav-link.active,
-.nav-pills .nav-link:hover {
-  background-color: #6c757d;
-  color: white;
-}
-
-.nav-pills .nav-item {
-  margin: 0 0.5rem;
-}
-
-h1, h2, h3 {
-  font-weight: 700;
-  color: #212529;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
-}
-
-
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #0069d9;
-}
-
-.btn-outline-secondary {
-  color: #333;
-  border-color: #333;
-  transition: color 0.3s ease, border-color 0.3s ease;
-}
-
-.btn-outline-secondary:hover {
-  color: #fff;
-  background-color: #333;
-  border-color: #333;
-}
-
-
-#icon-grid {
-  background-color: #fff;
-  padding: 2rem 0;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 1rem;
-  margin-bottom:0.5rem;
-  fill: #fff;
-  background-color: #6c757d;
-  border-radius: 50%;
-  padding: 0.5rem;
-}
-
-.icons.cxx {
-  background-color: #377777;
-}
-
-.icons.sql {
-  background-color: #377777;
-}
-
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-}
-
-.project-tile {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.project-img, .img-proj {
-  width: 100%;
-  height: auto;
-  border-radius: 8px 8px 0 0;
-}
-
-.code {
-  color: #007bff;
-}
-
-.pp {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.ppicon {
-  display: block;
-  margin: 1rem auto;
-  animation: rotate 2s infinite linear;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-#welcome-section {
-  text-align: center;
-  padding: 5rem 0;
-  background: linear-gradient(135deg, #add8e6, #b0e0e6);
-}
-
-#projects {
-  padding: 4rem 0;
-}
-
-#project-hail {
-  text-align: center;
-  margin-bottom: 3rem;
 }
 
 .pr-nav {
-  background: linear-gradient(135deg, #e6f2ff, #d1e0e6);
+    background-color: #f0f0f0; /* Slightly lighter background for projects page */
 }
 
+header {
+    background-color: #f0f0f0; /* Light gray header background */
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-pills .nav-link {
+    color: #333; /* Dark text for nav links */
+    border-radius: 5px; /* Rounded nav links */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: #6c757d;
+    color:white;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* Or a similar elegant serif font for headings */
+    font-weight: 700;
+    color: #333;
+}
+
+#welcome-section {
+    text-align: center;
+    padding: 50px 0;
+    background-image: url('dark-academia-background.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+#welcome-section h1, #welcome-section h3 {
+    color: white;
+}
+
+.pp {
+    font-size:1.2em;
+    font-style:italic;
+    margin-top: 20px;
+    color:white;
+
+}
+
+.ppicon {
+  margin-top:20px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  width:50px;
+}
+
+#projects {
+    padding: 50px 0;
+}
+
+#project-hail {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.project-tile {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-tile:hover {
+    transform: translateY(-5px);
+}
+
+.project-img, .img-proj {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0; /* Rounded top corners for images */
+}
+
+.code {
+    color: #a0522d; /* Brown accent color for code brackets */
+    font-weight: bold;
+}
 
 .contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
 }
 
+
 .card.ppmid {
-  margin: 0 auto;
-  max-width: 500px;
-  width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
 }
 
 .card {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 1px solid #ddd;
 }
 
 .card-header {
-  background-color: #007bff;
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  padding: 1rem 0;
-  border-radius: 0.5rem 0.5rem 0 0;
+    background-color: #6c757d;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+    padding: 15px;
+    text-align: center;
 }
 
 .card-body {
-  padding: 2rem;
-}
-
-.form-label {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+    padding: 30px;
 }
 
 .form-control {
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
-  padding: 0.75rem 1rem;
-  margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.btn.btn-primary {
+    background-color: #a0522d; /* Brown accent color for button */
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+    background-color: #8B4513;
 }
 
 .form-text {
-  color: #6c757d;
-  font-size: 0.875rem;
+    font-style: italic;
+    color: #666;
 }
 
-#sub-btn {
-  padding: 0.5rem 2rem;
-  border-radius: 0.25rem;
-  background-color: #007bff;
-  border: none;
-  color: white;
-  transition: background-color 0.3s ease;
+
+.icons {
+    width: 75px;
+    height: 75px;
+    margin-right: 15px;
 }
 
-#sub-btn:hover {
-  background-color: #0069d9;
-}
+
+/* Responsive styles */
 
 @media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
 
-@media (max-width: 992px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+@media (max-width: 576px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .card.ppmid{
+        max-width: 90%;
+    }
 }
 
-.h-100 {
-    height: 100%;
+/* Style for images in the icon grid */
+.icons img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Circular icons */
+    
+}
+
+/* Style for specific image in icon grid */
+.icons.cxx {
+    width: 75px;
+    height: 75px;
+}
+.icons.cxx img {
+    border-radius: 5px; /* Rounded corner icons */
+}
+
+
+/* Style for specific image in icon grid */
+.icons.sql {
+    width: 75px;
+    height: 75px;
+}
+.icons.sql img {
+    border-radius: 5px; /* Rounded corner icons */
+}
+
+/* Add a general style for all images to ensure responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Prevents extra space below images */
+}
+
+/* Style the email address */
+span[style*="color: red"] {
+    color: red;
+    font-style: italic;
+}
+
+
+/* Add some spacing between paragraphs */
+p + p {
+    margin-top: 1rem;
+}
+
+/* Style to improve the look of the links */
+a {
+    color: #1E90FF; /* A vibrant blue color that matches dark academia */
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Styling for marked elements */
+mark {
+    background-color: #FFFFE0; /* Light yellow background */
+    padding: 0.2em;
 }
