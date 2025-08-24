@@ -1,136 +1,116 @@
 body {
-  background-color: #1e1e1e;
-  color: #f2f2f2;
   font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
   transition: background-color 0.3s ease;
 }
 
 .pr-nav {
-  background-color: #282828;
+  background-color: #002d42; /* Darker blue for project page background */
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 header {
-  background-color: #282828;
+  background-color: #0056b3; /* Dark blue for header */
+  color: white;
 }
 
 .nav-pills .nav-link {
-  color: #f2f2f2;
+  color: white;
   border-radius: 5px;
   padding: 10px 20px;
   margin: 0 5px;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  background-color: #444;
-  color: white;
+  background-color: #fff;
+  color: #0056b3;
 }
 
 .nav-pills .nav-link:hover {
-  background-color: #333;
+  background-color: rgba(255,255,255,0.2);
 }
-
 
 h1, h2, h3 {
   font-weight: bold;
-  color: #f2f2f2;
+  color: #002d42; /* Darker blue for headings */
 }
 
 h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 3em;
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.5em;
 }
 
 h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.5em;
 }
 
 p {
-  line-height: 1.6;
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
 }
 
 .lead {
-  font-size: 1.25rem;
-  font-weight: 300;
-}
-
-.display-5 {
-  font-size: 3rem;
-}
-
-.fw-bold {
-  font-weight: bold;
+  font-size: 1.2em;
 }
 
 .btn-primary {
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-  color: white;
+  background-color: #0056b3; /* Dark blue for primary button */
+  border-color: #0056b3;
 }
 
 .btn-primary:hover {
-  background-color: #4cae4c;
+  background-color: #003e86; /* Darker blue on hover */
+  border-color: #003e86;
 }
 
 .btn-outline-secondary {
-  color: #f2f2f2;
-  border-color: #f2f2f2;
+  color: white;
+  border-color: white;
 }
 
+
 .btn-outline-secondary:hover {
-  background-color: #333;
-  color: white;
-  border-color: #333;
+  color: #0056b3;
+  background-color: rgba(255,255,255,0.2);
 }
 
 
 #icon-grid .icons {
   width: 75px;
   height: 75px;
-  margin-right: 1rem;
+  margin-right: 10px;
 }
-
-#icon-grid h2 {
-  color: #f2f2f2;
-}
-
 
 #welcome-section {
   text-align: center;
-  padding: 5rem 0;
-  background-color: #282828;
-}
-
-#welcome-section h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-#welcome-section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  padding: 50px 0;
+  background-image: url("https://images.unsplash.com/photo-1518008459187-8f4d569418f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNvc21vcyUyMGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
 .pp {
-  font-size: 1.2rem;
-  color: #999;
-  margin-bottom: 2rem;
+  color: white;
+  font-style: italic;
 }
 
-
 .ppicon {
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
+  margin: 20px auto;
   display: block;
-  fill: #ddd;
-  animation: rotate 1s infinite;
+  fill: white;
+  animation: rotate 2s linear infinite;
 }
 
 @keyframes rotate {
@@ -143,112 +123,97 @@ p {
 }
 
 #projects {
-  padding: 4rem 0;
+  padding: 50px 0;
 }
 
 #project-hail {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  font-size: 2.5em;
+  margin-bottom: 30px;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 20px;
 }
 
 .project-tile {
-  border: 1px solid #444;
+  border: 1px solid #ccc;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
 }
 
-.project-img {
+.project-img, .img-proj {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.img-proj {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+  border-radius: 10px 10px 0 0;
 }
 
 .code {
-  color: #5cb85c;
+  color: #007bff; /* Blue for code brackets */
+  font-weight: bold;
 }
+
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 2rem;
+  padding: 20px;
 }
-
 
 .card.ppmid {
-  max-width: 500px;
-  margin: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
 }
 
-
 .card {
+  border: 1px solid #ccc;
   border-radius: 10px;
-  background-color: #333;
-  color: white;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  padding: 20px;
 }
 
 .card-header {
-  background-color: #444;
+  background-color: #0056b3;
+  color: white;
   font-weight: bold;
-  padding: 1rem;
-  border-bottom: none;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-body {
-  padding: 2rem;
+  padding: 20px;
 }
 
 .form-control {
-  background-color: #333;
-  border: 1px solid #444;
-  color: white;
+  border: 1px solid #ccc;
   border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .form-label {
-  color: white;
-  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #002d42;
+  margin-bottom: 5px;
 }
 
 .form-text {
-  color: #999;
+  color: #6c757d; /* Gray for help text */
+  font-size: 0.8em;
 }
-
-#sub-btn {
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-  color: white;
-}
-
-#sub-btn:hover {
-  background-color: #4cae4c;
-}
-
 
 @media (max-width: 768px) {
   .project-grid {
@@ -256,8 +221,36 @@ p {
   }
 }
 
-@media (max-width: 992px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+@media (max-width: 1024px) {
+    .project-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax value for tablets */
+    }
+}
+
+.cxx {
+  fill: #0056b3;
+}
+
+.sql {
+  width: 75px;
+    height: 75px;
+    margin-right: 10px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+mark {
+  background-color: #e9ecef; /* Light gray for mark */
+  padding: 0.2em;
+}
+
+
+/* Responsive adjustments for contact form */
+@media (max-width: 768px) {
+  .card.ppmid {
+    max-width: 90%; /* Adjust width for smaller screens */
   }
 }
