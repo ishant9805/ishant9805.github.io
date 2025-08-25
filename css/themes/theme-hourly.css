@@ -1,49 +1,44 @@
 body {
-  background-color: #1e1e1e;
+  background: linear-gradient(to right, #1e1e1e, #303030);
   color: #f0f0f0;
-  font-family: 'Poppins', sans-serif; /* Add a modern font */
-  transition: background-color 0.3s ease; /* Smooth transition for theme changes */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
 }
 
-.pr-nav {
-  background-color: #282828; /* Darker background for projects page nav */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-  background-color: #282828;
+  background: #282828;
+  padding: 1rem 0;
 }
 
 .nav-pills .nav-link {
   color: #f0f0f0;
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 0 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+  padding: .8rem 1.5rem;
+  margin: 0 .5rem;
+  transition: background-color .3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: gold;
-  color: #1e1e1e;
-}
-
-
-.container {
-  max-width: 1200px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 h1, h2, h3 {
-  font-weight: 600;
-  color: gold; /* Golden headings */
+  font-weight: 700;
+  color: #fff;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
 }
 
 h3 {
@@ -51,45 +46,53 @@ h3 {
 }
 
 p {
+  color: #d0d0d0;
   line-height: 1.6;
-  margin-bottom: 1rem;
 }
 
 .lead {
   font-size: 1.2rem;
 }
 
-.img-fluid {
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+.btn-primary {
+  background-image: linear-gradient(to right, #ff5733, #ff9800);
+  border: none;
+  color: white;
+}
+
+.btn-outline-secondary {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-outline-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .icons {
   width: 75px;
   height: 75px;
   margin-right: 1rem;
-  margin-bottom: 0.5rem;
-  fill: gold; /* golden icons */
 }
 
-svg.icons:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
-#icon-grid {
-  text-align: center;
+#icon-grid .icons {
+  fill: #fff;
 }
 
-#icon-grid .row {
-  justify-content: center;
+#icon-grid .icons.cxx {
+  fill: #1A4674;
 }
-
 
 #welcome-section {
   text-align: center;
   padding: 5rem 0;
-  background: linear-gradient(to bottom, #282828, #1e1e1e); /* Subtle gradient background */
+  background: linear-gradient(to bottom, #282828, #3e3e3e);
 }
 
 #welcome-section h1,
@@ -97,59 +100,65 @@ svg.icons:hover {
   margin-bottom: 1rem;
 }
 
-.pp {
-  color: #a0a0a0;
-  font-style: italic;
-  font-size: 1.2rem;
+#welcome-section .pp {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
-.ppicon {
-  fill: gold;
-  animation: bounce 1s infinite; /* Add a bounce animation */
+#welcome-section .ppicon {
+  width: 30px;
+  height: 30px;
+  fill: white;
+  animation: spin 2s linear infinite;
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0) }
-  50% { transform: translateY(-10px) }
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-#project-hail {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+
+#projects h1 {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-  padding: 20px;
+  grid-gap: 2rem;
 }
 
 .project-tile {
-  border: 2px solid gold;
+  background-color: #303030;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1rem;
+  transition: transform .3s ease;
   text-decoration: none;
   color: #f0f0f0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .project-img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .code {
-  color: gold;
-  font-family: monospace;
+  color: #ff9800;
+}
+
+.pr-nav {
+  padding-top: 2rem;
 }
 
 .contact-wrapper {
@@ -157,73 +166,81 @@ svg.icons:hover {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 10px;
 }
 
 .card.ppmid {
-  max-width: 500px;
   margin: auto;
-  border: 2px solid gold;
-}
-
-.card {
+  max-width: 500px;
+  background-color: #303030;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-  background-color: gold;
-  color: #1e1e1e;
-  font-weight: bold;
+  background-color: #1A4674;
+  color: #f0f0f0;
   text-align: center;
   padding: 1rem;
   border-radius: 10px 10px 0 0;
 }
 
-
 .card-body {
   padding: 2rem;
 }
 
-.form-label {
-  color: gold;
+.form-control {
+  background-color: #282828;
+  color: #f0f0f0;
+  border: 1px solid #555;
+  border-radius: 5px;
 }
 
-.form-control {
-  background-color: #333;
+.form-label {
   color: #f0f0f0;
-  border: 1px solid gold;
-  border-radius: 5px;
+  margin-bottom: .5rem;
 }
 
 .form-text {
-  color: #a0a0a0;
+  color: #888;
 }
 
-.btn.btn-primary {
-  background-color: gold;
-  color: #1e1e1e;
+#sub-btn{
+  background-image: linear-gradient(to right, #ff5733, #ff9800);
   border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
+  color: white;
+  width: 100%;
+  padding: 1rem 0;
 }
-
-.btn.btn-primary:hover {
-  background-color: darkgoldenrod;
-}
-
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .project-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-  .card.ppmid {
-    max-width: 90%;
-  }
+}
+
+.mark {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+
+a {
+  color: #87ceeb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.ppmid {
+    padding: 2rem;
 }
