@@ -1,262 +1,220 @@
 body {
-    font-family: 'Lora', serif; /* Or a similar elegant serif font */
-    line-height: 1.6;
-    color: #333; /* Dark text for better contrast */
-    background-color: #f8f8f8; /* Light background */
-    margin:0;
-    padding:0;
-
-}
-
-.pr-nav {
-    background-color: #f0f0f0; /* Slightly lighter background for projects page */
-}
-
-header {
-    background-color: #f0f0f0; /* Light gray header background */
-    border-bottom: 1px solid #ddd;
-}
-
-.nav-pills .nav-link {
-    color: #333; /* Dark text for nav links */
-    border-radius: 5px; /* Rounded nav links */
-    transition: background-color 0.3s ease; /* Smooth transition for hover */
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    background-color: #6c757d;
-    color:white;
-}
-
-.nav-pills .nav-link:hover {
-    background-color: #e9ecef;
-    color: #333;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
+  color: #333;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif; /* Or a similar elegant serif font for headings */
-    font-weight: 700;
-    color: #333;
+header {
+  background: linear-gradient(to right, #66ccff, #3399ff);
+  color: white;
+}
+
+.nav-pills .nav-link {
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 5px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.pr-nav {
+    background: linear-gradient(to bottom right, #e0e0e0, #f0f0f0);
 }
 
 #welcome-section {
-    text-align: center;
-    padding: 50px 0;
-    background-image: url('dark-academia-background.jpg'); /* Replace with your background image */
-    background-size: cover;
-    background-position: center;
-    color: white;
+  text-align: center;
+  padding: 100px 0;
+  background-image: url('https://source.unsplash.com/random/1920x1080/?technology'); /* Replace with your desired background image */
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
-#welcome-section h1, #welcome-section h3 {
-    color: white;
+#welcome-section h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+#welcome-section h3 {
+  font-size: 2em;
+  margin-bottom: 1em;
 }
 
 .pp {
-    font-size:1.2em;
-    font-style:italic;
-    margin-top: 20px;
-    color:white;
-
+  font-size: 1.2em;
+  color: white;
+  margin-bottom: 2em;
 }
 
 .ppicon {
-  margin-top:20px;
-  display:block;
-  margin-left:auto;
-  margin-right:auto;
-  width:50px;
+  fill: white;
+  animation: rotate 2s linear infinite;
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #projects {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 
 #project-hail {
-    text-align: center;
-    font-size: 3em;
-    margin-bottom: 30px;
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #3399ff;
 }
 
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
 }
 
 .project-tile {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .project-tile:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .project-img, .img-proj {
-    width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0; /* Rounded top corners for images */
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
 }
 
 .code {
-    color: #a0522d; /* Brown accent color for code brackets */
-    font-weight: bold;
+  color: #3399ff;
 }
 
+
 .contact-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #c0e0ff, #99ccff);
 }
 
 
 .card.ppmid {
-    max-width: 600px;
-    margin: 0 auto;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    margin: auto;
+    max-width: 500px;
+    width:100%;
+    margin-top: 50px;
+    background: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
 
+
 .card {
-    border-radius: 10px;
-    border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-    background-color: #6c757d;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px 10px 0 0;
-    padding: 15px;
-    text-align: center;
+  background-color: #3399ff;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-body {
-    padding: 30px;
+  padding: 20px;
 }
 
 .form-control {
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+  border-radius: 5px;
+  border-color: #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .form-label {
-    font-weight: bold;
-    margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
 }
 
 .btn.btn-primary {
-    background-color: #a0522d; /* Brown accent color for button */
-    color: white;
-    border-radius: 5px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
+  background-color: #3399ff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .btn.btn-primary:hover {
-    background-color: #8B4513;
+  background-color: #2277cc;
 }
 
 .form-text {
-    font-style: italic;
-    color: #666;
+  color: #666;
+  font-size: 0.9em;
 }
-
 
 .icons {
-    width: 75px;
-    height: 75px;
-    margin-right: 15px;
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+  margin-bottom: 10px;
 }
 
-
-/* Responsive styles */
-
 @media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 
 @media (max-width: 576px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-    .card.ppmid{
-        max-width: 90%;
-    }
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card.ppmid {
+    max-width: 100%;
+  }
 }
 
-/* Style for images in the icon grid */
-.icons img{
-    width: 100%;
-    height: auto;
-    border-radius: 50%; /* Circular icons */
-    
+.cxx{
+    fill: #3399ff;
 }
 
-/* Style for specific image in icon grid */
-.icons.cxx {
-    width: 75px;
-    height: 75px;
-}
-.icons.cxx img {
-    border-radius: 5px; /* Rounded corner icons */
+.sql{
+    fill: #3399ff;
 }
 
-
-/* Style for specific image in icon grid */
-.icons.sql {
-    width: 75px;
-    height: 75px;
-}
-.icons.sql img {
-    border-radius: 5px; /* Rounded corner icons */
-}
-
-/* Add a general style for all images to ensure responsiveness */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block; /* Prevents extra space below images */
-}
-
-/* Style the email address */
-span[style*="color: red"] {
-    color: red;
-    font-style: italic;
-}
-
-
-/* Add some spacing between paragraphs */
-p + p {
-    margin-top: 1rem;
-}
-
-/* Style to improve the look of the links */
-a {
-    color: #1E90FF; /* A vibrant blue color that matches dark academia */
-    text-decoration: underline;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-/* Styling for marked elements */
-mark {
-    background-color: #FFFFE0; /* Light yellow background */
+mark{
+    background-color: #FFFF99;
+    color: #000000;
     padding: 0.2em;
+    font-weight: bold;
 }
