@@ -1,76 +1,144 @@
 body {
   font-family: 'Arial', sans-serif;
-  margin: 0;
-  background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
-  color: #333;
+  background: rgba(255, 255, 255, 0.8); /* Light glassmorphism background */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+.pr-nav {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
 }
+
 
 header {
-  background: linear-gradient(to right, #66ccff, #3399ff);
-  color: white;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .nav-pills .nav-link {
-  color: white;
-  border-radius: 5px;
+  color: #333;
+  border-radius: 20px;
   padding: 10px 20px;
-  margin: 0 5px;
+  transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 123, 255, 0.2);
 }
 
 
-.pr-nav {
-    background: linear-gradient(to bottom right, #e0e0e0, #f0f0f0);
+.container {
+  padding: 20px;
+}
+
+h1, h3, h2, h4 {
+  font-weight: 600;
+  color: #333;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+.lead {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn-outline-secondary {
+  color: #333;
+  border-color: #ccc;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  color: #007bff;
+}
+
+
+#icon-grid h2{
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.icons.sql{
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.icons.cxx{
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 #welcome-section {
   text-align: center;
   padding: 100px 0;
-  background-image: url('https://source.unsplash.com/random/1920x1080/?technology'); /* Replace with your desired background image */
-  background-size: cover;
-  background-position: center;
-  color: white;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 #welcome-section h1 {
   font-size: 3em;
-  margin-bottom: 0.5em;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 #welcome-section h3 {
-  font-size: 2em;
-  margin-bottom: 1em;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #555;
 }
 
 .pp {
-  font-size: 1.2em;
-  color: white;
-  margin-bottom: 2em;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
 }
 
 .ppicon {
-  fill: white;
-  animation: rotate 2s linear infinite;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+    animation: rotate 2s infinite linear;
 }
-
 
 @keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
+
+
 
 #projects {
   padding: 50px 0;
@@ -78,9 +146,9 @@ header {
 
 #project-hail {
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2em;
   margin-bottom: 30px;
-  color: #3399ff;
+  color: #333;
 }
 
 .project-grid {
@@ -90,61 +158,57 @@ header {
 }
 
 .project-tile {
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-radius: 10px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.project-img, .img-proj {
+.project-img {
   width: 100%;
   height: auto;
   border-radius: 10px 10px 0 0;
+  object-fit: cover;
 }
 
 .code {
-  color: #3399ff;
+  color: #007bff; /* Accent color for code brackets */
 }
-
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #c0e0ff, #99ccff);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
 }
-
 
 .card.ppmid {
     margin: auto;
     max-width: 500px;
-    width:100%;
-    margin-top: 50px;
-    background: white;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
 }
 
 
 .card {
   border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-  background-color: #3399ff;
+  background-color: #007bff;
   color: white;
   font-weight: bold;
-  font-size: 1.5em;
-  text-align: center;
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px 10px 0 0;
 }
 
@@ -152,40 +216,21 @@ header {
   padding: 20px;
 }
 
-.form-control {
-  border-radius: 5px;
-  border-color: #ccc;
-  padding: 10px;
-  margin-bottom: 15px;
-}
-
 .form-label {
   font-weight: bold;
   color: #333;
+  margin-bottom: 5px;
 }
 
-.btn.btn-primary {
-  background-color: #3399ff;
-  border: none;
-  padding: 10px 20px;
+.form-control {
   border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.btn.btn-primary:hover {
-  background-color: #2277cc;
+  border: 1px solid #ccc;
+  padding: 10px;
 }
 
 .form-text {
-  color: #666;
-  font-size: 0.9em;
-}
-
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 15px;
-  margin-bottom: 10px;
+  font-size: 0.8rem;
+  color: #555;
 }
 
 @media (max-width: 768px) {
@@ -198,23 +243,20 @@ header {
   .project-grid {
     grid-template-columns: 1fr;
   }
-
-  .card.ppmid {
-    max-width: 100%;
-  }
 }
 
-.cxx{
-    fill: #3399ff;
-}
-
-.sql{
-    fill: #3399ff;
-}
-
-mark{
-    background-color: #FFFF99;
-    color: #000000;
+mark {
+    background-color: rgba(0, 123, 255, 0.2);
+    color: #007bff;
     padding: 0.2em;
-    font-weight: bold;
+    border-radius: 5px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-proj{
+    border-radius: 10px 10px 0 0;
 }
