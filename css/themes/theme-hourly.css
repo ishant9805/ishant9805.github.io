@@ -1,118 +1,138 @@
 body {
-  background: linear-gradient(to right, #121212, #212121);
-  color: #eee;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s ease; /* Add transition for smooth theme change */
 }
 
-.container {
-  max-width: 1200px;
+.pr-nav {
+  background-color: #1a1a1a; /* Darker background for projects page */
 }
+
 
 header {
-  background: #212121;
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .nav-pills .nav-link {
-  color: #eee;
-  background: #333;
+  color: #fff;
+  background-color: transparent;
+  border: none;
   border-radius: 5px;
   padding: 10px 15px;
   margin: 0 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  background: linear-gradient(to right, #4CAF50, #8BC34A);
-  color: #121212;
-}
-
+.nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background: linear-gradient(to right, #388E8E, #008080);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
 
-.display-5 {
-  color: #4CAF50;
+.container {
+  padding-top: 20px;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #fff;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.lead {
+  font-size: 1.2rem;
 }
 
 .btn-primary {
-  background: linear-gradient(to right, #4CAF50, #8BC34A);
-  border-color: #4CAF50;
+  background-color: #6200EE;
+  border-color: #6200EE;
+}
+
+.btn-primary:hover {
+  background-color: #5000b5;
+  border-color: #5000b5;
 }
 
 .btn-outline-secondary {
-  border-color: #eee;
-  color: #eee;
+  color: #fff;
+  border-color: #fff;
 }
 
 .btn-outline-secondary:hover {
-  background: #eee;
-  color: #121212;
-}
-
-
-#icon-grid h2 {
-  color: #4CAF50;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #000;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
+  margin-right: 10px;
+  fill: white;
 }
 
-.icons:hover {
-  transform: scale(1.1);
-  transition: 0.3s ease-in-out;
+.icons.cxx {
+  fill: #fff;
 }
 
-.cxx {
-  width: 75px;
-  height: 75px;
-  margin-right: 15px;
+.icons.sql {
+  fill: #fff;
 }
 
-.sql{
-  width: 75px;
-  height: 75px;
-  margin-right: 15px;
+#icon-grid {
+  text-align: center;
 }
-
-.lead {
-  color: #bbb;
-}
-
 
 #welcome-section {
   text-align: center;
-  background: linear-gradient(to bottom, #333, #121212);
+  padding: 50px 0;
+  background: linear-gradient(to bottom, rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.5)), url('background.jpg'); /* Replace with your actual background image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.pp {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #eee; /* Light grey for paragraph */
+}
+
+.ppicon {
+    width: 40px;
+    height: 40px;
+    margin: 20px auto 0;
+    animation: arrowBounce 1s infinite;
+}
+
+@keyframes arrowBounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+#projects {
   padding: 50px 0;
 }
 
-#welcome-section h1, #welcome-section h3 {
-  color: #4CAF50;
-}
-
-#welcome-section .pp {
-  color: #bbb;
-  font-style: italic;
-  margin-bottom: 20px;
-}
-
-#welcome-section .ppicon {
-  margin: 0 auto;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-#projects h1 {
-  color: #4CAF50;
+#project-hail {
   text-align: center;
   margin-bottom: 30px;
 }
@@ -124,89 +144,87 @@ header {
 }
 
 .project-tile {
-  border: 1px solid #555;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  overflow: hidden; /* Hide overflowing image content on hover */
 }
-
 
 .project-tile:hover {
-  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px); /* Add subtle lift on hover */
 }
 
-
-.project-img, .img-proj {
+.project-img {
   width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 8px 8px 0 0; /* Rounded top corners only */
+  object-fit: cover; /* Ensure image covers the entire container */
 }
 
 .code {
-  color: #ff9800;
-}
-
-.pr-nav {
-  padding-top: 0 !important;
+  color: #6200EE; /* Accent color for code brackets */
 }
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensure form is centered vertically */
+  padding: 20px;
 }
 
 .card.ppmid {
-  margin: auto;
-  max-width: 600px;
-  background: #333;
-  border: 1px solid #555;
+  margin: 0 auto; /* Center horizontally */
+  max-width: 500px; /* Adjust as needed */
 }
 
 .card {
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 20px;
 }
 
 .card-header {
-  background: linear-gradient(to right, #4CAF50, #8BC34A);
-  color: #121212;
-  text-align: center;
+  background-color: #6200EE;
+  color: #fff;
+  font-weight: bold;
   padding: 15px;
-  border-radius: 10px 10px 0 0;
+  border-radius: 8px 8px 0 0;
 }
 
 .card-body {
   padding: 20px;
 }
 
-.form-label {
-  color: #eee;
-}
-
 .form-control {
-  background: #222;
-  border: 1px solid #555;
-  color: #eee;
+  background-color: #212121;
+  color: #fff;
+  border: 1px solid #424242;
+  border-radius: 5px;
 }
 
-.form-control:focus {
-  box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.25);
-  border-color: #4CAF50;
-}
-
-.btn.btn-primary{
-    background: linear-gradient(to right, #4CAF50, #8BC34A);
-    border-color: #4CAF50;
+.form-label {
+  color: #fff;
+  font-weight: 500;
 }
 
 .form-text {
-  color: #bbb;
+  color: #9e9e9e;
 }
 
+#sub-btn {
+  background-color: #6200EE;
+  border-color: #6200EE;
+}
 
+#sub-btn:hover {
+  background-color: #5000b5;
+  border-color: #5000b5;
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .project-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -216,5 +234,8 @@ header {
 @media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
+  }
+  .card.ppmid {
+    max-width: 100%;
   }
 }
