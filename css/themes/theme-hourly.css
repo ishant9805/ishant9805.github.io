@@ -1,148 +1,123 @@
 body {
-  font-family: 'Merriweather', serif;
-  background-color: #282c34;
-  color: #d6d6d6;
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
-}
-
-a {
-  color: #61afef;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-h1, h2, h3 {
-  font-weight: 700;
-  color: #f8f8f2;
-}
-
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: 1.5em;
+  margin: 0;
+  background-color: #f8f9fa;
+  color: #343a40;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 header {
-  background-color: #282c34;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-pills .nav-link {
+  color: #343a40;
+  padding: 1rem 1.5rem;
   border-radius: 0.25rem;
-  background-color: #44475a;
-  color: #d6d6d6;
-  padding: 0.5rem 1rem;
-  margin: 0 0.5rem;
+  transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #61afef;
-  color: #282c34;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:focus {
+  box-shadow: none;
+}
+
+.display-5 {
+  font-weight: 700;
+  color: #343a40;
 }
 
 .lead {
-  font-style: italic;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #343a40;
 }
 
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 1rem;
-  fill: #d6d6d6;
-}
-
-.icons.cxx {
-    fill: #d6d6d6;
-}
-
-.icons.sql {
-    fill: #d6d6d6;
-}
-
-#icon-grid {
-  background-color: #343a40;
-  padding: 2rem;
-  border-radius: 0.5rem;
-}
-
-.fw-bold {
-  font-weight: bold;
-}
 
 .btn-primary {
-  background-color: #61afef;
-  border-color: #61afef;
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
 }
 
 .btn-primary:hover {
-  background-color: #4e94c7;
-  border-color: #4e94c7;
+  background-color: #0069d9;
+  border-color: #0062cc;
 }
 
 .btn-outline-secondary {
-  color: #61afef;
-  border-color: #61afef;
+  color: #343a40;
+  border-color: #343a40;
 }
 
 .btn-outline-secondary:hover {
-  background-color: #61afef;
-  color: #282c34;
-}
-
-#welcome-section {
-  text-align: center;
   background-color: #343a40;
-  padding: 4rem 0;
+  color: #fff;
 }
 
-#welcome-section h1 {
-  font-size: 3em;
-}
-
-#welcome-section h3 {
-  font-size: 1.8em;
+#icon-grid .icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 1rem;
   margin-bottom: 1rem;
 }
 
-.pp {
-  font-style: italic;
-  color: #989898;
+#icon-grid h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #343a40;
 }
 
-.ppicon {
-  margin-top: 1rem;
-  fill: #61afef;
-  animation: bounce 1.5s infinite ease-in-out;
+#icon-grid h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #343a40;
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+#icon-grid p {
+  font-size: 1rem;
+  color: #343a40;
 }
 
-#projects {
-  padding: 4rem 0;
+
+.pr-nav {
+  background-color: #fff;
 }
 
-#project-hail {
+#welcome-section {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5rem 0;
   text-align: center;
+}
+
+#welcome-section h1, #welcome-section h3 {
+    font-weight: 700;
+    color: white;
+    margin: 0.5rem;
+}
+
+#welcome-section p {
+    color: white;
+}
+
+#projects h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #343a40;
   margin-bottom: 2rem;
 }
 
@@ -153,59 +128,66 @@ header {
 }
 
 .project-tile {
-  border: 1px solid #44475a;
+  border: 1px solid #dee2e6;
   border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  text-decoration: none;
-  color: #d6d6d6;
-  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.project-img, .img-proj {
-  max-width: 100%;
+.project-img {
+  width: 100%;
   height: auto;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .code {
-  color: #61afef;
+  color: #007bff;
+  font-weight: 600;
 }
 
-.pr-nav {
-  padding-top: 1rem;
+.pp {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #fff;
+  margin-bottom: 2rem;
 }
+
+.ppicon {
+  display: block;
+  margin: 2rem auto;
+}
+
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #282c34;
 }
 
 .card.ppmid {
   margin: auto;
   max-width: 600px;
-  background-color: #343a40;
+  border: 1px solid #007bff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .card {
-  border-radius: 1rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  width: 100%;
   padding: 2rem;
-  text-align: center;
 }
 
 .card-header {
-  background-color: #44475a;
-  color: #f8f8f2;
-  font-weight: bold;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
   padding: 1rem;
   border-radius: 0.5rem 0.5rem 0 0;
 }
@@ -214,31 +196,32 @@ header {
   padding: 2rem;
 }
 
+.form-label {
+  font-weight: 600;
+  color: #343a40;
+}
+
 .form-control {
-  background-color: #343a40;
-  color: #d6d6d6;
-  border: 1px solid #44475a;
-  border-radius: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
   padding: 0.5rem;
   margin-bottom: 1rem;
 }
 
-.form-label {
-  color: #f8f8f2;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+.form-text {
+  font-size: 0.8rem;
+  color: #6c757d;
 }
 
 .btn.btn-primary {
-  background-color: #61afef;
-  border-color: #61afef;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
 }
 
-.form-text {
-  color: #989898;
-}
 
 @media (max-width: 768px) {
   .project-grid {
@@ -250,12 +233,7 @@ header {
   .project-grid {
     grid-template-columns: 1fr;
   }
-  .contact-wrapper {
-    flex-direction: column;
-  }
-
-  .card.ppmid{
-    max-width: 90%;
-    margin: 2rem auto;
+  .card.ppmid {
+    max-width: 100%;
   }
 }
