@@ -1,8 +1,11 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4; /* Light background */
-  color: #333; /* Dark text */
-  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.pr-nav {
+  background-color: #FFD700; /* Gold */
 }
 
 .container {
@@ -11,155 +14,94 @@ body {
 }
 
 header {
-  background-color: #002d62; /* Deep blue header */
+  background-color: #8B008B; /* DarkMagenta */
   color: white;
 }
 
 .nav-pills .nav-link {
   color: white;
-  border-radius: 0.5rem;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background-color: #fff;
-    color: #002d62;
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #FF8C00; /* DarkOrange */
 }
 
-.nav-pills .nav-link:hover{
-  background-color: rgba(255,255,255,0.2);
-}
-
-h1, h2, h3 {
-  font-weight: 700;
-  color: #002d62; /* Deep blue headings */
-}
-
-.lead {
-  font-style: italic;
-  font-size: 1.2rem;
-}
-
-.icons {
-  width: 50px;
-  height: 50px;
-  margin-right: 1rem;
-}
-
-.icons.cxx{
-  width: 75px;
-  height: 75px;
-  margin-right: 1rem;
-}
-
-.icons.sql {
-  width: 75px;
-  height: 75px;
-  margin-right: 1rem;
-}
-
-
-#icon-grid .icons {
-    margin-right: 10px;
-}
-
-#icon-grid h2 {
-  margin-bottom: 2rem;
-  border-bottom: 2px solid #002d62;
-  padding-bottom: 1rem;
-}
-
-.btn-primary {
-  background-color: #002d62; /* Deep blue button */
-  border-color: #002d62;
-  color: white;
-}
-
-.btn-primary:hover{
-  background-color: #001e40;
-  border-color: #001e40;
-}
-
-.btn-outline-secondary{
-  color: #002d62;
-  border-color: #002d62;
-}
-
-.btn-outline-secondary:hover{
-  background-color: #002d62;
-  color: white;
+.nav-link.active {
+    background-color: #FF8C00;
 }
 
 #welcome-section {
-  text-align: center;
-  padding: 5rem 0;
-  background: linear-gradient(to bottom, #002d62, #001e40); /* Deep blue background */
+  background-color: #00CED1; /* DarkTurquoise */
   color: white;
-}
-
-#welcome-section h1, #welcome-section h3 {
-  margin-bottom: 1rem;
-}
-
-#projects h1 {
   text-align: center;
-  margin-bottom: 3rem;
+  padding: 100px 0;
+}
+
+#welcome-section h1,
+#welcome-section h3 {
+  margin-bottom: 10px;
+}
+
+#projects {
+  padding: 50px 0;
+  text-align: center;
+}
+
+#project-hail {
+  font-size: 3em;
+  margin-bottom: 30px;
+  color: #4B0082; /* Indigo */
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 20px;
 }
 
 .project-tile {
-  border: 1px solid #ddd;
-  border-radius: 0.5rem;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border: 5px solid #FF1493; /* DeepPink */
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.project-img {
+.project-img,
+.img-proj {
   width: 100%;
   height: auto;
-  border-radius: 0.5rem 0.5rem 0 0;
-  object-fit: cover;
+  border-radius: 20px;
 }
 
 .code {
-  color: #f2e59a; /* Accent color for code brackets */
+  color: #FF00FF; /* Magenta */
 }
 
 .pp {
-  font-style: italic;
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: white;
 }
 
 .ppicon {
-  display: block;
-  margin: 1rem auto;
-  animation: rotate 2s linear infinite;
+  margin-top: 20px;
+  fill: white;
+  transition: transform 0.3s ease;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.pr-nav {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+.ppicon:hover {
+  transform: scale(1.1);
 }
 
 .contact-wrapper {
@@ -167,61 +109,72 @@ h1, h2, h3 {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: #DC143C; /* Crimson */
 }
 
 .card.ppmid {
   margin: 0 auto;
-  max-width: 600px; /* Adjust width as needed */
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .card {
-  border: 1px solid #ddd;
-  border-radius: 0.5rem;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  background-color: white;
+  padding: 20px;
 }
 
 .card-header {
-  background-color: #002d62; /* Deep blue header */
+  font-size: 2em;
+  background-color: #008000; /* Green */
   color: white;
-  font-weight: bold;
-  padding: 1rem;
-  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-body {
-  padding: 2rem;
-}
-
-.form-control {
-  border-radius: 0.5rem;
-  border-color: #ddd;
-  padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 
 .form-label {
   font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #002d62;
+  color: #483D8B; /* DarkSlateBlue */
+}
+
+.form-control {
+  border: 2px solid #FF69B4; /* HotPink */
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .btn.btn-primary {
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #FF4500; /* OrangeRed */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .form-text {
-  font-size: 0.8rem;
-  color: #666;
+  color: gray;
+  font-size: 0.9em;
+}
+
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
@@ -229,10 +182,37 @@ h1, h2, h3 {
   .project-grid {
     grid-template-columns: 1fr;
   }
+  .card.ppmid {
+    max-width: 100%;
+  }
 }
 
-.img-fluid, .img-proj{
-  width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
+.display-5 {
+    color: #800000; /* Maroon */
+}
+
+h1 {
+    color: #000080; /* Navy */
+}
+
+h2 {
+    color: #800080; /* Purple */
+}
+
+h3 {
+    color: #008080; /* Teal */
+}
+
+mark {
+    background-color: #FFD700; /* Gold */
+    padding: 2px 5px;
+    color: black;
+}
+
+.lead {
+    color: #A0522D; /* Sienna */
+}
+
+.img-fluid {
+    border-radius: 20px;
 }
