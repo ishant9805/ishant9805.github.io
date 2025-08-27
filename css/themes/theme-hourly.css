@@ -1,172 +1,181 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #222;
-  color: #eee;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
   transition: background-color 0.3s ease;
 }
 
-body.pr-nav {
-  background-color: #111;
+.pr-nav {
+  background-color: #f0f0f0; /* Lighter background for projects page */
 }
-
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 header {
-  background-color: #333;
-  padding: 1rem 0;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8; /* Light header background */
+  border-bottom: 1px solid #eee;
 }
 
 .nav-pills .nav-link {
-  color: #eee;
-  border-radius: 0.5rem;
-  padding: 0.8rem 1.5rem;
-  margin: 0 0.5rem;
-  background-color: #444;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 0 10px;
   transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
-  background-color: #666;
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #ff9966; /* Accent color for active/hover nav links */
+  color: white;
 }
 
 h1, h2, h3 {
-  font-weight: 700;
-  color: #fff;
+  font-weight: 600;
+  color: #333;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3em;
+  margin-bottom: 1em;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2em;
+  margin-bottom: 1em;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 p {
-  line-height: 1.6;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 
 .lead {
-  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .btn {
-  border-radius: 0.5rem;
-  padding: 0.8rem 1.5rem;
-  transition: background-color 0.3s ease;
+  border-radius: 20px;
+  padding: 10px 20px;
 }
 
 .btn-primary {
-  background-color: #f08080;
+  background-color: #ff6633; /* Main accent color for buttons */
   border: none;
-  color: #222;
+  color: white;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #e07070;
+  background-color: #cc5522;
 }
 
 .btn-outline-secondary {
-  border-color: #888;
-  color: #eee;
+  color: #ff6633;
+  border-color: #ff6633;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .btn-outline-secondary:hover {
-  background-color: #888;
-  color: #222;
-  border-color: #888;
+  background-color: #ff6633;
+  color: white;
+  border-color: #cc5522;
 }
-
 
 #icon-grid .icons {
   width: 75px;
   height: 75px;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+  margin-right: 1em;
+  border-radius: 50%;
+  background-color: white;
+  padding: 10px;
 }
 
-#icon-grid h2 {
-  margin-bottom: 2rem;
+.img-fluid {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
 }
 
 #welcome-section {
+  background-color: #ffe0cc;
   text-align: center;
-  background-color: #1a4674;
-  padding: 4rem 0;
+  padding: 40px 0;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-#welcome-section h1, #welcome-section h3 {
-  margin-bottom: 1rem;
+#welcome-section h1,
+#welcome-section h3 {
+  margin-bottom: 0.5em;
 }
 
-#welcome-section .pp {
-  font-size: 1.2rem;
-  color: #fff;
-  margin-bottom: 2rem;
+.pp {
+  font-style: italic;
+  color: #663300;
+  margin-bottom: 1em;
 }
+
+.ppicon {
+  animation: spin 2s infinite linear;
+  margin: 20px auto;
+  display: block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 
 #projects {
-  padding: 4rem 0;
+  margin-top: 20px;
 }
 
 #project-hail {
+  font-size: 2em;
+  color: #cc6633;
+  margin-bottom: 20px;
   text-align: center;
-  margin-bottom: 2rem;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 20px;
 }
 
 .project-tile {
-  border: 1px solid #555;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
   overflow: hidden;
 }
 
 .project-tile:hover {
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-  transform: translateY(-0.5rem);
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.project-img, .img-proj {
-  width: 100%;
+.project-img {
+  border-radius: 10px;
+  max-width: 100%;
   height: auto;
-  border-radius: 0.5rem 0.5rem 0 0;
-  object-fit: cover;
 }
 
 .code {
-  color: #f08080;
-}
-
-.ppicon {
-  display: block;
-  margin: 2rem auto;
-  animation: rotate 2s linear infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: #ff6633; /* Accent color for code brackets */
 }
 
 .contact-wrapper {
@@ -178,56 +187,51 @@ p {
 
 .card.ppmid {
   margin: auto;
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
-  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card {
-  border-radius: 0.5rem;
-  background-color: #333;
-  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
-  color: #eee;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .card-header {
-  background-color: #555;
+  background-color: #ff6633;
+  color: white;
   font-weight: bold;
-  padding: 1rem;
-  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-body {
-  padding: 2rem;
+  padding: 20px;
 }
 
-
 .form-control {
-  background-color: #333;
-  color: #eee;
-  border: 1px solid #555;
-  border-radius: 0.5rem;
-  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .form-label {
-  color: #eee;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .form-text {
   color: #888;
-  font-size: 0.9rem;
+  font-size: 0.8em;
+  margin-top: 5px;
 }
 
-#sub-btn {
-  margin-top: 1rem;
-}
-
+/* Media Queries for responsiveness */
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
@@ -235,27 +239,7 @@ p {
   .project-grid {
     grid-template-columns: 1fr;
   }
-}
-
-.mark {
-  background-color: #f08080;
-  padding: 0.2rem 0.4rem;
-  border-radius: 0.2rem;
-  color: #222;
-}
-
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
-
-
-.cxx {
-  width: 75px;
-  height: 75px;
-}
-
-.sql {
-    width: 75px;
-    height: 75px;
+  .card.ppmid {
+    max-width: 90%;
+  }
 }
