@@ -1,181 +1,168 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  margin: 0;
-  padding: 0;
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  font-family: 'Bebas Neue', cursive;
+  line-height: 1.6;
 }
 
-.pr-nav {
-  background-color: #f0f2f5;
+a {
+  color: gold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 header {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #282828;
+  padding: 1rem 0;
+  border-radius: 0 0 10px 10px;
 }
 
 .nav-pills .nav-link {
-  color: #343a40;
-  font-weight: 600;
-  border-radius: 5px;
-  padding: 10px 20px;
+  color: #f5f5f5;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  margin: 0 0.5rem;
   transition: background-color 0.3s ease;
-  margin: 0 5px;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #007bff;
-  color: #fff;
+  background-color: gold;
+  color: #1e1e1e;
+}
+
+.display-5 {
+  color: gold;
+}
+
+.lead {
+  font-style: italic;
+}
+
+.btn-primary {
+  background-color: gold;
+  border-color: gold;
+}
+
+.btn-primary:hover {
+  background-color: #d4af37;
+  border-color: #d4af37;
+}
+
+.btn-outline-secondary {
+  color: gold;
+  border-color: gold;
+}
+
+.btn-outline-secondary:hover {
+  background-color: gold;
+  color: #1e1e1e;
+}
+
+#icon-grid h2 {
+  color: gold;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
-  fill: #fff;
-  background-color: #3498db;
-  border-radius: 50%;
-  padding: 10px;
-  transition: transform 0.3s ease;
+  margin-right: 1rem;
 }
+
 
 .icons:hover {
   transform: scale(1.1);
+  transition: transform .3s ease;
 }
 
-.cxx {
-  background-color: #e74c3c;
-}
-
-.sql{
-  background-color: #2ecc71;
-}
-
-h1, h3, h2 {
+.fw-bold {
   font-weight: bold;
-  color: #333;
 }
-
-h1 {
-  font-size: 3em;
-}
-
-h2 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: 1.5em;
-}
-
-p {
-  line-height: 1.6;
-  color: #555;
-}
-
-.lead {
-  font-size: 1.2em;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.btn-outline-secondary {
-  background-color: transparent;
-  color: #333;
-  border-color: #ced4da;
-}
-
-.btn:hover {
-    opacity: 0.8;
-}
-
-#icon-grid .icons {
-  margin-right: 10px;
-}
-
 
 #welcome-section {
+  background-image: url('https://www.transparenttextures.com/patterns/subtle-dots-grey.png'); /* Replace with your desired background image */
+  background-size: cover;
+  background-position: center;
   text-align: center;
-  padding: 50px 0;
-  background-image: linear-gradient(to bottom, #f0f2f5, #fff);
+  padding: 100px 0;
 }
 
-#welcome-section h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-}
-
+#welcome-section h1,
 #welcome-section h3 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  font-style: italic;
-}
-
-.pp {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-
-.ppicon{
-  margin: 0 auto;
-  display: block;
-  animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% {transform: translateY(0);}
-  50% {transform: translateY(-20px);}
+  color: gold;
+  margin-bottom: 1rem;
 }
 
 
-#projects {
-  padding: 50px 0;
-}
-
-#project-hail{
+#projects h1 {
+  color: gold;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
+
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  gap: 2rem;
 }
 
+
 .project-tile {
-  border: 1px solid #ddd;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border: 2px solid gold;
   border-radius: 10px;
-  overflow: hidden;
+  padding: 1rem;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-
-.project-img, .img-proj {
-  width: 100%;
+.project-img {
+  max-width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
-
 
 .code {
-  color: #007bff;
-  font-weight: bold;
+  color: gold;
+  font-family: monospace;
+}
+
+.pp {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ppicon {
+  display: block;
+  margin: 2rem auto;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pr-nav {
+  background-color: #282828; /* Add background color */
 }
 
 .contact-wrapper {
@@ -183,60 +170,61 @@ p {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, #f0f2f5, #fff);
+  background-image: url('https://www.transparenttextures.com/patterns/subtle-dots-grey.png'); /* Replace with your desired background image */
+  background-size: cover;
 }
 
 .card.ppmid {
+  margin: auto;
   max-width: 600px;
-  margin: 0 auto;
-  background-color: white;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-  border-radius: 10px;
+  width: 100%;
 }
 
 .card {
-  border: none;
+  background-color: #333;
+  border: 2px solid gold;
   border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+  padding: 2rem;
 }
 
 .card-header {
-  background-color: #007bff;
-  color: #fff;
+  color: gold;
   font-weight: bold;
-  border-radius: 10px 10px 0 0;
-  padding: 15px;
+  text-align: center;
+  margin-bottom: 1rem;
 }
+
 
 .card-body {
-  padding: 30px;
-}
-
-.form-label {
-  font-weight: 600;
-  color: #333;
+  padding: 1rem;
 }
 
 .form-control {
+  background-color: #282828;
+  color: #f5f5f5;
+  border: 1px solid gold;
   border-radius: 5px;
-  border-color: #ced4da;
-  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  padding: 0.8rem 1rem;
 }
 
-.form-text {
-  color: #888;
+.form-label {
+  color: gold;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .btn.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  border-radius: 5px;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
+  background-color: gold;
+  border-color: gold;
+  border-radius: 10px;
+  padding: 0.8rem 2rem;
 }
 
-.btn.btn-primary:hover {
-  background-color: #0069d9;
+.form-text {
+  color: #a0a0a0;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 768px) {
@@ -245,8 +233,28 @@ p {
   }
 }
 
-@media (max-width: 992px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 576px) {
+  .card.ppmid {
+    max-width: 100%;
   }
+}
+
+
+.h-100{
+  height: 100vh;
+}
+
+.text-muted{
+  color: #a0a0a0;
+}
+
+.text-muted u{
+  text-decoration: underline;
+}
+
+mark{
+  background-color: #333;
+  color: gold;
+  padding: 0.2rem;
+  border-radius: 5px;
 }
