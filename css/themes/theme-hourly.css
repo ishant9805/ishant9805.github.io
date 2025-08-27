@@ -1,158 +1,178 @@
 body {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
     font-family: 'Arial', sans-serif;
     margin: 0;
-    line-height: 1.6;
-    background-color: #f8f9fa;
-    color: #343a40;
+    padding:0;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 header {
-    background-color: #fff;
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #282c34;
 }
 
 .nav-pills .nav-link {
+    color: #e0e0e0;
+    background-color: #343a40;
+    border-radius: 10px;
     padding: 10px 20px;
-    border-radius: 5px;
-    color: #343a40;
+    margin: 0 5px;
     transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active,
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #61dafb;
+    color: #1e1e1e;
+}
+
 .nav-pills .nav-link:hover {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #495057;
 }
 
 
+hr {
+    border-top: 1px solid #495057;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .display-5 {
-    font-weight: 700;
-    color: #212529;
+    color: #61dafb;
 }
 
 .lead {
-    font-size: 1.2rem;
-    color: #495057;
+    color: #e0e0e0;
 }
 
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #61dafb;
+    border-color: #61dafb;
+}
+
+.btn-primary:hover {
+    background-color: #495057;
+    border-color: #495057;
 }
 
 .btn-outline-secondary {
-    color: #343a40;
-    border-color: #adb5bd;
+    color: #61dafb;
+    border-color: #61dafb;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #61dafb;
+    color: #1e1e1e;
+}
+
+
+#icon-grid h2 {
+    color: #61dafb;
 }
 
 .icons {
     width: 75px;
     height: 75px;
     margin-right: 15px;
-    vertical-align: middle;
+    fill: #e0e0e0;
 }
 
-#icon-grid h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #212529;
+.icons.cxx {
+    fill: #61dafb;
 }
 
-#icon-grid .col h3 {
-    font-size: 1.5rem;
-    color: #212529;
-    margin-bottom: 0.5rem;
+.icons.sql {
+    fill: #e0e0e0;
 }
 
-#icon-grid .col p {
-    font-size: 1rem;
-    color: #495057;
+h3 {
+    color: #e0e0e0;
 }
 
-#welcome-section {
-    text-align: center;
-    padding: 100px 0;
-    background-image: url('https://source.unsplash.com/random/1920x1080');
-    background-size: cover;
-    background-position: center;
-    color: white;
-}
-
-#welcome-section h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-#welcome-section h3 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-
-.pp {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-
-.ppicon {
-  width: 40px;
-  height: 40px;
-  margin: 0 auto;
-  display: block;
-  fill: white;
-}
-
-#projects {
-    padding: 50px 0;
-}
-
-#project-hail {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #212529;
+p {
+    color: #e0e0e0;
 }
 
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 30px;
+    gap: 20px;
 }
 
 
+#welcome-section {
+    text-align: center;
+    padding: 100px 0;
+    background-image: url('memphis-bg.svg'); /* Replace with your Memphis background */
+    background-size: cover;
+    background-position: center;
+    color: #e0e0e0;
+}
+
+
+#welcome-section h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+#welcome-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.pp {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+.ppicon {
+    margin: 0 auto;
+    display: block;
+    fill: #61dafb;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+#projects h1 {
+    color: #61dafb;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
 .project-tile {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    border: 2px solid #61dafb;
+    border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
 .project-tile:hover {
-    transform: translateY(-5px);
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+    transform: scale(1.02);
 }
 
-.project-img, .img-proj {
+
+.project-img {
     width: 100%;
     height: auto;
-    border-radius: 8px 8px 0 0;
+    border-radius: 10px 10px 0 0;
 }
 
 .code {
-    color: #007bff;
+    color: #61dafb;
 }
 
 .pr-nav {
-    padding-top: 50px;
+    background-color: #282c34;
 }
 
 .contact-wrapper {
@@ -163,77 +183,73 @@ header {
 }
 
 .card.ppmid {
-    margin: 0 auto;
+    margin: auto;
     max-width: 600px;
+    border: 2px solid #61dafb;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
-
 
 .card {
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    background-color: #ffffff;
+    border: none;
+    background-color: #282c34;
 }
 
+
 .card-header {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #212529;
-    margin-bottom: 20px;
+    background-color: #61dafb;
+    color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
 }
 
 .card-body {
-    padding: 30px;
+    padding: 20px;
 }
 
 .form-label {
-    font-weight: 600;
-    color: #212529;
+    color: #e0e0e0;
     margin-bottom: 5px;
 }
 
 .form-control {
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 1rem;
-    margin-bottom: 15px;
-}
-
-.btn.btn-primary {
-    padding: 10px 20px;
-    font-size: 1.1rem;
+    background-color: #343a40;
+    color: #e0e0e0;
+    border: 1px solid #61dafb;
     border-radius: 5px;
 }
 
 .form-text {
-    font-size: 0.9rem;
-    color: #6c757d;
+    color: #e0e0e0;
+    font-size: 0.8em;
 }
+
+#sub-btn {
+    background-color: #61dafb;
+    border-color: #61dafb;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#sub-btn:hover {
+    background-color: #495057;
+    border-color: #495057;
+}
+
 
 @media (max-width: 768px) {
     .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .project-grid {
         grid-template-columns: 1fr;
     }
-}
-
-@media (max-width: 992px) {
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .card.ppmid {
+        max-width: 90%;
     }
-}
-
-.cxx {
-    width: 75px;
-    height: 75px;
-}
-
-.sql {
-    width: 75px;
-    height: 75px;
-}
-
-.img-fluid {
-  max-width: 100%;
-  height: auto;
 }
