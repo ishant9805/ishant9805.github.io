@@ -1,13 +1,7 @@
 body {
+  background-color: #181818;
+  color: #d1d1d1;
   font-family: 'Roboto', sans-serif;
-  background-color: #f8f9fa;
-  color: #343a40;
-  transition: background-color 0.3s ease;
-}
-
-.pr-nav {
-  background-color: #171e26; /* Dark background for Projects page */
-  color: #fff;
 }
 
 .container {
@@ -15,115 +9,120 @@ body {
 }
 
 header {
-  background-color: #171e26; /* Dark background for header */
-  color: #fff;
+  background-color: #282828;
 }
 
 .nav-pills .nav-link {
-  color: #fff;
-  border-radius: 20px;
+  color: #d1d1d1;
+  border-radius: 5px;
   padding: 10px 20px;
   margin: 0 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active, .nav-pills .nav-link:hover {
-  background-color: #007bff; /* Neon blue for active/hover links */
-  color: #fff;
+  background-color: #4CAF50;
+  color: #181818;
 }
 
-
 .display-5 {
-  color: #007bff; /* Neon blue for main headings */
-  font-weight: 900;
+  color: #00FF00;
 }
 
 .lead {
-    font-size: 1.1rem;
+  color: #b0bec5;
 }
 
 .btn-primary {
-    background-color: #007bff; /* Neon blue for primary buttons */
-    border-color: #007bff;
-    color: #fff;
-    transition: background-color 0.3s ease;
+  background-color: #FF00FF;
+  border-color: #FF00FF;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+  background-color: #cc00cc;
 }
 
 .btn-outline-secondary {
-    border-color: #fff; /* White border for secondary buttons */
-    color: #fff;
-    transition: border-color 0.3s ease, color 0.3s ease;
+  color: #00FFFF;
+  border-color: #00FFFF;
 }
 
 .btn-outline-secondary:hover {
-    border-color: #007bff; /* Neon blue for secondary button hover */
-    color: #007bff;
+  color: #181818;
+  background-color: #00FFFF;
 }
 
-#icon-grid .icons {
+#icon-grid h2 {
+  color: #00FFFF;
+}
+
+.icons {
   width: 75px;
   height: 75px;
   margin-right: 15px;
+}
+
+.icons:hover {
+  transform: scale(1.1);
   transition: transform 0.3s ease;
 }
 
-#icon-grid .icons:hover {
-  transform: scale(1.1);
+.icons path {
+  transition: fill 0.3s ease;
+}
+
+.icons:hover path {
+  fill: #00FFFF;
+}
+
+.fw-bold {
+  font-weight: bold;
 }
 
 #welcome-section {
-  text-align: center;
-  padding: 50px 0;
-  background-image: linear-gradient(to bottom, #007bff, #000000), url("background.jpg"); /* Add your background image path */
-  background-size: cover;
-  background-blend-mode: multiply;
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background: linear-gradient(to bottom, #282828, #000000);
 }
 
 #welcome-section h1 {
+  color: #00FFFF;
   font-size: 3rem;
   margin-bottom: 10px;
 }
 
 #welcome-section h3 {
-  font-size: 1.5rem;
+  color: #b0bec5;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
 .pp {
+  color: #b0bec5;
   font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #6c757d;
+  text-align: center;
 }
 
 .ppicon {
-  fill: white;
+  width: 40px;
+  height: 40px;
+  fill: #00FFFF;
   margin: 0 auto;
-  animation: spin 2s linear infinite;
+  animation: pulse 1.5s infinite;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
-#projects {
-  padding: 40px 0;
-}
-
-#project-hail {
+#projects h1 {
+  color: #00FFFF;
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #007bff; /* Neon blue for project heading */
+  margin-bottom: 20px;
 }
 
 .project-grid {
@@ -133,32 +132,31 @@ header {
 }
 
 .project-tile {
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 1px solid #4CAF50;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
+  transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.project-img, .img-proj {
+
+.project-img {
   width: 100%;
   height: auto;
-  border-radius: 8px 8px 0 0; /* Rounded corners at the top */
-  transition: transform 0.3s ease;
+  border-radius: 10px 10px 0 0;
 }
-
-.project-img:hover {
-  transform: scale(1.05);
-}
-
 
 .code {
-  color: #00ff00; /* Neon green for code brackets */
-  font-weight: bold;
+  color: #FF00FF;
+}
+
+.pr-nav {
+  padding-top: 20px;
 }
 
 .contact-wrapper {
@@ -169,68 +167,64 @@ header {
 }
 
 .card.ppmid {
-  max-width: 600px;
   margin: auto;
+  max-width: 600px;
+  background-color: #282828;
 }
 
 .card {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #171e26;
-  color: #fff;
 }
 
-
 .card-header {
-  background-color: #007bff; /* Neon blue for card header */
-  color: #fff;
-  border-radius: 10px 10px 0 0;
+  background-color: #FF00FF;
+  color: #181818;
   font-weight: bold;
+  border-radius: 10px 10px 0 0;
   padding: 15px;
-  text-align: center;
 }
 
 .card-body {
-  padding: 25px;
-}
-
-.form-control {
-  background-color: #212529;
-  border: 1px solid #ced4da;
-  color: #fff;
+  padding: 20px;
 }
 
 .form-label {
-  color: #fff;
-  font-weight: bold;
+  color: #b0bec5;
 }
 
-.btn.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  color: white;
+.form-control {
+  background-color: #282828;
+  color: #d1d1d1;
+  border: 1px solid #4CAF50;
+  border-radius: 5px;
 }
-
 
 .form-text {
-  color: #6c757d;
+  color: #b0bec5;
 }
 
+#sub-btn {
+  background-color: #00FFFF;
+  border-color: #00FFFF;
+}
+
+#sub-btn:hover {
+  background-color: #009999;
+}
 
 @media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-}
-
-@media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 576px) {
-  .card {
-    max-width: 100%;
+@media (max-width: 992px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.cxx{
+    fill: #00FFFF;
 }
