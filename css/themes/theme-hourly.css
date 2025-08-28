@@ -1,227 +1,189 @@
 body {
-    background-color: #222831;
-    color: #f2f2f2;
-    font-family: 'Arial', sans-serif;
-    transition: background-color 0.3s ease;
-}
-
-.pr-nav {
-    background-color: #39626c;
+  font-family: 'Arial', sans-serif;
+  background: rgba(255, 255, 255, 0.8); /* Light glassmorphism background */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
 }
 
 .container {
-    max-width: 1200px;
+  max-width: 1200px;
 }
 
 header {
-    background-color: #00adb5;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
 }
 
 .nav-pills .nav-link {
-    color: #f2f2f2;
-    border-radius: 20px;
-    padding: 10px 20px;
-    margin: 0 5px;
-    transition: background-color 0.3s ease;
+  border-radius: 20px;
+  padding: 0.8rem 1.5rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active {
-    background-color: #39626c;
-}
-
+.nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-    background-color: #28a745;
+  background-color: rgba(0, 123, 255, 0.2); /* Light blue hover effect */
+  color: #007bff;
 }
 
-h1, h2, h3 {
-    color: #e7e7e7;
-    font-weight: 700;
-}
-
-h1 {
-    font-size: 2.5em;
-}
-
-h2 {
-    font-size: 2em;
-}
-
-p {
-    line-height: 1.6;
-    color: #a8a8a8;
-}
-
-.lead {
-    font-size: 1.2em;
-}
-
-.btn-primary {
-    background-color: #00adb5;
-    border-color: #00adb5;
-}
-
-.btn-primary:hover {
-    background-color: #28a745;
-    border-color: #28a745;
-}
-
-
-#icon-grid .icons {
-  width: 100px;
-  height: 100px;
-  margin-right: 10px;
-  border-radius: 50%;
-  background: #283593;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-#icon-grid svg {
-    fill: white;
+.pr-nav {
+  padding-right: 0;
 }
 
 #welcome-section {
-    background: url('nature-bg.jpg') center/cover no-repeat; /* Replace with your actual background image */
-    color: white;
-    text-align: center;
-    padding: 100px 0;
+  background: url('welcome-bg.jpg') no-repeat center center/cover; /* Replace with actual background image */
+  color: white;
+  text-align: center;
+  padding: 100px 0;
 }
 
-#welcome-section h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
+#welcome-section h1,
 #welcome-section h3 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .pp {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    color: #a8a8a8;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
 }
+
 
 .ppicon {
-    margin: 0 auto;
-    fill: white;
-    animation: rotate 2s linear infinite; /* Animate the icon */
+  margin: 0 auto;
+  display: block;
+  animation: bounce 2s infinite; /* Add bounce animation */
+  fill: white;
 }
 
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
     }
-    to {
-        transform: rotate(360deg);
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
     }
 }
 
-#projects {
-    padding: 50px 0;
-}
-
-#project-hail {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 30px;
+#projects h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #007bff; /* Light blue heading */
 }
 
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
 }
 
 .project-tile {
-    border: 1px solid #555;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-    transform: translateY(-5px);
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .project-img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
 }
 
 .code {
-    color: #00adb5;
+  color: #007bff; /* Light blue code brackets */
+  font-weight: bold;
 }
 
-
 .contact-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .card.ppmid {
-    width: 50%;
-    margin: auto;
-    max-width: 600px;
-    background-color: #39626c;
-    border-radius: 10px;
+  margin: auto;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-    background-color: #00adb5;
-    color: #f2f2f2;
-    font-size: 1.5em;
-    padding: 15px;
-    border-radius: 10px 10px 0 0;
-    text-align: center;
+  background-color: #007bff; /* Light blue header */
+  color: white;
+  border-radius: 15px 15px 0 0;
+  padding: 1rem;
+  font-weight: bold;
 }
 
 .card-body {
-    padding: 30px;
+  padding: 2rem;
 }
 
 .form-label {
-    color: #f2f2f2;
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .form-control {
-    background-color: #333;
-    border: 1px solid #555;
-    color: #f2f2f2;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+}
+
+.btn.btn-primary {
+  background-color: #007bff; /* Light blue button */
+  border-radius: 20px;
+  padding: 0.8rem 2rem;
+  font-weight: bold;
 }
 
 .form-text {
-    color: #a8a8a8;
+  color: #777;
 }
 
-.btn {
-  border-radius: 20px;
+.icons {
+    width: 75px;
+    height: 75px;
+    margin-right: 1rem;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-    .card.ppmid {
-        width: 90%;
-    }
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 
 @media (max-width: 576px) {
-    #welcome-section h1 {
-        font-size: 2em;
-    }
-    #welcome-section h3 {
-        font-size: 1.2em;
-    }
-    .pp {
-        font-size: 1em;
-    }
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .card.ppmid {
+    max-width: 90%;
+  }
+}
+
+.cxx {
+    width: 75px;
+    height: 75px;
+    margin-right: 1rem;
+}
+
+.sql {
+    width: 75px;
+    height: 75px;
+    margin-right: 1rem;
 }
