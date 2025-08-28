@@ -1,54 +1,60 @@
 body {
-  background-color: #1e1e1e;
-  color: #eee;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: background-color 0.3s ease;
-}
-
-.pr-nav {
-  background-color: #282828;
+  background-color: #121212;
+  color: #f2f2f2;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 header {
-  background-color: #282828;
+  background-color: #212121;
+  padding: 10px 0;
 }
 
 .nav-pills .nav-link {
-  color: #eee;
-  border-radius: 10px;
+  color: #f2f2f2;
+  border-radius: 5px;
   padding: 10px 20px;
-  margin: 0 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
-}
-
+.nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #4CAF50;
 }
 
-h1, h3, h2, .display-5 {
-  font-weight: 600;
-  color: #fff;
+.display-5 {
+  color: #4CAF50;
 }
 
-h1 {
-  font-size: 3rem;
+
+#icon-grid h2 {
+  color: #4CAF50;
 }
 
-h2 {
-  font-size: 2rem;
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
 }
 
-h3 {
-  font-size: 1.5rem;
+.icons.cxx{
+    width: 75px;
+    height: 75px;
+    margin-right: 15px;
+}
+
+.icons.sql{
+    width: 75px;
+    height: 75px;
+    margin-right: 15px;
 }
 
 .lead {
@@ -56,44 +62,46 @@ h3 {
 }
 
 .btn-primary {
-  background-color: #6563ff;
-  border-color: #6563ff;
-  color: #fff;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.25);
-  transition: box-shadow 0.3s ease;
+  background-color: #4CAF50;
+  border-color: #4CAF50;
 }
-
-.btn-primary:hover {
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25), -3px -3px 6px rgba(255, 255, 255, 0.25);
-}
-
 
 .btn-outline-secondary {
-  border-color: rgba(255,255,255,0.5);
-  color: #eee;
-  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.2);
-}
-
-
-.btn-outline-secondary:hover {
-  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2), inset -1px -1px 2px rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.1);
+  color: #4CAF50;
+  border-color: #4CAF50;
 }
 
 
 #welcome-section {
   text-align: center;
-  padding: 50px 0;
-  background-color: #282828;
+  background-color: #212121;
+  padding: 80px 0;
 }
 
-#projects {
-  padding: 50px 0;
+#welcome-section h1,
+#welcome-section h3 {
+  color: #4CAF50;
 }
 
-#project-hail {
+#welcome-section .pp {
+  font-style: italic;
+  color: #888;
+  margin-top: 20px;
+}
+
+#welcome-section .ppicon {
+    animation: arrow-bounce 1s infinite;
+}
+@keyframes arrow-bounce{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(-10px);}
+    100%{transform: translateY(0);}
+}
+
+#projects h1 {
+  color: #4CAF50;
+  margin-bottom: 40px;
   text-align: center;
-  margin-bottom: 30px;
 }
 
 .project-grid {
@@ -103,139 +111,90 @@ h3 {
 }
 
 .project-tile {
+  border: 1px solid #333;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.25);
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25), -3px -3px 6px rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
 
-.project-img, .img-proj {
+.project-img,
+.img-proj {
   width: 100%;
   height: auto;
   border-radius: 10px 10px 0 0;
 }
 
 .code {
-  color: #6563ff;
+  color: #4CAF50;
 }
 
-.pp {
-  text-align: center;
-  margin-top: 20px;
-  font-style: italic;
+.pr-nav {
+    padding-top: 60px;
 }
-
-.ppicon {
-  margin: 20px auto;
-  display: block;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #1e1e1e;
 }
 
 .card.ppmid {
   margin: 0 auto;
-  width: 500px;
-  max-width: 90%;
-  background-color: #282828;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.25);
-  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
 }
 
 .card {
+  background-color: #212121;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
   padding: 20px;
 }
 
 .card-header {
-  background-color: #6563ff;
-  color: #fff;
-  border-radius: 10px 10px 0 0;
-  padding: 10px;
+  background-color: #4CAF50;
+  color: #121212;
   font-weight: bold;
-  text-align: center;
-
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-body {
-  padding: 20px;
-}
-
-.form-label {
-  color: #eee;
+  padding: 30px;
 }
 
 .form-control {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: none;
+  background-color: #212121;
+  color: #f2f2f2;
+  border: 1px solid #333;
   border-radius: 5px;
-  color: #eee;
-  padding: 10px;
-  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.2);
+}
+
+.form-label {
+  color: #f2f2f2;
+  margin-bottom: 5px;
+}
+
+.btn.btn-primary {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+  color: #121212;
 }
 
 .form-text {
   color: #888;
+  font-size: 14px;
+  margin-top: 5px;
 }
-
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 10px;
-}
-
-#icon-grid {
-  background-color: #282828;
-  padding: 30px 0;
-}
-
-.cxx {
-  width: 75px;
-  height: auto;
-  margin-right: 10px;
-}
-
-.sql{
-  width: 75px;
-  height: auto;
-  margin-right: 10px;
-}
-
-#css3{
-  width:75px;
-  height: auto;
-  margin-right: 10px;
-}
-
-#js {
-  width: 75px;
-  height: auto;
-  margin-right: 10px;
-}
-
-#html {
-  width: 75px;
-  height: auto;
-  margin-right: 10px;
-}
-
 
 @media (max-width: 768px) {
   .project-grid {
@@ -248,6 +207,6 @@ h3 {
     grid-template-columns: 1fr;
   }
   .card.ppmid {
-    width: 95%;
+    max-width: 100%;
   }
 }
