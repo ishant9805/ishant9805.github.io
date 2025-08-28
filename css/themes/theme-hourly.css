@@ -1,108 +1,53 @@
 body {
-  background-color: #121212;
-  color: #f2f2f2;
   font-family: 'Arial', sans-serif;
-  line-height: 1.6;
   margin: 0;
+  background-color: #f8f8f8; /* Light background color */
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
 }
 
 header {
-  background-color: #212121;
-  padding: 10px 0;
+  background-color: #800080; /* Dark purple header background */
+  color: white;
 }
 
 .nav-pills .nav-link {
-  color: #f2f2f2;
-  border-radius: 5px;
+  color: white;
+  border-radius: 20px;
   padding: 10px 20px;
-  margin: 0 10px;
+  margin: 0 5px;
   transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #4CAF50;
+  background-color: #FF1493; /* Deep Pink on hover */
 }
 
-.display-5 {
-  color: #4CAF50;
+h1, h2, h3 {
+  font-weight: bold;
+  color: #283593; /* Dark blue for headings */
+}
+
+p {
+  line-height: 1.6;
+  color: #333; /* Dark gray for paragraph text */
 }
 
 
-#icon-grid h2 {
-  color: #4CAF50;
+#icon-grid {
+  background-color: #FFFFE0; /* Light yellow background */
 }
-
 .icons {
   width: 75px;
   height: 75px;
   margin-right: 15px;
+  vertical-align: middle;
 }
 
-.icons.cxx{
-    width: 75px;
-    height: 75px;
-    margin-right: 15px;
-}
-
-.icons.sql{
-    width: 75px;
-    height: 75px;
-    margin-right: 15px;
-}
-
-.lead {
-  font-weight: 300;
-}
-
-.btn-primary {
-  background-color: #4CAF50;
-  border-color: #4CAF50;
-}
-
-.btn-outline-secondary {
-  color: #4CAF50;
-  border-color: #4CAF50;
-}
-
-
-#welcome-section {
-  text-align: center;
-  background-color: #212121;
-  padding: 80px 0;
-}
-
-#welcome-section h1,
-#welcome-section h3 {
-  color: #4CAF50;
-}
-
-#welcome-section .pp {
-  font-style: italic;
-  color: #888;
-  margin-top: 20px;
-}
-
-#welcome-section .ppicon {
-    animation: arrow-bounce 1s infinite;
-}
-@keyframes arrow-bounce{
-    0%{transform: translateY(0);}
-    50%{transform: translateY(-10px);}
-    100%{transform: translateY(0);}
-}
-
-#projects h1 {
-  color: #4CAF50;
-  margin-bottom: 40px;
-  text-align: center;
-}
 
 .project-grid {
   display: grid;
@@ -110,95 +55,10 @@ header {
   grid-gap: 20px;
 }
 
-.project-tile {
-  border: 1px solid #333;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-
-
-.project-img,
-.img-proj {
-  width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0;
-}
-
-.code {
-  color: #4CAF50;
-}
-
-.pr-nav {
-    padding-top: 60px;
-}
-
-.contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.card.ppmid {
-  margin: 0 auto;
-  max-width: 600px;
-  width: 100%;
-}
-
-.card {
-  background-color: #212121;
-  border: 1px solid #333;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  padding: 20px;
-}
-
-.card-header {
-  background-color: #4CAF50;
-  color: #121212;
-  font-weight: bold;
-  padding: 15px;
-  border-radius: 10px 10px 0 0;
-}
-
-.card-body {
-  padding: 30px;
-}
-
-.form-control {
-  background-color: #212121;
-  color: #f2f2f2;
-  border: 1px solid #333;
-  border-radius: 5px;
-}
-
-.form-label {
-  color: #f2f2f2;
-  margin-bottom: 5px;
-}
-
-.btn.btn-primary {
-  background-color: #4CAF50;
-  border-color: #4CAF50;
-  color: #121212;
-}
-
-.form-text {
-  color: #888;
-  font-size: 14px;
-  margin-top: 5px;
-}
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
@@ -206,7 +66,162 @@ header {
   .project-grid {
     grid-template-columns: 1fr;
   }
-  .card.ppmid {
+}
+
+.project-tile {
+  border: 3px solid #FF69B4; /* Hot Pink border */
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-img,
+.img-proj {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+.code {
+  color: #FF00FF; /* Magenta for code brackets */
+  font-weight: bold;
+}
+
+
+#welcome-section {
+  text-align: center;
+  padding: 100px 0;
+  background-image: linear-gradient(to bottom right, #FFC0CB, #FFA07A); /* Pink and light salmon gradient */
+  color: white;
+}
+
+#projects {
+  padding: 50px 0;
+}
+
+#project-hail {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 30px;
+}
+
+.pp {
+  font-style: italic;
+  text-align: center;
+  color: #8B4513; /*Saddle Brown*/
+  font-size: 1.2em;
+}
+
+.ppicon {
+    display: block;
+    margin: 20px auto;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.pr-nav {
+  padding-top: 70px;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #E6E6FA; /* Light lavender background */
+}
+
+.card.ppmid {
+  margin: 0 auto;
+  max-width: 500px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  border: 2px solid #008080; /* Teal border */
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.card-header {
+  background-color: #483D8B; /* Dark Slate Blue background */
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.form-control {
+  border: 1px solid #800000; /* Maroon border */
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #000080; /* Navy blue labels */
+  margin-bottom: 5px;
+}
+
+.btn.btn-primary {
+  background-color: #008000; /* Green button */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #006400; /* Dark green on hover */
+}
+
+.form-text {
+  font-size: 0.8em;
+  color: #666; /* Light gray help text */
+}
+
+.display-4{
+  color: #8B008B; /* Dark magenta */
+}
+
+.lead{
+  color: #0000FF; /*Blue*/
+}
+
+.text-muted{
+  color: #A0522D; /*Sienna*/
+}
+
+mark {
+  background-color: #FFFF00; /* Yellow highlight */
+  padding: 2px 5px;
+}
+
+.img-fluid {
     max-width: 100%;
+    height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card.ppmid {
+    max-width: 90%;
   }
 }
