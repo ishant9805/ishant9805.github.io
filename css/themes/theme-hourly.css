@@ -1,188 +1,157 @@
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  background-color: #f8f8f8;
-  color: #333;
-}
-
-.pr-nav {
-  background-color: #e0e0e0;
-  padding-bottom: 2rem;
+  background-color: #f8f9fa;
+  color: #343a40;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 header {
-  background-color: #f0f0f0;
-  padding: 1rem 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-pills .nav-link {
-  background-color: #ddd;
-  color: #333;
-  border-radius: 5px;
-  padding: 0.8rem 1.5rem;
-  margin: 0 0.5rem;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  color: #343a40;
+  border-radius: 0.25rem;
+  padding: 1rem 1.5rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #a0e0a0;
-  color: white;
+  background-color: #6c757d;
+  color: #ffffff;
 }
 
 .display-5 {
-  color: #3a703a;
+  font-weight: 900;
+  color: #212529;
 }
 
 .lead {
-  font-size: 1.1rem;
-  color: #555;
-}
-
-.btn-primary,
-.btn-outline-secondary {
-  border-radius: 25px;
-  padding: 0.8rem 2rem;
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 
 .btn-primary {
-  background-color: #558b2f;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #43702a;
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
 .btn-outline-secondary {
-  color: #333;
-  border-color: #888;
-  transition: border-color 0.3s ease;
+  border-color: #6c757d;
+  color: #6c757d;
 }
 
-.btn-outline-secondary:hover {
-  border-color: #555;
-}
-
-#icon-grid {
-  margin-top: 2rem;
+.btn-lg {
+  padding: 1rem 2rem;
+  font-weight: bold;
 }
 
 .icons {
   width: 75px;
   height: 75px;
   margin-right: 1rem;
-  vertical-align: middle;
+  fill: #fff;
+  background-color: #343a40;
+  padding: 1rem;
+  border-radius: 50%;
 }
 
-.icons:hover{
-    transform: scale(1.1);
-    transition: transform 0.2s ease;
+#icon-grid h2 {
+  font-weight: 900;
+  color: #212529;
 }
 
-.icons.cxx{
-    width: 60px;
-    height: 60px;
-    margin-right: 1rem;
-    vertical-align: middle;
-}
-
-.icons.cxx:hover{
-    transform: scale(1.1);
-    transition: transform 0.2s ease;
+.fw-bold {
+  font-weight: 700;
 }
 
 .fs-4 {
-  color: #3a703a;
+  font-size: 1.5rem;
 }
 
 #welcome-section {
-  background-image: url("https://images.unsplash.com/photo-1572120244803-e9e1607a5351?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
-  background-size: cover;
-  background-position: center;
-  color: white;
   text-align: center;
-  padding: 10rem 0;
+  padding: 100px 0;
+  background-color: #f5f5f5;
 }
 
 #welcome-section h1 {
   font-size: 3rem;
+  font-weight: 900;
   margin-bottom: 1rem;
+  color: #343a40;
 }
 
 #welcome-section h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #343a40;
   margin-bottom: 2rem;
 }
 
 .pp {
   font-size: 1.2rem;
-  color: white;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-weight: 300;
+  color: #343a40;
 }
-
 
 .ppicon {
-  margin-left: 1rem;
-  animation: arrowBounce 1s infinite;
+  display: block;
+  margin: 2rem auto;
+  animation: bounce 1s infinite;
 }
 
-@keyframes arrowBounce {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-  100% { transform: translateY(0); }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(-20px) }
 }
 
-#projects {
-  padding: 4rem 0;
-}
-
-#project-hail {
-  text-align: center;
+#projects h1 {
   font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #3a703a;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  color: #343a40;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 20px;
 }
 
 .project-tile {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border: 2px solid #343a40;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease-in-out;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .project-img {
   width: 100%;
   height: auto;
-  border-radius: 8px 8px 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .code {
-  color: #80ff80;
+  color: #007bff;
+}
+
+.pr-nav {
+  padding-top: 50px;
 }
 
 .contact-wrapper {
@@ -190,27 +159,28 @@ header {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 2rem 0;
 }
 
 .card.ppmid {
-  margin: 0 auto;
   max-width: 600px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
 
 .card {
-  border-radius: 10px;
+  background-color: #ffffff;
+  border: 2px solid #343a40;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  background-color: #f8f8f8;
+  border-radius: 0.5rem;
 }
 
 .card-header {
-  background-color: #558b2f;
-  color: white;
-  font-size: 1.5rem;
-  border-radius: 10px 10px 0 0;
-  padding: 1rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #212529;
+  border-bottom: 2px solid #343a40;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .card-body {
@@ -218,34 +188,36 @@ header {
 }
 
 .form-label {
-  color: #333;
   font-weight: bold;
+  color: #212529;
+  margin-bottom: 0.5rem;
 }
 
 .form-control {
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
+  border: 2px solid #343a40;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: #343a40;
 }
 
 .form-text {
-  color: #666;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  color: #6c757d;
 }
 
 .btn.btn-primary {
-  background-color: #558b2f;
-  color: white;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .btn.btn-primary:hover {
-  background-color: #43702a;
+  background-color: #0069d9;
 }
 
 
@@ -258,5 +230,8 @@ header {
 @media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
+  }
+  .card.ppmid {
+    max-width: 90%;
   }
 }
