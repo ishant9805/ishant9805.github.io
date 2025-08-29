@@ -1,194 +1,225 @@
 body {
-    font-family: 'Lora', serif; /* Or a similar elegant serif font */
-    line-height: 1.6;
-    color: #333; /* Dark gray text */
-    background-color: #f8f8f8; /* Light beige background */
-}
-
-.pr-nav {
-    background-color: #f0e68c; /* Light yellow for projects page background */
-}
-
-#welcome-section {
-    text-align: center;
-    padding: 5rem 0;
-    background-image: url('dark-academia-background.jpg'); /* Replace with your background image */
-    background-size: cover;
-    background-position: center;
-    color: white;
-}
-
-#welcome-section h1, #welcome-section h3 {
-    margin-bottom: 1rem;
-}
-
-#welcome-section .pp {
-    font-style: italic;
-    color: #f0e68c;
-}
-
-
-#projects {
-    padding: 4rem 0;
-    text-align: center;
-}
-
-#project-hail {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #996633; /* Dark brown */
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    grid-gap: 2rem;
-}
-
-.project-tile {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
-}
-
-.project-tile:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.project-img, .img-proj {
-    width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0; /* Rounded top corners */
-}
-
-.code {
-    color: #996633; /* Dark brown */
-    font-weight: bold;
-}
-
-.ppicon {
-    margin-top: 2rem;
-    animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  background-color: #1e1e1e;
+  color: #eee;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.6;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1200px;
+}
+
+header {
+  background-color: #282828;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .nav-pills .nav-link {
-    padding: 1rem 1.5rem;
-    border-radius: 0.25rem;
-    font-weight: bold;
-    color: #663300; /* Dark golden */
+  color: #eee;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-    background-color: #996633;
-    color: white;
+  background-color: gold;
+  color: #1e1e1e;
 }
 
-.display-5 {
-    font-size: 3rem;
-    color: #663300;
+h1, h2, h3 {
+  font-weight: 700;
+  color: gold;
+  text-shadow: 2px 2px 4px #000;
 }
 
-.btn-primary {
-    background-color: #996633;
-    border-color: #996633;
+h1 {
+  font-size: 3rem;
 }
 
-.icons {
-    width: 75px;
-    height: 75px;
-    margin-right: 1rem;
+h2 {
+  font-size: 2rem;
 }
 
-#icon-grid h2 {
-    color: #663300;
+h3 {
+  font-size: 1.5rem;
 }
 
-.contact-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+p {
+  color: #eee;
 }
 
-.card.ppmid {
-    margin: auto;
-    max-width: 600px;
-    position: relative;
-}
-
-.card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    background-color: white;
-}
-
-
-.card-header {
-    font-size: 2rem;
-    color: #663300;
-    margin-bottom: 2rem;
-}
-
-.card-body {
-    padding: 2rem;
-}
-
-.form-label {
-    font-weight: bold;
-    color: #663300;
-}
-
-.form-control {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 0.5rem;
-    font-size: 1rem;
-    color: #333;
+.lead {
+  font-size: 1.2rem;
 }
 
 .btn-primary {
-    background-color: #996633;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    font-weight: bold;
-    color: white;
-    transition: background-color 0.3s ease;
+  background-color: gold;
+  border-color: gold;
+  color: #1e1e1e;
 }
 
 .btn-primary:hover {
-    background-color: #663300;
+  background-color: #d4af37;
+  border-color: #d4af37;
+}
+
+
+.btn-outline-secondary {
+  color: gold;
+  border-color: gold;
+}
+
+.btn-outline-secondary:hover {
+  background-color: gold;
+  color: #1e1e1e;
+}
+
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+  fill: #eee;
+}
+
+.img-fluid {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#icon-grid {
+  background-color: #282828;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+#welcome-section {
+  text-align: center;
+  background: url('https://source.unsplash.com/random/1920x1080/?dark,artdeco') no-repeat center center;
+  background-size: cover;
+  color: #eee;
+  padding: 100px 0;
+}
+
+#welcome-section h1, #welcome-section h3{
+  color: gold;
+}
+
+#welcome-section p {
+  font-style: italic;
+}
+
+.ppicon {
+  animation: spin 2s linear infinite;
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+#projects h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.project-tile {
+  border: 2px solid gold;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-tile:hover {
+  transform: scale(1.05);
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.code {
+  color: gold;
+  font-family: monospace;
+}
+
+
+.pr-nav {
+  padding-top: 50px;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card.ppmid {
+  margin: auto;
+  max-width: 600px;
+  border: 2px solid gold;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  background-color: #282828;
+  padding: 20px;
+}
+
+.card-header {
+  background-color: gold;
+  color: #1e1e1e;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  padding: 15px;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.form-control {
+  background-color: #333;
+  color: #eee;
+  border: 1px solid gold;
+  border-radius: 5px;
+}
+
+.form-label {
+  color: gold;
 }
 
 .form-text {
-    font-size: 0.8rem;
-    color: #663300;
+  color: #888;
 }
 
+
 @media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 
 @media (max-width: 576px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
