@@ -1,13 +1,13 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f8f9fa;
-  color: #343a40;
-  transition: background-color 0.3s ease;
+  background-color: #212529; /* Dark background */
+  color: #f8f9fa; /* Light text */
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease; /* Smooth transition for theme change */
 }
 
-.pr-nav {
-  background-color: #282c34; /* Dark background for Projects page */
-  color: #fff;
+body.light-theme {
+  background-color: #f8f9fa; /* Light background for light theme */
+  color: #212529; /* Dark text for light theme */
 }
 
 .container {
@@ -15,147 +15,143 @@ body {
 }
 
 header {
-  background-color: #282c34;
-  color: #fff;
+  background-color: #343a40; /* Dark header background */
+  padding: 1rem 0;
+  border-radius: 0.5rem;
 }
 
 .nav-pills .nav-link {
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #f8f9fa; /* Light link color */
+  border-radius: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  margin: 0 0.5rem;
 }
 
-.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
-  background-color: #6563ff; /* Neon blue */
-  color: #fff;
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: #ffc107; /* Yellow active link */
+  color: #212529; /* Dark text on active link */
 }
 
-.nav-pills .nav-link.active {
-    background-color: #6563ff;
-}
 
 .display-5 {
-    color: #6563ff; /* Neon blue */
-}
-
-h1, h2, h3 {
-  font-weight: bold;
-  color: #282c34; /* Dark text for headings */
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
-  line-height: 1.6;
+  color: #ffc107; /* Yellow heading */
 }
 
 .lead {
-  font-size: 1.25rem;
+  color: #adb5bd; /* Light gray text */
 }
 
 .btn-primary {
-  background-color: #6563ff; /* Neon blue */
-  border-color: #6563ff;
-  color: #fff;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #4e4db7; /* Darker neon blue on hover */
+  background-color: #ffc107; /* Yellow button */
+  border-color: #ffc107;
+  color: #212529; /* Dark text on yellow button */
 }
 
 .btn-outline-secondary {
-    color: #6563ff;
-    border-color: #6563ff;
+  color: #ffc107; /* Yellow outline button */
+  border-color: #ffc107;
 }
 
-.btn-outline-secondary:hover {
-    background-color: #6563ff;
-    color: #fff;
-}
-
-#icon-grid .icons {
+.icons {
   width: 75px;
   height: 75px;
   margin-right: 1rem;
 }
 
 #icon-grid h2 {
-    color: #6563ff;
+  color: #ffc107; /* Yellow heading */
+}
+
+#icon-grid .col h3 {
+  color: #f8f9fa;
+}
+
+#icon-grid .col p {
+  color: #adb5bd;
+}
+
+.pr-nav {
+  background-color: #212529; /* Dark background for projects page */
 }
 
 #welcome-section {
-  background-image: linear-gradient(to bottom, #1e1e2e, #282c34); /* Cyberpunk gradient */
-  color: #fff;
   text-align: center;
-  padding: 5rem 0;
+  background-color: #343a40;
+  padding: 4rem 0;
+  color: #f8f9fa;
+  border-radius: 0.5rem;
 }
 
 #welcome-section h1, #welcome-section h3 {
-  color: #6563ff; /* Neon blue */
+  margin-bottom: 1rem;
 }
 
-#welcome-section .pp {
-  color: #fff;
-  font-style: italic;
-  margin-top: 1rem;
-}
-
-
-#projects h1 {
-  color: #6563ff; /* Neon blue */
-  margin-bottom: 2rem;
+#project-hail {
   text-align: center;
+  color: #ffc107; /* Yellow heading */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
-
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 2rem;
+  margin-top: 2rem;
 }
 
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 .project-tile {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #adb5bd;
+  border-radius: 0.5rem;
   overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-.project-img, .img-proj {
+.project-img {
   width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0; /* Rounded top corners */
+  border-radius: 0.5rem;
 }
 
 .code {
-  color: #6563ff; /* Neon blue */
+  color: #ffc107; /* Yellow code brackets */
+}
+
+.pp {
+  color: #adb5bd; /* Light gray paragraph text */
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .ppicon {
-  fill: #6563ff; /* Neon blue */
-  margin-top: 1rem;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2rem auto;
+  fill: #adb5bd;
+  transition: fill 0.3s ease;
 }
+
+.ppicon:hover {
+  fill: #ffc107;
+}
+
 
 .contact-wrapper {
   display: flex;
@@ -166,62 +162,72 @@ p {
 
 .card.ppmid {
   margin: auto;
-  max-width: 500px;
-  text-align: center;
+  max-width: 600px;
+  border-radius: 1rem;
 }
 
 .card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  border-radius: 1rem;
+  background-color: #343a40;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+  padding: 2rem;
 }
 
 .card-header {
-  background-color: #282c34;
-  color: #fff;
-  font-weight: bold;
-  padding: 15px;
-  border-radius: 10px 10px 0 0;
+  color: #ffc107; /* Yellow header text */
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .card-body {
-  padding: 20px;
-}
-
-.form-control {
-  border-radius: 5px;
-  border-color: #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 2rem;
 }
 
 .form-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #282c34;
+  color: #f8f9fa; /* Light label text */
+  margin-bottom: 0.5rem;
 }
+
+.form-control {
+  background-color: #343a40; /* Dark input background */
+  color: #f8f9fa; /* Light input text */
+  border: 1px solid #adb5bd;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #ffc107; /* Yellow border on focus */
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+
+.btn.btn-primary {
+    background-color: #ffc107; /* Yellow submit button */
+    border-color: #ffc107;
+    color: #212529; /* Dark text on yellow button */
+    border-radius: 0.5rem;
+    padding: 0.7rem 2rem;
+  }
 
 .form-text {
-  font-size: 0.875rem;
-  color: #868e96; /* Grayish color for help text */
+  color: #adb5bd; /* Light gray help text */
+  font-size: 0.8rem;
 }
 
-.mark {
-  background-color: #6563ff; /* Neon blue for marked text */
-  color: #fff;
-  padding: 0.2em 0.4em;
-  border-radius: 0.2em;
+.img-fluid{
+    border-radius: 0.5rem;
 }
+
+.h-100 {
+    height: 100%;
+}
+
 
 @media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 992px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .card.ppmid {
+    max-width: 90%;
   }
 }
