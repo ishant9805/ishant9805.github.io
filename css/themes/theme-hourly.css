@@ -1,62 +1,41 @@
 body {
-  background-color: #111827;
-  color: #d1d5db;
   font-family: 'Arial', sans-serif;
-  transition: background-color 0.3s ease;
-}
-
-.pr-nav {
-  background-color: #18202e;
-}
-
-header {
-  background-color: #18202e;
-}
-
-
-.nav-pills .nav-link {
-  color: #d1d5db;
-  border-radius: 0.5rem;
-  background-color: #18202e;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  margin: 0 0.5rem;
-  transition: background-color 0.3s ease;
-}
-
-.nav-pills .nav-link.active {
-  background-color: #3b82f6;
-  color: #111827;
-}
-
-.nav-pills .nav-link:hover {
-  background-color: #2563eb;
+  margin: 0;
+  background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
+  color: #333;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
-h1, h2, h3 {
-  color: #f5f5f5;
-  font-weight: 700;
+header {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  font-size: 2.5rem;
+.nav-pills .nav-link {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  color: #333;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+  border: 1px solid #ccc;
 }
 
-h2 {
-  font-size: 2rem;
+.nav-pills .nav-link.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
 }
 
-h3 {
-  font-size: 1.5rem;
+.nav-pills .nav-link:hover {
+  background-color: #ddd;
 }
 
-p {
-  line-height: 1.6;
-  margin-bottom: 1rem;
+.display-5 {
+  color: #4CAF50;
 }
 
 .lead {
@@ -64,100 +43,105 @@ p {
 }
 
 .btn-primary {
-  background-color: #3b82f6;
-  border-color: #3b82f6;
-  color: #111827;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #2563eb;
+  background-color: #4CAF50;
+  border-color: #4CAF50;
 }
 
 .btn-outline-secondary {
-  color: #d1d5db;
-  border-color: #d1d5db;
-  transition: border-color 0.3s ease, color 0.3s ease;
-}
-
-.btn-outline-secondary:hover {
-  color: #f5f5f5;
-  border-color: #f5f5f5;
-}
-
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-  border-radius: 1rem;
+  color: #4CAF50;
+  border-color: #4CAF50;
 }
 
 .icons {
   width: 75px;
   height: 75px;
   margin-right: 1rem;
-  fill: #f5f5f5;
 }
 
-
 #icon-grid {
-  background-color: #18202e;
-  padding: 2rem 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.icons.sql{
+  width: auto;
+  height: auto;
+}
+.icons.cxx{
+  width: auto;
+  height: auto;
 }
 
 #welcome-section {
   text-align: center;
   padding: 5rem 0;
-  background: linear-gradient(135deg, #1a4674, #18202e);
+  background: linear-gradient(to bottom right, #66CDAA, #008080);
+  color: white;
 }
 
-#welcome-section h1, #welcome-section h3, #welcome-section p {
+#welcome-section h1, #welcome-section h3{
+    color: white;
     margin-bottom: 1rem;
 }
 
-#project-hail {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
+#projects h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #4CAF50;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 2rem;
-  margin-top: 2rem;
 }
 
 .project-tile {
-  background-color: #18202e;
+  border: 1px solid #ccc;
   border-radius: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 1rem;
-  text-align: center;
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 
 .project-tile:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transform: translateY(-2px);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.project-img {
-  width: 100%;
-  border-radius: 0.7rem;
+.project-img, .img-proj {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  display: block;
+  margin: 0 auto;
 }
 
 .code {
-  color: #60a5fa;
+  color: #4CAF50;
 }
 
-.pp {
-  font-style: italic;
-  color: #a0aec0;
+.pp{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 .ppicon {
-  margin-top: 2rem;
-  fill: #a0aec0;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 2rem;
+    fill: white;
+}
+
+.pr-nav {
+  padding-top: 2rem;
 }
 
 
@@ -166,62 +150,65 @@ p {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 2rem;
 }
 
 .card.ppmid {
-  width: 80%;
-  max-width: 600px;
-  margin: 0 auto;
+  margin: auto;
+  max-width: 500px;
 }
 
-
 .card {
-  background-color: #18202e;
-  border-radius: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 2rem;
+  border-radius: 1rem;
 }
 
 .card-header {
-  background-color: #3b82f6;
-  color: #111827;
-  font-weight: 700;
-  padding: 1rem;
+  background-color: #4CAF50;
+  color: white;
   border-radius: 0.5rem 0.5rem 0 0;
+  padding: 1rem;
 }
+
 
 .card-body {
   padding: 2rem;
 }
 
 .form-control {
-  background-color: #202532;
-  color: #d1d5db;
-  border: 1px solid #4b5563;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
 }
 
 .form-label {
-  color: #d1d5db;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
+
+
+.btn-primary {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+}
+
 
 .form-text {
-  color: #a0aec0;
+  font-size: 0.8rem;
+  color: #777;
 }
 
-#sub-btn {
-  background-color: #3b82f6;
-  border-color: #3b82f6;
-  color: #111827;
-  transition: background-color 0.3s ease;
-}
-
-#sub-btn:hover {
-  background-color: #2563eb;
-}
 
 @media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 992px) {
   .project-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
@@ -231,7 +218,11 @@ p {
   .project-grid {
     grid-template-columns: 1fr;
   }
-  .card.ppmid {
-    width: 95%;
+  .contact-wrapper .card {
+    max-width: 100%;
   }
+}
+
+.h-100{
+    min-height: 100vh;
 }
