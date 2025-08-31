@@ -1,235 +1,224 @@
 body {
-  background-color: #222831;
-  color: #e6f2ff;
-  font-family: 'Arial', sans-serif;
-  transition: background-color 0.3s ease;
+    background-color: #121212;
+    color: #f2f2f2;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease;
 }
 
 .pr-nav {
-  background-color: #395B64;
+    background-color: #181818;
 }
 
 .container {
-  max-width: 1200px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 header {
-  background-color: #395B64;
+    background-color: #222;
 }
 
 .nav-pills .nav-link {
-  color: #e6f2ff;
-  border-radius: 20px;
-  padding: 10px 20px;
-  margin: 0 5px;
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #00ADB5;
-  color: #222831;
+    background-color: #555;
 }
 
-h1, h3, h2 {
-  color: #e6f2ff;
-  font-weight: 600;
-}
-
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: 1.5em;
-}
-
-p {
-  color: #e6f2ff;
-  line-height: 1.6;
+.display-5 {
+    color: #fff;
 }
 
 .lead {
-  font-size: 1.2em;
+    color: #ddd;
 }
 
 .btn-primary {
-  background-color: #00ADB5;
-  border-color: #00ADB5;
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #008080;
-  border-color: #008080;
+    background-color: #0069d9;
 }
 
-
 .btn-outline-secondary {
-  color: #e6f2ff;
-  border-color: #e6f2ff;
+    color: #fff;
+    border-color: #fff;
+    transition: border-color 0.3s ease;
 }
 
 .btn-outline-secondary:hover {
-  background-color: #e6f2ff;
-  color: #222831;
+    border-color: #ccc;
 }
 
+#icon-grid h2 {
+    color: #fff;
+}
+
+.icons {
+    width: 75px;
+    height: 75px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.icons.sql {
+    width: auto;
+}
+
+.cxx {
+    width: auto;
+}
+
+.icons path {
+    transition: fill 0.3s ease;
+}
+
+.icons:hover path {
+    fill: #fff;
+}
 
 #welcome-section {
-  text-align: center;
-  padding: 50px 0;
-  background-image: url("https://source.unsplash.com/random/1920x1080/?nature"); /* Replace with your nature image */
-  background-size: cover;
-  background-position: center;
-  color: #e6f2ff;
+    text-align: center;
+    padding: 100px 0;
+    background-color: #282c34;
 }
 
 #welcome-section h1,
 #welcome-section h3 {
-  margin-bottom: 10px;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
 .pp {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+    color: #eee;
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
 .ppicon {
-  margin: 0 auto;
-  display: block;
-  animation: bounce 1s infinite;
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+    animation: spin 2s linear infinite;
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-
-#projects {
-  padding: 40px 0;
-}
-
-#project-hail {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #00ADB5;
+#projects h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
 }
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
 }
 
 .project-tile {
-  border: 2px solid #00ADB5;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #222;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.project-img,
-.img-proj {
-  width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0;
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
 }
 
 
 .code {
-  color: #00ADB5;
+    color: #007bff;
 }
 
 .contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .card.ppmid {
-  margin: auto;
-  max-width: 500px;
+    margin: auto;
+    width: 500px;
+    max-width: 90%;
 }
 
 .card {
-  background-color: #395B64;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+    background-color: #222;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .card-header {
-  background-color: #00ADB5;
-  color: #222831;
-  font-weight: bold;
-  border-radius: 10px 10px 0 0;
-  padding: 15px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
 }
 
 .card-body {
-  padding: 20px;
+    padding: 30px;
 }
 
 .form-control {
-  background-color: #395B64;
-  border: 1px solid #00ADB5;
-  color: #e6f2ff;
-  border-radius: 5px;
+    background-color: #333;
+    color: #eee;
+    border: 1px solid #555;
+    border-radius: 5px;
 }
 
 .form-label {
-  color: #e6f2ff;
+    color: #fff;
+    margin-bottom: 5px;
 }
 
-.btn.btn-primary {
-  background-color: #00ADB5;
-  border: none;
-  border-radius: 5px;
+#sub-btn {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
 }
 
-.btn.btn-primary:hover {
-    background-color: #008080;
+#sub-btn:hover {
+    background-color: #0069d9;
 }
 
 .form-text {
-  color: #e6f2ff;
-}
-
-.icons {
-  margin-right: 10px;
+    color: #aaa;
 }
 
 @media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-@media (max-width: 576px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-  .card.ppmid {
-    max-width: 90%;
-  }
-}
-
-.cxx {
-  fill: #00ADB5;
-}
-
-.sql {
-  fill: #00ADB5;
+@media (max-width: 992px) {
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
