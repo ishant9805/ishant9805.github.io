@@ -1,241 +1,249 @@
 body {
-  font-family: 'Times New Roman', serif;
-  line-height: 1.6;
-  margin: 0;
-  background-color: #f8f9fa;
-  color: #343a40;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
 }
-
-.pr-nav {
-  background-color: #f0e68c; /* Light golden background */
-}
-
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 header {
-  background-color: #f0e68c; /* Light golden background */
+    background-color: #f8f9fa;
+    padding: 1rem 0;
 }
 
 .nav-pills .nav-link {
-  border-radius: 20px; /* Art Deco curves */
-  padding: 10px 20px;
-  margin: 0 5px;
-  background-color: #fff;
-  color: #343a40;
-  transition: background-color 0.3s ease;
+    color: #333;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+    margin: 0 0.5rem;
 }
 
-.nav-pills .nav-link.active,
-.nav-pills .nav-link:hover {
-  background-color: #ffd700; /* Golden hover effect */
-  color: #343a40;
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
+    background-color: #007bff;
+    color: #fff;
 }
+
 
 h1, h2, h3 {
-  font-weight: bold;
-  color: #343a40;
+    font-weight: 600;
+    color: #212529;
 }
 
 h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 p {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .lead {
-  font-size: 1.25rem;
-  font-weight: 300;
+    font-size: 1.25rem;
+}
+
+.btn {
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+    margin: 0 0.5rem;
 }
 
 
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.btn-outline-secondary {
+    border: 1px solid #6c757d;
+    color: #6c757d;
+}
+
+.btn-primary:hover, .btn-outline-secondary:hover {
+    opacity: 0.8;
+}
+
 .img-fluid {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px; /* Art Deco curves */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
 }
 
 .icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 1rem;
-  border-radius: 5px;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    width: 75px;
+    height: 75px;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 0.5rem;
 }
 
-
-#icon-grid {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+#icon-grid .icons {
+    width: auto;
+    height: auto;
 }
+
 
 #welcome-section {
-  background-color: #f0e68c; /* Light golden background */
-  text-align: center;
-  padding: 100px 0;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 4rem 0;
 }
 
-
-#welcome-section h1,
-#welcome-section h3 {
-  color: #343a40;
-}
-
-#welcome-section p {
-    color: #343a40;
-    margin-bottom: 2rem;
+#welcome-section h1, #welcome-section h3{
+    margin-bottom: 0.5rem;
 }
 
 #projects h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #343a40;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
 }
 
 .project-tile {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
-
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
 }
 
 .project-img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0; /* Art Deco curves */
+    width: 100%;
+    height: auto;
+    border-radius: 0.25rem 0.25rem 0 0;
 }
 
 
 .code {
-  color: #ffd700; /* Golden accent color */
+    color: #007bff;
 }
 
-.ppicon {
-    margin-top: 2rem;
-}
 
 .pp {
     text-align: center;
-    font-size: 1.2rem;
-    color: #343a40;
+    font-style: italic;
     margin-bottom: 2rem;
 }
 
+.ppicon {
+  display: block;
+  margin: 1rem auto;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.pr-nav {
+    padding-top: 2rem;
+}
+
+
 .contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* Ensure form is centered vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .card.ppmid {
-  margin: auto;
-  max-width: 500px;
-  width: 100%;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .card {
-  border-radius: 10px; /* Art Deco curves */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+    background-color: #fff;
+    padding: 20px;
 }
 
 .card-header {
-  background-color: #ffd700; /* Golden header */
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: bold;
-  border-radius: 10px 10px 0 0; /* Art Deco curves */
-  padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .card-body {
-  padding: 20px;
+    padding: 2rem;
 }
 
 .form-label {
-  color: #343a40;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 .form-control {
-  border-radius: 5px; /* Art Deco curves */
-  border-color: #ddd;
-  padding: 10px;
-  margin-bottom: 1rem;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-.btn.btn-primary {
-  background-color: #ffd700; /* Golden button */
-  color: #343a40;
-  border-radius: 5px; /* Art Deco curves */
-  padding: 10px 20px;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-.btn.btn-primary:hover {
-    background-color: #ffa500; /* Darker golden hover */
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
 }
 
 
 .form-text {
-  color: #6c757d;
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
 }
 
+.sub-btn {
+    margin-top: 1rem;
+}
+
+
 @media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
 
 @media (max-width: 576px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-mark {
-  background-color: #ffd700; /* Golden highlight */
-  color: #343a40;
-  padding: 0.2em;
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
 }
