@@ -1,7 +1,17 @@
 body {
-  background-color: #1e1e1e;
-  color: #d6d6d6;
-  font-family: 'Roboto', sans-serif;
+  background-color: #222;
+  color: #eee;
+  font-family: 'Playfair Display', serif; /* Or a similar art deco font */
+  line-height: 1.6;
+}
+
+a {
+  color: gold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .container {
@@ -9,133 +19,120 @@ body {
 }
 
 header {
-  background-color: #282c34;
+  background-color: #333;
   padding: 1rem 0;
+  border-radius: 10px;
 }
 
 .nav-pills .nav-link {
-  color: #d6d6d6;
   border-radius: 10px;
-  padding: 10px 20px;
-  margin: 0 5px;
+  background-color: #444;
+  color: #eee;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
   transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #ff6347; /* Neon Orange */
+  background-color: gold;
+  color: #222;
 }
 
-.nav-link.active {
-    font-weight: bold;
+.display-5 {
+  color: gold;
 }
 
-h1, h2, h3 {
-  font-weight: 700;
-  color: #ff6347; /* Neon Orange */
+.btn-primary {
+  background-color: gold;
+  border-color: gold;
 }
 
-#icon-grid h2 {
-    color: #d6d6d6;
+
+.btn-primary:hover {
+  background-color: #d4af37;
+  border-color: #d4af37;
+}
+
+.btn-outline-secondary {
+  border-color: gold;
+  color: gold;
+}
+
+.btn-outline-secondary:hover {
+  background-color: gold;
+  color: #222;
 }
 
 .icons {
   width: 75px;
   height: 75px;
   margin-right: 1rem;
-  fill: white;
+  fill: gold; /* Or adjust color as needed */
 }
 
-.icons.cxx {
-    fill: #444;
+.icons.cxx{
+  fill: #1A4674;
 }
 
 .icons.sql {
-  width: auto;
-  height: auto;
+  fill: #3498db; /* Blue color for SQL icon */
 }
 
-.lead {
-  font-size: 1.1rem;
-}
 
-.btn-primary {
-  background-color: #00ffff; /* Cyan */
-  border-color: #00ffff; /* Cyan */
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #00cc99; /* Teal */
-}
-
-.btn-outline-secondary {
-  color: #d6d6d6;
-  border-color: #d6d6d6;
-  transition: background-color 0.3s ease;
-}
-
-.btn-outline-secondary:hover {
-  background-color: #d6d6d6;
-  color: #1e1e1e;
-}
-
-#welcome-section {
-  background-color: #282c34;
-  text-align: center;
-  padding: 5rem 0;
-}
-
-#welcome-section h1, #welcome-section h3{
-    color: #d6d6d6;
-}
-
-#welcome-section p{
-    color: #b3b3b3;
-}
-
-#projects h1 {
-    text-align: center;
-    padding-bottom: 20px;
+#icon-grid h2 {
+  color: gold;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 2rem;
 }
 
 .project-tile {
-  border: 1px solid #555;
+  border: 2px solid gold;
   border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-.project-img {
-  width: 100%;
+.project-img, .img-proj {
+  max-width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
 }
 
 .code {
-  color: #00ff00; /* Neon Green */
-  font-weight: bold;
+  color: gold;
+}
+
+#welcome-section {
+  background-color: #444;
+  text-align: center;
+  padding: 4rem 0;
+  border-radius: 10px;
+}
+
+#welcome-section h1,
+#welcome-section h3 {
+  color: gold;
 }
 
 .pp {
-    text-align: center;
-    color: #b3b3b3;
+  color: #ddd;
+  font-style: italic;
 }
 
 .ppicon {
-  margin: 1rem auto;
+  fill: gold;
+  margin-top: 1rem;
   animation: rotate 2s linear infinite;
 }
 
@@ -148,10 +145,14 @@ h1, h2, h3 {
   }
 }
 
+#project-hail {
+  color: gold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
 
 .pr-nav {
-    background-color: #282c34;
-    padding: 20px 0;
+  background-color: #222;
 }
 
 .contact-wrapper {
@@ -159,60 +160,53 @@ h1, h2, h3 {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #1e1e1e;
+  background-color: #222; /* Dark background for the contact section */
 }
 
 .card.ppmid {
+  margin: auto;
   max-width: 600px;
-  margin: 0 auto;
+  border-radius: 20px;
 }
 
 .card {
-  background-color: #282c34;
-  border: 1px solid #555;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #333;
   padding: 2rem;
+  border-radius: 20px;
 }
 
 .card-header {
-  background-color: #ff6347; /* Neon Orange */
-  color: #fff;
+  color: gold;
   font-size: 1.5rem;
-  text-align: center;
-  border-radius: 10px 10px 0 0;
-  padding: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid gold;
 }
 
 .card-body {
-    padding: 1.5rem;
+  padding: 1rem;
 }
 
 .form-control {
   background-color: #333;
-  border: 1px solid #555;
-  color: #d6d6d6;
-  border-radius: 5px;
+  color: #eee;
+  border: 2px solid gold;
+  border-radius: 10px;
 }
 
 .form-label {
-  color: #d6d6d6;
-  font-weight: bold;
+  color: gold;
 }
 
-.btn.btn-primary {
-  background-color: #00ffff; /* Cyan */
-  border-color: #00ffff; /* Cyan */
-  transition: background-color 0.3s ease;
+#sub-btn {
+  background-color: gold;
+  color: #222;
+  border: none;
+  border-radius: 10px;
 }
 
-.btn.btn-primary:hover {
-  background-color: #00cc99; /* Teal */
-}
 
 .form-text {
-  color: #888;
-  font-size: 0.9rem;
+  color: #aaa;
 }
 
 @media (max-width: 768px) {
@@ -227,61 +221,18 @@ h1, h2, h3 {
   }
 }
 
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
-
 mark {
-    background-color: #00ffff; /* Cyan */
-    color: #1e1e1e;
-    padding: 2px 5px;
-}
-
-a {
-    color: #d6d6d6;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a:visited {
-    color: #d6d6d6;
+  background-color: gold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  color: #222;
 }
 
 .h-100 {
-  height: 100%;
+  min-height: 100vh; /* Ensure the height takes up the full viewport height */
 }
 
-.d-none {
-  display: none;
-}
 
-.d-lg-block {
-  display: block !important;
-}
-
-.text-muted {
-  color: #888 !important;
-}
-
-.fw-bold {
-    font-weight: bold;
-}
-
-.lh-1 {
-  line-height: 1;
-}
-
-.mb-3, .mb-0, .py-5, .py-3, .py-1, .mt-4, .mt-5, .px-4, .px-0, .pr-nav {
-    /*These are bootstrap classes. I am leaving them as they are to not introduce any inconsistency.*/
-}
-
-.row, .col, .col-10, .col-sm-8, .col-lg-6, .col-xxl-8, .flex-lg-row-reverse, .align-items-center, .g-5, .row-cols-1, .row-cols-sm-2, .row-cols-md-3, .row-cols-lg-4, .g-4, .d-flex, .align-items-start, .justify-content-center, .justify-content-md-start, .d-grid, .gap-2, .d-md-flex, .btn-lg, .px-4, .me-md-2 {
-    /*These are bootstrap classes. I am leaving them as they are to not introduce any inconsistency.*/
-}
-
-.display-5 {
-    /*These are bootstrap classes. I am leaving them as they are to not introduce any inconsistency.*/
+body.pr-nav {
+  padding-top: 100px; /* Adjust as needed */
 }
