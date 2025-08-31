@@ -1,15 +1,8 @@
 body {
+  background-color: #1e1e1e;
+  color: #d6d6d6;
   font-family: 'Roboto', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  transition: background-color 0.3s ease;
 }
-
-.pr-nav {
-  background-color: #1a4674;
-  color: white;
-}
-
 
 .container {
   max-width: 1200px;
@@ -17,14 +10,12 @@ body {
 
 header {
   background-color: #282c34;
-  color: #fff;
+  padding: 1rem 0;
 }
 
 .nav-pills .nav-link {
-  color: #fff;
-  background-color: transparent;
-  border: 1px solid #fff;
-  border-radius: 5px;
+  color: #d6d6d6;
+  border-radius: 10px;
   padding: 10px 20px;
   margin: 0 5px;
   transition: background-color 0.3s ease;
@@ -32,125 +23,135 @@ header {
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #61dafb;
-  color: #282c34;
+  background-color: #ff6347; /* Neon Orange */
 }
 
-
-.display-5 {
-  color: #61dafb;
+.nav-link.active {
+    font-weight: bold;
 }
 
-.lead {
-  font-weight: 300;
-}
-
-.btn-primary {
-  background-color: #61dafb;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #44b0e1;
-}
-
-
-.btn-outline-secondary {
-  border-color: #61dafb;
-  color: #61dafb;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn-outline-secondary:hover {
-  background-color: #61dafb;
-  color: #282c34;
+h1, h2, h3 {
+  font-weight: 700;
+  color: #ff6347; /* Neon Orange */
 }
 
 #icon-grid h2 {
-  color: #61dafb;
+    color: #d6d6d6;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
+  margin-right: 1rem;
   fill: white;
 }
 
 .icons.cxx {
-  fill: #61dafb;
+    fill: #444;
 }
 
 .icons.sql {
-  fill: #61dafb;
+  width: auto;
+  height: auto;
 }
 
-.icons.sql path {
-    fill: #61dafb;
+.lead {
+  font-size: 1.1rem;
 }
 
-.icons.cxx path {
-    fill: #61dafb;
+.btn-primary {
+  background-color: #00ffff; /* Cyan */
+  border-color: #00ffff; /* Cyan */
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #00cc99; /* Teal */
+}
+
+.btn-outline-secondary {
+  color: #d6d6d6;
+  border-color: #d6d6d6;
+  transition: background-color 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #d6d6d6;
+  color: #1e1e1e;
 }
 
 #welcome-section {
-  background-color: #1a4674;
-  color: #fff;
+  background-color: #282c34;
   text-align: center;
-  padding: 100px 0;
+  padding: 5rem 0;
 }
 
-
-#welcome-section h1,
-#welcome-section h3 {
-  color: #61dafb;
+#welcome-section h1, #welcome-section h3{
+    color: #d6d6d6;
 }
 
-.pp {
-  color: #d3d3d3;
-  font-style: italic;
-}
-
-.ppicon {
-  fill: #61dafb;
-  margin-top: 20px;
+#welcome-section p{
+    color: #b3b3b3;
 }
 
 #projects h1 {
-  color: #61dafb;
-  text-align: center;
-  padding-bottom: 30px;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  gap: 20px;
 }
 
 .project-tile {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #555;
+  border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
-
 
 .project-img {
   width: 100%;
   height: auto;
-  border-radius: 5px 5px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 
 .code {
-  color: #61dafb;
+  color: #00ff00; /* Neon Green */
   font-weight: bold;
+}
+
+.pp {
+    text-align: center;
+    color: #b3b3b3;
+}
+
+.ppicon {
+  margin: 1rem auto;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.pr-nav {
+    background-color: #282c34;
+    padding: 20px 0;
 }
 
 .contact-wrapper {
@@ -158,63 +159,59 @@ header {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: #1e1e1e;
 }
 
 .card.ppmid {
-  margin: auto;
-  max-width: 500px;
-  width: 100%;
-  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .card {
   background-color: #282c34;
-  color: #fff;
-  border: none;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  border: 1px solid #555;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
 }
 
 .card-header {
-  color: #61dafb;
+  background-color: #ff6347; /* Neon Orange */
+  color: #fff;
   font-size: 1.5rem;
-  border-bottom: 1px solid #61dafb;
-  padding-bottom: 10px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  padding: 1rem;
 }
-
 
 .card-body {
-  padding: 20px;
-}
-
-.form-label {
-  color: #fff;
-  font-weight: 500;
+    padding: 1.5rem;
 }
 
 .form-control {
   background-color: #333;
-  color: #fff;
-  border: 1px solid #61dafb;
+  border: 1px solid #555;
+  color: #d6d6d6;
   border-radius: 5px;
-  padding: 10px;
+}
+
+.form-label {
+  color: #d6d6d6;
+  font-weight: bold;
 }
 
 .btn.btn-primary {
-  background-color: #61dafb;
-  color: #282c34;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  background-color: #00ffff; /* Cyan */
+  border-color: #00ffff; /* Cyan */
   transition: background-color 0.3s ease;
 }
 
 .btn.btn-primary:hover {
-  background-color: #44b0e1;
+  background-color: #00cc99; /* Teal */
 }
 
 .form-text {
-  color: #aaa;
+  color: #888;
   font-size: 0.9rem;
 }
 
@@ -230,8 +227,61 @@ header {
   }
 }
 
-@media (max-width: 576px) {
-  .contact-wrapper .card {
+.img-fluid {
     max-width: 100%;
-  }
+    height: auto;
+}
+
+mark {
+    background-color: #00ffff; /* Cyan */
+    color: #1e1e1e;
+    padding: 2px 5px;
+}
+
+a {
+    color: #d6d6d6;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #d6d6d6;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-lg-block {
+  display: block !important;
+}
+
+.text-muted {
+  color: #888 !important;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.lh-1 {
+  line-height: 1;
+}
+
+.mb-3, .mb-0, .py-5, .py-3, .py-1, .mt-4, .mt-5, .px-4, .px-0, .pr-nav {
+    /*These are bootstrap classes. I am leaving them as they are to not introduce any inconsistency.*/
+}
+
+.row, .col, .col-10, .col-sm-8, .col-lg-6, .col-xxl-8, .flex-lg-row-reverse, .align-items-center, .g-5, .row-cols-1, .row-cols-sm-2, .row-cols-md-3, .row-cols-lg-4, .g-4, .d-flex, .align-items-start, .justify-content-center, .justify-content-md-start, .d-grid, .gap-2, .d-md-flex, .btn-lg, .px-4, .me-md-2 {
+    /*These are bootstrap classes. I am leaving them as they are to not introduce any inconsistency.*/
+}
+
+.display-5 {
+    /*These are bootstrap classes. I am leaving them as they are to not introduce any inconsistency.*/
 }
