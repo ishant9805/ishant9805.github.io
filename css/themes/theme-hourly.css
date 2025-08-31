@@ -1,165 +1,156 @@
 body {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
   font-family: 'Roboto', sans-serif;
-  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.3s ease;
 }
+
+.pr-nav {
+  background-color: #1a4674;
+  color: white;
+}
+
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 header {
-  background-color: #282828;
+  background-color: #282c34;
+  color: #fff;
 }
 
 .nav-pills .nav-link {
-  color: #f0f0f0;
-  padding: 1rem 1.5rem;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
   border-radius: 5px;
-  margin: 0 0.5rem;
+  padding: 10px 20px;
+  margin: 0 5px;
   transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #4CAF50;
+  background-color: #61dafb;
+  color: #282c34;
 }
 
-h1, h2, h3 {
-  font-weight: 700;
-  color: #f0f0f0;
+
+.display-5 {
+  color: #61dafb;
 }
 
-h1 {
-  font-size: 3rem;
+.lead {
+  font-weight: 300;
 }
 
-h2 {
-  font-size: 2rem;
+.btn-primary {
+  background-color: #61dafb;
+  border: none;
+  transition: background-color 0.3s ease;
 }
 
-h3 {
-  font-size: 1.5rem;
+.btn-primary:hover {
+  background-color: #44b0e1;
 }
 
-p {
-  font-size: 1rem;
-  line-height: 1.6;
+
+.btn-outline-secondary {
+  border-color: #61dafb;
+  color: #61dafb;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.btn-outline-secondary:hover {
+  background-color: #61dafb;
+  color: #282c34;
+}
+
+#icon-grid h2 {
+  color: #61dafb;
+}
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 1rem;
-  fill: #f0f0f0;
+  margin-right: 15px;
+  fill: white;
 }
 
-.icons.cxx{
-    fill: #f0f0f0;
+.icons.cxx {
+  fill: #61dafb;
 }
 
-.icons.sql{
-    width: 75px;
-    height: 75px;
+.icons.sql {
+  fill: #61dafb;
 }
 
-#icon-grid .row {
-  justify-content: space-around;
+.icons.sql path {
+    fill: #61dafb;
 }
 
-
-.btn-primary {
-  background-color: #4CAF50;
-  border-color: #4CAF50;
+.icons.cxx path {
+    fill: #61dafb;
 }
-
-.btn-outline-secondary {
-  color: #4CAF50;
-  border-color: #4CAF50;
-}
-
-.btn-primary:hover, .btn-outline-secondary:hover{
-    background-color: #3e8e41;
-    color: white;
-    border-color: #3e8e41;
-}
-
 
 #welcome-section {
-  background-color: #282828;
+  background-color: #1a4674;
+  color: #fff;
   text-align: center;
-  padding: 4rem 0;
+  padding: 100px 0;
 }
+
 
 #welcome-section h1,
 #welcome-section h3 {
-  margin-bottom: 1rem;
+  color: #61dafb;
 }
 
-#projects {
-  padding: 4rem 0;
+.pp {
+  color: #d3d3d3;
+  font-style: italic;
 }
 
-#project-hail {
+.ppicon {
+  fill: #61dafb;
+  margin-top: 20px;
+}
+
+#projects h1 {
+  color: #61dafb;
   text-align: center;
-  margin-bottom: 2rem;
+  padding-bottom: 30px;
 }
-
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 20px;
 }
 
 .project-tile {
-  border: 2px solid #4CAF50;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 
 .project-img {
   width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 
 .code {
-  color: #4CAF50;
-}
-
-.pp {
-  font-style: italic;
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.ppicon {
-  display: block;
-  margin: 1rem auto 0;
-  animation: rotate 2s linear infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.pr-nav {
-  padding-top: 2rem;
+  color: #61dafb;
+  font-weight: bold;
 }
 
 .contact-wrapper {
@@ -170,60 +161,61 @@ p {
 }
 
 .card.ppmid {
-  width: 80%;
-  max-width: 600px;
-  margin: 0 auto;
-  border: 2px solid #4CAF50;
+  margin: auto;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .card {
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #282c34;
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
 }
-
 
 .card-header {
-  background-color: #4CAF50;
-  color: #1e1e1e;
-  font-weight: bold;
-  text-align: center;
-  padding: 1rem;
-  border-radius: 10px 10px 0 0;
+  color: #61dafb;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #61dafb;
+  padding-bottom: 10px;
 }
+
 
 .card-body {
-  padding: 2rem;
-}
-
-.form-control {
-  background-color: #282828;
-  color: #f0f0f0;
-  border: 1px solid #4CAF50;
-  border-radius: 5px;
+  padding: 20px;
 }
 
 .form-label {
-  color: #f0f0f0;
-  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 500;
 }
 
-.btn-primary {
-  background-color: #4CAF50;
-  color: #1e1e1e;
-  border: none;
+.form-control {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #61dafb;
   border-radius: 5px;
-  padding: 0.8rem 1.5rem;
+  padding: 10px;
+}
+
+.btn.btn-primary {
+  background-color: #61dafb;
+  color: #282c34;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
-
-.btn-primary:hover {
-  background-color: #3e8e41;
+.btn.btn-primary:hover {
+  background-color: #44b0e1;
 }
 
 .form-text {
-  color: #888;
-  font-size: 0.8rem;
+  color: #aaa;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
@@ -236,7 +228,10 @@ p {
   .project-grid {
     grid-template-columns: 1fr;
   }
-  .card.ppmid {
-    width: 90%;
+}
+
+@media (max-width: 576px) {
+  .contact-wrapper .card {
+    max-width: 100%;
   }
 }
