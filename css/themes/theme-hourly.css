@@ -1,233 +1,247 @@
 body {
-  background-color: #1e1e1e;
-  color: #eee;
-  font-family: 'Playfair Display', serif; /* Or a similar Art Deco font */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-  background-color: #282828;
-  border-radius: 10px;
+  background-color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-pills .nav-link {
-  color: #eee;
-  border-radius: 10px;
-  background-color: #383838;
-  padding: 10px 20px;
-  margin: 0 5px;
+  font-weight: bold;
+  color: #333;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #ffcc00; /* Golden accent */
-  color: #1e1e1e;
+  background-color: #ddd;
+}
+
+.nav-pills .nav-link.active {
+  font-weight: bolder;
 }
 
 h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  color: #ffcc00; /* Golden accent */
+  font-weight: 800;
+  color: #222;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 p {
-  color: #eee;
   line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .lead {
-  font-weight: 300;
+  font-size: 1.2rem;
 }
 
-
-/* Index Page Specific Styles */
-#icon-grid {
-  background-color: #282828;
-  border-radius: 10px;
-  padding: 20px;
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
-  fill: #ffcc00; /* Golden accent */
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+
+#icon-grid .icons {
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-weight: bold;
 }
 
 .btn-primary {
-  background-color: #ffcc00;
-  border-color: #ffcc00;
-  color: #1e1e1e;
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
 .btn-outline-secondary {
-  border-color: #ffcc00;
-  color: #ffcc00;
+  color: #007bff;
+  border-color: #007bff;
 }
 
-.btn-outline-secondary:hover {
-  background-color: #ffcc00;
-  color: #1e1e1e;
-}
-
-/* Projects Page Specific Styles */
-.pr-nav {
-  background-color: #1e1e1e;
-}
 
 #welcome-section {
-  background-color: #282828;
   text-align: center;
-  padding: 50px 0;
+  padding: 4rem 0;
+  background-color: #444;
+  color: #fff;
 }
 
 #welcome-section h1,
 #welcome-section h3 {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
-.pp {
-  font-style: italic;
-  margin-bottom: 20px;
+#welcome-section .pp {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #eee;
 }
 
-.ppicon {
-  fill: #ffcc00;
+#welcome-section .ppicon {
+  width: 50px;
+  height: auto;
   animation: bounce 1s infinite;
 }
 
 @keyframes bounce {
-  0%, 100% {transform: translateY(0);}
-  50% {transform: translateY(-10px);}
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
 
 
 #projects {
-  padding: 40px 0;
+  padding: 4rem 0;
 }
 
 #project-hail {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 2rem;
 }
 
 .project-tile {
-  border: 2px solid #ffcc00;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration:none;
+  color: black;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .project-img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 5px;
 }
-
 
 .code {
-  color: #ffcc00; /* Golden accent */
-  font-family: monospace;
+  color: #007bff;
 }
 
-/* Contact Page Specific Styles */
+.pr-nav {
+  padding-top: 2rem;
+}
+
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: #f4f4f4;
 }
+
 
 .card.ppmid {
-  margin: auto;
-  max-width: 600px;
-  border: 2px solid #ffcc00; /* Golden accent */
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-
 .card {
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #282828;
+  background-color: #fff;
+  padding: 2rem;
 }
 
 .card-header {
-  background-color: #ffcc00; /* Golden accent */
-  color: #1e1e1e;
+  background-color: #007bff;
+  color: #fff;
   font-weight: bold;
-  padding: 15px;
-  border-radius: 10px 10px 0 0;
+  padding: 1rem;
+  border-radius: 5px 5px 0 0;
 }
 
 .card-body {
-  padding: 20px;
-}
-
-.form-label {
-  color: #eee;
+  padding: 2rem;
 }
 
 .form-control {
-  background-color: #282828;
-  color: #eee;
-  border: 1px solid #ffcc00;
+  border: 1px solid #ccc;
   border-radius: 5px;
+  padding: 0.5rem 1rem;
 }
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+}
+
 
 .form-text {
-  color: #888;
-  font-size: 14px;
+  font-size: 0.8rem;
+  color: #666;
 }
 
-.btn.btn-primary {
-  background-color: #ffcc00;
-  border-color: #ffcc00;
-  color: #1e1e1e;
-}
-
-/* Responsive Styles */
 @media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-}
-
-@media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
-  .card.ppmid {
-    max-width: 90%;
-  }
 }
 
-/*About Page*/
-.h-100{
-  min-height: 100vh;
-}
-.align-items-center{
-  display: flex;
-  align-items: center;
-}
-.text-muted{
-  color: #888;
-}
-mark{
-  background-color: #ffcc00;
-  color: #1e1e1e;
+@media (max-width: 992px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
