@@ -1,56 +1,135 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f8f9fa;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #ffe5b4; /*Light Yellow*/
+  padding: 20px 0;
+}
+
+.nav-pills .nav-link {
+  color: #333;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 10px;
   transition: background-color 0.3s ease;
 }
 
-.pr-nav {
-  background-color: #f0f0f0; /* Light background for Projects page */
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #ffb347; /*Orange*/
+  color: white;
 }
 
-#welcome-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 300px;
-  background: linear-gradient(135deg, #f0f0f0, #e0e0e0); /* Light gradient background */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.7); /* Neumorphism shadow */
-}
-
-#welcome-section h1, #welcome-section h3 {
-  text-align: center;
+.display-5 {
   color: #333;
 }
 
-#welcome-section .pp {
-  text-align: center;
-  font-style: italic;
+.lead {
+  font-size: 1.2rem;
   color: #555;
 }
 
-.ppicon {
-  display: block;
-  margin: 20px auto;
-  animation: bounce 1s infinite;
+.btn-primary {
+  background-color: #ff5733; /*Red-Orange*/
+  border: none;
+}
+
+.btn-outline-secondary {
+  background-color: #fff;
+  border-color: #ff5733;
+  color: #ff5733;
+}
+
+
+hr {
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+
+#icon-grid h2 {
+  color: #333;
+  font-size: 2rem;
+}
+
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.icons path {
+  transition: fill 0.3s ease;
+}
+
+.icons:hover path {
+  fill: #ff5733; /*Red-Orange*/
+}
+
+
+.row-cols-1, .row-cols-sm-2, .row-cols-md-3, .row-cols-lg-4 {
+    margin-bottom: 20px;
+}
+
+
+.h-100 {
+  height: 100%;
+}
+
+.pr-nav {
+    padding-right: 20px;
+}
+
+#welcome-section {
+  text-align: center;
+  padding: 100px 0;
+  background-image: linear-gradient(to right, #ffb347, #ff5733); /*Orange to Red-Orange*/
+  color: white;
+}
+
+#welcome-section h1,
+#welcome-section h3{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#welcome-section p {
+    margin-bottom: 20px;
+}
+
+.ppicon{
+    width: 50px;
+    height: 50px;
+    margin: 20px 0;
+    animation: bounce 1.5s infinite;
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 
-#projects {
-  padding: 40px;
-}
-
-#project-hail {
-  text-align: center;
-  font-size: 2.5em;
+#projects h1 {
   color: #333;
+  font-size: 2.5rem;
   margin-bottom: 30px;
 }
 
@@ -61,118 +140,90 @@ body {
 }
 
 .project-tile {
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.7); /* Neumorphism shadow */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.8); /* Hover shadow */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.project-img, .img-proj {
-  width: 100%;
+.project-img {
+  max-width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0; /* Rounded top corners */
+  border-radius: 8px;
 }
 
 .code {
-  color: #007bff; /* Blue accent color */
+  color: #ff5733; /*Red-Orange*/
+  font-weight: bold;
 }
 
+.pp{
+    color: white;
+    font-size: 1.5rem;
+}
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ensure the form is centered even with less content */
+  min-height: 100vh;
 }
-
 
 .card.ppmid {
-  width: 80%;
+  margin: auto;
   max-width: 600px;
-  margin: 0 auto;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.7); /* Neumorphism shadow */
 }
 
+
 .card {
+  border: 2px solid #ff5733; /*Red-Orange*/
   border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+  padding: 20px;
 }
 
 .card-header {
-  background-color: #007bff;
+  background-color: #ffb347; /*Orange*/
   color: white;
-  font-weight: bold;
+  font-size: 1.5rem;
   border-radius: 10px 10px 0 0;
-  text-align: center;
+  padding: 15px;
 }
 
 .card-body {
-  padding: 30px;
+  padding: 20px;
 }
 
 .form-control {
+  border: 2px solid #ddd;
   border-radius: 5px;
-  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.7); /* Neumorphism shadow */
+  padding: 10px;
+  margin-bottom: 10px;
 }
+
 
 .form-label {
   font-weight: bold;
+  color: #333;
 }
 
-.btn.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.8); /* Neumorphism shadow */
-  transition: box-shadow 0.3s ease;
-}
 
-.btn.btn-primary:hover {
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3), -1px -1px 3px rgba(255, 255, 255, 0.9); /* Hover shadow */
+.btn.btn-primary{
+    background-color: #ff5733; /*Red-Orange*/
+    border: none;
 }
 
 .form-text {
-  color: #6c757d;
+  color: #777;
+  font-size: 0.9rem;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-}
-
-.nav-pills .nav-link {
-    color: #333;
-    border-radius: 5px;
-}
-
-.icons {
-  margin-right: 10px;
-  width: 50px;
-  height: 50px;
-}
-
-.icons.cxx{
-    width: 75px;
-    height: 75px;
-}
-
-.icons.sql{
-    width: 75px;
-    height: 75px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: #333;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-/* Responsive styles */
 @media (max-width: 768px) {
   .project-grid {
     grid-template-columns: 1fr;
@@ -181,22 +232,6 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 992px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-hr {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-}
-
-.lead {
-    font-size: 1.2rem;
 }
