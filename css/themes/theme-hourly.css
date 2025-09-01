@@ -1,145 +1,128 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #1e1e1e;
+  background-color: #121212;
   color: #eee;
-  transition: background-color 0.3s ease;
-}
-
-body.pr-nav {
-  background-image: url('background.jpg'); /* Replace with your background image */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: white;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 header {
-  background-color: #282828;
-  padding: 10px 0;
-  border-radius: 10px;
+  background-color: #222;
 }
 
 .nav-pills .nav-link {
   color: #eee;
-  border-radius: 10px;
   padding: 10px 20px;
+  border-radius: 5px;
   margin: 0 5px;
-  background-color: #383838;
   transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active {
-  background-color: #ff9800;
-  color: #1e1e1e;
-}
-
+.nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #ffb347;
+  background-color: #555;
 }
 
+.nav-pills .nav-item {
+  margin: 0 10px;
+}
 
-.display-5 {
-  color: #ff9800;
+hr {
+  border-top: 1px solid #333;
+  margin: 20px 0;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  color: #eee;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  color: #bbb;
 }
 
 .lead {
-  color: #ddd;
+  font-size: 1.2em;
 }
 
 .btn-primary {
-  background-color: #ff9800;
-  border-color: #ff9800;
-  color: #1e1e1e;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #ffb347;
+  background-color: #666;
+  border-color: #666;
+  color: #eee;
 }
 
 .btn-outline-secondary {
-  color: #ff9800;
-  border-color: #ff9800;
-  transition: color 0.3s ease;
+  border-color: #555;
+  color: #eee;
 }
 
-.btn-outline-secondary:hover {
-  color: #ffb347;
+.btn-primary:hover, .btn-outline-secondary:hover {
+    background-color: #888;
+    border-color: #888;
 }
 
-#icon-grid h2 {
-  color: #ff9800;
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
-  margin-bottom: 10px;
+  margin-right: 10px;
+  fill: #fff;
 }
-
 
 .icons.cxx {
-  width: 100px;
-  height: 100px;
+    fill: #eee;
 }
 
-
-.icons.sql{
-  width: 75px;
-  height: 75px;
+#icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-.fw-bold {
-  font-weight: 600;
-}
 
 #welcome-section {
   text-align: center;
-  padding: 50px 0;
-  background-color: rgba(255, 152, 0, 0.3);
-  color: white;
+  padding: 100px 0;
+  background-color: #222;
+  background-image: url("https://www.transparenttextures.com/patterns/subtle-dots-pattern.png");
 }
 
-#welcome-section h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-  color: #ff9800;
+#welcome-section h1, #welcome-section h3 {
+    color: white;
 }
 
-#welcome-section h3 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: white;
+#projects {
+  padding: 40px 0;
 }
 
-.pp {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.ppicon {
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
-  animation: bounce 1.5s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-#projects h1 {
-  color: #ff9800;
-  font-size: 2.5em;
-  margin-bottom: 30px;
+#project-hail {
   text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
 }
 
 .project-grid {
@@ -149,30 +132,53 @@ header {
 }
 
 .project-tile {
-  border: 1px solid #555;
+  border: 1px solid #333;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
-
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.project-img,
-.img-proj {
+.project-img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 .code {
-  color: #007bff;
+  color: #007bff; /* Accent color for code brackets */
 }
 
+.pp {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.ppicon {
+  display: block;
+  margin: 20px auto;
+  fill: #888;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pr-nav {
+  padding-top: 50px;
+}
 
 .contact-wrapper {
   display: flex;
@@ -182,55 +188,81 @@ header {
 }
 
 .card.ppmid {
-  margin: 0 auto;
-  max-width: 500px;
+  margin: auto;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .card {
+  border: none;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  background-color: #222;
+  color: #eee;
   padding: 20px;
+  text-align:center;
 }
 
+
 .card-header {
-  background-color: #ff9800;
-  color: #1e1e1e;
-  font-weight: bold;
+  background-color: #333;
+  color: #eee;
+  font-size: 1.5em;
+  padding: 15px;
   border-radius: 10px 10px 0 0;
+  text-align:center;
 }
 
 .card-body {
   padding: 20px;
 }
 
-.form-label {
+.form-control {
+  background-color: #222;
+  border: 1px solid #555;
   color: #eee;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-.form-control {
-  background-color: #282828;
+.form-label {
   color: #eee;
-  border: 1px solid #555;
-  border-radius: 10px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.btn.btn-primary {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+    background-color: #0056b3;
 }
 
 .form-text {
   color: #888;
+  font-size: 0.8em;
+  margin-top: 5px;
 }
 
-.btn {
-    border-radius: 10px;
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .project-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card.ppmid {
+    max-width: 100%;
   }
 }
