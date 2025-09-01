@@ -1,118 +1,78 @@
 body {
-  background-color: #121212;
-  color: #eee;
+  background: rgba(20, 20, 20, 0.8); /* Dark background with slight transparency */
+  color: #eee; /* Light text color */
   font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+.pr-nav {
+  background: rgba(20, 20, 20, 0.8); /* Dark background with slight transparency for project page */
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
 }
 
 header {
-  background-color: #222;
+  background: rgba(0, 0, 0, 0.5); /* Dark header with transparency */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  border-radius: 10px;
 }
 
 .nav-pills .nav-link {
   color: #eee;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin: 0 5px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 0 10px;
   transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active,
+.nav-pills .nav-link.active {
+  background-color: rgba(150,150,255, 0.6); /* Accent color for active link */
+}
+
 .nav-pills .nav-link:hover {
-  background-color: #555;
+  background-color: rgba(100,100,255, 0.6); /* Darker accent color on hover */
 }
 
-.nav-pills .nav-item {
-  margin: 0 10px;
-}
-
-hr {
-  border-top: 1px solid #333;
-  margin: 20px 0;
-}
-
-h1, h2, h3 {
-  font-weight: bold;
+h1, h3, h2, h4 {
   color: #eee;
+  font-weight: bold;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
 }
 
 p {
-  color: #bbb;
-}
-
-.lead {
-  font-size: 1.2em;
-}
-
-.btn-primary {
-  background-color: #666;
-  border-color: #666;
   color: #eee;
-}
-
-.btn-outline-secondary {
-  border-color: #555;
-  color: #eee;
-}
-
-.btn-primary:hover, .btn-outline-secondary:hover {
-    background-color: #888;
-    border-color: #888;
-}
-
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 10px;
-  fill: #fff;
-}
-
-.icons.cxx {
-    fill: #eee;
-}
-
-#icon-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  line-height: 1.6;
 }
 
 
 #welcome-section {
   text-align: center;
-  padding: 100px 0;
-  background-color: #222;
-  background-image: url("https://www.transparenttextures.com/patterns/subtle-dots-pattern.png");
+  padding: 50px 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
 }
 
-#welcome-section h1, #welcome-section h3 {
-    color: white;
+#welcome-section h1, h3 {
+  margin-bottom: 1rem;
 }
 
 #projects {
@@ -122,7 +82,7 @@ p {
 #project-hail {
   text-align: center;
   margin-bottom: 30px;
-  color: #fff;
+  font-size: 2.5rem;
 }
 
 .project-grid {
@@ -131,39 +91,52 @@ p {
   grid-gap: 20px;
 }
 
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .project-tile {
-  border: 1px solid #333;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  padding: 15px;
+  text-decoration: none;
+  color: #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.project-img {
-  width: 100%;
+.project-img, .img-proj {
+  max-width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
 }
 
 .code {
-  color: #007bff; /* Accent color for code brackets */
+  color: #6563ff; /* Accent color for code brackets */
 }
 
 .pp {
   text-align: center;
   font-style: italic;
-  color: #888;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .ppicon {
   display: block;
   margin: 20px auto;
-  fill: #888;
   animation: rotate 2s linear infinite;
 }
 
@@ -176,10 +149,6 @@ p {
   }
 }
 
-.pr-nav {
-  padding-top: 50px;
-}
-
 .contact-wrapper {
   display: flex;
   justify-content: center;
@@ -189,80 +158,108 @@ p {
 
 .card.ppmid {
   margin: auto;
-  max-width: 600px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  max-width: 500px;
+  width: 100%;
 }
 
 .card {
-  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
   border-radius: 10px;
-  background-color: #222;
-  color: #eee;
   padding: 20px;
-  text-align:center;
 }
-
 
 .card-header {
-  background-color: #333;
-  color: #eee;
-  font-size: 1.5em;
-  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
   border-radius: 10px 10px 0 0;
-  text-align:center;
+  font-weight: bold;
+  color: #eee;
+  padding: 10px;
+  text-align: center;
 }
+
 
 .card-body {
   padding: 20px;
 }
 
 .form-control {
-  background-color: #222;
-  border: 1px solid #555;
+  background: rgba(255,255,255,0.1);
   color: #eee;
+  border: 1px solid rgba(255,255,255,0.3);
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.form-control:focus {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(150,150,255, 0.6);
+  outline: none;
 }
 
 .form-label {
   color: #eee;
-  font-weight: bold;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .btn.btn-primary {
-  background-color: #007bff;
+  background-color: rgba(150,150,255, 0.6);
+  color: #eee;
   border: none;
-  color: white;
-  padding: 10px 20px;
   border-radius: 5px;
-  margin-top: 10px;
-  cursor: pointer;
+  padding: 10px 20px;
   transition: background-color 0.3s ease;
 }
 
 .btn.btn-primary:hover {
-    background-color: #0056b3;
+  background-color: rgba(100,100,255, 0.6);
 }
 
 .form-text {
-  color: #888;
-  font-size: 0.8em;
-  margin-top: 5px;
+  color: #aaa;
+  font-size: 0.8rem;
 }
 
-@media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+  fill: #fff; /* Adjust as needed for each icon */
 }
 
-@media (max-width: 992px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
+.icons.sql {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+}
+
+.cxx {
+  fill: #fff;
+}
+
+.img-fluid{
+  border-radius: 10px;
+}
+
+mark{
+  background-color: rgba(150,150,255, 0.3);
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.lead{
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px){
+  .row{
+    flex-direction: column;
   }
-  .card.ppmid {
-    max-width: 100%;
+  .col-lg-6{
+    width: 100%;
   }
 }
