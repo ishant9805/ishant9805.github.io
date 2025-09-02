@@ -1,73 +1,97 @@
 body {
   font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  background-color: #f8f8f8;
-  color: #333;
+  background-color: #f8f9fa;
   transition: background-color 0.3s ease;
 }
 
 .pr-nav {
-  background-color: #f0f0f0; /* Lighter background for Projects page */
+  background-color: #f8f9fa; /* Match body background for seamless transition */
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 header {
-  background-color: #f8f8f8; /* Header background color */
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
 }
 
 .nav-pills .nav-link {
-  border-radius: 20px; /* Rounded corners for nav links */
   padding: 10px 20px;
-  margin: 0 10px;
-  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1), -2px -2px 5px rgba(255,255,255,0.8);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.nav-pills .nav-link.active,
-.nav-pills .nav-link:hover {
-  background-color: #e79c6b; /* Orange hover/active color */
+.nav-pills .nav-link.active {
+  background-color: #6c757d;
   color: white;
 }
 
-.display-5 {
-  font-weight: 600;
-  color: #e79c6b; /* Orange color for display-5 */
+.nav-pills .nav-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2), -4px -4px 10px rgba(255,255,255,0.9);
 }
 
-h1, h2, h3 {
-  font-family: 'Arial', sans-serif;
+h1, h3, h2 {
   font-weight: 600;
-  color: #333;
+  color: #343a40;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  color: #6c757d;
 }
 
 .lead {
-  font-weight: 400;
+  font-size: 1.25rem;
 }
 
 .btn-primary {
-  background-color: #e79c6b; /* Orange button background */
-  border-color: #e79c6b; /* Orange button border */
-  border-radius: 20px;
+  background-color: #007bff;
+  border-color: #007bff;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1), -2px -2px 5px rgba(255,255,255,0.8);
 }
 
 .btn-primary:hover {
-  background-color: #d28352; /* Darker orange on hover */
+  background-color: #0069d9;
+  border-color: #0062cc;
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2), -4px -4px 10px rgba(255,255,255,0.9);
 }
 
 .btn-outline-secondary {
-  border-radius: 20px;
-  color: #e79c6b; /* Orange color for outline button */
-  border-color: #e79c6b;
+  color: #6c757d;
+  border-color: #6c757d;
 }
 
 .btn-outline-secondary:hover {
-  background-color: #e79c6b; /* Orange background on hover */
-  color: white;
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2), -4px -4px 10px rgba(255,255,255,0.9);
+}
+
+
+#icon-grid {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1), -2px -2px 5px rgba(255,255,255,0.8);
 }
 
 .icons {
@@ -76,32 +100,15 @@ h1, h2, h3 {
   margin-right: 15px;
 }
 
-.icons svg {
-  border-radius: 10px; /* Rounded corners for SVG icons */
-}
-
-#icon-grid .col {
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: white;
-}
-
-
 #welcome-section {
   text-align: center;
   padding: 100px 0;
-  background-image: url('https://source.unsplash.com/random/1920x1080/?nature'); /* Unsplash background image */
+  background-image: url('https://source.unsplash.com/random/1920x1080');
   background-size: cover;
+  background-position: center;
   color: white;
+  background-blend-mode: multiply;
 }
-
-#welcome-section h1,
-#welcome-section h3,
-#welcome-section p {
-  margin-bottom: 10px;
-}
-
 
 #projects {
   padding: 50px 0;
@@ -109,8 +116,8 @@ h1, h2, h3 {
 
 #project-hail {
   text-align: center;
-  font-size: 3em;
   margin-bottom: 30px;
+  font-size: 2.5rem;
 }
 
 .project-grid {
@@ -122,48 +129,35 @@ h1, h2, h3 {
 .project-tile {
   border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1), -2px -2px 5px rgba(255,255,255,0.8);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2), -4px -4px 10px rgba(255,255,255,0.9);
 }
 
-.project-img {
+.project-img, .img-proj {
   width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0; /* Rounded top corners for images */
+  border-radius: 10px 10px 0 0;
 }
 
 .code {
-  color: #e79c6b; /* Orange color for code brackets */
+  color: #007bff;
 }
 
 .pp {
+  font-size: 1.1rem;
+  margin-top: 20px;
   text-align: center;
-  font-style: italic;
-  margin-bottom: 20px;
 }
 
 .ppicon {
-    display: block;
-    margin: 20px auto; /* Center the icon */
-    animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  display: block;
+  margin: 20px auto;
 }
 
 .contact-wrapper {
@@ -171,75 +165,67 @@ h1, h2, h3 {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f8f8f8; /* Background for contact section */
 }
 
 .card.ppmid {
-  margin: auto;
-  max-width: 600px; /* Max width for contact form card */
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
-  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2), -5px -5px 10px rgba(255,255,255,0.9);
 }
+
 
 .card {
   border-radius: 10px;
-  background-color: white;
-  padding: 20px;
+  overflow: hidden;
 }
 
 .card-header {
-  background-color: #e79c6b; /* Orange background for card header */
+  background-color: #007bff;
   color: white;
-  font-size: 1.5em;
-  border-radius: 10px 10px 0 0;
-  padding: 15px;
+  font-weight: bold;
   text-align: center;
+  padding: 15px;
+  border-bottom: none;
 }
 
 .card-body {
   padding: 30px;
 }
 
-
 .form-label {
-  color: #333;
+  font-weight: 600;
+  color: #343a40;
   margin-bottom: 5px;
 }
 
+
 .form-control {
   border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1), -2px -2px 5px rgba(255,255,255,0.8);
+}
+
+.form-control:focus {
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2), -4px -4px 10px rgba(255,255,255,0.9);
 }
 
 .form-text {
-  color: #666;
-  font-size: 0.9em;
-  margin-bottom: 20px;
-}
-
-#sub-btn {
-  background-color: #e79c6b; /* Orange submit button */
-  color: white;
-  border-radius: 20px;
-  padding: 10px 20px;
-}
-
-#sub-btn:hover{
-  background-color: #d28352; /* Darker orange on hover */
+  color: #6c757d;
 }
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column width on tablet */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
 @media (max-width: 576px) {
   .project-grid {
-    grid-template-columns: 1fr; /* Single column on mobile */
+    grid-template-columns: 1fr;
   }
+
   .card.ppmid {
-    max-width: 90%; /* Adjust max width on mobile */
+    width: 90%;
   }
 }
