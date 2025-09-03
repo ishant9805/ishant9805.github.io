@@ -1,135 +1,116 @@
 body {
   font-family: 'Arial', sans-serif;
+  line-height: 1.6;
   margin: 0;
-  background: linear-gradient(to bottom right, #f2f2f2, #e0e0e0);
-  color: #333;
+  background-color: #f8f9fa;
+  color: #343a40;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 header {
-  background-color: #fff;
+  background-color: #ffffff;
+  padding: 10px 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-pills .nav-link {
-  color: #333;
+  color: #343a40;
+  padding: 10px 15px;
   border-radius: 5px;
-  padding: 10px 20px;
   transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
-  background-color: #66bb6a;
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #007bff;
   color: white;
 }
 
+
 .display-5 {
-  color: #333;
+  color: #343a40;
+  font-weight: bold;
 }
 
 .lead {
-  color: #555;
+  font-size: 1.2rem;
 }
 
+
 .btn-primary {
-  background-color: #66bb6a;
-  border-color: #66bb6a;
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
 .btn-outline-secondary {
-  color: #66bb6a;
-  border-color: #66bb6a;
+  border-color: #6c757d;
+  color: #6c757d;
 }
 
-#icon-grid {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 
 .icons {
   width: 75px;
   height: 75px;
   margin-right: 15px;
-  margin-bottom: 10px;
+  vertical-align: middle;
 }
 
 .icons.cxx{
-    width: 75px;
+  width: 75px;
     height: 75px;
     margin-right: 15px;
-    margin-bottom: 10px;
+    vertical-align: middle;
 }
 
-.icons.sql {
-  width: 75px;
-  height: 75px;
-  margin-right: 15px;
-  margin-bottom: 10px;
-}
 
-h3 {
-  color: #333;
-}
-
-p {
-  color: #555;
-}
-
-#welcome-section {
-  text-align: center;
-  padding: 50px 0;
-  background: linear-gradient(to bottom right, #4CAF50, #8BC34A);
-  color: white;
-}
-
-#welcome-section h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-}
-
-#welcome-section h3 {
-  font-size: 1.5em;
+#icon-grid h2 {
+  color: #343a40;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
-.pp {
-  font-size: 1.2em;
-  margin-bottom: 30px;
+
+#welcome-section {
+  text-align: center;
+  padding: 100px 0;
+  background-image: url('hero.jpg'); /* Replace with your hero image */
+  background-size: cover;
+  background-position: center;
   color: white;
 }
 
-.ppicon {
+
+#welcome-section h1,
+#welcome-section h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#welcome-section .pp{
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+#welcome-section .ppicon{
   margin: 0 auto;
   display: block;
-  animation: bounce 1.5s infinite;
+  animation: bounce 1s infinite;
 }
 
 @keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
-
-#projects {
-  padding: 50px 0;
-}
-
-#project-hail {
-  text-align: center;
-  font-size: 2em;
+#projects h1 {
+  color: #343a40;
+  font-weight: bold;
   margin-bottom: 30px;
 }
 
@@ -140,30 +121,31 @@ p {
 }
 
 .project-tile {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.project-img, .img-proj {
+.project-img,
+.img-proj{
   width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 
 .code {
-  color: #66bb6a;
+  color: #007bff;
 }
 
-.pr-nav {
-  padding-top: 20px;
+.pr-nav{
+  background-color: #ffffff;
 }
 
 .contact-wrapper {
@@ -176,56 +158,53 @@ p {
 .card.ppmid {
   margin: auto;
   max-width: 600px;
-  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
 }
 
 .card {
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  padding: 20px;
+  border: none;
 }
 
 .card-header {
-  background-color: #66bb6a;
+  background-color: #007bff;
   color: white;
-  font-size: 1.5em;
-  border-radius: 10px 10px 0 0;
+  font-weight: bold;
   padding: 15px;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-body {
-  padding: 20px;
+  padding: 30px;
 }
 
 .form-control {
   border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
+  border-color: #ced4da;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .form-label {
   font-weight: bold;
-  margin-bottom: 5px;
+  color: #343a40;
 }
 
 .btn.btn-primary {
-  background-color: #66bb6a;
-  border-color: #66bb6a;
+  background-color: #007bff;
+  border-color: #007bff;
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
-.btn.btn-primary:hover {
-    background-color: #5cb85c;
+.btn.btn-primary:hover{
+  background-color: #0069d9;
 }
 
 .form-text {
-  color: #777;
-  font-size: 0.9em;
+  font-size: 0.8rem;
+  color: #6c757d;
 }
-
 
 @media (max-width: 768px) {
   .project-grid {
@@ -239,8 +218,21 @@ p {
   }
 }
 
-@media (max-width: 576px) {
-  .contact-wrapper .card {
-    max-width: 100%;
-  }
+.img-fluid{
+  max-width: 100%;
+  height: auto;
+}
+
+mark{
+  background-color: #e9ecef;
+  padding: .2em;
+}
+
+a{
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover{
+  color: #0069d9;
 }
