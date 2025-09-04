@@ -1,202 +1,236 @@
 body {
-  background-color: #282c34;
-  color: #abb2bf;
-  font-family: 'Merriweather', serif;
-  line-height: 1.6;
+    font-family: 'Playfair Display', serif; /* Or a similar art deco font */
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
 }
 
 .pr-nav {
-  background-color: #333;
+    background-color: #f0e68c; /* Light gold background */
 }
 
 header {
-  background-color: #333;
+    background-color: #f0e68c; /* Light gold background */
 }
 
 .nav-pills .nav-link {
-  color: #abb2bf;
-  background-color: #333;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 0 5px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  background-color: #6c757d;
-  color: #fff;
-}
-
+.nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #495057;
+    background-color: #ffd700; /* Gold hover effect */
+}
+
+.container {
+    max-width: 1200px;
 }
 
 h1, h2, h3 {
-  color: #fff;
-  font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: #333;
 }
 
 h1 {
-  font-size: 3rem;
+    font-size: 3em;
 }
 
 h2 {
-  font-size: 2rem;
+    font-size: 2em;
 }
 
 h3 {
-  font-size: 1.5rem;
+    font-size: 1.5em;
 }
 
 p {
-  color: #abb2bf;
+    color: #555;
 }
 
+.lead {
+    font-weight: normal;
+}
+
+.btn-primary {
+    background-color: #ffd700; /* Gold button */
+    border-color: #ffd700;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #FFD700; /* Darker gold hover */
+}
+
+
+.icons {
+    width: 75px;
+    height: 75px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.icons, .cxx{
+  fill: gold;
+}
+
+#icon-grid {
+  text-align: center;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
 
 #welcome-section {
-  text-align: center;
-  padding: 50px 0;
-  background: linear-gradient(to bottom, #333, #282c34);
+    background-image: url("https://www.transparenttextures.com/patterns/subtle-dots-pattern.png"); /* Or a suitable art deco background */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    text-align: center;
 }
 
-#welcome-section h1, #welcome-section h3 {
-  margin-bottom: 1rem;
+#welcome-section h1,
+#welcome-section h3 {
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .pp {
-  font-style: italic;
-  color: #a0aec0;
-  margin-bottom: 2rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
 }
 
 .ppicon {
-  animation: rotate 2s linear infinite;
-  fill: #a0aec0;
-  margin: 20px auto;
+    width: 30px;
+    height: 30px;
+    fill: gold;
+    animation: rotate 2s infinite linear;
 }
 
+
 @keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 #projects {
-  padding: 50px 0;
+    padding: 50px 0;
 }
 
 #project-hail {
-  text-align: center;
-  margin-bottom: 3rem;
-  color: #f8f9fa;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
 }
 
+
 .project-tile {
-  border: 1px solid #555;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+    border: 5px solid #ffd700; /* Gold border */
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-.project-img, .img-proj {
-  width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0;
-  object-fit: cover;
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .code {
-  color: #56b6c2;
+    color: #ffd700; /* Gold code brackets */
+    font-weight: bold;
 }
 
+
 .contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .card.ppmid {
-  margin: 0 auto;
-  max-width: 600px;
+    margin: auto;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
 }
 
 .card {
-  border: 1px solid #555;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: #f0e68c;
 }
 
 .card-header {
-  background-color: #333;
-  color: #fff;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  text-align: center;
-  border-radius: 10px 10px 0 0;
-  padding: 15px;
+    background-color: #ffd700; /* Gold card header */
+    border-bottom: none;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 15px;
 }
 
 .card-body {
-  padding: 30px;
-}
-
-.form-control {
-  background-color: #333;
-  color: #abb2bf;
-  border: 1px solid #555;
-  border-radius: 5px;
+    padding: 30px;
 }
 
 .form-label {
-  color: #fff;
-  margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
 }
 
-.btn.btn-primary {
-  background-color: #56b6c2;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
+.form-control {
+    border-radius: 10px;
+    border-color: #ffd700; /* Gold border */
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
 .form-text {
-  color: #888;
+    color: #888;
+    font-size: 0.9em;
 }
 
-.icons {
-  margin-right: 1rem;
-  fill: #fff;
+.form-control:focus{
+  border-color: gold;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-.icons.cxx {
-    fill: #007bff;
-}
-
-.icons.sql {
-    fill: #007bff;
-}
 
 @media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
 
 @media (max-width: 576px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
 }
