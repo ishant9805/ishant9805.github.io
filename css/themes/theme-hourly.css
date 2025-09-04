@@ -1,13 +1,8 @@
 body {
-  background: linear-gradient(to right, #1e272e, #2e3a42);
-  color: #eee;
   font-family: 'Arial', sans-serif;
   margin: 0;
-  padding: 0;
-}
-
-.pr-nav {
-  background: linear-gradient(to right, #1e272e, #2e3a42);
+  background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
+  color: #333;
 }
 
 .container {
@@ -16,153 +11,159 @@ body {
 }
 
 header {
-  background: linear-gradient(to right, #293b46, #354a54);
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-pills .nav-link {
-  color: #eee;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 0 10px;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  color: #333;
+  background-color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  background-color: #6563ff;
-  color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.nav-pills .nav-link:hover {
-  background-color: #444;
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
+  background-color: #ff9800;
   color: #fff;
 }
 
-h1, h3 {
-  font-weight: 700;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+.display-5 {
+  color: #333;
 }
 
 .lead {
-  color: #ddd;
-  font-style: italic;
+  color: #555;
 }
 
 .btn-primary {
-  background-color: #6563ff;
-  border-color: #6563ff;
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background-color: #444;
-  border-color: #444;
-  color: #eee;
+  background-color: #ff9800;
+  border-color: #ff9800;
 }
 
 .btn-outline-secondary {
-  color: #eee;
-  border-color: #eee;
+  border-color: #555;
+  color: #555;
 }
 
-.btn-outline-secondary:hover {
-  background-color: #6563ff;
+.btn-primary:hover, .btn-outline-secondary:hover {
+  background-color: #ffa500;
   color: #fff;
+  border-color: #ffa500;
 }
 
-#icon-grid .icons {
+#icon-grid h2 {
+  color: #333;
+}
+
+
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 1rem;
+}
+
+.icons.cxx {
   width: 100px;
   height: 100px;
-  margin-right: 15px;
-  transition: transform 0.3s ease;
 }
 
-#icon-grid .icons:hover {
-  transform: scale(1.1);
-}
 
-#icon-grid h2{
-  color: #eee;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-#icon-grid p {
-  color: #ddd;
+.icons.sql {
+  width: 80px;
+  height: 80px;
+  margin-right: 1rem;
 }
 
 #welcome-section {
   text-align: center;
-  padding: 100px 0;
-  background: linear-gradient(to bottom, #293b46, #354a54);
+  padding: 5rem 0;
+  background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
 }
 
 #welcome-section h1 {
   font-size: 3rem;
-  margin-bottom: 20px;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
 #welcome-section h3 {
   font-size: 2rem;
-  margin-bottom: 30px;
+  color: #555;
+  margin-bottom: 2rem;
 }
 
 .pp {
-  color: #ddd;
   font-size: 1.2rem;
-  margin-bottom: 30px;
+  color: #555;
+  margin-bottom: 2rem;
 }
 
 .ppicon {
-  animation: bounce 1s infinite;
-  margin: 20px auto;
-  display: block;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
 }
 
-@keyframes bounce {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-#projects h1 {
+#projects {
+  padding: 4rem 0;
+}
+
+#project-hail {
   text-align: center;
-  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
 }
+
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 2rem;
 }
 
 .project-tile {
-  border: 1px solid #555;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
   overflow: hidden;
-  text-decoration: none;
-  color: #eee;
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-  transform: translateY(-5px);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .project-img {
   width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .img-proj {
-  max-height: 300px;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+
 }
 
 .code {
-  color: #6563ff;
+  color: #ff9800;
 }
+
+.pr-nav {
+  padding-top: 2rem;
+}
+
 
 .contact-wrapper {
   display: flex;
@@ -174,61 +175,59 @@ h1, h3 {
 .card.ppmid {
   margin: auto;
   max-width: 600px;
-  border: 1px solid #555;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 
 .card {
-  border-radius: 10px;
-  background-color: rgba(0,0,0,0.7);
-  padding: 20px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
 }
 
 .card-header {
-  background-color: #6563ff;
+  background-color: #ff9800;
   color: #fff;
   font-size: 1.5rem;
-  border-radius: 10px 10px 0 0;
-  padding: 15px;
+  padding: 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .card-body {
-  padding: 30px;
-}
-
-.form-control {
-  background-color: #222;
-  color: #eee;
-  border: 1px solid #555;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  padding: 10px;
+  padding: 2rem;
 }
 
 .form-label {
-  color: #eee;
-  font-weight: 600;
-  margin-bottom: 5px;
+  color: #333;
+}
+
+
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+
+.btn.btn-primary {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn.btn-primary:hover {
+  background-color: #ffa500;
 }
 
 .form-text {
-  color: #888;
-  font-size: 0.9rem;
-  margin-top: 5px;
+  color: #555;
 }
 
-#sub-btn {
-  background-color: #6563ff;
-  border-color: #6563ff;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-#sub-btn:hover {
-  background-color: #444;
-}
 
 @media (max-width: 768px) {
   .project-grid {
