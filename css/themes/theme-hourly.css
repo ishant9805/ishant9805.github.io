@@ -1,167 +1,169 @@
 body {
-  background-color: #1e1e1e;
-  color: #eee;
-  font-family: 'Roboto', sans-serif;
-  transition: background-color 0.3s ease;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
+  color: #333;
 }
 
-.pr-nav {
-  background-color: #282c34;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-  background-color: #282c34;
+  background: linear-gradient(to right, #67b26f, #4ca2cd);
+  color: white;
 }
 
 .nav-pills .nav-link {
-  color: #eee;
-  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
   border-radius: 10px;
   padding: 10px 20px;
   margin: 0 5px;
-  transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active {
-  background-color: #50e3c2;
-  color: #1e1e1e;
-}
-
+.nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #50e3c2;
-  color: #1e1e1e;
+  background-color: #fff;
+  color: #333;
 }
 
 h1, h2, h3 {
-  font-weight: 700;
-  color: #50e3c2;
-  text-shadow: 0 0 10px rgba(50, 227, 194, 0.5);
+  font-weight: bold;
+  color: #333;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3em;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 p {
   line-height: 1.6;
-  color: #eee;
+  color: #555;
 }
 
 .lead {
-  font-weight: 400;
+  font-size: 1.2em;
 }
 
 .btn-primary {
-  background-color: #50e3c2;
-  border: none;
-  color: #1e1e1e;
-  padding: 10px 20px;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
+  background-color: #4ca2cd;
+  border-color: #4ca2cd;
 }
 
 .btn-primary:hover {
-  background-color: #26c9a4;
+  background-color: #3e81b8;
+  border-color: #3e81b8;
 }
 
 .btn-outline-secondary {
-  color: #50e3c2;
-  border-color: #50e3c2;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #4ca2cd;
+  border-color: #4ca2cd;
 }
 
 .btn-outline-secondary:hover {
-  background-color: #50e3c2;
-  color: #1e1e1e;
+  background-color: #4ca2cd;
+  color: white;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 1rem;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
-.icons:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
+.icons:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease;
 }
 
 #icon-grid .icons {
-    fill: white;
+  fill: white;
 }
 
 
 #welcome-section {
+  background: linear-gradient(to bottom right, #a6d1ff, #67b26f);
+  color: white;
   text-align: center;
-  padding: 5rem 0;
-  background-image: linear-gradient(to bottom, #1e1e1e, #282c34);
+  padding: 50px 0;
 }
 
-#welcome-section h1, #welcome-section h3 {
-  margin-bottom: 1rem;
+#welcome-section h1,
+#welcome-section h3 {
+  margin-bottom: 10px;
 }
 
-.pp {
-  font-style: italic;
-  margin-bottom: 2rem;
+#projects {
+  padding: 50px 0;
 }
 
-.ppicon {
-  margin: 0 auto;
-  display: block;
-  animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-
-#projects h1 {
+#project-hail {
   text-align: center;
-  margin-bottom: 3rem;
+  font-size: 2.5em;
+  margin-bottom: 30px;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 20px;
 }
 
+
 .project-tile {
-  border: 1px solid #50e3c2;
+  border: 1px solid #ccc;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(50, 227, 194, 0.5);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 30px rgba(50, 227, 194, 0.7);
+  transform: scale(1.05);
 }
 
-.project-img {
+.project-img,
+.img-proj {
   width: 100%;
   height: auto;
   border-radius: 10px 10px 0 0;
 }
 
 .code {
-  color: #50e3c2;
+  color: #4ca2cd;
+  font-weight: bold;
+}
+
+.pp {
+  text-align: center;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.ppicon {
+  display: block;
+  margin: 20px auto;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.pr-nav {
+    background: linear-gradient(to bottom right, #e6f2ff, #d1e9ff);
 }
 
 
@@ -175,69 +177,77 @@ p {
 .card.ppmid {
   margin: auto;
   max-width: 600px;
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 30px rgba(50, 227, 194, 0.5);
-  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
 }
 
 .card {
-  width: 100%;
-  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .card-header {
-  background-color: #50e3c2;
-  color: #1e1e1e;
+  background-color: #4ca2cd;
+  color: white;
+  font-size: 1.5em;
+  padding: 15px;
   text-align: center;
-  border-radius: 10px 10px 0 0;
-  padding: 10px 0;
 }
 
 .card-body {
-  padding: 20px;
-}
-
-.form-control {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #eee;
-  border: 1px solid #50e3c2;
-  border-radius: 5px;
+  padding: 30px;
 }
 
 .form-label {
-  color: #eee;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .form-text {
-  color: #aaa;
+  font-size: 0.9em;
+  color: #777;
 }
 
 #sub-btn {
-  background-color: #50e3c2;
-  color: #1e1e1e;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
+    background-color: #67b26f;
+    border-color: #67b26f;
 }
 
 #sub-btn:hover {
-  background-color: #26c9a4;
+  background-color: #52915a;
+  border-color: #52915a;
 }
-
 
 @media (max-width: 768px) {
   .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .project-grid {
     grid-template-columns: 1fr;
   }
-}
 
-@media (max-width: 992px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .card.ppmid {
+    max-width: 100%;
+    margin: 20px;
   }
 }
 
-.img-fluid{
-  border-radius: 10px;
+mark {
+    background-color: #ffff66;
+    color: black;
+    padding: 0.2em;
+    font-weight: bold;
 }
