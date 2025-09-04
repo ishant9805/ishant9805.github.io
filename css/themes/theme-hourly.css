@@ -1,236 +1,255 @@
 body {
-    font-family: 'Playfair Display', serif; /* Or a similar art deco font */
-    line-height: 1.6;
-    background-color: #f8f8f8;
-    color: #333;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #f8f8f8;
+  color: #333;
 }
 
 .pr-nav {
-    background-color: #f0e68c; /* Light gold background */
+  background-color: #f0f4c3; /* Light Green Background */
 }
 
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
 header {
-    background-color: #f0e68c; /* Light gold background */
+  background-color: #e0e0d1; /* Light Beige Background */
+  border-bottom: 1px solid #ddd;
 }
 
 .nav-pills .nav-link {
-    border-radius: 10px;
-    padding: 10px 20px;
-    margin: 0 5px;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
+  color: #333;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active,
-.nav-pills .nav-link:hover {
-    background-color: #ffd700; /* Gold hover effect */
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
+  background-color: #a0522d; /* Brown Highlight */
+  color: white;
 }
 
-.container {
-    max-width: 1200px;
+.display-5, h1, h3 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    color: #4a235a; /* Deep Purple */
 }
 
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-    color: #333;
-}
-
-h1 {
-    font-size: 3em;
-}
-
-h2 {
-    font-size: 2em;
-}
-
-h3 {
-    font-size: 1.5em;
-}
-
-p {
-    color: #555;
-}
 
 .lead {
-    font-weight: normal;
+  font-style: italic;
+  color: #800000; /* Maroon */
 }
 
 .btn-primary {
-    background-color: #ffd700; /* Gold button */
-    border-color: #ffd700;
-    color: #333;
-    transition: background-color 0.3s ease;
+  background-color: #800000; /* Maroon Button */
+  border-color: #800000;
+  color: white;
 }
 
-.btn-primary:hover {
-    background-color: #FFD700; /* Darker gold hover */
+.btn-outline-secondary {
+  color: #800000; /* Maroon Outline */
+  border-color: #800000;
+}
+
+.btn-primary:hover, .btn-outline-secondary:hover {
+  background-color: #660000; /* Darker Maroon on hover */
+  border-color: #660000;
+  color: white;
 }
 
 
-.icons {
-    width: 75px;
-    height: 75px;
-    margin-right: 15px;
-    vertical-align: middle;
+#icon-grid .icons {
+  width: 80px;
+  height: 80px;
+  margin-right: 1rem;
 }
 
-.icons, .cxx{
-  fill: gold;
-}
-
-#icon-grid {
-  text-align: center;
-}
-
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+#icon-grid h2 {
+  color: #4a235a; /* Deep Purple */
 }
 
 #welcome-section {
-    background-image: url("https://www.transparenttextures.com/patterns/subtle-dots-pattern.png"); /* Or a suitable art deco background */
-    background-size: cover;
-    background-position: center;
-    padding: 50px 0;
-    text-align: center;
+  text-align: center;
+  padding: 8rem 0;
+  background-image: url('nature-background.jpg'); /* Replace with your nature background image */
+  background-size: cover;
+  background-position: center;
+  color: white; /* Text color for better contrast on background image */
 }
 
-#welcome-section h1,
-#welcome-section h3 {
-    color: #333;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+#welcome-section h1, #welcome-section h3{
+    color: white;
 }
 
 .pp {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  color: #eee; /* Light Text Color */
 }
+
 
 .ppicon {
-    width: 30px;
-    height: 30px;
-    fill: gold;
-    animation: rotate 2s infinite linear;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  fill: #eee;
+  margin-top: 1rem;
+  animation: rotate 2s linear infinite;
 }
-
 
 @keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-#projects {
-    padding: 50px 0;
-}
 
-#project-hail {
-    text-align: center;
-    margin-bottom: 30px;
+#projects h1 {
+    font-size: 3rem;
+    color: #4a235a; /* Deep Purple */
+    margin-bottom: 3rem;
 }
 
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 30px;
+    grid-gap: 20px;
 }
 
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 .project-tile {
-    border: 5px solid #ffd700; /* Gold border */
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-    transform: translateY(-5px);
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-
-.project-img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+.project-img, .img-proj {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
 }
+
 
 .code {
-    color: #ffd700; /* Gold code brackets */
-    font-weight: bold;
+  color: #a0522d; /* Brown Accent */
+  font-weight: bold;
 }
 
-
 .contact-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f4c3; /* Light Green Background */
 }
 
 .card.ppmid {
-    margin: auto;
-    max-width: 600px;
-    width: 100%;
-    padding: 20px;
+  margin: auto;
+  width: 600px; /* Adjust as needed */
+  max-width: 100%; /* Responsive width */
+  position: relative;
+  border-radius: 10px;
+  background-color: white; /* Adjust as needed */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+
 }
 
+
 .card {
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    background-color: #f0e68c;
+  padding: 20px;
 }
 
 .card-header {
-    background-color: #ffd700; /* Gold card header */
-    border-bottom: none;
-    text-align: center;
-    font-size: 1.5em;
-    padding: 15px;
+  background-color: #800000; /* Maroon */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  padding: 1rem 0;
 }
 
 .card-body {
-    padding: 30px;
+  padding: 2rem;
 }
 
 .form-label {
-    font-weight: bold;
-    color: #333;
+  color: #4a235a; /* Deep Purple */
+  font-weight: bold;
 }
 
 .form-control {
-    border-radius: 10px;
-    border-color: #ffd700; /* Gold border */
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  border-color: #ddd;
+  padding: 0.7rem 1rem;
 }
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25); /* Maroon focus shadow */
+}
+
+
+.btn.btn-primary {
+  background-color: #800000; /* Maroon */
+  border: none;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+    background-color: #660000; /* Darker Maroon on hover */
+}
+
 
 .form-text {
-    color: #888;
-    font-size: 0.9em;
-}
-
-.form-control:focus{
-  border-color: gold;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  color: #777;
+  font-size: 0.9rem;
 }
 
 
 @media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
+  .card.ppmid {
+    width: 90%;
+  }
 }
 
-@media (max-width: 576px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
+mark {
+  background-color: #ffffcc;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+}
+
+a.text-muted, a.text-muted:hover, a.text-muted:visited{
+    text-decoration: underline;
+    color: #777;
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
 }
