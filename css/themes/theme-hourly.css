@@ -1,99 +1,55 @@
 body {
-  font-family: 'Playfair Display', serif; /* Or a similar elegant serif font */
-  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  background-color: #f8f8f8; /* Light background for light theme */
-  color: #333; /* Dark text color */
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-header {
-  background-color: #f0f0f0; /* Slightly lighter background for header */
-  padding: 1rem 0;
-}
-
-.nav-pills .nav-link {
-  padding: 0.8rem 1.5rem;
-  border-radius: 0.3rem;
-  font-weight: 500;
-  color: #333;
   transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active,
-.nav-pills .nav-link:hover {
-  background-color: #a78b6e; /* Dark academia accent color */
-  color: #fff;
-}
-
-.display-5 {
-  font-weight: 700;
-  font-size: 2.5rem;
-}
-
-.lead {
-  font-weight: 400;
-  font-size: 1.2rem;
-}
-
-.btn-primary {
-  background-color: #a78b6e; /* Dark academia accent color */
-  border-color: #a78b6e;
-  color: #fff;
-}
-
-.btn-outline-secondary {
-  color: #a78b6e;
-  border-color: #a78b6e;
-}
-
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 1rem;
-  fill: #a78b6e; /* Dark academia accent color for icons */
-  transition: transform 0.3s ease;
-}
-
-.icons:hover {
-  transform: scale(1.1);
-}
-
-#icon-grid .icons {
-  margin-bottom: 1rem;
-}
-
-
-#icon-grid h2{
-    color: #a78b6e;
-}
-
-.fw-bold {
-  font-weight: bold;
+.pr-nav {
+  background-color: #f2f2f2; /* Light grey background for projects page */
 }
 
 #welcome-section {
-  text-align: center;
+  background-color: #e0f7fa; /* Light blue background */
   padding: 5rem 0;
-  background-image: url('https://source.unsplash.com/random/1920x1080/?dark,academia'); /* Replace with your background image */
-  background-size: cover;
-  background-position: center;
-  color: white;
+  text-align: center;
 }
 
-#welcome-section h1,
-#welcome-section h3 {
+#welcome-section h1 {
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
-#projects h1 {
-  text-align: center;
+#welcome-section h3 {
+  font-size: 2rem;
   margin-bottom: 2rem;
-  color: #a78b6e;
+}
+
+.pp {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+
+.ppicon {
+  fill: #3f51b5; /* Accent blue color for icon */
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
+#projects {
+  padding: 4rem 0;
+}
+
+#project-hail {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .project-grid {
@@ -104,81 +60,92 @@ header {
 
 .project-tile {
   border: 1px solid #ddd;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.project-img,
-.img-proj {
+.project-img, .img-proj {
   width: 100%;
   height: auto;
-  border-radius: 0.5rem;
-  display: block;
+  border-radius: 5px 5px 0 0;
 }
 
 .code {
-  color: #a78b6e; /* Dark academia accent color for code brackets */
+  color: #3f51b5; /* Accent blue color for code brackets */
   font-weight: bold;
 }
 
-
-.pp {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-style: italic;
-  font-size: 1.2rem;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-.ppicon {
-  fill: #a78b6e;
-  display: block;
-  margin: 0 auto 1rem;
-  animation: bounce 1s infinite;
+nav {
+  background-color: #f0f0f0;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+.nav-link {
+  color: #333;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.pr-nav {
-  background-color: #f8f8f8; /* Adjust background color as needed */
+.nav-link:hover {
+  background-color: #e0e0e0;
+}
+
+.nav-link.active {
+  background-color: #3f51b5; /* Accent blue for active link */
+  color: white;
+}
+
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 1rem;
+}
+
+
+h1, h2, h3, h4 {
+  font-weight: 600;
 }
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ensure form is centered vertically */
+  min-height: 100vh;
+  padding: 2rem;
 }
 
 .card.ppmid {
-  margin: auto;
-  max-width: 500px;
-  width: 100%;
-  border: 1px solid #a78b6e;
+  margin: 0 auto;
+  width: 500px;
+  max-width: 90%; /* Responsive width */
 }
 
-
 .card {
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .card-header {
-  background-color: #a78b6e;
-  color: #fff;
-  font-weight: bold;
+  background-color: #3f51b5; /* Accent blue for header */
+  color: white;
+  font-size: 1.5rem;
   padding: 1rem;
-  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .card-body {
@@ -186,28 +153,33 @@ header {
 }
 
 .form-control {
-  border-color: #ddd;
-  border-radius: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .form-label {
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.form-text {
-  font-size: 0.9rem;
-  color: #777;
+  font-weight: bold;
 }
 
 .btn.btn-primary {
-    background-color: #a78b6e;
-    border: none;
-    border-radius: 0.3rem;
-    padding: 0.8rem 1.5rem;
-    font-weight: 500;
-    color: white;
+  background-color: #3f51b5;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
+
+.btn.btn-primary:hover {
+  background-color: #283593; /* Darker blue on hover */
+}
+
+.form-text {
+  font-size: 0.8rem;
+  color: #777;
+}
+
 
 @media (max-width: 768px) {
   .project-grid {
@@ -218,5 +190,9 @@ header {
 @media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .card.ppmid {
+    width: 90%;
   }
 }
