@@ -1,194 +1,265 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4; /* Light background for light theme */
-  color: #333; /* Dark text for light theme */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for theme changes */
+    background-color: #222831;
+    color: #e5e5e5;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease;
 }
 
 .pr-nav {
-  background-color: #333;
-  color: white;
+    background-color: #393e46;
 }
 
 .container {
-  max-width: 1200px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
+
 header {
-  background-color: #2196f3; /* Deep blue header */
-  color: white;
+    background-color: #222831;
+    padding: 1rem 0;
 }
 
 .nav-pills .nav-link {
-  color: white;
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 0 5px;
+    color: #e5e5e5;
+    border-radius: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #fff;
-  color: #2196f3;
+    background-color: #4db6ac;
+    color: #222831;
 }
+
+.nav-pills.justify-content-center {
+    justify-content: center;
+}
+
 
 h1, h2, h3 {
-  font-weight: 600;
-  color: #2196f3; /* Deep blue headings */
+    font-weight: 700;
+    color: #e5e5e5;
+    margin-bottom: 1rem;
 }
 
-#welcome-section {
-  text-align: center;
-  padding: 50px 0;
-  background-image: url('space-background.jpg'); /* Replace with your space background image */
-  background-size: cover;
-  background-position: center;
-  color: white;
+h1 {
+    font-size: 2.5rem;
 }
 
-#projects {
-  padding: 50px 0;
+h2 {
+    font-size: 2rem;
 }
 
-#project-hail {
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 30px;
+h3 {
+    font-size: 1.5rem;
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-}
-
-.project-tile {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.project-img, .img-proj {
-  width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0;
-}
-
-.code {
-  color: #f7ca18; /* Accent color for code brackets */
-}
-
-.pp {
-  font-style: italic;
-  font-size: 1.2em;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.ppicon {
-  display: block;
-  margin: 20px auto;
-  animation: rotate 2s linear infinite; /* Smooth animation for scroll icon */
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 10px;
-}
-
-.contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color:#2196f3;
-}
-
-.card.ppmid {
-  margin: auto;
-  max-width: 600px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card {
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.card-header {
-  background-color: #2196f3;
-  color: white;
-  font-size: 1.5em;
-  border-radius: 10px 10px 0 0;
-  padding: 15px;
-  text-align: center;
-}
-
-.card-body {
-  padding: 30px;
-}
-
-.form-control {
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 15px;
-}
-
-.form-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.btn.btn-primary {
-  background-color: #2196f3;
-  color: white;
-  border-radius: 5px;
-  padding: 10px 20px;
-}
-
-.form-text {
-  font-size: 0.8em;
-  color: #888;
-}
-
-/* Responsive styles for project grid */
-@media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-}
-
-@media (max-width: 576px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
+p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 .lead {
-    font-weight: 400;
+    font-size: 1.25rem;
 }
 
-mark {
-    background-color: #f7ca18;
-    padding: .2em;
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.icons {
+    width: 75px;
+    height: 75px;
+    margin-right: 1rem;
+}
+
+.icons.cxx {
+    width: 100px;
+    height: 100px;
+}
+
+.icons.sql {
+    width: 100px;
+    height: 100px;
+}
+
+svg {
+    fill: #4db6ac;
+}
+
+#icon-grid {
+    background-color: #393e46;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+#welcome-section {
+    text-align: center;
+    background-image: url('https://images.pexels.com/photos/370212/pexels-photo-370212.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 5rem 0;
+}
+
+.pp {
+  font-size: 1.2rem;
+  color: #e5e5e5;
+  margin-top: 2rem;
+}
+
+
+.ppicon {
+    fill: #e5e5e5;
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem auto;
+    display: block;
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+#projects {
+    padding: 2rem 0;
+}
+
+#project-hail {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    padding: 1rem;
+}
+
+.project-tile {
+    background-color: #393e46;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+
+.project-tile:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem 0.5rem 0 0;
+    object-fit: cover;
+}
+
+
+.code {
+    color: #4db6ac;
+}
+
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card.ppmid {
+    margin: auto;
+    max-width: 500px;
+    background-color: #393e46;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    width: 100%;
+    padding: 2rem;
+}
+
+.card-header {
+    background-color: #4db6ac;
+    color: #222831;
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.form-label {
+    color: #e5e5e5;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    background-color: #393e46;
+    border: 1px solid #6c757d;
+    color: #e5e5e5;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #4db6ac;
+    box-shadow: 0 0 0 0.25rem rgba(77,182,172,0.25);
+}
+
+
+.btn.btn-primary {
+    background-color: #4db6ac;
+    border: none;
+    color: #222831;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+    background-color: #388e80;
+}
+
+.form-text {
+    color: #6c757d;
+    font-size: 0.875rem;
+}
+
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
 }
