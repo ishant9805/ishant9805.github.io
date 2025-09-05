@@ -1,7 +1,13 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  color: #343a40;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4; /* Light background for light theme */
+  color: #333; /* Dark text for light theme */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for theme changes */
+}
+
+.pr-nav {
+  background-color: #333;
+  color: white;
 }
 
 .container {
@@ -9,109 +15,45 @@ body {
 }
 
 header {
-  background-color: #f8f9fa;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #2196f3; /* Deep blue header */
+  color: white;
 }
 
 .nav-pills .nav-link {
-  border-radius: 20px;
+  color: white;
+  border-radius: 10px;
   padding: 10px 20px;
   margin: 0 5px;
-  transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #6c757d;
-  color: white;
+  background-color: #fff;
+  color: #2196f3;
 }
 
-.display-5 {
-  font-weight: 700;
-  color: #343a40;
+h1, h2, h3 {
+  font-weight: 600;
+  color: #2196f3; /* Deep blue headings */
 }
-
-.lead {
-  font-size: 1.1rem;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.btn-outline-secondary {
-  color: #343a40;
-  border-color: #adb5bd;
-}
-
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 15px;
-  fill: white;
-  background-color: #6c757d;
-  border-radius: 50%;
-  padding: 10px;
-  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.3);
-}
-
-
-.icons.cxx{
-  background-color: #6c757d;
-}
-
-
-#icon-grid h2 {
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.icons.sql{
-  background-color: #6c757d;
-}
-
 
 #welcome-section {
   text-align: center;
-  padding: 100px 0;
-  background-color: #f8f9fa;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 50px 0;
+  background-image: url('space-background.jpg'); /* Replace with your space background image */
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
-#welcome-section h1,
-#welcome-section h3 {
-  color: #343a40;
+#projects {
+  padding: 50px 0;
 }
 
-.pp {
-  font-size: 1.2rem;
-  font-style: italic;
-  margin-bottom: 20px;
-  color: #6c757d;
-}
-
-.ppicon {
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
-  animation: rotate 2s infinite linear;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-#projects h1 {
+#project-hail {
   text-align: center;
+  font-size: 3em;
   margin-bottom: 30px;
-  color: #343a40;
 }
 
 .project-grid {
@@ -121,31 +63,55 @@ header {
 }
 
 .project-tile {
-  border: 1px solid #dee2e6;
+  border: 1px solid #ccc;
   border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1), -2px -4px 10px rgba(255, 255, 255, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.2), -4px -8px 15px rgba(255, 255, 255, 0.4);
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.project-img {
+.project-img, .img-proj {
   width: 100%;
   height: auto;
   border-radius: 10px 10px 0 0;
 }
 
-
 .code {
-  color: #007bff;
+  color: #f7ca18; /* Accent color for code brackets */
 }
 
-.pr-nav{
-  padding-top: 20px;
+.pp {
+  font-style: italic;
+  font-size: 1.2em;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.ppicon {
+  display: block;
+  margin: 20px auto;
+  animation: rotate 2s linear infinite; /* Smooth animation for scroll icon */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 10px;
 }
 
 .contact-wrapper {
@@ -153,69 +119,76 @@ header {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f8f9fa;
+  background-color:#2196f3;
 }
 
 .card.ppmid {
-  width: 80%;
+  margin: auto;
   max-width: 600px;
-  margin: 0 auto;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1), -2px -4px 10px rgba(255, 255, 255, 0.3);
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card {
-  border-radius: 15px;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .card-header {
-  background-color: #007bff;
+  background-color: #2196f3;
   color: white;
-  border-radius: 15px 15px 0 0;
-  font-weight: 700;
+  font-size: 1.5em;
+  border-radius: 10px 10px 0 0;
+  padding: 15px;
+  text-align: center;
 }
 
 .card-body {
   padding: 30px;
 }
 
-.form-label {
-  font-weight: 600;
-  color: #343a40;
-}
-
 .form-control {
-  border: 1px solid #ced4da;
-  border-radius: 10px;
-  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.btn.btn-primary {
+  background-color: #2196f3;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
 
 .form-text {
-  font-size: 0.875em;
-  color: #6c757d;
+  font-size: 0.8em;
+  color: #888;
 }
 
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  border-radius: 10px;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #0069d9;
-}
-
-
+/* Responsive styles for project grid */
 @media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 992px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.lead {
+    font-weight: 400;
+}
+
+mark {
+    background-color: #f7ca18;
+    padding: .2em;
 }
