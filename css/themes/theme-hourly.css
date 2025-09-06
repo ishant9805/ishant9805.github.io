@@ -1,236 +1,237 @@
 body {
-  background-color: #121212;
-  color: #f2f2f2;
-  font-family: 'Arial', sans-serif;
-  transition: background-color 0.3s ease;
+    background-color: #1e2735;
+    color: #d9e0e7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease; /* Add smooth transition for body background */
 }
 
 .pr-nav {
-  background-color: #1a1a1a;
+    background-color: #1e2735; /* Dark background for projects page */
+}
+
+.container {
+    max-width: 1200px;
 }
 
 header {
-  background-color: #222;
+    background-color: #2a384e;
 }
 
-.nav {
-  background-color: transparent;
+.nav-pills .nav-link {
+    color: #d9e0e7;
+    background-color: transparent;
+    border: 1px solid #4466a1;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #4466a1;
+    color: #1e2735;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #4466a1;
+    color: #1e2735;
 }
 
 .nav-link {
-  color: #f2f2f2;
-  padding: 10px 15px;
-  border-radius: 5px;
-  margin: 0 5px;
-}
-
-.nav-link.active {
-  background-color: #555;
-}
-
-.nav-link:hover {
-  background-color: #444;
+    text-decoration: none;
 }
 
 h1, h2, h3 {
-  font-weight: bold;
-  color: #f2f2f2;
+    color: #e8f1ff;
+    font-weight: 600;
 }
 
 h1 {
-  font-size: 3em;
+    font-size: 2.5em;
 }
 
 h2 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: 1.5em;
+    font-size: 2em;
 }
 
 p {
-  line-height: 1.6;
+    line-height: 1.6;
 }
 
 .lead {
-  font-weight: normal;
+    font-weight: 300;
 }
 
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.btn-primary:hover {
-  background-color: #0069d9;
-  border-color: #0062cc;
-}
-
-.btn-outline-secondary {
-  color: #f2f2f2;
-  border-color: #f2f2f2;
-}
-
-.btn-outline-secondary:hover {
-  color: #fff;
-  background-color: #f2f2f2;
-  border-color: #f2f2f2;
-}
-
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 10px;
-  fill: #fff;
-}
-
-.icons.cxx {
-  fill: #fff;
-}
-
-#icon-grid .icons {
-  margin-bottom: 10px;
-}
-
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
 
 #welcome-section {
-  text-align: center;
-  padding: 50px 0;
-  background-color: #282828;
+    text-align: center;
+    padding: 50px 0;
+    background: linear-gradient(to bottom, #2a384e, #1e2735);
 }
 
 #welcome-section h1, #welcome-section h3 {
-  margin-bottom: 10px;
+    color: #fff;
 }
 
 .pp {
-  font-style: italic;
-  margin-bottom: 20px;
+    color: #d9e0e7;
+    font-style: italic;
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
-.ppicon {
-  fill: #fff;
-  animation: rotate 2s linear infinite;
-}
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#projects {
+    padding: 40px 0;
 }
 
 #project-hail {
-  text-align: center;
-  margin-bottom: 30px;
+    color: #e8f1ff;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
+
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
 }
 
 .project-tile {
-  border: 1px solid #333;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
+    border: 1px solid #4466a1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-
 .project-img, .img-proj {
-  width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
 }
 
 .code {
-  color: #007bff;
+    color: #007bff; /* Accent color for code brackets */
 }
 
+
+.ppicon {
+    display: block;
+    margin: 20px auto;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
 .contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .card.ppmid {
-  margin: auto;
-  max-width: 600px;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .card {
-  border: 1px solid #333;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 20px;
+    border: 1px solid #4466a1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
+
 
 .card-header {
-  background-color: #333;
-  color: #fff;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 10px 10px 0 0;
+    background-color: #2a384e;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+    padding: 15px;
 }
 
+
 .card-body {
-  padding: 20px;
+    padding: 20px;
 }
 
 .form-control {
-  background-color: #222;
-  color: #f2f2f2;
-  border: 1px solid #333;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
+    border: 1px solid #4466a1;
+    border-radius: 5px;
+    background-color: #283545;
+    color: #d9e0e7;
+}
+
+.form-label {
+    color: #d9e0e7;
+    font-weight: bold;
 }
 
 
-.form-label {
-  color: #f2f2f2;
-  font-weight: bold;
-  margin-bottom: 5px;
+.btn.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #1e2735;
+}
+
+.btn.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
 }
 
 
 .form-text {
-  color: #888;
-  font-size: smaller;
+    color: #a0aec0;
+    font-size: 0.9em;
 }
 
+.icons {
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    fill: white;
+}
+
+.icons.cxx{
+    width: 75px;
+    height: 75px;
+}
+
+.icons.sql{
+    width: 75px;
+    height: 75px;
+}
+
+
 @media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
 
 @media (max-width: 576px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-  .contact-wrapper {
-    flex-direction: column;
-  }
-  .card.ppmid {
-    max-width: 100%;
-    margin: 20px;
-  }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .card.ppmid {
+        width: 90%;
+    }
 }
