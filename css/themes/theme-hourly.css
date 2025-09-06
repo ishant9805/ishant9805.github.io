@@ -1,147 +1,153 @@
 body {
-  background-color: #212529;
-  color: #f8f9fa;
-  font-family: 'Times New Roman', serif; /* Or a similar elegant font */
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
-
-.pr-nav {
-  background-color: #212529; /*Dark Background*/
-}
-
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 header {
-  background-color: #212529; /*Dark Background*/
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-pills .nav-link {
-  color: #f8f9fa;
-  border-radius: 20px; /* Art Deco curves */
-  padding: 10px 20px;
-  margin: 0 5px;
+  font-weight: bold;
+  color: #333;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
   transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: gold;
-  color: #212529;
+  background-color: #ddd;
 }
 
+
 .display-5 {
-  color: gold;
+  font-weight: 900;
+}
+
+h1, h3, h2 {
+  font-weight: bold;
 }
 
 .lead {
-  color: #f8f9fa;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .btn-primary {
-  background-color: gold;
-  border-color: gold;
-  color: #212529;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
 }
 
 .btn-outline-secondary {
-  color: gold;
-  border-color: gold;
-}
-
-.btn-primary:hover, .btn-outline-secondary:hover {
-  background-color: #a08e53;
-  border-color: #a08e53;
-  color: #f8f9fa;
-}
-
-#icon-grid h2 {
-  color: gold;
+  background-color: transparent;
+  color: #333;
+  border: 2px solid #333;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
 }
 
 .icons {
-  width: 100px;
-  height: auto;
-  margin-right: 15px;
+  width: 75px;
+  height: 75px;
+  margin-right: 1rem;
 }
 
-.icons, .cxx {
-  fill: gold;
-}
 
+#icon-grid h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
 
 #welcome-section {
+  background-color: #eee;
   text-align: center;
-  padding: 50px 0;
-  background-image: url("https://www.transparenttextures.com/patterns/subtle-dots-pattern.png"); /* Replace with your desired background */
-  background-size: cover;
-  color: #f8f9fa;
+  padding: 5rem 0;
+  color: #333;
 }
 
-#welcome-section h1, h3 {
-  color: gold;
+#welcome-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
+
+#welcome-section h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
 
 .pp {
   font-style: italic;
-  color: #f8f9fa;
-  margin-bottom: 20px;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
 }
 
 .ppicon {
-  margin: 0 auto 20px;
-  animation: rotate 2s linear infinite;
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 1rem auto;
+  animation: rotate 1s linear infinite;
 }
 
 @keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-#projects {
-  padding: 50px 0;
-}
-
-#project-hail {
+#projects h1 {
   text-align: center;
-  color: gold;
-  font-size: 3rem;
-  margin-bottom: 30px;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
 }
 
 .project-tile {
-  border: 2px solid gold;
+  border: 2px solid #333;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
-  transition: transform 0.3s ease;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-
-.project-img, .img-proj {
+.project-img {
   width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0; /* Art Deco curves on top */
+  border-radius: 10px 10px 0 0;
 }
 
 .code {
-  color: gold;
+  color: #007bff; /* Blue accent color */
+  font-weight: bold;
+}
+
+.pr-nav {
+  padding-top: 2rem;
 }
 
 .contact-wrapper {
@@ -149,52 +155,62 @@ header {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: #f4f4f4;
 }
 
 .card.ppmid {
-  margin: auto;
-  max-width: 600px;
-  border-radius: 10px;
+    margin: auto;
+    max-width: 500px;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card {
-  background-color: #343a40; /* Darker background for card */
-  padding: 30px;
-  border: 2px solid gold;
+  border: 2px solid #333;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 .card-header {
-  color: gold;
-  font-size: 2rem;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
   text-align: center;
-  margin-bottom: 20px;
+  padding: 1rem;
+  border-radius: 10px 10px 0 0;
 }
 
+
 .card-body {
-  padding: 20px;
+  padding: 2rem;
 }
 
 .form-control {
-  background-color: #343a40;
-  border: 1px solid gold;
-  color: #f8f9fa;
-  border-radius: 5px; /* Subtle curves */
+  border: 2px solid #333;
+  border-radius: 5px;
+  padding: 0.8rem;
+  font-size: 1rem;
 }
 
 .form-label {
-  color: gold;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .btn.btn-primary {
-  background-color: gold;
-  border-color: gold;
-  color: #212529;
-  border-radius: 5px; /* Subtle curves */
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
 }
 
 .form-text {
-  color: #f8f9fa;
+  font-size: 0.8rem;
+  color: #666;
 }
 
 @media (max-width: 768px) {
@@ -206,5 +222,11 @@ header {
 @media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
+  }
+  .contact-wrapper {
+      flex-direction: column;
+  }
+  .card.ppmid {
+      margin: 2rem 0;
   }
 }
