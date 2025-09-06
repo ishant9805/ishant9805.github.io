@@ -1,119 +1,140 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
   margin: 0;
-  background-color: #f4f4f4;
+  background-color: #f8f8f8;
   color: #333;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 20px;
 }
 
 header {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
 }
 
 .nav-pills .nav-link {
-  font-weight: bold;
   color: #333;
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
   transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #ddd;
+  background-color: #a0c4b0;
+  color: #fff;
 }
 
-
-.display-5 {
-  font-weight: 900;
+h1, h2, h3 {
+  font-weight: 600;
+  color: #222;
 }
 
-h1, h3, h2 {
-  font-weight: bold;
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  margin-bottom: 1em;
 }
 
 .lead {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.2em;
+  font-weight: 400;
 }
 
 .btn-primary {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  font-weight: bold;
+  background-color: #65a18b;
+  border-color: #65a18b;
 }
 
 .btn-outline-secondary {
-  background-color: transparent;
-  color: #333;
-  border: 2px solid #333;
-  padding: 0.8rem 1.5rem;
-  font-weight: bold;
+  color: #65a18b;
+  border-color: #65a18b;
 }
+
+.btn-primary:hover,
+.btn-outline-secondary:hover {
+  background-color: #528a74;
+  border-color: #528a74;
+  color: white;
+}
+
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 1rem;
+  margin-right: 1em;
+  vertical-align: middle;
 }
 
 
-#icon-grid h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
+#icon-grid {
+  background-color: #f8f8f8;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
 
 #welcome-section {
-  background-color: #eee;
   text-align: center;
-  padding: 5rem 0;
-  color: #333;
+  padding: 100px 0;
+  background-image: url('nature-background.jpg'); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
-#welcome-section h1 {
-  font-size: 3rem;
+#welcome-section h1, #welcome-section h3, #welcome-section p {
   margin-bottom: 1rem;
 }
 
-#welcome-section h3 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-
 .pp {
   font-style: italic;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
+  color: #ddd;
 }
 
 .ppicon {
-  width: 50px;
-  height: 50px;
-  display: block;
+  display: inline-block;
   margin: 1rem auto;
-  animation: rotate 1s linear infinite;
+  animation: rotate 2s linear infinite;
 }
 
 @keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-#projects h1 {
+
+#projects {
+  padding: 50px 0;
+}
+
+#project-hail {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 
 .project-grid {
@@ -123,95 +144,97 @@ h1, h3, h2 {
 }
 
 .project-tile {
-  border: 2px solid #333;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .project-img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 8px;
 }
 
 .code {
-  color: #007bff; /* Blue accent color */
-  font-weight: bold;
+  color: #65a18b;
 }
 
 .pr-nav {
-  padding-top: 2rem;
+  padding-top: 10px;
 }
+
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f4f4f4;
+  background-color: #f8f8f8; /* Background color for contact page */
 }
 
 .card.ppmid {
-    margin: auto;
-    max-width: 500px;
-    width: 100%;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
 }
 
 .card {
-  border: 2px solid #333;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
-
 
 .card-header {
-  background-color: #333;
+  background-color: #65a18b;
   color: white;
-  font-weight: bold;
+  font-size: 1.2em;
   text-align: center;
-  padding: 1rem;
-  border-radius: 10px 10px 0 0;
+  padding: 15px;
+  border-radius: 10px 10px 0 0; /* Rounded top corners for header */
 }
-
 
 .card-body {
-  padding: 2rem;
-}
-
-.form-control {
-  border: 2px solid #333;
-  border-radius: 5px;
-  padding: 0.8rem;
-  font-size: 1rem;
+  padding: 20px;
 }
 
 .form-label {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
 }
 
-.btn.btn-primary {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  font-weight: bold;
+.form-control {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .form-text {
-  font-size: 0.8rem;
-  color: #666;
+  color: #777;
+  font-size: 0.9em;
 }
+
+
+.btn.btn-primary {
+  background-color: #65a18b;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #528a74;
+}
+
 
 @media (max-width: 768px) {
   .project-grid {
@@ -222,11 +245,5 @@ h1, h3, h2 {
 @media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
-  }
-  .contact-wrapper {
-      flex-direction: column;
-  }
-  .card.ppmid {
-      margin: 2rem 0;
   }
 }
