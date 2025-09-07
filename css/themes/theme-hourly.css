@@ -1,284 +1,249 @@
 body {
-    background: linear-gradient(135deg, #1e1e1e, #303030);
-    color: #eee;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #f8f8f8;
+  color: #333;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 header {
-    background: linear-gradient(135deg, #282828, #404040);
-    border-radius: 10px;
-    padding: 10px;
+  background-color: #e0e0e0;
+  padding: 10px 0;
 }
 
 .nav-pills .nav-link {
-    color: #eee;
-    border-radius: 10px;
-    padding: 10px 20px;
-    margin: 5px;
-    transition: background-color 0.3s ease;
+  background-color: #fff;
+  color: #555;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active {
-    background-color: #6563ff;
-    color: #1e1e1e;
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
+  background-color: #b2d8bf;
+  color: #fff;
 }
-
-.nav-pills .nav-link:hover {
-    background-color: #444;
-}
-
-.display-5 {
-    color: #6563ff;
-}
-
-.btn-primary {
-    background-color: #6563ff;
-    border-color: #6563ff;
-}
-
-.btn-primary:hover {
-    background-color: #444;
-    border-color: #444;
-}
-
-.btn-outline-secondary {
-    color: #eee;
-    border-color: #eee;
-}
-
-.btn-outline-secondary:hover {
-    background-color: #eee;
-    color: #1e1e1e;
-}
-
-#icon-grid h2 {
-    color: #6563ff;
-}
-
-.icons {
-    width: 75px;
-    height: 75px;
-    margin-right: 15px;
-}
-
-.icons.cxx {
-  width: 100px;
-  height: 100px;
-  margin-right: 15px;
-}
-
-.icons.sql {
-    width: 75px;
-    height: 75px;
-    margin-right: 15px;
-}
-
 
 h1, h2, h3 {
-    font-weight: bold;
+  font-weight: 700;
+  color: #333;
 }
 
 h1 {
-    font-size: 2.5em;
-    color: #6563ff;
+  font-size: 2.5em;
 }
 
 h2 {
-    font-size: 2em;
-    color: #eee;
+  font-size: 2em;
 }
 
 h3 {
-    color: #eee;
+  font-size: 1.5em;
 }
 
 p {
-    line-height: 1.6;
-}
-
-#welcome-section {
-    text-align: center;
-    padding: 100px 0;
-    background: linear-gradient(135deg, #282828, #404040);
-    color: #eee;
-}
-
-#welcome-section h1, #welcome-section h3 {
-    margin-bottom: 20px;
-}
-
-#projects {
-    padding: 50px 0;
-}
-
-#project-hail {
-    text-align: center;
-    font-size: 2.2em;
-    color: #6563ff;
-    margin-bottom: 30px;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-}
-
-.project-tile {
-    border: 1px solid #555;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-tile:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.project-img, .img-proj {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
-}
-
-.code {
-    color: #6563ff;
-}
-
-.pp {
-    font-style: italic;
-    text-align: center;
-    color: #aaa;
-    margin-top: 20px;
-}
-
-.ppicon {
-    display: block;
-    margin: 20px auto;
-    animation: rotate 2s linear infinite;
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.pr-nav {
-    padding-top: 60px; /* Adjust as needed */
-}
-
-.contact-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.card.ppmid {
-    margin: auto;
-    max-width: 500px;
-    width: 100%;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #282828, #404040);
-}
-
-.card {
-    padding: 20px;
-}
-
-
-.card-header {
-    background-color: #6563ff;
-    color: #1e1e1e;
-    font-weight: bold;
-    border-radius: 10px 10px 0 0;
-    padding: 15px;
-}
-
-.card-body {
-    padding: 30px;
-}
-
-.form-control {
-    background-color: #222;
-    color: #eee;
-    border: 1px solid #555;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 15px;
-}
-
-.form-label {
-    color: #eee;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.form-text {
-    color: #888;
-    font-size: 0.8em;
-}
-
-#sub-btn {
-    background-color: #6563ff;
-    color: #1e1e1e;
-    border-color: #6563ff;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-#sub-btn:hover {
-    background-color: #444;
-    border-color: #444;
-    color: #eee;
-}
-
-@media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 992px) {
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  margin-bottom: 15px;
 }
 
 .lead {
-    color: #aaa;
+  font-size: 1.2em;
+  font-style: italic;
 }
 
-mark {
-    background-color: #6563ff;
-    padding: 2px 5px;
-    border-radius: 5px;
-    color: #1e1e1e;
+.btn-primary {
+  background-color: #b2d8bf;
+  border-color: #b2d8bf;
 }
 
-.text-muted{
-    color: #aaa;
+.btn-outline-secondary {
+  border-color: #a0afa9;
+  color: #a0afa9;
+}
+
+.btn-primary:hover, .btn-outline-secondary:hover {
+  opacity: 0.8;
+}
+
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#icon-grid .icons {
+  margin-bottom: 10px;
+}
+
+#icon-grid h2 {
+  margin-bottom: 20px;
+}
+
+#welcome-section {
+  text-align: center;
+  background-image: url('nature-background.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 0;
+}
+
+#welcome-section h1, #welcome-section h3, .pp {
+    margin-bottom: 10px;
+}
+
+#projects {
+  padding: 50px 0;
+}
+
+#project-hail {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.project-tile {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.code {
+  color: #b2d8bf; /* Accent color */
+  font-weight: bold;
+}
+
+.pp {
+  font-style: italic;
+  text-align: center;
+}
+
+.ppicon {
+  display: block;
+  margin: 20px auto;
+  animation: rotate 2s infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 
-a.text-muted:hover, a.text-muted:focus{
-    text-decoration: underline;
+.pr-nav {
+  background-color: #f0f0f0; /* Light background for Projects page */
 }
 
-a {
-    color: #6563ff;
-    text-decoration: none;
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-a:hover {
-    text-decoration: underline;
+.card.ppmid {
+  margin: 0 auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card {
+  padding: 20px;
+}
+
+.card-header {
+  background-color: #b2d8bf;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.form-text {
+  color: #777;
+  font-size: 0.9em;
+}
+
+.btn.btn-primary {
+  background-color: #5cb85c;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #4cae4c;
+}
+
+.cxx {
+    width: 75px;
+    height: 75px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .card.ppmid {
+    max-width: 90%;
+  }
 }
