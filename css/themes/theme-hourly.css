@@ -1,38 +1,58 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  transition: background-color 0.3s ease; /* Smooth transition for theme change */
+  background: rgba(20, 20, 20, 0.8); /* Dark background with transparency */
+  color: #eee; /* Light text color */
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease; /* Smooth transition for theme changes */
 }
 
 .pr-nav {
-  background-color: #f5f5f5; /* Light background for projects page */
+  background: rgba(20, 20, 20, 0.8); /* Dark background for Projects page */
 }
+
+header {
+  background: rgba(20, 20, 20, 0.5); /* Glassmorphism effect on header */
+  backdrop-filter: blur(10px); /* Glassmorphism blur */
+  border-radius: 10px;
+}
+
+.nav-pills .nav-link {
+  color: #eee; /* Light text color for nav links */
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 0 5px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: rgba(50, 100, 200, 0.5); /* Slightly transparent blue background for active nav link */
+  box-shadow: 0 0 10px rgba(50, 100, 200, 0.3);
+}
+
+.container {
+  max-width: 1200px; /* Adjust container width if needed */
+}
+
 
 #welcome-section {
-  background-color: #e0f2f7; /* Light blue background */
   text-align: center;
-  padding: 4rem 0;
+  padding: 50px 0;
+  background: rgba(20, 20, 20, 0.5); /* Glassmorphism background */
+  backdrop-filter: blur(10px); /* Glassmorphism blur */
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-#welcome-section h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+#welcome-section h1, #welcome-section h3 {
+  color: #eee;
 }
 
-#welcome-section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+#welcome-section .pp {
+  font-style: italic;
+  color: #aaa;
 }
 
-.pp {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 2rem;
-}
-
-.ppicon {
-  margin: 0 auto;
-  animation: bounce 1s infinite; /* Simple bounce animation for the icon */
+#welcome-section .ppicon {
+  margin-top: 10px;
+  animation: bounce 1s infinite;
 }
 
 @keyframes bounce {
@@ -41,94 +61,49 @@ body {
 }
 
 #projects {
-  padding: 4rem 0;
+  padding: 40px 0;
 }
 
 #project-hail {
-  font-size: 2rem;
   text-align: center;
-  margin-bottom: 2rem;
-  color: #3f51b5; /* Material Design blue */
+  color: #fff;
+  font-size: 3em;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add subtle shadow */
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
   grid-gap: 20px;
 }
 
 .project-tile {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Add smooth transitions */
+  background: rgba(20, 20, 20, 0.5); /* Glassmorphism effect on project cards */
+  backdrop-filter: blur(10px); /* Glassmorphism blur */
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 .project-tile:hover {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px); /* Add hover effect */
+  transform: translateY(-5px); /* Subtle lift-up effect on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
 }
 
 .project-img, .img-proj {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 5px 5px 0 0;
+  border-radius: 10px;
+  border: 2px solid #5c6bc0; /* Add border */
 }
 
 .code {
-  color: #ff5722; /* Material Design orange */
+  color: #ffcc00; /* Accent color for code brackets */
 }
 
-
-.container {
-  padding: 2rem;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  background-color: #3f51b5;
-  color: white;
-}
-
-.nav-pills .nav-link {
-  border-radius: 5px;
-  padding: 1rem 1.5rem;
-}
-
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 1rem;
-}
-
-.icons.sql {
-  width: auto;
-  height: auto;
-  margin-right: 1rem;
-}
-
-.icons.cxx {
-    width: auto;
-    height: auto;
-    margin-right: 1rem;
-}
-
-.icons.c {
-    width: auto;
-    height: auto;
-    margin-right: 1rem;
-}
-
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 500; /* Slightly bolder headings */
-  color: #333; /* Darker gray for better contrast */
-}
-
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
-p { color: #555; line-height: 1.6; }
 
 .contact-wrapper {
   display: flex;
@@ -138,62 +113,87 @@ p { color: #555; line-height: 1.6; }
 }
 
 .card.ppmid {
-  margin: auto;
-  max-width: 400px;
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 0 auto; /* Center the card */
+  max-width: 600px; /* Adjust card width as needed */
+  background: rgba(20, 20, 20, 0.5); /* Glassmorphism effect on card */
+  backdrop-filter: blur(10px); /* Glassmorphism blur */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .card {
-  width: 100%;
-  padding: 2rem;
+  padding: 30px;
 }
 
 .card-header {
-  font-size: 1.5rem;
-  background-color: #3f51b5;
-  color: white;
-  padding: 1rem;
-  border-radius: 10px 10px 0 0;
+  background-color: rgba(50, 100, 200, 0.5); /* Transparent blue header */
+  color: #eee;
+  font-size: 1.5em;
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
+  text-align: center;
+  padding: 15px;
 }
 
 .card-body {
-  padding: 2rem;
+  padding: 20px;
 }
 
 .form-control {
+  background-color: rgba(50, 50, 50, 0.5); /* Transparent dark gray background for inputs */
+  color: #eee;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 10px;
 }
 
 .form-label {
-  font-weight: 500;
-  color: #555;
+  color: #eee;
 }
 
 .btn.btn-primary {
-  background-color: #3f51b5;
-  border-color: #3f51b5;
+  background-color: rgba(50, 100, 200, 0.8); /* Slightly transparent blue button */
+  color: #eee;
+  border: none;
+  padding: 10px 20px;
   border-radius: 5px;
-  padding: 1rem 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: rgba(50, 100, 200, 1); /* Fully opaque blue on hover */
 }
 
 .form-text {
-  color: #888;
-  font-size: 0.9rem;
+  color: #aaa; /* Light gray color for help text */
 }
 
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+}
+
+.cxx {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+}
+
+.sql{
+    width: 75px;
+    height: 75px;
+    margin-right: 15px;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: 1fr; /* One column on smaller screens */
-  }
-  .card.ppmid {
-    max-width: 90%; /* Full-width on smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
-/*Added for responsive image*/
-img {
-  max-width: 100%;
-  height: auto;
+@media (max-width: 576px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
