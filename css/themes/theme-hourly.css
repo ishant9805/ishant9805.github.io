@@ -1,167 +1,112 @@
 body {
-  background-color: #111;
-  color: #eee;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: background-color 0.3s ease;
-}
-
-.pr-nav {
-  background-color: #222;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+  color: #333;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-  background-color: #222;
+  background: linear-gradient(135deg, #4CAF50, #8BC34A);
+  color: white;
+  padding: 1rem 0;
 }
 
 .nav-pills .nav-link {
-  color: #eee;
-  background-color: #333;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 0 5px;
+  color: white;
+  border-radius: 20px;
+  padding: .7rem 1.5rem;
+  margin: 0 0.5rem;
   transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active {
-  background-color: #444;
-}
-
+.nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #555;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.display-5 {
-  color: #fff;
-}
-
-.btn-primary {
-  background-color: #666;
-  border-color: #666;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #888;
-  border-color: #888;
-}
-
-.btn-outline-secondary {
-  border-color: #555;
-  color: #eee;
-  transition: border-color 0.3s ease, color 0.3s ease;
-}
-
-.btn-outline-secondary:hover {
-  border-color: #888;
-  color: #fff;
-}
-
-
-#icon-grid {
-  background-color: #222;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 15px;
-}
-
-.icons.cxx {
-    width: 100px;
-    height: 100px;
-    margin-right: 15px;
-}
-
-.icons.sql {
-    width: 75px;
-    height: 75px;
-    margin-right: 15px;
-}
-
-
-h2, h3 {
-  color: #fff;
-}
-
-p {
-  color: #ddd;
+.pr-nav {
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
 }
 
 #welcome-section {
-  background: linear-gradient(to bottom, #222, #111), url('space-background.jpg'); /*Replace space-background.jpg with your image*/
+  text-align: center;
+  padding: 4rem 0;
+  background-image: url('https://source.unsplash.com/random/1920x1080/?technology'); /* Example background image */
   background-size: cover;
   background-position: center;
-  color: #eee;
-  text-align: center;
-  padding: 100px 0;
+  color: white;
 }
 
-#welcome-section h1, #welcome-section h3 {
-  color: #fff;
+#welcome-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#welcome-section h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .pp {
-  font-size: 1.2em;
-  margin-top: 20px;
-  color: #bbb;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 .ppicon {
-  margin: 20px auto 0;
-  fill: #eee;
-  animation: spin 2s linear infinite;
+  animation: bounce 1s infinite;
+  margin: 0 auto;
+  display: block;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(-20px) }
 }
 
 #projects {
-  padding: 50px 0;
+  padding: 4rem 0;
 }
 
 #project-hail {
   text-align: center;
-  color: #fff;
-  font-size: 2.5em;
-  margin-bottom: 30px;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 2rem;
 }
 
 .project-tile {
-  border: 1px solid #333;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  padding: 10px;
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.project-img {
-  max-width: 100%;
+.project-img,
+.img-proj {
+  width: 100%;
   height: auto;
-  border-radius: 5px;
-  object-fit: cover;
+  border-radius: 10px 10px 0 0;
 }
 
 .code {
-  color: #0ff;
+  color: #007bff;
 }
 
 .contact-wrapper {
@@ -171,65 +116,91 @@ p {
   min-height: 100vh;
 }
 
-.ppmid {
+.card.ppmid {
   margin: 0 auto;
   max-width: 600px;
+  border-radius: 15px;
 }
 
-
 .card {
-  background-color: #222;
-  border: 1px solid #333;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
 }
 
 .card-header {
-  color: #fff;
-  font-size: 1.5em;
-  border-bottom: 1px solid #333;
-  padding: 10px 0;
+  background: linear-gradient(135deg, #FFC107, #FF9800);
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
 }
 
 .card-body {
-  padding: 20px;
+  padding: 2rem;
 }
 
 .form-control {
-  background-color: #333;
-  color: #eee;
-  border: 1px solid #555;
-  border-radius: 5px;
+  border-radius: 10px;
+  border-color: #ddd;
+  padding: 10px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
 }
 
 .form-label {
-  color: #eee;
+  font-weight: bold;
 }
 
 .btn.btn-primary {
-  background-color: #666;
-  border-color: #666;
-  transition: background-color 0.3s ease;
-}
-
-.btn.btn-primary:hover {
-  background-color: #888;
-  border-color: #888;
+  background-color: #28a745;
+  border-color: #28a745;
+  border-radius: 10px;
+  padding: 10px 20px;
 }
 
 .form-text {
-  color: #aaa;
+  color: #6c757d;
+}
+
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 1rem;
 }
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 576px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
   }
+  .card {
+    width: 95%;
+  }
+}
+
+#icon-grid .icons {
+    width: 75px;
+    height: 75px;
+    margin-right: 1rem;
+}
+
+.cxx {
+    width: 75px;
+    height: 75px;
+    margin-right: 1rem;
+}
+
+.sql{
+    width: 75px;
+    height: 75px;
+    margin-right: 1rem;
 }
