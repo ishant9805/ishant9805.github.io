@@ -1,160 +1,174 @@
 body {
   font-family: 'Arial', sans-serif;
-  background: rgba(255, 255, 255, 0.8); /* Glassmorphism background */
-  backdrop-filter: blur(10px); /* Glassmorphism blur */
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 15px;
 }
 
 header {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  padding: 1rem 0;
 }
 
 .nav-pills .nav-link {
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 0 5px;
-  transition: background-color 0.3s ease;
+  padding: 1rem 1.5rem;
+  border-radius: 0.25rem;
+  color: #555;
 }
 
-.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
-  background-color: rgba(0, 123, 255, 0.3); /* Glassmorphism hover effect */
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: #007bff;
+  color: #fff;
 }
 
-.display-5 {
+.nav-pills .nav-link:hover {
+  background-color: #e0e0e0;
   color: #333;
 }
 
+h1, h2, h3 {
+  font-weight: 700;
+  color: #212529;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
 .lead {
-  color: #555;
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 
 .btn-primary {
   background-color: #007bff;
   border-color: #007bff;
-  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
 }
 
 .btn-outline-secondary {
   color: #333;
-  border-color: #ccc;
+  border-color: #adb5bd;
 }
 
-#icon-grid {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: #adb5bd;
+  border-color: #8898aa;
 }
+
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
-  fill: #007bff; /* Or other accent color */
+  margin-right: 1rem;
+  fill: currentColor;
 }
 
-.icons.cxx {
-  fill: #007bff; /* Or other accent color */
+
+#icon-grid .icons {
+  margin-bottom: 1rem;
 }
 
-.icons.sql {
-  fill: #007bff; /* Or other accent color */
-}
-
-.fw-bold {
-  font-weight: bold;
+#icon-grid h2 {
+  margin-bottom: 2rem;
 }
 
 #welcome-section {
+  background-color: #f8f9fa;
+  padding: 5rem 0;
   text-align: center;
-  padding: 50px 0;
-  background: url('background-image.jpg') no-repeat center center; /* Replace with actual image */
-  background-size: cover;
-  color: white;
-  background-blend-mode: darken; /* Creates a darken effect */
 }
 
 #welcome-section h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 #welcome-section h3 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
 }
 
 .pp {
-  font-size: 1.2em;
-  color: #eee;
-  margin-bottom: 30px;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
 }
 
 .ppicon {
-  fill: white; /* Or other accent color */
-  animation: bounce 1s infinite;
+  display: block;
+  margin: 2rem auto;
+  animation: rotate 2s linear infinite;
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
-  50% {
-    transform: translateY(-10px);
+  to {
+    transform: rotate(360deg);
   }
 }
 
-#projects {
-  padding: 40px 0;
-}
-
-#project-hail {
+#projects h1 {
+  margin-bottom: 3rem;
   text-align: center;
-  font-size: 2em;
-  margin-bottom: 30px;
-  color: #333;
 }
+
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
 }
 
 .project-tile {
-  background: rgba(255, 255, 255, 0.8); /* Glassmorphism background */
-  backdrop-filter: blur(10px); /* Glassmorphism blur */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  transition: transform 0.3s ease;
-  text-decoration: none;
-  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+
 .project-img {
-  max-width: 100%;
-  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .code {
-  color: #007bff; /* Or other accent color */
+  color: #007bff;
 }
 
 .pr-nav {
-  padding-top: 60px; /* Adjust as needed */
+  padding-top: 50px;
 }
 
 .contact-wrapper {
@@ -166,76 +180,63 @@ header {
 
 .card.ppmid {
   margin: auto;
-  max-width: 600px;
-  position: relative;
-  background: rgba(255, 255, 255, 0.8); /* Glassmorphism background */
-  backdrop-filter: blur(10px); /* Glassmorphism blur */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
 }
 
 .card {
-  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 2rem;
 }
 
 .card-header {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 
 .card-body {
-  padding: 20px;
+  padding: 1.5rem;
 }
 
-
 .form-label {
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .form-control {
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
 }
 
 .form-text {
-  color: #888;
-  font-size: 0.9em;
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-top: 0.25rem;
 }
 
-.btn.btn-primary {
-  padding: 10px 20px;
-  border-radius: 5px;
+#sub-btn {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 0.5rem 1.5rem;
+}
+
+#sub-btn:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
 }
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: 1fr; /* 1 column on tablet */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
 @media (max-width: 576px) {
-  #welcome-section h1 {
-    font-size: 2em;
+  .project-grid {
+    grid-template-columns: 1fr;
   }
-  #welcome-section h3 {
-    font-size: 1.2em;
-  }
-  .pp {
-    font-size: 1em;
-  }
-  .card.ppmid {
-    max-width: 100%;
-    margin: 20px;
-  }
-}
-
-.img-fluid {
-  max-width: 100%;
-  height: auto;
 }
