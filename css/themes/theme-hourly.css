@@ -1,39 +1,53 @@
 body {
-  background: linear-gradient(to right, #1e1e1e, #303030);
-  color: #eee;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin:0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  transition: background-color 0.3s ease;
 }
 
 .pr-nav {
-  background: linear-gradient(to right, #1e1e1e, #303030);
-}
-
-header {
-  background: linear-gradient(to right, #282c34, #393e46);
-}
-
-.nav-pills .nav-link {
-  color: #eee;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 0 10px;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  background-color: #5092e8;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #212529;
+  color: #f8f9fa;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
 }
 
-h1, h3, h2, h1 {
-  font-weight: 600;
+header {
+  background-color: #282c34;
   color: #fff;
-  text-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.nav-pills .nav-link {
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #61dafb;
+  color: #212529;
+}
+
+.nav-pills.justify-content-center {
+    justify-content: center;
+}
+
+.icons {
+    width: 75px;
+    height: 75px;
+    fill: currentColor;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: #212529;
 }
 
 h1 {
@@ -49,102 +63,51 @@ h3 {
 }
 
 p {
-  color: #eee;
   line-height: 1.6;
-}
-
-.lead {
-  font-size: 1.2rem;
-}
-
-.btn-primary, .btn-outline-secondary {
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary {
-  background-color: #5092e8;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #3e72c2;
-}
-
-
-.btn-outline-secondary {
-  background-color: transparent;
-  border: 2px solid #5092e8;
-  color: #5092e8;
-}
-
-.btn-outline-secondary:hover {
-  background-color: #5092e8;
-  color: white;
-}
-
-#icon-grid .icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 10px;
-}
-
-#icon-grid h2 {
-  color: #5092e8;
+  color: #212529;
 }
 
 #welcome-section {
-  background: linear-gradient(to bottom, #282c34, #393e46);
-  padding: 50px 0;
   text-align: center;
+  padding: 5rem 0;
+  background: linear-gradient(to bottom, #1e1e1e, #313131);
+  color: #fff;
 }
 
-#welcome-section h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
+#welcome-section h1,
 #welcome-section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
+  color: #61dafb;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .pp {
-  font-size: 1rem;
-  color: #ccc;
-  margin-bottom: 30px;
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #868e96;
 }
 
 .ppicon {
-  display: block;
-  margin: 20px auto;
-  animation: bounce 1.5s infinite;
-  fill: #5092e8;
+    fill: #61dafb;
+    animation: rotate 2s linear infinite;
 }
 
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-20px);
-  }
-  60% {
-    transform: translateY(-10px);
-  }
+@keyframes rotate {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(15px); }
+  100% { transform: translateY(0px); }
 }
+
 
 #projects {
-  padding: 50px 0;
+  padding: 4rem 0;
 }
 
 #project-hail {
+  font-size: 2.5rem;
+  color: #61dafb;
   text-align: center;
-  margin-bottom: 30px;
-  color: #5092e8;
+  margin-bottom: 3rem;
 }
 
 .project-grid {
@@ -154,29 +117,27 @@ p {
 }
 
 .project-tile {
-  background-color: #282c34;
+  border: 2px solid #61dafb;
   border-radius: 10px;
-  box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
-  padding: 10px;
-  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
   transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
 }
 
-.project-img, .img-proj {
+.project-img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  border: 2px solid #5092e8;
 }
 
+
 .code {
-  color: #5092e8;
-  font-weight: bold;
+  color: #61dafb;
 }
 
 .contact-wrapper {
@@ -184,57 +145,76 @@ p {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background: linear-gradient(to bottom, #1e1e1e, #313131);
+  color: #fff;
 }
 
 .card.ppmid {
-  margin: auto;
-  max-width: 600px;
-  background-color: #282c34;
+    margin: auto;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  width: 100%;
   border-radius: 10px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  background-color: #282c34;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card-header {
-  background-color: #5092e8;
-  color: #fff;
-  font-weight: bold;
-  padding: 15px;
+  background-color: #61dafb;
+  color: #212529;
+  font-size: 1.5rem;
+  padding: 1rem;
   border-radius: 10px 10px 0 0;
 }
 
 .card-body {
-  padding: 20px;
-}
-
-.form-control {
-  background-color: #282c34;
-  color: #eee;
-  border: none;
-  border-bottom: 1px solid #5092e8;
-  border-radius: 5px;
+  padding: 2rem;
 }
 
 .form-label {
-  color: #eee;
-  font-weight: bold;
-  margin-bottom: 5px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
+
+.form-control {
+  background-color: #343a40;
+  color: #fff;
+  border: 1px solid #61dafb;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+
+.form-control:focus {
+    border-color: #e64926;
+    box-shadow: 0 0 0 0.2rem rgba(230,73,38,.25);
+}
+
+.btn.btn-primary {
+  background-color: #61dafb;
+  color: #212529;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #e64926;
+  color: white;
+}
+
 
 .form-text {
-  color: #ccc;
+  color: #868e96;
   font-size: 0.8rem;
-  margin-top: 5px;
 }
-
-#sub-btn {
-    background-color: #5092e8;
-    border: none;
-}
-
-#sub-btn:hover {
-  background-color: #3e72c2;
-}
-
 
 @media (max-width: 768px) {
   .project-grid {
@@ -246,4 +226,40 @@ p {
   .project-grid {
     grid-template-columns: 1fr;
   }
+}
+
+mark {
+  background-color: #61dafb;
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.display-4 {
+  font-size: 3rem;
+  color: #61dafb;
+}
+
+.lead {
+  font-size: 1.2rem;
+}
+
+
+.cxx {
+    width: 75px;
+    height: auto;
+    fill: currentColor;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.sql {
+    width: 75px;
+    height: auto;
+    margin-right: 15px;
+    margin-bottom: 10px;
 }
