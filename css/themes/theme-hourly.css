@@ -1,127 +1,129 @@
 body {
+  background-color: #1e1e1e;
+  color: #eee;
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4; /* Light background */
-  color: #333; /* Dark text */
-  line-height: 1.6;
+  transition: background-color 0.3s ease;
+}
+
+.pr-nav {
+  background-color: #282828;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 header {
-  background-color: #333; /* Dark header */
-  color: #fff; /* Light text */
+  background-color: #282828;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.1);
 }
 
 .nav-pills .nav-link {
-  color: #fff;
-  border-radius: 5px;
+  color: #eee;
+  background-color: #383838;
+  border-radius: 10px;
   padding: 10px 20px;
   margin: 0 5px;
+  transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  background-color: #6563ff;
-  color: #fff;
+.nav-pills .nav-link.active {
+  background-color: #4a4a4a;
 }
 
 .nav-pills .nav-link:hover {
-  background-color: #6563ff;
+  background-color: #4a4a4a;
+}
+
+h1, h3, h2, h1.display-5 {
   color: #fff;
-}
-
-
-h1, h2, h3 {
-  font-weight: 700;
-  color: #283593; /* Deep blue heading */
-}
-
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: 1.5em;
-}
-
-p {
-  font-size: 1.1em;
-}
-
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 15px;
-  fill: #283593;
-}
-
-.icons.cxx {
-  fill: #fff;
-}
-
-.icons.sql {
-  width: 100%;
-  height: auto;
-}
-
-#icon-grid .icons {
-  margin-right: 15px;
-}
-
-.btn-primary {
-    background-color: #6563ff;
-    border-color: #6563ff;
-}
-
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:visited {
-  background-color: #444; /* Darker hover */
-}
-
-.btn-outline-secondary {
-  color: #fff;
-  border-color: #fff;
-}
-
-.btn-outline-secondary:hover {
-  background-color: #fff;
-  color: #333;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .lead {
-  font-size: 1.2em;
+  color: #eee;
+  font-weight: normal;
+}
+
+.btn-primary {
+  background-color: #5c6bc0;
+  border-color: #5c6bc0;
+  color: #fff;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #7986cb;
+  border-color: #7986cb;
+}
+
+
+.btn-outline-secondary {
+  background-color: transparent;
+  border-color: #eee;
+  color: #eee;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#icon-grid .icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.2);
+}
+
+#icon-grid h2 {
+  color: #fff;
+}
+
+#icon-grid p {
+  color: #ddd;
 }
 
 #welcome-section {
   text-align: center;
-  padding: 50px 0;
-  background-image: url('https://www.nasa.gov/sites/default/files/thumbnails/image/web_first_images_release_0.png'); /* Replace with your cosmic background image */
-  background-size: cover;
-  background-position: center;
-  color: #fff;
+  padding: 100px 0;
+  background-color: #282828;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.1);
 }
 
-#welcome-section h1, #welcome-section h3, #welcome-section p {
-  color: #fff;
-  text-shadow: 1px 1px 2px #333;
+.pp {
+  color: #ddd;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
+
+.ppicon {
+  fill: #fff;
+  animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 #projects {
-  padding: 40px 0;
-  text-align: center;
+  padding: 50px 0;
 }
-
 
 #project-hail {
-  font-size: 2em;
+  text-align: center;
   margin-bottom: 30px;
 }
-
 
 .project-grid {
   display: grid;
@@ -130,122 +132,84 @@ p {
 }
 
 .project-tile {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  border: 1px solid #444;
+  border-radius: 10px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.2);
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .project-img, .img-proj {
   width: 100%;
   height: auto;
-  border-radius: 5px 5px 0 0;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
 }
 
 .code {
-  color: #6563ff; /* Accent color for code brackets */
+  color: #5c6bc0;
+  font-weight: bold;
 }
 
-.pp {
-  font-style: italic;
-  color: #eee;
-}
-
-.ppicon {
-  margin-top: 10px;
-  animation: rotate 2s linear infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-.pr-nav {
-    background-color: #f4f4f4;
-}
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #f4f4f4;
 }
 
+
 .card.ppmid {
-  width: 80%;
+  margin: auto;
   max-width: 600px;
-  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.1);
 }
 
 .card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #282828;
   padding: 20px;
 }
 
 .card-header {
-  background-color: #283593; /* Deep blue for header */
+  background-color: #383838;
   color: #fff;
-  font-size: 1.5em;
-  border-radius: 5px 5px 0 0;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
 }
 
 .card-body {
   padding: 20px;
 }
 
-
-.form-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #333;
-}
-
 .form-control {
-  border: 1px solid #ccc;
+  background-color: #383838;
+  color: #eee;
+  border: none;
   border-radius: 5px;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.2);
   padding: 10px;
   margin-bottom: 15px;
 }
 
+.form-label {
+  color: #eee;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
 .form-text {
-  color: #888;
-  font-size: 0.9em;
+  color: #999;
+  font-size: 0.8rem;
 }
 
-#sub-btn {
-  background-color: #6563ff;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-#sub-btn:hover {
-    background-color: #444;
-}
-
-/* Responsive styles for project grid */
 @media (max-width: 768px) {
   .project-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -256,16 +220,4 @@ p {
   .project-grid {
     grid-template-columns: 1fr;
   }
-}
-
-@media (max-width: 576px) {
-  .card.ppmid {
-    width: 95%;
-  }
-}
-
-mark {
-  background-color: #f9f28f;
-  padding: 2px 5px;
-  border-radius: 5px;
 }
