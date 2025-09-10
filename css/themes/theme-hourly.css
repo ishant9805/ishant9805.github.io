@@ -1,161 +1,116 @@
 body {
-  background-color: #1e1e1e;
-  color: #eee;
   font-family: 'Arial', sans-serif;
-  transition: background-color 0.3s ease;
+  background-color: #1e1e1e; /* Dark background */
+  color: #eee; /* Light text color */
+  transition: background-color 0.3s ease; /* Smooth transition for theme change */
 }
 
-.pr-nav {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+body.light-theme {
+  background-color: #f5f5f5; /* Light background */
+  color: #333; /* Dark text color */
 }
 
+.container {
+  max-width: 1200px;
+}
 
 header {
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
+  background-color: #282828; /* Dark header background */
+  border-radius: 10px;
+  padding: 10px 0;
 }
 
 .nav-pills .nav-link {
   color: #eee;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px 20px;
-  margin: 0 10px;
+  margin: 0 5px;
   transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background-color: #ff9800; /* Orange highlight */
+  color: #1e1e1e; /* Dark text on hover */
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-
-h1, h2, h3 {
-  font-weight: 600;
-  color: #fff;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
+.display-5 {
+  color: #ff9800; /* Orange for main headings */
 }
 
 p {
   line-height: 1.6;
-}
-
-.lead {
-  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .btn-primary {
-  background-color: #6563ff;
-  border-color: #6563ff;
-  color: #fff;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #4442ff;
+  background-color: #ff9800; /* Orange button */
+  border-color: #ff9800;
+  color: #1e1e1e;
 }
 
 .btn-outline-secondary {
-  color: #eee;
-  border-color: #eee;
-  transition: background-color 0.3s ease;
+  border-color: #ff9800;
+  color: #ff9800;
 }
 
+
+.btn-primary:hover,
 .btn-outline-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background-color: #d46a00; /* Darker orange on hover */
 }
 
-#icon-grid {
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-  padding: 20px;
+#icon-grid .icons {
+  width: 100px;
+  height: 100px;
+  margin-right: 1rem;
 }
 
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 15px;
-  fill: white;
-}
-
-.icons.sql {
-    width: 100px;
-    height: 100px;
-}
-
-.icons.cxx {
-    width: 75px;
-    height: 75px;
-}
-
-
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+#icon-grid h2 {
+  color: #ff9800;
 }
 
 #welcome-section {
   text-align: center;
-  padding: 100px 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
+  background-color: #333; /* Dark background for welcome section */
+  padding: 50px 0;
+  border-radius: 10px;
+  color: #eee; /* Light text */
 }
 
 #welcome-section h1,
 #welcome-section h3 {
-  margin-bottom: 20px;
+  color: #ff9800;
 }
 
 .pp {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+  font-style: italic;
+  margin-top: 20px;
 }
 
 .ppicon {
-  animation: rotate 2s linear infinite;
-  width: 50px;
-  height: 50px;
-  fill: white;
+  margin-top: 20px;
+  animation: bounce 1s infinite;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
   }
 }
 
-#projects {
-  padding: 50px 0;
-}
 
-#project-hail {
+#projects h1 {
   text-align: center;
-  margin-bottom: 40px;
+  color: #ff9800;
+  margin-bottom: 30px;
 }
-
 
 .project-grid {
   display: grid;
@@ -164,26 +119,33 @@ p {
 }
 
 .project-tile {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #282828;
   border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration:none;
+  color:#eee;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.project-img {
-  width: 100%;
+.project-img,
+.img-proj {
+  max-width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
 }
 
 .code {
-  color: #6563ff;
+  color: #ff9800; /* Orange for code brackets */
+}
+
+.pr-nav {
+  padding-top: 20px;
 }
 
 .contact-wrapper {
@@ -191,66 +153,50 @@ p {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #1e1e1e;
 }
 
 .card.ppmid {
-  margin: auto;
   max-width: 500px;
-  background-color: rgba(0, 0, 0, 0.4);
+  margin: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card {
+  background-color: #282828; /* Dark card background */
   padding: 20px;
+  border-radius: 10px;
+  color: #eee;
 }
 
 .card-header {
-  text-align: center;
-  font-size: 1.8rem;
-  color: white;
-  background-color: rgba(0,0,0,0.6);
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  border-radius: 10px 10px 0 0;
-  padding: 15px;
+  background-color: #ff9800; /* Orange header */
+  color: #1e1e1e;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
+  padding: 10px 15px;
 }
 
 .card-body {
-  padding: 30px;
+  padding: 20px;
+}
+
+
+.form-control {
+  background-color: #333; /* Dark input background */
+  color: #eee;
+  border: 1px solid #555; /* Darker border */
+  border-radius: 5px;
 }
 
 .form-label {
-  color: #eee;
-  font-weight: 600;
-}
-
-.form-control {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #eee;
-  border-radius: 5px;
-  padding: 10px;
-  margin-top: 5px;
+  color: #ff9800; /* Orange labels */
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .form-text {
-  color: #aaa;
-  font-size: 0.9rem;
-  margin-top: 5px;
-}
-
-#sub-btn {
-  width: 100%;
-  margin-top: 20px;
-  background-color: #6563ff;
-  border-color: #6563ff;
-  color: #fff;
-  transition: background-color 0.3s ease;
-}
-
-#sub-btn:hover {
-  background-color: #4442ff;
+  color: #888; /* Lighter gray help text */
+  font-size: 0.875rem;
 }
 
 @media (max-width: 768px) {
@@ -262,5 +208,9 @@ p {
 @media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .card.ppmid {
+    max-width: 90%;
   }
 }
