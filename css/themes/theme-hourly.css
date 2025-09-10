@@ -1,45 +1,40 @@
 body {
-  background: linear-gradient(to right, #1e1e1e, #303030);
+  background-color: #121212;
   color: #eee;
-  font-family: 'Arial', sans-serif;
-  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.pr-nav {
+  background-color: #1a1a1a;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 
 header {
-  background: #282828;
-  padding: 10px 0;
+  background-color: #212121;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .nav-pills .nav-link {
   color: #eee;
+  background-color: transparent;
+  border: none;
   border-radius: 5px;
+  padding: 10px 20px;
   margin: 0 5px;
-  padding: 8px 15px;
   transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #5c6bc0;
-}
-
-.nav-pills .nav-link.active {
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-hr {
-  border-top: 1px solid #444;
+  background-color: #6563ff;
 }
 
 h1, h2, h3 {
-  font-weight: bold;
-  color: #fff;
+  font-weight: 600;
 }
 
 h1 {
@@ -47,8 +42,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
 }
 
 h3 {
@@ -56,99 +50,103 @@ h3 {
 }
 
 p {
+  font-size: 1rem;
   line-height: 1.6;
-  color: #ddd;
 }
 
 .lead {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 
 .btn-primary {
-  background-image: linear-gradient(to right, #6563ff, #007bff);
-  border-color: transparent;
-  color: #fff;
+  background-color: #6563ff;
+  border-color: #6563ff;
   transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-image: linear-gradient(to right, #807eff, #28a745);
+  background-color: #4a49c8;
 }
 
 .btn-outline-secondary {
-  background-color: transparent;
-  border-color: #ccc;
   color: #eee;
-  transition: background-color 0.3s ease;
+  border-color: #eee;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .btn-outline-secondary:hover {
-  background-color: #444;
   color: #fff;
+  border-color: #fff;
 }
+
 
 #icon-grid .icons {
   width: 75px;
   height: 75px;
   margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
-#icon-grid h2 {
-  color: #fff;
-  border-bottom-color: #444;
-}
-
-#icon-grid .icons, .ppicon {
-  fill: #eee;
-}
-
-.icons.cxx {
-    fill: #fff;
-}
-.icons.sql {
-    fill: #fff;
-}
 
 #welcome-section {
-  background: linear-gradient(to bottom, #282828, #3e3e3e);
   text-align: center;
   padding: 5rem 0;
+  background: linear-gradient(to bottom, #1a1a1a, #212121);
+  color: #eee;
 }
 
-#welcome-section h1,
+#welcome-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
 #welcome-section h3 {
-  color: #fff;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-#welcome-section .pp {
-  font-size: 1.2rem;
-  color: #ddd;
-  margin-top: 1rem;
+
+.pp {
+    font-style: italic;
+    color: #a0a0a0;
+    margin-bottom: 2rem;
+}
+
+.ppicon {
+  width: 2rem;
+  height: 2rem;
+  animation: spin 2s linear infinite;
+  margin-left: 0.5rem;
+}
+
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 #projects h1 {
-  color: #fff;
+  margin-top: 3rem;
   margin-bottom: 2rem;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  gap: 2rem;
 }
 
 .project-tile {
-  border: 1px solid #555;
+  border: 1px solid #333;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
+
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .project-img,
@@ -160,24 +158,7 @@ p {
 
 .code {
   color: #6563ff;
-}
-
-.ppicon {
-  margin-top: 1rem;
-  animation: rotate 2s linear infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.pr-nav {
-  padding-top: 50px;
+  font-weight: bold;
 }
 
 .contact-wrapper {
@@ -185,62 +166,66 @@ p {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 2rem;
 }
 
 .card.ppmid {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
-  background-color: #282828;
 }
 
 .card {
-  border: 1px solid #444;
+  background-color: #212121;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  padding: 20px;
+  padding: 2rem;
 }
+
 
 .card-header {
-  background-color: #5c6bc0;
+  font-size: 1.75rem;
   color: #fff;
-  padding: 15px;
-  border-radius: 8px 8px 0 0;
-  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
+
 
 .card-body {
-  padding: 20px;
-}
-
-.form-control {
-  background-color: #333;
-  color: #eee;
-  border: 1px solid #555;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
+  padding: 2rem;
 }
 
 .form-label {
   color: #eee;
-  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-control {
+  background-color: #282828;
+  border: 1px solid #333;
+  color: #eee;
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
 }
 
 .form-text {
-  color: #888;
-  font-size: 0.9rem;
+  color: #a0a0a0;
+  font-size: 0.875rem;
 }
 
 #sub-btn {
-  background-image: linear-gradient(to right, #6563ff, #007bff);
-  border-color: transparent;
+  background-color: #6563ff;
+  border: none;
   color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 #sub-btn:hover {
-  background-image: linear-gradient(to right, #807eff, #28a745);
+  background-color: #4a49c8;
 }
 
 @media (max-width: 768px) {
@@ -252,5 +237,11 @@ p {
 @media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
+  }
+  .contact-wrapper {
+    padding: 1rem;
+  }
+  .card.ppmid {
+    max-width: 100%;
   }
 }
