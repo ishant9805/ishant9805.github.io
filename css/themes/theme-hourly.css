@@ -1,138 +1,124 @@
 body {
   font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4; /* Light background */
+  color: #333; /* Dark text */
   line-height: 1.6;
-  margin: 0;
-  background-color: #f8f8f8;
-  color: #333;
-  transition: background-color 0.3s ease;
 }
-
-.pr-nav {
-  background-color: #f2f2f2;
-}
-
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 header {
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  margin-bottom: 20px;
+  background-color: #333; /* Dark header */
+  color: #fff; /* Light text */
 }
 
 .nav-pills .nav-link {
+  color: #fff;
   border-radius: 5px;
   padding: 10px 20px;
   margin: 0 5px;
-  color: #333;
-  background-color: #f2f2f2;
-  transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active {
-  background-color: #ff9966;
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: #6563ff;
   color: #fff;
 }
 
 .nav-pills .nav-link:hover {
-  background-color: #ffcc99;
+  background-color: #6563ff;
+  color: #fff;
 }
 
+
 h1, h2, h3 {
-  color: #333;
-  font-weight: 600;
+  font-weight: 700;
+  color: #283593; /* Deep blue heading */
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 p {
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 1.1em;
 }
-
-.lead {
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-
-.btn-primary {
-  background-color: #ff9966;
-  border-color: #ff9966;
-}
-
-.btn-primary:hover {
-  background-color: #ffcc99;
-  border-color: #ffcc99;
-}
-
 
 .icons {
   width: 75px;
-  height: auto;
+  height: 75px;
   margin-right: 15px;
-  margin-bottom: 10px;
+  fill: #283593;
 }
 
-.icons:hover {
-  transform: scale(1.1);
-  transition: 0.5s;
+.icons.cxx {
+  fill: #fff;
 }
 
-img {
-  max-width: 100%;
+.icons.sql {
+  width: 100%;
   height: auto;
-  border-radius: 5px;
+}
+
+#icon-grid .icons {
+  margin-right: 15px;
+}
+
+.btn-primary {
+    background-color: #6563ff;
+    border-color: #6563ff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:visited {
+  background-color: #444; /* Darker hover */
+}
+
+.btn-outline-secondary {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.lead {
+  font-size: 1.2em;
 }
 
 #welcome-section {
   text-align: center;
-  padding: 100px 0;
-  background: linear-gradient(to bottom, #ffe5cc, #ffcc99);
-  color: #333;
+  padding: 50px 0;
+  background-image: url('https://www.nasa.gov/sites/default/files/thumbnails/image/web_first_images_release_0.png'); /* Replace with your cosmic background image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
 
-#welcome-section h1, #welcome-section h3 {
-    margin-bottom: 10px;
-}
-
-.pp {
-  font-size: 1.2rem;
-  margin-top: 20px;
-}
-
-.ppicon {
-  display: block;
-  margin: 20px auto 0 auto;
-  animation: spin 2s linear infinite;
-}
-
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+#welcome-section h1, #welcome-section h3, #welcome-section p {
+  color: #fff;
+  text-shadow: 1px 1px 2px #333;
 }
 
 #projects {
-  padding: 50px 0;
+  padding: 40px 0;
+  text-align: center;
 }
 
+
 #project-hail {
-  text-align: center;
+  font-size: 2em;
   margin-bottom: 30px;
 }
 
@@ -144,31 +130,50 @@ img {
 }
 
 .project-tile {
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  transition: box-shadow 0.3s ease;
+  transition: all 0.3s ease;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
-
 
 .project-tile:hover {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.project-img {
-  border-radius: 5px;
+.project-img, .img-proj {
   width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
 }
-
 
 .code {
-  color: #ff6600; /* Accent color */
-  font-family: monospace;
+  color: #6563ff; /* Accent color for code brackets */
+}
+
+.pp {
+  font-style: italic;
+  color: #eee;
+}
+
+.ppicon {
+  margin-top: 10px;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.pr-nav {
+    background-color: #f4f4f4;
 }
 
 .contact-wrapper {
@@ -176,27 +181,26 @@ img {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background: #f4f4f4;
 }
 
 .card.ppmid {
-  margin: auto;
+  width: 80%;
   max-width: 600px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
 
 .card {
-    border-radius: 5px;
-    padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 .card-header {
-  background-color: #ff9966;
+  background-color: #283593; /* Deep blue for header */
   color: #fff;
-  font-size: 1.5rem;
-  text-align: center;
-  padding: 15px;
+  font-size: 1.5em;
   border-radius: 5px 5px 0 0;
 }
 
@@ -204,36 +208,44 @@ img {
   padding: 20px;
 }
 
+
 .form-label {
-  font-weight: 500;
+  font-weight: bold;
   margin-bottom: 5px;
+  color: #333;
 }
 
 .form-control {
+  border: 1px solid #ccc;
   border-radius: 5px;
-  border: 1px solid #ddd;
   padding: 10px;
   margin-bottom: 15px;
 }
 
 .form-text {
-  font-size: 0.8rem;
-  color: #666;
+  color: #888;
+  font-size: 0.9em;
 }
 
 #sub-btn {
-  background-color: #ff9966;
-  border-color: #ff9966;
+  background-color: #6563ff;
+  border: none;
+  color: white;
   padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
 }
 
 #sub-btn:hover {
-  background-color: #ffcc99;
-  border-color: #ffcc99;
+    background-color: #444;
 }
 
+/* Responsive styles for project grid */
 @media (max-width: 768px) {
   .project-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -244,12 +256,16 @@ img {
   .project-grid {
     grid-template-columns: 1fr;
   }
+}
 
-  .contact-wrapper {
-    flex-direction: column;
-  }
-
+@media (max-width: 576px) {
   .card.ppmid {
-    margin: 20px;
+    width: 95%;
   }
+}
+
+mark {
+  background-color: #f9f28f;
+  padding: 2px 5px;
+  border-radius: 5px;
 }
