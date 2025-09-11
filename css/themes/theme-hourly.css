@@ -1,127 +1,107 @@
 body {
-  font-family: 'Times New Roman', serif;
-  line-height: 1.6;
-  margin: 0;
+  font-family: 'Roboto', sans-serif;
   background-color: #f8f9fa;
-  color: #343a40;
+  color: #212529;
+  transition: background-color 0.3s ease;
+}
+
+.pr-nav {
+  background-color: #1a4674;
+  color: #fff;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 header {
-  background-color: #f8f9fa;
+  background-color: #1B598E;
+  color: #fff;
 }
 
 .nav-pills .nav-link {
-  border-radius: 20px;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 10px;
   padding: 10px 20px;
-  color: #343a40;
-  background-color: #f8f9fa;
-  border: 2px solid #f8f9fa;
-  transition: background-color 0.3s ease;
+  margin: 0 10px;
 }
 
-.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
-  background-color: #FFD700;
-  color: #343a40;
-  border-color: #FFD700;
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: #5C8DBC;
+  color: #fff;
 }
 
 
 .display-5 {
-  font-weight: bold;
-  color: #343a40;
+  font-weight: 900;
+  color: #5C8DBC;
 }
 
 .lead {
-  font-style: italic;
-  color: #6c757d;
-}
-
-.btn-primary {
-  background-color: #FFD700;
-  border-color: #FFD700;
+  font-size: 1.2rem;
   color: #343a40;
 }
 
 
+.btn-primary {
+  background-color: #5C8DBC;
+  border-color: #5C8DBC;
+  color: #fff;
+  padding: 10px 20px;
+}
+
 .btn-outline-secondary {
-  color: #FFD700;
-  border-color: #FFD700;
+  color: #5C8DBC;
+  border-color: #5C8DBC;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
-}
-
-.icons.cxx {
-    width: 100px;
-    height: 100px;
-    margin-right: 15px;
+  margin-right: 1rem;
 }
 
 #icon-grid h2 {
-  color: #343a40;
+  color: #5C8DBC;
+  text-align: center;
 }
 
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+#icon-grid .col h3 {
+  color: #5C8DBC;
 }
 
-.pr-nav {
-  background-image: url('https://source.unsplash.com/random/1920x1080/?artdeco'); /*Replace with your desired background*/
-  background-size: cover;
-  background-position: center;
-  color: white;
+#icon-grid p {
+  font-size: 0.9rem;
+  color: #495057;
 }
-
 
 #welcome-section {
+  background-color: #1a4674;
+  color: #fff;
   text-align: center;
-  padding: 100px 0;
-  background-color: rgba(255, 215, 0, 0.8); /* Adjust opacity as needed */
+  padding: 50px 0;
 }
 
-#welcome-section h1, #welcome-section h3 {
-  color: #343a40;
-  margin-bottom: 10px;
+
+#welcome-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #5C8DBC;
 }
 
-.pp {
-  font-size: 1.2em;
-  color: #343a40;
-  margin-bottom: 20px;
-}
-
-.ppicon {
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
-  display: block;
-  animation: rotate 2s linear infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#welcome-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
 }
 
 #projects h1 {
   text-align: center;
-  color: #343a40;
-  margin-bottom: 30px;
-  font-size: 2.5em;
+  margin-bottom: 3rem;
+  color: #5C8DBC;
+  font-size: 2rem;
 }
 
 .project-grid {
@@ -131,25 +111,44 @@ header {
 }
 
 .project-tile {
-  border: 2px solid #FFD700;
+  border: 1px solid #5C8DBC;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
-.project-img {
+.project-img, .img-proj {
   width: 100%;
   height: auto;
   border-radius: 10px 10px 0 0;
 }
 
 .code {
-  color: #FFD700;
+  color: #5C8DBC;
+}
+
+.pp {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.ppicon {
+  display: block;
+  margin: 0 auto;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 
@@ -158,28 +157,28 @@ header {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url('https://source.unsplash.com/random/1920x1080/?artdeco'); /*Replace with your desired background*/
-  background-size: cover;
-  background-position: center;
 }
 
 .card.ppmid {
   margin: auto;
   max-width: 600px;
-  background-color: rgba(255,255,255,0.8); /* semi-transparent white */
-  border-radius: 15px;
-  box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+  position: relative;
 }
 
 
 .card {
-  border-radius: 15px;
+  background-color: #1a4674;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
 }
 
 .card-header {
-  background-color: #FFD700;
-  color: #343a40;
+  background-color: #5C8DBC;
+  color: #fff;
   font-weight: bold;
+  text-align: center;
   border-radius: 10px 10px 0 0;
   padding: 15px;
 }
@@ -188,49 +187,45 @@ header {
   padding: 20px;
 }
 
-.form-control {
-  border-radius: 10px;
-  border: 2px solid #FFD700;
-  box-shadow: inset 2px 2px 4px rgba(0,0,0,0.1);
-  padding: 10px;
-}
-
 .form-label {
+  color: #fff;
   font-weight: bold;
-  color: #343a40;
 }
 
-.btn.btn-primary {
-  background-color: #FFD700;
-  color: #343a40;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 20px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.btn.btn-primary:hover {
-  background-color: #DAA520;
+.form-control {
+  background-color: #212529;
+  color: #fff;
+  border: 1px solid #5C8DBC;
+  border-radius: 5px;
 }
 
 .form-text {
-  color: #6c757d;
-  font-size: 0.9em;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.btn.btn-primary {
+  background-color: #5C8DBC;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
 }
 
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 576px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-  .card.ppmid {
-    max-width: 90%;
+  .contact-wrapper .card {
+      max-width: 100%;
   }
 }
