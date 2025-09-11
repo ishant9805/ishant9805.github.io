@@ -1,8 +1,8 @@
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
-  color: #333;
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
 }
 
 .container {
@@ -11,142 +11,117 @@ body {
 }
 
 header {
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #222;
 }
 
 .nav-pills .nav-link {
-  color: #333;
-  border-radius: 20px;
+  color: #f0f0f0;
+  background-color: transparent;
+  border: 1px solid #555;
+  border-radius: 5px;
   padding: 10px 20px;
+  margin: 0 5px;
   transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
-  background-color: #4CAF50;
-  color: #fff;
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #555;
 }
 
-.nav-pills .nav-item {
-    margin: 0 10px;
-}
 
 .display-5 {
+  color: #f0f0f0;
   font-weight: bold;
-  color: #333;
 }
 
 .lead {
-  color: #555;
+  color: #ddd;
 }
-
 
 .btn-primary {
-  background-color: #3498db;
-  border-color: #3498db;
-  color: #fff;
-  transition: background-color 0.3s ease;
-}
-
-
-.btn-primary:hover {
-  background-color: #2980b9;
+  background-color: #ff6347;
+  border-color: #ff6347;
 }
 
 .btn-outline-secondary {
-  color: #3498db;
-  border-color: #3498db;
-  transition: background-color 0.3s ease;
+  color: #f0f0f0;
+  border-color: #555;
 }
 
-.btn-outline-secondary:hover {
-  background-color: #3498db;
-  color: #fff;
+.btn-primary:hover, .btn-outline-secondary:hover {
+  opacity: 0.8;
+}
+
+#icon-grid .icons {
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 #icon-grid h2 {
-  color: #333;
-}
-
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 15px;
-}
-
-.icons.cxx {
-    width: 100px;
-    height: 100px;
-}
-
-.icons.sql {
-    width: 100px;
-    height: 100px;
-}
-
-.icons:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-}
-
-h3.fw-bold {
-  color: #333;
-}
-
-
-/* Projects Page */
-.pr-nav {
-    padding-top: 20px;
-}
-
-#welcome-section {
-  background: linear-gradient(to bottom right, #b2d7f8, #d1e2f9);
-  text-align: center;
-  padding: 100px 0;
-  color: #fff;
+  color: #f0f0f0;
   font-weight: bold;
 }
 
+#icon-grid .fw-bold {
+  color: #f0f0f0;
+}
+
+#icon-grid p {
+  color: #ddd;
+}
+
+.pr-nav {
+  background-color: #181818;
+}
+
+#welcome-section {
+  text-align: center;
+  padding: 100px 0;
+  background-image: url('vintage-background.jpg'); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  color: #f0f0f0;
+}
+
 #welcome-section h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
+    font-size: 3em;
+    margin-bottom: 0.5em;
 }
 
 #welcome-section h3 {
-  font-size: 2em;
-  margin-bottom: 20px;
+    font-size: 1.5em;
+    margin-bottom: 1em;
 }
 
 .pp {
-  font-size: 1.2em;
-  margin-bottom: 30px;
   font-style: italic;
+  margin-bottom: 2em;
+  font-size: 1.2em;
 }
 
 .ppicon {
-    width: 30px;
-    height: 30px;
-    fill: #fff;
-    margin: 0 auto;
-    margin-top: 20px;
-    animation: rotate 2s infinite;
+  display: block;
+  margin: 20px auto;
+  fill: #f0f0f0;
+  animation: rotate 2s linear infinite;
 }
 
 @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-
-#projects {
-  padding: 50px 0;
-}
-
-#project-hail {
+#projects h1 {
   text-align: center;
-  font-size: 2em;
-  color: #333;
   margin-bottom: 30px;
+  color: #f0f0f0;
 }
 
 .project-grid {
@@ -156,98 +131,83 @@ h3.fw-bold {
 }
 
 .project-tile {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #555;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
+
 
 .project-img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 8px 8px 0 0;
 }
+
 
 .code {
-  color: #4CAF50;
-  font-weight: bold;
+  color: #ff6347; /* Accent color */
 }
 
-
-/* Contact Page */
-
 .contact-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .card.ppmid {
-  margin: 0 auto;
-  max-width: 600px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  overflow: hidden;
+  margin: auto;
+  max-width: 500px;
+  width: 100%;
 }
 
 .card {
-  background-color: white;
+  background-color: #222;
+  border: 1px solid #555;
+  border-radius: 8px;
   padding: 20px;
-  border-radius: 10px;
 }
 
 .card-header {
-  background-color: #3498db;
-  color: white;
+  background-color: #ff6347;
+  color: #f0f0f0;
   font-weight: bold;
-  text-align: center;
   padding: 15px;
-  border-bottom: none; /* Remove default border */
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 8px 8px 0 0;
 }
 
 .card-body {
-    padding: 30px;
+  padding: 20px;
 }
 
 .form-control {
-  border: 1px solid #ccc;
+  background-color: #333;
+  color: #f0f0f0;
+  border: 1px solid #555;
   border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 15px;
 }
 
 .form-label {
+  color: #f0f0f0;
   font-weight: bold;
-  margin-bottom: 5px;
+}
+
+.btn.btn-primary {
+  background-color: #ff6347;
+  border-color: #ff6347;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 .form-text {
-  color: #888;
-  font-size: 0.9em;
-}
-
-/* About Page */
-.h1, h1 {
-  color: #333;
-}
-
-.lead {
-    font-weight: 300;
-}
-
-.mark {
-  background-color: #f7f7f7;
-  padding: 2px 5px;
-  border-radius: 5px;
+  color: #aaa;
 }
 
 
@@ -261,8 +221,12 @@ h3.fw-bold {
   .project-grid {
     grid-template-columns: 1fr;
   }
-
   .card.ppmid {
     max-width: 90%;
   }
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
