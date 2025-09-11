@@ -1,246 +1,203 @@
 body {
-    font-family: 'Times New Roman', serif;
-    background-color: #f8f9fa;
-    color: #343a40;
+  background-color: #222831;
+  color: #a3b18a;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease;
 }
 
 .pr-nav {
-    background-color: #f8f9fa; /*Light background for projects page*/
-}
-
-#welcome-section {
-    text-align: center;
-    padding: 5rem 0;
-    background-image: url("https://www.transparenttextures.com/patterns/subtle_dots-dark.png"); /* Example background */
-    background-size: cover;
-    color: white; /*Text color for contrast*/
-}
-
-#welcome-section h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-#welcome-section h3 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-
-.pp {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    font-style: italic; /* Style paragraph text */
-}
-
-.ppicon {
-    margin: 0 auto;
-    display: block;
-    animation: smooth-scroll 1s infinite; /* Animate the icon*/
-}
-
-@keyframes smooth-scroll {
-  0%{ transform: translateY(0); }
-  50%{ transform: translateY(5px); }
-  100%{ transform: translateY(0); }
-}
-
-
-#projects {
-    padding: 4rem 0;
-}
-
-#project-hail {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #996600; /* Golden color for heading */
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 2rem;
-}
-
-.project-tile {
-    border: 2px solid #996600;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out; /*Add transition for hover*/
-}
-
-.project-tile:hover {
-    transform: translateY(-5px);
-}
-
-.project-img, .img-proj {
-    width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0; /*Rounded corners on top*/
-    object-fit: cover;
-}
-
-.code {
-    color: #996600; /* Golden accent for code brackets*/
-    font-weight: bold;
+  background-color: #393e46;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
 }
 
 header {
-    background-color: #f0f0f0; /*Light gray header background */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /*subtle shadow*/
-    padding: 1rem 0;
+  background-color: #222831;
 }
 
-.nav-link {
-    color: #343a40;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    padding: .7rem 1rem; /*add padding */
-    transition: background-color .3s;
+.nav-pills .nav-link {
+  color: #a3b18a;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-link.active, .nav-link:hover {
-    background-color: #996600; /* Golden hover color*/
-    color: white;
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #404b54;
+  color: #f2f2f2;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    background-color: #996600; /* Golden active color*/
-    color: white;
+.display-5 {
+  color: #ececec;
 }
 
-.icons {
-    width: 75px;
-    height: 75px;
-    margin-right: 1rem;
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: #eee;
 }
 
-.icons.cxx {
-    width: auto; /*adjust width as needed*/
+#welcome-section {
+  text-align: center;
+  padding: 50px 0;
+  background-image: url('https://images.unsplash.com/photo-1526411609-18450f7071b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZWFydGglMjBob21lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
 
-.icons.sql {
-    width: auto; /*adjust width as needed*/
+#welcome-section h1,
+#welcome-section h3 {
+  color: #fff;
 }
 
-#icon-grid h2 {
-    color: #996600; /*Golden color for section heading*/
-    font-size: 2rem;
+#projects h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #eee;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.project-tile {
+  border: 1px solid #404b54;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.project-tile:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-img,
+.img-proj {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.code {
+  color: #a3b18a;
+}
+
+
+.pp {
+  text-align: center;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.ppicon {
+  display: block;
+  margin: 20px auto;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .contact-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: url("https://www.transparenttextures.com/patterns/subtle_dots-dark.png"); /* Example background */
-    background-size: cover;
-    color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-
 .card.ppmid {
-    margin: auto;
-    max-width: 500px;
-    position: relative; /* needed for centering*/
+  margin: auto;
+  max-width: 600px;
+  border: 1px solid #404b54;
+  border-radius: 10px;
 }
 
 .card {
-    width: 80%;
-    padding: 2rem;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border: 2px solid #996600; /* Golden border */
+  background-color: #404b54;
+  padding: 20px;
+  border-radius: 10px;
 }
-
 
 .card-header {
-    background-color: #996600; /* Golden header color*/
-    color: white;
-    font-size: 1.5rem;
-    text-align: center;
-    border-bottom: none; /*remove default border*/
-    border-radius: 10px 10px 0 0; /* Rounded corners*/
-
+  background-color: #393e46;
+  color: #eee;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
 }
 
+
 .card-body {
-    padding: 2rem;
+  padding: 20px;
+}
+
+
+.form-control {
+  background-color: #393e46;
+  color: #a3b18a;
+  border: 1px solid #55606a;
+  border-radius: 5px;
 }
 
 .form-label {
-    color: #343a40; /* Dark text color*/
-    font-weight: bold;
-}
-
-.form-control {
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /*subtle shadow*/
-}
-
-.form-text {
-    color: #868e96; /* Light gray text color*/
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
+  color: #eee;
 }
 
 .btn.btn-primary {
-    background-color: #996600; /* Golden button color*/
-    border: none; /*remove default border*/
-    color: white;
-    font-weight: bold;
-    padding: 0.8rem 1.5rem; /*add padding*/
-    border-radius: 5px;
-    transition: background-color .3s;
+  background-color: #404b54;
+  color: #eee;
+  border: 1px solid #55606a;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .btn.btn-primary:hover {
-    background-color: #c7911e; /*darker golden color on hover*/
+  background-color: #55606a;
 }
 
+.form-text {
+  color: #a3b18a;
+  font-size: 0.8rem;
+}
+
+.icons {
+  width: 75px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.icons.cxx {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
 
 @media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 
 @media (max-width: 576px) {
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-wrapper {
-        flex-direction: column; /* Stack form elements vertically on mobile*/
-    }
-
-    .card {
-        width: 90%;
-    }
-}
-
-.img-fluid {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .card.ppmid {
     max-width: 100%;
-    height: auto;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    color: #343a40;
-}
-
-mark {
-    background-color: #fcf8e3;
-    padding: 0.2rem 0.5rem;
-    border-radius: 5px;
+  }
 }
