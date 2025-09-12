@@ -1,179 +1,155 @@
 body {
-  background-color: #1e2732;
-  color: #d9e0e7;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: background-color 0.3s ease;
-}
-
-.pr-nav {
-  background-color: #1e2732;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #f8f8f8; /* Light earth tone background */
+  color: #333; /* Dark text color */
+  line-height: 1.6;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 header {
-  background-color: #283542;
+  background-color: #e0e0e0; /* Light gray header */
+  padding: 10px 0;
+  border-radius: 5px;
 }
 
 .nav-pills .nav-link {
-  color: #d9e0e7;
-  background-color: transparent;
-  border: 1px solid #6c757d;
   border-radius: 5px;
-  padding: 10px 15px;
+  padding: 10px 20px;
   margin: 0 5px;
-  transition: background-color 0.3s ease;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #34414e;
-  border-color: #34414e;
+  background-color: #d9d9d9;
+  color: #fff;
 }
 
 .icons {
   width: 75px;
   height: 75px;
   margin-right: 15px;
-  fill: #d9e0e7;
-  transition: transform 0.2s ease;
+  fill: #444; /* Dark gray icon fill */
 }
 
-.icons:hover {
-  transform: scale(1.1);
-}
 
-#icon-grid .icons {
-  margin-bottom: 10px;
-}
-
-h1, h2, h3 {
-  color: #d9e0e7;
-  font-weight: 600;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
-  color: #a5b1c2;
-  line-height: 1.6;
-}
-
-.lead {
-  font-size: 1.25rem;
+.display-5{
+  color:#555;
 }
 
 .btn-primary {
-  background-color: #4CAF50;
-  border-color: #4CAF50;
-  color: #ffffff;
+  background-color: #5cb85c; /* Green button */
+  border-color: #4cae4c;
   transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #45a049;
-  border-color: #45a049;
+  background-color: #449d44;
 }
 
 .btn-outline-secondary {
-  border-color: #6c757d;
-  color: #6c757d;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #555;
+  border-color: #ddd;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .btn-outline-secondary:hover {
-  background-color: #6c757d;
-  color: #ffffff;
+  color: #fff;
+  background-color: #ddd;
+}
+
+#icon-grid h2 {
+  color: #555; /* Slightly darker gray for headings */
 }
 
 #welcome-section {
-  background: linear-gradient(to bottom, #283542, #1e2732), url('space.jpg'); /* Replace space.jpg with your image */
-  background-size: cover;
-  background-position: center;
-  color: #d9e0e7;
-  padding: 80px 0;
   text-align: center;
+  padding: 50px 0;
+  background: linear-gradient(to bottom, #c7e9b4, #a2d28b); /* Green gradient background */
+  color: #fff;
 }
 
 #welcome-section h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
+  font-size: 3em;
+  margin-bottom: 10px;
 }
 
 #welcome-section h3 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-.pp {
-  font-size: 1.2rem;
-  color: #a5b1c2;
+  font-size: 1.5em;
   margin-bottom: 20px;
 }
 
+.pp {
+  font-size: 1.2em;
+  color: #eee; /* Lighter gray for paragraph text */
+  margin-bottom: 30px;
+}
+
 .ppicon {
-  fill: #d9e0e7;
-  width: 30px;
-  height: 30px;
-  margin: 10px auto 0;
-  animation: bounce 1s infinite;
+  margin: 0 auto;
+  display: block;
+  animation: bounce 1.5s infinite;
+  fill: #eee; /* Lighter gray for icon */
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%, 100% {
     transform: translateY(0);
   }
-  40% {
+  50% {
     transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
   }
 }
 
-#projects h1 {
-  font-size: 3rem;
-  margin-bottom: 40px;
+#projects {
+  padding: 40px 0;
+}
+
+#project-hail {
+  font-size: 2em;
+  color: #555;
+  margin-bottom: 30px;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-gap: 20px;
 }
 
 .project-tile {
-  border: 1px solid #34414e;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.project-img {
+.project-img,
+.img-proj {
   width: 100%;
   height: auto;
   border-radius: 10px 10px 0 0;
 }
 
 .code {
-  color: #007bff;
+  color: #3498db; /* Blue accent color */
+}
+
+.pr-nav {
+  padding-top: 20px;
 }
 
 .contact-wrapper {
@@ -184,47 +160,53 @@ p {
 }
 
 .card.ppmid {
-  max-width: 500px;
-  margin: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 .card {
-  background-color: #283542;
-  color: #d9e0e7;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
 
 .card-header {
-  background-color: #34414e;
-  color: #d9e0e7;
-  font-size: 1.5rem;
-  border-radius: 10px 10px 0 0;
-  padding: 15px;
-  font-weight: 600;
+  font-size: 1.5em;
+  color: #555;
+  margin-bottom: 20px;
 }
 
 .card-body {
-  padding: 20px;
+  padding: 30px;
 }
 
 .form-control {
-  background-color: #34414e;
-  color: #d9e0e7;
-  border: 1px solid #6c757d;
   border-radius: 5px;
+  border-color: #ddd;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .form-label {
-  color: #d9e0e7;
-  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.btn.btn-primary {
+  background-color: #4CAF50; /* Green button */
+  border-color: #45a049;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #45a049;
 }
 
 .form-text {
-  color: #a5b1c2;
-  font-size: 0.9rem;
+  color: #777; /* Light gray help text */
+  font-size: 0.9em;
 }
+
 
 @media (max-width: 768px) {
   .project-grid {
@@ -236,11 +218,10 @@ p {
   .project-grid {
     grid-template-columns: 1fr;
   }
-
   .contact-wrapper {
-    flex-direction: column;
+    flex-direction: column; /* Stack form on mobile */
   }
   .card.ppmid {
-    max-width: 90%;
+    margin: 20px auto;
   }
 }
