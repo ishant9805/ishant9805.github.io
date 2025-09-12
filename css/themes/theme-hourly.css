@@ -1,12 +1,11 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #f8f9fa;
-  color: #343a40;
   transition: background-color 0.3s ease;
 }
 
 .pr-nav {
-  background-color: #f8f9fa;
+  background-color: #f0f0f0;
 }
 
 .container {
@@ -19,55 +18,18 @@ header {
   border-radius: 10px;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  background-color: #6c757d;
-  color: white;
-}
-
 .nav-pills .nav-link {
+  color: #343a40;
   border-radius: 10px;
-  padding: 10px 15px;
+  padding: 10px 20px;
   margin: 0 5px;
+  transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-
-.nav-link:hover {
-  background-color: #adb5bd;
-  color: #343a40;
-}
-
-h1, h3, h2 {
-  font-weight: 600;
-  color: #343a40;
-}
-
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: 1.5em;
-}
-
-.lead {
-  font-size: 1.25em;
-}
-
-p {
-  line-height: 1.6;
-}
-
-
-.img-fluid {
-  border-radius: 10px;
-}
-
-#icon-grid h2 {
-  margin-bottom: 20px;
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.9);
 }
 
 .icons {
@@ -76,50 +38,97 @@ p {
   margin-right: 15px;
 }
 
-.icons:hover {
-  transform: scale(1.05);
-  transition: 0.3s;
+.icons.cxx {
+  width: 100px;
+  height: 100px;
 }
 
+.icons.sql {
+    width: 75px;
+    height: 75px;
+}
+
+#icon-grid h2 {
+  color: #343a40;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.display-5 {
+  font-size: 3rem;
+}
+
+.lead {
+  font-size: 1.2rem;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.9);
+}
 
 #welcome-section {
-  background-color: #fff;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  padding: 40px;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding: 50px 0;
+  background-color: #f0f0f0;
+  background-image: linear-gradient(to right, #f0f0f0, #e0e0e0);
+  color: #343a40;
 }
-
 
 #welcome-section h1 {
-    margin-bottom: 10px;
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
-#welcome-section h3{
-  margin-bottom: 20px;
+#welcome-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
 }
 
 .pp {
-  font-size: 1.1em;
+  font-size: 1.2rem;
   margin-bottom: 20px;
+  color: #343a40;
 }
 
 .ppicon {
-    margin-top: 20px;
-    transition: transform 0.3s ease;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  display: block;
+  animation: bounce 1s infinite;
 }
 
-.ppicon:hover{
-    transform: scale(1.1);
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }
 
 #projects h1 {
-  margin-bottom: 30px;
   text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #343a40;
 }
-
 
 .project-grid {
   display: grid;
@@ -128,29 +137,77 @@ p {
 }
 
 .project-tile {
-  background-color: #fff;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 15px;
-  text-decoration: none;
-  color: #343a40;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.9);
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
 }
 
 .project-img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
-
 
 .code {
   color: #007bff;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card.ppmid {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.9);
+}
+
+.card-header {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  padding: 15px;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+
+.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1), inset -1px -1px 3px rgba(255, 255, 255, 0.9);
+}
+
+.form-label {
+  color: #343a40;
+  font-weight: bold;
+}
+
+.btn.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.form-text {
+  color: #6c757d;
+  font-size: 0.875rem;
 }
 
 @media (max-width: 768px) {
@@ -163,74 +220,7 @@ p {
   .project-grid {
     grid-template-columns: 1fr;
   }
-}
-
-
-.contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.card.ppmid {
-  margin: auto;
-  max-width: 600px;
-  background-color: #fff;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-}
-
-.card {
-  padding: 20px;
-}
-
-.card-header {
-  background-color: #6c757d;
-  color: white;
-  font-weight: 600;
-  border-radius: 10px 10px 0 0;
-}
-
-.card-body {
-  padding: 30px;
-}
-
-.form-control {
-  border: 1px solid #ced4da;
-  border-radius: 5px;
-  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.9);
-  padding: 10px;
-}
-
-.form-label {
-  font-weight: 500;
-}
-
-
-.btn.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.9);
-  border-radius: 5px;
-  padding: 10px 20px;
-}
-
-.btn.btn-primary:hover {
-  background-color: #0069d9;
-  border-color: #0062cc;
-}
-
-
-.form-text {
-  color: #6c757d;
-  font-size: 0.875em;
-}
-
-
-@media (max-width: 768px) {
   .card.ppmid {
-    max-width: 100%;
-    padding: 10px;
+    width: 90%;
   }
 }
