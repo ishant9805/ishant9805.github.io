@@ -1,67 +1,107 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
-  transition: background-color 0.3s ease;
+  background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
+  color: #333;
 }
 
-.pr-nav {
-  background-color: #f0f2f5; /* Light grey background for Projects page */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-pills .nav-link {
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  color: #666;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+
+.display-5 {
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 3rem;
+    color:#333;
+}
+
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-outline-secondary {
+  color: #333;
+  border-color: #ccc;
+}
+
+.icons {
+    width: 75px;
+    height: 75px;
+    fill: currentColor;
+    margin-right:1rem;
+}
+
+#icon-grid h2 {
+  color: #333;
+}
+
+
+.icons.cxx{
+    fill: #673ab7;
+}
+
+.icons.sql{
+    fill: #2196f3;
 }
 
 #welcome-section {
-  background-color: #e3f2fd; /* Light blue background */
-  padding: 5rem 0;
   text-align: center;
-}
-
-#welcome-section h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  color: #2196F3;
-}
-
-#welcome-section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  color: #3f51b5;
-}
-
-.pp {
-  font-size: 1.2rem;
-  color: #607d8b;
-  margin-bottom: 2rem;
-}
-
-.ppicon {
-  fill: #2196F3;
-  margin-top: 1rem;
-  animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
-}
-
-
-#projects {
   padding: 4rem 0;
+  background: linear-gradient(to bottom, #e0e0e0, #f0f0f0);
 }
 
-#project-hail {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  font-weight: 600;
-  color: #3f51b5;
-  text-align: center;
+
+#welcome-section h1,
+#welcome-section h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+#welcome-section .pp {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+#welcome-section .ppicon{
+    animation: rotation 2s infinite linear;
+    margin-top: 1rem;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#projects h1 {
+  color: #007bff;
+  margin-bottom: 2rem;
 }
 
 .project-grid {
@@ -71,49 +111,31 @@ body {
 }
 
 .project-tile {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .project-img,
 .img-proj {
   width: 100%;
   height: auto;
-  border-radius: 8px 8px 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
-
 
 .code {
-  color: #03A9F4; /* Accent blue color for code brackets */
+  color: #007bff;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    background-color: #2196F3;
-    color: white;
-}
-
-.nav-pills .nav-link {
-  border-radius: 20px;
-  padding: 10px 20px;
-  margin: 0 5px;
-  transition: background-color 0.3s ease;
-}
-
-.nav-pills .nav-link:hover {
-  background-color: #42a5f5;
+.pr-nav{
+  background: linear-gradient(to bottom, #e0e0e0, #f0f0f0);
 }
 
 .contact-wrapper {
@@ -121,31 +143,26 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f0f2f5;
 }
 
 .card.ppmid {
   margin: auto;
-  max-width: 600px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  overflow: hidden;
+  max-width: 500px;
+  width: 100%;
 }
 
 .card {
-  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 2rem;
 }
 
-
 .card-header {
-  background-color: #2196F3;
-  color: white;
-  font-weight: 600;
-  padding: 1rem 1.5rem;
-  border-bottom: none;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .card-body {
@@ -153,69 +170,48 @@ body {
 }
 
 .form-control {
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-  padding: 0.75rem 1rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-}
-
-.form-control:focus {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .form-label {
-  font-weight: 500;
+  font-weight: bold;
   margin-bottom: 0.5rem;
+  color: #333;
 }
 
 .btn.btn-primary {
-  background-color: #2196F3;
-  border: none;
-  border-radius: 4px;
-  padding: 0.75rem 1.5rem;
-  color: white;
-  font-weight: 500;
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.3rem;
   transition: background-color 0.3s ease;
 }
 
-.btn.btn-primary:hover {
-  background-color: #1976d2;
+.btn.btn-primary:hover{
+  background-color: #0069d9;
 }
 
 .form-text {
-  font-size: 0.875rem;
-  color: #6c757d;
-  margin-top: 0.25rem;
-}
-
-.icons {
-  margin-right: 1rem;
-  fill: currentColor;
-}
-
-.cxx {
-  fill: #ff9800;
-}
-
-.sql {
-  fill: #4CAF50;
+  color: #555;
+  font-size: 0.8rem;
 }
 
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 576px) {
-  .project-grid {
-    grid-template-columns: 1fr;
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: stretch; /*Align to the stretch for mobile*/
   }
   .card.ppmid {
-    max-width: 90%;
+    margin: 2rem 0;
   }
 }
