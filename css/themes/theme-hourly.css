@@ -1,60 +1,136 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f8f8f8;
+  background-color: #222;
+  color: #eee;
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #333;
+  padding: 1rem 0;
+}
+
+.nav-pills .nav-link {
+  color: #eee;
+  background-color: #444;
+  border-radius: 5px;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #666;
+}
+
+.nav-pills .nav-link.active{
+  background-color: #555;
+}
+
+.display-5 {
+  font-weight: bold;
+  color: #ffb347; /* Accent color */
+}
+
+.lead {
+  font-style: italic;
+}
+
+.btn-primary {
+  background-color: #ffb347;
+  border-color: #ffb347;
+}
+
+.btn-primary:hover {
+  background-color: #ffa300; /* Darker accent color */
+}
+
+
+.btn-outline-secondary {
+  border-color: #eee;
+  color: #eee;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #eee;
   color: #333;
 }
 
-.pr-nav {
-  background-color: #f0f0f0;
+#icon-grid h2 {
+  color: #ffb347; /* Accent color */
+}
+
+
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 1rem;
+  fill: #eee; /* Icon fill color */
+}
+
+.icons.cxx{
+  fill: #eee;
+}
+
+.icons.sql{
+  width: auto;
+}
+
+.icons.ppicon {
+  width: 30px;
+  height: 30px;
+  fill: #eee;
+  margin: 0 auto;
+  margin-top: 1rem;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #welcome-section {
   text-align: center;
-  padding: 5rem 0;
-  background-image: url('vintage-paper-texture.jpg'); /* Replace with your texture image */
-  background-size: cover;
-  background-position: center;
-  color: white;
+  background-color: #333;
+  padding: 4rem 0;
+  color: #eee;
 }
 
 #welcome-section h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ffb347;
 }
 
 #welcome-section h3 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #eee;
+    font-style: italic;
 }
 
 .pp {
   font-style: italic;
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: white;
+  color: #aaa;
 }
 
-.ppicon {
-  display: block;
-  margin: 2rem auto;
-  animation: rotate 2s linear infinite;
-  fill: white;
-}
-
-@keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-#projects {
-  padding: 4rem 0;
-}
-
-#project-hail {
+#projects h1 {
+  color: #ffb347; /* Accent color */
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #444;
+  margin-bottom: 2rem;
 }
 
 .project-grid {
@@ -64,27 +140,25 @@ body {
 }
 
 .project-tile {
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border: 1px solid #555;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-
-.project-img, .img-proj {
+.project-img {
   width: 100%;
   height: auto;
-  border-radius: 0.5rem;
+  border-radius: 8px 8px 0 0;
 }
 
 .code {
-  color: #e74c3c; /* Accent color */
+  color: #ffb347; /* Accent color */
 }
 
 .contact-wrapper {
@@ -92,26 +166,30 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 2rem;
+  background-color: #222;
 }
 
 .card.ppmid {
-  width: 60%;
-  max-width: 600px;
-  margin: 0 auto;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%; /* Ensure responsiveness */
+    position: relative;
 }
 
+
 .card {
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #333;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
   background-color: #444;
-  color: white;
-  font-size: 1.5rem;
+  color: #ffb347; /* Accent color */
+  font-weight: bold;
   padding: 1rem;
-  border-radius: 10px 10px 0 0;
+  border-radius: 8px 8px 0 0;
 }
 
 .card-body {
@@ -119,65 +197,37 @@ body {
 }
 
 .form-control {
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #555;
   border-radius: 5px;
-  border-color: #ccc;
-  padding: 0.7rem;
-  background-color: #f8f8f8;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
 }
 
 .form-label {
+  color: #eee;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
 .btn.btn-primary {
-  background-color: #444;
-  border-color: #444;
-  color: white;
-  padding: 0.8rem 1.5rem;
+  background-color: #ffb347;
+  border-color: #ffb347;
+  color: #222;
+  padding: 0.75rem 1.5rem;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.btn.btn-primary:hover {
-  background-color: #222;
 }
 
 .form-text {
-  color: #777;
-  font-size: 0.9rem;
+  color: #aaa;
+  font-size: 0.8rem;
 }
 
-nav {
-  background-color: #e9ecef;
-  padding: 10px 0;
+.pr-nav{
+  padding-right: 1rem;
 }
 
-.nav-link {
-  color: #444;
-  font-weight: bold;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  background-color: #ddd;
-}
-
-.nav-link.active {
-  font-weight: bold;
-}
-
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 1rem;
-}
-
-
-/* Responsive Styles */
 
 @media (max-width: 768px) {
   .project-grid {
@@ -189,33 +239,4 @@ nav {
   .project-grid {
     grid-template-columns: 1fr;
   }
-  .card.ppmid {
-    width: 90%;
-  }
-}
-
-/* Add some more styling for visual appeal */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif; /* Replace with a suitable vintage font */
-    color: #333; /* Dark text for better contrast */
-}
-
-mark {
-    background-color: #f9f9f9;
-    padding: 2px 5px;
-    border-radius: 3px;
-}
-
-a {
-    color: #007bff; /* Blue hyperlink color */
-    text-decoration: underline; /* Underline for links */
-}
-
-a:hover {
-    color: #0056b3; /* Darker blue on hover */
-    text-decoration: none; /* Remove underline on hover for better UX */
-}
-
-.lead {
-  font-size: 1.1rem;
 }
