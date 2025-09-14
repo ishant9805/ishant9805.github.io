@@ -1,35 +1,29 @@
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  margin: 0;
+  font-family: 'Playfair Display', serif; /* Or a similar art deco font */
   background-color: #f8f9fa;
+  line-height: 1.6;
   color: #343a40;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
 }
 
 header {
-  background-color: #fff;
-  padding: 10px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa; /* Light background for header */
 }
 
 .nav-pills .nav-link {
-  color: #343a40;
-  border-radius: 20px;
+  border-radius: 20px; /* Art Deco rounded corners */
   padding: 10px 20px;
-  margin: 0 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #6c757d;
-  color: #fff;
+  background-color: #FFD700; /* Golden hover effect */
+  color: #343a40;
 }
 
 .display-5 {
@@ -38,136 +32,123 @@ header {
 }
 
 .lead {
-  font-weight: 400;
-  color: #495057;
+  color: #6c757d;
 }
 
 .btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #FFD700; /* Golden button */
+  border-color: #FFD700;
+  color: #343a40;
 }
 
 .btn-outline-secondary {
-  color: #343a40;
-  border-color: #adb5bd;
+  border-color: #FFD700;
+  color: #FFD700;
 }
 
-
-#icon-grid {
-    text-align: center;
+.btn-primary:hover,
+.btn-outline-secondary:hover {
+  background-color: #b78f00; /* Darker golden on hover */
+  color: white;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
-
-.icons.cxx {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
+#icon-grid .icons {
+  margin-bottom: 10px;
 }
 
-.icons.sql {
-  width: 75px;
-  height: 75px;
-  margin-right: 10px;
-}
-
-
-h2 {
+#icon-grid h2 {
   font-size: 2rem;
   font-weight: 700;
   color: #343a40;
 }
 
-h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #343a40;
-}
-
 .pr-nav {
-  padding-top: 50px;
+  background-color: #f8f9fa;
 }
 
 #welcome-section {
-  background-color: #e9ecef;
-  padding: 100px 0;
   text-align: center;
+  padding: 100px 0;
+  background-image: linear-gradient(to bottom, #f8f9fa, #e9ecef);
 }
 
-#welcome-section h1,
-#welcome-section h3 {
+#welcome-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
   color: #343a40;
+  margin-bottom: 10px;
 }
 
-#welcome-section .pp {
+#welcome-section h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.pp {
   font-size: 1.2rem;
-  margin-top: 20px;
-  color: #495057;
+  color: #6c757d;
+  margin-bottom: 30px;
 }
 
-#welcome-section .ppicon {
-  margin-top: 20px;
-  animation: bounce 1s infinite;
+.ppicon {
+  margin: 0 auto;
+  display: block;
+  animation: bounce 1s infinite; /* Add a bouncing animation */
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%, 100% {
     transform: translateY(0);
   }
-  40% {
+  50% {
     transform: translateY(-20px);
   }
-  60% {
-    transform: translateY(-10px);
-  }
 }
 
-#projects {
-  padding: 50px 0;
-}
-
-#project-hail {
+#projects h1 {
   font-size: 2.5rem;
   font-weight: 700;
   color: #343a40;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 30px;
 }
 
 .project-tile {
   border: 1px solid #dee2e6;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  transition: box-shadow 0.3s ease;
-  text-decoration: none;
-  color: #343a40;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.project-img {
-  max-width: 100%;
+
+.project-img, .img-proj {
+  width: 100%;
   height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 .code {
-  color: #007bff;
+  color: #FFD700; /* Golden color for code brackets */
 }
 
 .contact-wrapper {
@@ -178,26 +159,24 @@ h3 {
 }
 
 .card.ppmid {
-  margin: 0 auto;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: auto;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  padding: 30px;
 }
 
+
 .card-header {
-  background-color: #007bff;
-  color: #fff;
-  font-size: 1.5rem;
+  background-color: #FFD700;
+  color: #343a40;
   font-weight: 700;
-  border-radius: 5px 5px 0 0;
-  padding: 15px;
-  text-align: center;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-body {
@@ -205,27 +184,25 @@ h3 {
 }
 
 .form-control {
-  border-radius: 5px;
+  border-radius: 10px;
+  border-color: #ced4da;
   padding: 10px;
 }
 
 .form-label {
   font-weight: 600;
+  color: #343a40;
 }
 
 .btn.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  padding: 10px 20px;
-  border-radius: 5px;
+  background-color: #FFD700;
+  color: #343a40;
+  border-radius: 10px;
 }
-
 
 .form-text {
-  font-size: 0.8rem;
   color: #6c757d;
 }
-
 
 @media (max-width: 768px) {
   .project-grid {
@@ -237,7 +214,8 @@ h3 {
   .project-grid {
     grid-template-columns: 1fr;
   }
-  .card.ppmid {
-    max-width: 90%;
+
+  .card {
+    width: 90%;
   }
 }
