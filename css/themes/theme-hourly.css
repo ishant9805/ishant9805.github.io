@@ -1,264 +1,224 @@
 body {
-  font-family: 'Roboto', sans-serif; /* Or a similar retro-style font */
-  line-height: 1.6;
-  margin: 0;
-  background-color: #f8f8f8; /* Light background */
-  color: #333; /* Dark text */
-}
-
-.pr-nav {
-  background-color: #f0f0f0; /* Light grey background for projects page navigation */
-  padding-top: 20px;
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  font-family: 'Times New Roman', serif; /* or a similar elegant serif font */
+  transition: background-color 0.3s ease;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 
 header {
-  background-color: #e0e0e0; /* Light grey background for header */
-  padding: 10px 0;
+  background-color: #282828;
+  padding: 1rem 0;
+  border-radius: 10px;
 }
 
 .nav-pills .nav-link {
-  background-color: #fff; /* White background for nav links */
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 0 5px;
+  color: #f5f5f5;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  margin: 0 0.5rem;
+  background-color: rgba(255, 215, 0, 0.2); /* Subtle golden background */
   transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #666; /* Dark grey background on hover/active */
-  color: #fff;
+  background-color: rgba(255, 215, 0, 0.4); /* More intense golden background on hover/active */
 }
 
-.display-5,
-h1,
-h2,
-h3 {
-  font-family: 'Playfair Display', serif; /* Or a similar classic serif font */
-  font-weight: 700;
-  color: #333;
-}
-
-h1,h2{
-  text-align: center;
+.display-5 {
+  color: gold;
 }
 
 .lead {
-  font-style: italic;
+  color: #d9d9d9;
 }
 
-#icon-grid h2{
-  color: #666;
+.btn-primary {
+  background-color: gold;
+  border-color: gold;
+}
+
+.btn-primary:hover, .btn-outline-secondary:hover{
+  background-color: #FFD700; /*Adjust as needed*/
+  color: #222;
+}
+
+
+#icon-grid h2 {
+  color: gold;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
-  margin-bottom: 10px;
+  margin-right: 1rem;
+  fill: #f5f5f5; /* Default icon fill color */
+  transition: transform 0.3s ease;
 }
 
-.icons path,
-.icons circle {
-  transition: fill 0.3s ease;
+.icons:hover{
+  transform: scale(1.1);
 }
 
-
-.icons:hover path,
-.icons:hover circle {
-  fill: #ffcc66; /* Accent color on hover */
+.icons.cxx{
+  fill: gold;
 }
 
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px; /* Rounded corners for images */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+.icons.sql{
+  fill: #f5f5f5;
 }
+
+.icons.cxx:hover{
+  fill: #FFD700;
+}
+
 
 #welcome-section {
-  background-color: #eee; /* Light grey background */
-  padding: 50px 0;
+  background-color: #282828;
   text-align: center;
+  padding: 4rem 0;
+  color: #f5f5f5;
 }
 
-#welcome-section h1,
-#welcome-section h3{
-  color: #666;
+#welcome-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: gold;
 }
 
-#welcome-section p {
-    font-style: italic;
+#welcome-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #d9d9d9;
 }
+
+.pp{
+  font-size: 1.2rem;
+  color: #d9d9d9;
+}
+
 
 .ppicon{
-    width: 30px;
-    height: auto;
-    margin-left: 5px;
+  margin-top: 2rem;
+  fill: gold;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 #projects h1 {
   text-align: center;
-  margin-bottom: 30px;
-  color: #666;
+  margin-bottom: 2rem;
+  color: gold;
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 2rem;
 }
 
 .project-tile {
-  border: 1px solid #ddd;
+  background-color: #282828;
+  border: 1px solid rgba(255, 215, 0, 0.5);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
 }
 
-
-.project-img {
+.project-img,
+.img-proj {
   max-width: 100%;
   height: auto;
-  border-radius: 10px; /* Rounded corners for images */
+  border-radius: 10px;
 }
 
 .code {
-  color: #ff9900; /* Accent color for code brackets */
-  font-weight: bold;
+  color: gold;
 }
 
-.pp{
-    font-style: italic;
-    text-align: center;
-    margin-bottom: 20px;
+.pr-nav{
+  background-color: #1e1e1e;
 }
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ensure form is centered vertically */
-  background-color: #f0f0f0;
+  min-height: 100vh;
 }
-
 
 .card.ppmid {
-  width: 60%;
-  margin: 0 auto; /* Center card horizontally */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  padding: 20px;
-}
-
-@media (max-width: 768px) {
-  .card.ppmid {
-    width: 90%;
-  }
+  margin: auto;
+  max-width: 600px;
+  background-color: #282828;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #fff; /* White background for card */
-  padding: 20px;
-}
-
-.card-header {
-  background-color: #666; /* Dark grey background for card header */
-  color: #fff;
-  font-weight: bold;
-  padding: 15px;
-  border-radius: 10px 10px 0 0; /* Rounded top corners only */
+  padding: 2rem;
   text-align: center;
 }
 
-.card-body {
-  padding: 20px;
+.card-header {
+  background-color: gold;
+  color: #1e1e1e;
+  border-radius: 10px 10px 0 0;
+  font-size: 1.5rem;
+  padding: 1rem;
 }
 
-.form-label {
-  color: #333; /* Dark text for labels */
+.card-body {
+  padding: 2rem;
 }
 
 .form-control {
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 15px;
+  background-color: #333;
+  color: #f5f5f5;
+  border: 1px solid rgba(255, 215, 0, 0.5);
+  border-radius: 10px;
+}
+
+.form-label {
+  color: gold;
+  font-weight: bold;
 }
 
 .btn.btn-primary {
-  background-color: #ff9900; /* Orange button color */
-  border: none;
-  padding: 12px 24px;
-  border-radius: 5px;
-  color: #fff;
-  transition: background-color 0.3s ease;
-}
-
-.btn.btn-primary:hover {
-  background-color: #ff6600; /* Darker orange on hover */
+  background-color: gold;
+  color: #1e1e1e;
+  border-radius: 10px;
+  padding: 0.8rem 2rem;
+  margin-top: 1rem;
 }
 
 .form-text {
-  font-size: 0.875em;
-  color: #666;
-  margin-top: 5px;
+  color: #d9d9d9;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 768px) {
   .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .project-grid {
     grid-template-columns: 1fr;
   }
-}
-
-@media (max-width: 992px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.cxx{
-  width: 75px;
-  height: auto;
-  margin-right: 15px;
-  margin-bottom: 10px;
-}
-
-.sql{
-  width: 75px;
-  height: auto;
-  margin-right: 15px;
-  margin-bottom: 10px;
-}
-
-.cxx path, .sql path{
-    transition: fill 0.3s ease;
-}
-
-.cxx:hover path, .sql:hover path{
-    fill: #ffcc66;
-}
-
-mark{
-  background-color: #fff5ce;
-  padding: 3px;
-}
-
-/* Add this to style the underline of the links */
-a:underline {
-  text-decoration: underline; /* Use 'underline' for standard underlines */
 }
