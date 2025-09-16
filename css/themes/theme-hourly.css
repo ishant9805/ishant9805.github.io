@@ -1,7 +1,12 @@
 body {
-  background: linear-gradient(to bottom right, #1e1e1e, #333);
-  color: #eee;
   font-family: 'Arial', sans-serif;
+  background-color: #222;
+  color: #eee;
+  transition: background-color 0.3s ease;
+}
+
+body.pr-nav {
+  background-color: #333;
 }
 
 .container {
@@ -9,130 +14,138 @@ body {
 }
 
 header {
-  background: #282828;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 1rem;
 }
 
 .nav-pills .nav-link {
+  background-color: #444;
   color: #eee;
-  background: #333;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 0 5px;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  margin: 0 0.5rem;
   transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active {
-  background-color: #6563ff;
-}
-
-.nav-pills .nav-link:hover {
-  background-color: #444;
-}
-
-.display-5 {
-  color: #FFC107;
-}
-
-.lead {
-  color: #eee;
-}
-
-.btn-primary {
-  background-color: #6563ff;
-  border-color: #6563ff;
-}
-
-.btn-primary:hover {
-  background-color: #555bff;
-  border-color: #555bff;
-}
-
-.btn-outline-secondary {
-  color: #eee;
-  border-color: #eee;
-}
-
-.btn-outline-secondary:hover {
-  background-color: #eee;
+  background-color: #ffa500; /*Orange*/
   color: #222;
 }
 
+.nav-pills .nav-link:hover {
+  background-color: #666;
+}
+
+.display-5 {
+  color: #ffa500; /*Orange*/
+}
+
+.lead {
+  color: #ddd;
+}
+
+.btn-primary {
+  background-color: #ffa500; /*Orange*/
+  border-color: #ffa500; /*Orange*/
+  color: #222;
+}
+
+.btn-outline-secondary {
+  color: #ffa500; /*Orange*/
+  border-color: #ffa500; /*Orange*/
+}
+
+.btn-primary:hover, .btn-outline-secondary:hover {
+  background-color: #d48100; /*Darker Orange*/
+  border-color: #d48100; /*Darker Orange*/
+}
+
+
 #icon-grid h2 {
-  color: #FFC107;
+  color: #ffa500; /*Orange*/
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
+  margin-right: 1rem;
 }
 
 .icons.cxx {
-    width: 75px;
-    height: 75px;
-    margin-right: 15px;
+  width: 100px;
+  height: 100px;
+  margin-right: 1rem;
 }
 
 .icons.sql {
     width: 75px;
     height: 75px;
-    margin-right: 15px;
+    margin-right: 1rem;
 }
 
-.icons.ppicon {
-    width: 50px;
-    height: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    color: #6563ff;
+.icons path {
+  transition: fill 0.3s ease;
+}
+
+.icons:hover path {
+  fill: #ffa500; /*Orange*/
 }
 
 #welcome-section {
-  background: linear-gradient(to bottom right, #282828, #1e1e1e);
+  background-color: #333;
   text-align: center;
-  padding: 50px 0;
+  padding: 4rem 0;
+  border-radius: 10px;
 }
 
-#welcome-section h1 {
-  font-size: 3em;
-  color: #FFC107;
+#welcome-section h1, #welcome-section h3 {
+  color: #ffa500; /*Orange*/
 }
 
-#welcome-section h3 {
-  font-size: 1.5em;
-  color: #eee;
+#welcome-section .pp {
+  color: #ddd;
+  margin-top: 1rem;
+  font-size: 1.2rem;
 }
 
-.pp {
-  color: #eee;
-  font-style: italic;
-  margin-top: 20px;
+#welcome-section .ppicon {
+  margin-top: 1rem;
+  fill: #ffa500; /*Orange*/
+  animation: rotate 2s linear infinite;
 }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 #projects h1 {
-  text-align: center;
-  color: #FFC107;
-  margin-bottom: 30px;
+  color: #ffa500; /*Orange*/
+  margin-bottom: 2rem;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 2rem;
 }
 
 .project-tile {
   border: 1px solid #555;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .project-img, .img-proj {
@@ -142,13 +155,9 @@ header {
 }
 
 .code {
-  color: #6563ff;
+  color: #ffa500; /*Orange*/
 }
 
-
-.pr-nav {
-  background: linear-gradient(to bottom right, #1e1e1e, #333);
-}
 
 .contact-wrapper {
   display: flex;
@@ -158,67 +167,66 @@ header {
 }
 
 .card.ppmid {
-  margin: auto;
-  max-width: 500px;
-  position: relative;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .card {
-  background-color: #333;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .card-header {
-  background-color: #6563ff;
-  color: white;
-  font-weight: bold;
+  background-color: #ffa500; /*Orange*/
+  color: #222;
   border-radius: 10px 10px 0 0;
-  padding: 15px;
+  padding: 1rem;
   text-align: center;
+  font-weight: bold;
 }
 
 .card-body {
-  padding: 20px;
+  padding: 2rem;
 }
 
 .form-label {
-  color: #eee;
-  margin-bottom: 5px;
+  color: #ddd;
+  margin-bottom: 0.5rem;
 }
 
 .form-control {
-  background-color: #282828;
+  background-color: #333;
   color: #eee;
   border: 1px solid #555;
   border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
 }
 
 .form-text {
-  color: #888;
+  color: #aaa;
 }
 
-.btn.btn-primary {
-  background-color: #6563ff;
-  border-color: #6563ff;
-  padding: 10px 20px;
+
+.btn.btn-primary{
+  background-color: #ffa500; /*Orange*/
+  border-color: #ffa500; /*Orange*/
+  color: #222;
+  border-radius: 5px;
 }
 
+.btn.btn-primary:hover {
+  background-color: #d48100; /*Darker Orange*/
+  border-color: #d48100; /*Darker Orange*/
+}
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .project-grid {
-    grid-template-columns: 1fr;
-  }
-  .card.ppmid {
-    max-width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
