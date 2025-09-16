@@ -1,163 +1,115 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #222;
+  background-color: #1e1e1e;
   color: #eee;
-  transition: background-color 0.3s ease;
-}
-
-body.pr-nav {
-  background-color: #333;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-  background-color: #333;
-  border-radius: 10px;
-  padding: 1rem;
+  background-color: #282828;
 }
 
 .nav-pills .nav-link {
-  background-color: #444;
   color: #eee;
-  border-radius: 8px;
-  padding: 0.8rem 1.5rem;
-  margin: 0 0.5rem;
-  transition: background-color 0.3s ease;
+  background-color: #383838;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 5px;
 }
 
 .nav-pills .nav-link.active {
-  background-color: #ffa500; /*Orange*/
-  color: #222;
+  background-color: #585858;
 }
 
 .nav-pills .nav-link:hover {
-  background-color: #666;
+  background-color: #484848;
 }
 
-.display-5 {
-  color: #ffa500; /*Orange*/
-}
-
-.lead {
-  color: #ddd;
-}
-
-.btn-primary {
-  background-color: #ffa500; /*Orange*/
-  border-color: #ffa500; /*Orange*/
-  color: #222;
-}
-
-.btn-outline-secondary {
-  color: #ffa500; /*Orange*/
-  border-color: #ffa500; /*Orange*/
-}
-
-.btn-primary:hover, .btn-outline-secondary:hover {
-  background-color: #d48100; /*Darker Orange*/
-  border-color: #d48100; /*Darker Orange*/
-}
-
-
-#icon-grid h2 {
-  color: #ffa500; /*Orange*/
-}
-
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 1rem;
-}
-
-.icons.cxx {
-  width: 100px;
-  height: 100px;
-  margin-right: 1rem;
-}
-
-.icons.sql {
-    width: 75px;
-    height: 75px;
-    margin-right: 1rem;
-}
-
-.icons path {
-  transition: fill 0.3s ease;
-}
-
-.icons:hover path {
-  fill: #ffa500; /*Orange*/
+.pr-nav {
+  background-color: #111;
 }
 
 #welcome-section {
-  background-color: #333;
   text-align: center;
-  padding: 4rem 0;
-  border-radius: 10px;
+  padding: 50px 0;
+  background: linear-gradient(to bottom, #282828, #111);
 }
 
-#welcome-section h1, #welcome-section h3 {
-  color: #ffa500; /*Orange*/
+#welcome-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
-#welcome-section .pp {
-  color: #ddd;
-  margin-top: 1rem;
+#welcome-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.pp {
   font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #999;
 }
 
-#welcome-section .ppicon {
-  margin-top: 1rem;
-  fill: #ffa500; /*Orange*/
-  animation: rotate 2s linear infinite;
+.ppicon {
+  margin: 0 auto;
+  display: block;
+  fill: #777;
+  animation: bounce 1s infinite alternate;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
+@keyframes bounce {
+  from {
+    transform: translateY(0);
   }
-  100% {
-    transform: rotate(360deg);
+  to {
+    transform: translateY(-10px);
   }
 }
 
 
-#projects h1 {
-  color: #ffa500; /*Orange*/
-  margin-bottom: 2rem;
+#projects {
+  padding: 40px 0;
+}
+
+#project-hail {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #bada55;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 20px;
 }
 
 .project-tile {
-  border: 1px solid #555;
-  border-radius: 10px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
 
 .project-tile:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
 }
 
 .project-img, .img-proj {
   width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 8px 8px 0 0;
 }
 
 .code {
-  color: #ffa500; /*Orange*/
+  color: #007bff;
 }
-
 
 .contact-wrapper {
   display: flex;
@@ -167,56 +119,78 @@ header {
 }
 
 .card.ppmid {
-  width: 80%;
+  margin: auto;
   max-width: 600px;
-  margin: 0 auto;
+  background-color: #282828;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
 }
 
 .card {
+  border: none;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 30px;
 }
 
 .card-header {
-  background-color: #ffa500; /*Orange*/
-  color: #222;
-  border-radius: 10px 10px 0 0;
-  padding: 1rem;
+  font-size: 2rem;
   text-align: center;
-  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 20px;
 }
 
 .card-body {
-  padding: 2rem;
+  padding: 20px;
 }
 
 .form-label {
-  color: #ddd;
-  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #eee;
 }
 
 .form-control {
-  background-color: #333;
+  background-color: #383838;
   color: #eee;
-  border: 1px solid #555;
+  border: 1px solid #585858;
   border-radius: 5px;
+  padding: 10px;
 }
 
-.form-text {
-  color: #aaa;
-}
-
-
-.btn.btn-primary{
-  background-color: #ffa500; /*Orange*/
-  border-color: #ffa500; /*Orange*/
-  color: #222;
+.btn.btn-primary {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
   border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .btn.btn-primary:hover {
-  background-color: #d48100; /*Darker Orange*/
-  border-color: #d48100; /*Darker Orange*/
+  background-color: #0056b3;
+}
+
+.form-text {
+  color: #999;
+}
+
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+  fill: white;
+}
+
+.cxx {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+  fill: white;
+}
+
+.sql {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
 }
 
 @media (max-width: 768px) {
