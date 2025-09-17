@@ -1,245 +1,233 @@
 body {
-  background-color: #121212;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-  transition: background-color 0.3s ease;
+  background-color: #1a2a47;
+  color: #d9e0ee;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  line-height: 1.6;
 }
 
-.pr-nav {
-  background-color: #1a1a1a;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 header {
-  background-color: #1a1a1a;
+  background-color: #111b34;
+  padding: 10px 0;
 }
 
 .nav-pills .nav-link {
-  color: #fff;
+  color: #d9e0ee;
   border-radius: 20px;
   padding: 10px 20px;
   margin: 0 5px;
+  transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #6563ff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1, h2, h3 {
-  font-weight: 500;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.lead {
-  font-size: 1.25rem;
+  background-color: #31476f;
 }
 
 .display-5 {
-  font-size: 3rem;
+  color: #d9e0ee;
+  font-weight: 700;
 }
 
-
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 1rem;
-}
-
-.icons svg {
-    fill: #fff;
-}
-
-.icons.cxx svg {
-  fill: #fff;
-}
-
-.icons.sql {
-  width: auto;
-  height: auto;
-}
-
-.icons.sql svg {
-    width: 75px;
-    height: 75px;
-}
-
-#icon-grid .icons {
-  margin-bottom: 1rem;
+.lead {
+  font-size: 1.2rem;
+  color: #d9e0ee;
 }
 
 .btn-primary {
-  background-color: #6563ff;
-  border-color: #6563ff;
+  background-color: #556ebd;
+  border-color: #556ebd;
+}
+
+.btn-outline-secondary {
+  color: #d9e0ee;
+  border-color: #556ebd;
 }
 
 .btn-primary:hover,
-.btn-primary:focus {
-  background-color: #4442ff;
-  border-color: #4442ff;
+.btn-outline-secondary:hover {
+  background-color: #31476f;
+  border-color: #31476f;
 }
 
+#icon-grid {
+  text-align: center;
+}
+
+.icons {
+  width: 80px;
+  height: auto;
+  margin-right: 1rem;
+  fill: #d9e0ee;
+}
+
+.icons.cxx {
+    fill: #d9e0ee;
+}
+
+.icons.sql {
+    width: 100px;
+    height: auto;
+}
+
+
+h2, h3 {
+  color: #d9e0ee;
+}
 
 #welcome-section {
+  background: linear-gradient(to bottom, rgba(26, 42, 71, 0.8), rgba(26, 42, 71, 0.4)), url('space-background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #d9e0ee;
   text-align: center;
-  padding: 5rem 0;
-  background-image: linear-gradient(to bottom, #1a1a1a, #222222);
+  padding: 100px 0;
 }
 
-#welcome-section h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
 
+#welcome-section h1,
 #welcome-section h3 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+    color: #d9e0ee;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px #111b34;
 }
-
 
 .pp {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #ccc;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 10px;
+    color: #d9e0ee;
 }
 
 .ppicon {
-  margin: 20px auto;
-  display: block;
-  animation: bounce 2s infinite;
+  width: 30px;
+  height: auto;
+  margin: 10px auto;
+  animation: rotate 2s infinite linear;
+  fill: #d9e0ee;
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
-  50% {
-    transform: translateY(-20px);
+  to {
+    transform: rotate(360deg);
   }
 }
 
+#projects {
+    padding: 50px 0;
+}
 
 #project-hail {
   text-align: center;
-  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #d9e0ee;
+  margin-bottom: 30px;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 20px;
 }
 
 .project-tile {
-  border: 1px solid #333;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  background-color: #263a5b;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: #d9e0ee;
 }
-
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .project-img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px;
   object-fit: cover;
 }
 
 .code {
-  color: #6563ff;
-  font-weight: bold;
+  color: #556ebd;
 }
+
+
+.pr-nav {
+  padding-top: 50px;
+}
+
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: #1a2a47;
 }
 
 .card.ppmid {
-    margin: auto;
-    max-width: 600px;
-    width: 100%;
+  max-width: 500px;
+  margin: auto;
 }
 
 .card {
-  width: 90%;
-  max-width: 500px;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #263a5b;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 .card-header {
-  background-color: #6563ff;
-  color: #fff;
-  font-size: 1.5rem;
-  padding: 1rem;
-  border-radius: 8px 8px 0 0;
-  text-align: center;
+  background-color: #31476f;
+  color: #d9e0ee;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-body {
-  padding: 2rem;
-}
-
-.form-label {
-  color: #fff;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
+  padding: 20px;
 }
 
 .form-control {
-  background-color: #222;
-  color: #fff;
-  border: 1px solid #333;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  background-color: #223048;
+  color: #d9e0ee;
+  border: 1px solid #556ebd;
+  border-radius: 5px;
+}
+
+.form-label {
+  color: #d9e0ee;
 }
 
 .form-text {
-  color: #ccc;
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
+  color: #a0aec0;
 }
 
 #sub-btn {
-  background-color: #6563ff;
-  border-color: #6563ff;
-  padding: 0.5rem 2rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  background-color: #556ebd;
+  border-color: #556ebd;
+  color: #d9e0ee;
 }
 
 #sub-btn:hover {
-  background-color: #4442ff;
+  background-color: #31476f;
+  border-color: #31476f;
 }
-
 
 @media (max-width: 768px) {
   .project-grid {
@@ -251,7 +239,7 @@ p {
   .project-grid {
     grid-template-columns: 1fr;
   }
-  .card {
-    width: 95%;
+  .card.ppmid {
+    max-width: 90%;
   }
 }
