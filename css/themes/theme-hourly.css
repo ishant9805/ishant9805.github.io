@@ -1,157 +1,119 @@
 body {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
   font-family: 'Roboto', sans-serif;
-  background-color: #f8f9fa;
-  color: #343a40;
-  transition: background-color 0.3s ease;
-}
-
-.pr-nav {
-  background-color: #171d29;
-  color: #fff;
+  margin: 0;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-  background-color: #171d29;
-  color: #fff;
+  background-color: #282828;
 }
 
 .nav-pills .nav-link {
-  color: #fff;
-  border-radius: 20px;
+  color: #f0f0f0;
+  border-radius: 5px;
+  margin: 0 10px;
   padding: 10px 20px;
-  margin: 0 5px;
+  transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  background-color: #6563ff;
-  color: #fff;
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
+  background-color: #4CAF50;
 }
 
-.nav-pills .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-h1, h3, h2 {
-  font-weight: 700;
-  color: #171d29;
-  text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h3 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #343a40;
-  margin-bottom: 1rem;
-}
-
-.lead {
-  font-size: 1.2rem;
+.display-5 {
+  color: #4CAF50;
 }
 
 .btn-primary {
-  background-color: #6563ff;
-  border-color: #6563ff;
-}
-
-.btn-primary:hover {
-  background-color: #5c6bc0;
-  border-color: #5c6bc0;
+  background-color: #4CAF50;
+  border-color: #4CAF50;
 }
 
 .btn-outline-secondary {
-  border-color: #fff;
-  color: #fff;
+  color: #4CAF50;
+  border-color: #4CAF50;
 }
 
-.btn-outline-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #000;
+#icon-grid h2 {
+  color: #4CAF50;
 }
-
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 1rem;
+  margin-right: 15px;
+  margin-bottom: 10px;
 }
 
-.icons.sql{
-  width: 100%;
-  height: auto;
+.icons path {
+  transition: fill 0.3s ease;
 }
 
-.icons.cxx{
-  width: 100%;
-  height: auto;
+.icons:hover path {
+  fill: #4CAF50;
 }
 
-
-#icon-grid .icons {
-  margin-bottom: 1rem;
+.icons.sql {
+    width: 75px;
+    height: 75px;
 }
+
+.cxx {
+    width: 75px;
+    height: 75px;
+}
+
+.sql img{
+    width: 75px;
+    height: 75px;
+}
+
 
 #welcome-section {
-  background-image: linear-gradient(to bottom, #171d29, #000), url('https://source.unsplash.com/random/1920x1080/?cyberpunk');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
   text-align: center;
-  padding: 100px 0;
+  padding: 50px 0;
+  background-color: #282828;
 }
 
-#welcome-section h1 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
+#welcome-section h1, #welcome-section h3{
+  color: #4CAF50;
 }
 
-#welcome-section h3 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+#welcome-section .pp {
+  color: #888;
+  font-size: 18px;
+  margin-top: 10px;
 }
 
-.pp{
-  font-size: 1.5rem;
-  color: #fff;
-}
-
-.ppicon {
+#welcome-section .ppicon {
+  fill: #4CAF50;
   margin-top: 20px;
   animation: bounce 1s infinite;
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
   }
-  50% {
+  40% {
     transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
   }
 }
 
-
-#projects {
-  padding: 50px 0;
-}
-
-#project-hail {
+#projects h1 {
+  color: #4CAF50;
   text-align: center;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #4CAF50;
 }
 
 .project-grid {
@@ -161,26 +123,30 @@ p {
 }
 
 .project-tile {
-  border: 1px solid #ccc;
+  border: 2px solid #4CAF50;
+  padding: 10px;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-.project-img, .img-proj {
-  width: 100%;
+.project-img {
+  max-width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
 }
 
 .code {
-  color: #6563ff;
+  color: #4CAF50;
+}
+
+.pr-nav{
+    padding-top: 50px;
 }
 
 .contact-wrapper {
@@ -188,79 +154,73 @@ p {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 20px;
 }
 
 .card.ppmid {
-  width: 80%;
   max-width: 600px;
-  margin: auto;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  margin: 0 auto;
+  border: 2px solid #4CAF50;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .card {
-  border: none;
-  border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .card-header {
-  background-color: #6563ff;
-  color: #fff;
-  font-weight: 700;
-  text-align: center;
-  border-radius: 15px 15px 0 0;
-  padding: 15px 0;
+  background-color: #282828;
+  color: #4CAF50;
+  font-size: 24px;
+  padding: 15px;
+  border-bottom: 2px solid #4CAF50;
 }
 
 .card-body {
   padding: 20px;
 }
 
-
 .form-control {
+  background-color: #282828;
+  color: #f0f0f0;
+  border: 1px solid #4CAF50;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-}
-
-.form-control:focus {
-  box-shadow: 3px 3px 10px rgba(0, 255, 255, 0.5);
-  outline: none;
 }
 
 .form-label {
-  font-weight: 600;
-  color: #343a40;
+  color: #f0f0f0;
+  font-weight: bold;
 }
 
-.form-text {
-  color: #888;
-  font-size: 0.9rem;
-}
-
-#sub-btn {
-  background-color: #6563ff;
-  border-color: #6563ff;
+.btn.btn-primary {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
-#sub-btn:hover {
-  background-color: #5c6bc0;
-  border-color: #5c6bc0;
+.btn.btn-primary:hover{
+  background-color: #2e7d32;
+}
+
+.form-text {
+  color: #888;
+  font-size: 14px;
 }
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 576px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
+  }
+  .card.ppmid {
+    max-width: 90%;
   }
 }
