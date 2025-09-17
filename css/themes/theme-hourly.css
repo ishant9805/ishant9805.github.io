@@ -1,282 +1,268 @@
 body {
-  background-color: #222;
-  color: #eee;
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    font-family: 'Merriweather', serif;
+    line-height: 1.6;
+    margin:0;
+    padding:0;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+.pr-nav {
+    background-color: #282828;
 }
 
 header {
-  background-color: #333;
-  padding: 1rem 0;
+    background-color: #282828;
 }
 
 .nav-pills .nav-link {
-  color: #eee;
-  background-color: #444;
-  border-radius: 5px;
-  margin: 0 0.5rem;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease;
+    color: #d3d3d3;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active,
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #5c6bc0;
+    color: white;
+}
+
 .nav-pills .nav-link:hover {
-  background-color: #666;
+    background-color: #444;
 }
 
-.display-5 {
-  font-size: 3rem;
-  line-height: 1.2;
-  font-weight: 700;
-  color: #ffcc00; /* Gold accent color */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #f0f0f0;
 }
 
-.lead {
-  font-size: 1.25rem;
-  font-weight: 400;
+h1 {
+    font-size: 2.5rem;
 }
 
-.btn-primary {
-  background-color: #ffcc00;
-  border-color: #ffcc00;
-  color: #222;
-}
-
-.btn-primary:hover {
-  background-color: #ccaa00;
-  border-color: #ccaa00;
-}
-
-.btn-outline-secondary {
-  color: #eee;
-  border-color: #eee;
-}
-
-.btn-outline-secondary:hover {
-  color: #ffcc00;
-  border-color: #ffcc00;
-}
-
-#icon-grid h2 {
-  color: #ffcc00;
-}
-
-.icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 1rem;
-  vertical-align: middle;
-}
-
-.icons.cxx {
-  width: auto;
-}
-
-.icons.sql {
-  width: auto;
-}
-
-.fw-bold {
-    font-weight: 700;
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 h3 {
     font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-#welcome-section {
-  text-align: center;
-  padding: 4rem 0;
-  background-color: #333;
-}
-
-#welcome-section h1,
-#welcome-section h3 {
-  color: #ffcc00;
-  margin-bottom: 1rem;
-}
-
-.pp {
-  font-style: italic;
-  color: #aaa;
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-}
-
-.ppicon {
-  fill: #ffcc00;
-  margin-left: 0.5rem;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-#projects h1 {
-  color: #ffcc00;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
-}
-
-.project-tile {
-  border: 1px solid #555;
-  border-radius: 8px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  text-align: center;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.project-tile:hover {
-  transform: scale(1.05);
-}
-
-.project-img,
-.img-proj {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.code {
-  color: #ffcc00; /* Gold accent color for code brackets */
-}
-
-.pr-nav {
-    padding-top: 1rem;
+p {
+    color: #d3d3d3;
+    font-weight: 300;
+    margin-bottom: 1rem;
 }
 
 
-@media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-}
-
-@media (max-width: 576px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
+.lead {
+    font-weight: 300;
+    font-size: 1.2rem;
 }
 
 
-.contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-.card.ppmid {
-  margin: auto;
-  max-width: 500px;
-  width: 100%;
-}
-
-.card {
-  border: 1px solid #555;
-  border-radius: 8px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  background-color: #333;
-  padding: 2rem;
-}
-
-.card-header {
-  color: #ffcc00;
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.card-body {
-  padding: 1rem;
-}
-
-.form-label {
-  color: #eee;
-  margin-bottom: 0.5rem;
-}
-
-.form-control {
-  background-color: #333;
-  border: 1px solid #555;
-  color: #eee;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-}
-
-.form-text {
-  color: #aaa;
-  font-size: 0.8rem;
-}
-
-.btn.btn-primary {
-  background-color: #ffcc00;
-  border-color: #ffcc00;
-  color: #222;
-  padding: 0.5rem 1.5rem;
-  border-radius: 5px;
-}
-
-.btn.btn-primary:hover {
-  background-color: #ccaa00;
-  border-color: #ccaa00;
-}
-
-.h-100 {
-    height: 100%;
-}
-
-.py-5 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-
-.display-4 {
-    font-size: 2.5rem;
-}
-
-mark {
-    background-color: #555;
-    padding: 0.2rem 0.5rem;
-    border-radius: 5px;
-}
-
-a.text-muted {
-    color: #aaa;
-}
-
-a.text-muted:hover {
-    color: #ffcc00;
-    text-decoration: underline;
+.icons {
+    width: 75px;
+    height: 75px;
+    margin-right: 1rem;
 }
 
 .img-fluid {
     max-width: 100%;
     height: auto;
+    border-radius: 0.5rem;
 }
 
-.row {
-    margin-right: 0;
-    margin-left: 0;
+.btn-primary {
+    background-color: #5c6bc0;
+    border-color: #5c6bc0;
+    color: white;
 }
 
-.col-lg-6 {
-    padding-left: 1rem;
-    padding-right: 1rem;
+.btn-primary:hover {
+    background-color: #444;
+    border-color: #444;
+}
+
+.btn-outline-secondary {
+    color: #f0f0f0;
+    border-color: #d3d3d3;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #d3d3d3;
+    color: #1e1e1e;
+}
+
+#icon-grid {
+    margin-top: 2rem;
+}
+
+#welcome-section {
+    background-color: #282828;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+#welcome-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#welcome-section h3 {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+.pp {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #a0a0a0;
+}
+
+.ppicon {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#projects {
+    padding: 4rem 0;
+}
+
+#project-hail {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+}
+
+.project-tile {
+    border: 1px solid #5c6bc0;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-decoration:none;
+    color: #f0f0f0;
+}
+
+.project-tile:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.5rem);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.code {
+    color: #5c6bc0;
+    font-family: monospace;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding:2rem 0;
+}
+
+.card.ppmid {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #282828;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background-color: #5c6bc0;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: none;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.form-label {
+    color: #f0f0f0;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #5c6bc0;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #777;
+}
+
+
+.form-text {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+}
+
+.btn.btn-primary {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
