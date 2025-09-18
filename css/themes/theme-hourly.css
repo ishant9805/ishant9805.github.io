@@ -1,194 +1,225 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #212529; /* Dark theme background */
-  color: #f8f9fa; /* Light text color */
-  transition: background-color 0.3s ease;
-}
-
-body.pr-nav {
-  background-color: #212529; /* Dark background for Projects page */
+  margin: 0;
+  background: linear-gradient(to bottom right, #f0f0f0, #ffffff);
+  color: #333;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-  background-color: #343a40; /* Dark header background */
-  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-pills .nav-link {
-  color: #f8f9fa; /* Light text color for nav links */
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 0 5px;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  background: #f0f0f0;
+  color: #333;
+  transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
-.nav-pills .show>.nav-link {
-  background-color: #ffc107; /* Accent color for active nav link */
-  color: #212529; /* Dark text color for active nav link */
+.nav-pills .nav-link:hover {
+  background-color: #6563ff;
+  color: #fff;
 }
 
 .display-5 {
-  color: #ffc107; /* Accent color for main headings */
-}
-
-.lead {
-  color: #ced4da; /* Light gray color for lead paragraphs */
+  color: #6563ff;
 }
 
 .btn-primary {
-  background-color: #ffc107; /* Accent color for primary button */
-  border-color: #ffc107;
-  color: #212529; /* Dark text color for primary button */
+  background-color: #6563ff;
+  border-color: #6563ff;
 }
 
 .btn-outline-secondary {
-  color: #ffc107; /* Accent color for secondary button */
-  border-color: #ffc107;
+  color: #6563ff;
+  border-color: #6563ff;
 }
 
-.icons {
+
+#icon-grid .icons {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
+  margin-right: 1rem;
 }
-
-.icons.cxx {
-    width: 75px;
-    height: 75px;
-    margin-right: 15px;
-}
-
-.icons.sql {
-    margin-right: 15px;
-}
-
 
 #icon-grid h2 {
-  color: #ffc107; /* Accent color for technology section heading */
+  color: #6563ff;
+}
+
+.pr-nav {
+  background: linear-gradient(to bottom right, #e0f7fa, #b2ebf2);
 }
 
 #welcome-section {
   text-align: center;
-  padding: 50px 0;
-  background-color: #343a40; /* Dark background */
-  color: #f8f9fa;
+  padding: 4rem 0;
+  background-image: url('https://source.unsplash.com/random/1920x1080'); /* Replace with your desired background image */
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
 #welcome-section h1,
 #welcome-section h3 {
-  color: #ffc107; /* Accent color for welcome section headings */
+  margin-bottom: 1rem;
 }
 
+#welcome-section p {
+  margin-bottom: 2rem;
+}
+
+.pp {
+  font-size: 1.2rem;
+  color: #fff;
+  font-style: italic;
+}
+
+.ppicon {
+  margin-top: 1rem;
+  animation: bounce 1s infinite;
+  fill: white;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
 #projects h1 {
-  text-align: center;
-  color: #ffc107; /* Accent color for project section heading */
-  margin-bottom: 30px;
+  color: #6563ff;
+  margin-bottom: 2rem;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 2rem;
 }
 
 .project-tile {
-  border: 1px solid #ced4da; /* Light gray border */
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .project-img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .code {
-  color: #ffc107; /* Accent color for code brackets */
+  color: #6563ff;
+  font-weight: bold;
 }
 
-.pp {
-  text-align: center;
-  font-style: italic;
-  margin-bottom: 20px;
-  color: #ced4da;
-}
-
-.ppicon {
-  display: block;
-  margin: 20px auto;
-}
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .card.ppmid {
-  margin: auto;
+  margin: 0 auto;
   max-width: 600px;
-  border-radius: 20px;
 }
 
 .card {
-  background-color: #343a40; /* Dark card background */
-  padding: 30px;
-  border-radius: 20px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
 }
 
 .card-header {
-  background-color: #ffc107; /* Accent color for card header */
-  color: #212529; /* Dark text color for card header */
+  background-color: #6563ff;
+  color: white;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 1rem;
   font-weight: bold;
-  border-radius: 10px;
 }
 
 .card-body {
-  padding: 20px;
+  padding: 2rem;
 }
 
 .form-control {
-  background-color: #343a40; /* Dark input background */
-  color: #f8f9fa; /* Light text color for inputs */
-  border-radius: 10px;
-  border-color: #ced4da;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
 .form-label {
-  color: #f8f9fa;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.btn-primary {
+  background-color: #6563ff;
+  border-color: #6563ff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
 }
 
 .form-text {
-  color: #ced4da;
+  font-size: 0.8rem;
+  color: #777;
 }
-
-
-.mb-3 {
-    margin-bottom: 10px;
-}
-
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .project-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.lead {
+    color: #333;
+}
+
+mark {
+    background-color: #ffff99;
+    padding: 0.2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cxx {
+    width: 75px;
+    height: 75px;
+}
+
+.sql {
+    width: 75px;
+    height: 75px;
 }
