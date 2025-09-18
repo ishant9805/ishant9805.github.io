@@ -1,217 +1,254 @@
 body {
-  background-color: #1e1e1e;
-  color: #eee;
-  font-family: 'Playfair Display', serif; /* Or a similar art deco font */
-  line-height: 1.6;
+    background-color: #222831;
+    color: #eeeeee;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.pr-nav {
+    background-color: #393e46;
 }
 
 .container {
-  max-width: 1200px;
+    max-width: 1200px;
 }
 
 header {
-  background-color: #282828;
-  border-bottom: 1px solid #333;
+    background-color: #0056b3;
 }
 
 .nav-pills .nav-link {
-  color: #eee;
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 0 5px;
-  transition: background-color 0.3s ease;
+    color: #eeeeee;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active,
-.nav-pills .nav-link:hover {
-  background-color: #e6b8af; /* Goldish */
-  color: #1e1e1e;
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #393e46;
 }
+
+.nav-pills .nav-link:hover {
+    background-color: #393e46;
+}
+
 
 h1, h2, h3 {
-  font-weight: 700;
-  color: #e6b8af; /* Goldish */
+    font-family: 'Playfair Display', serif;
+    color: #f2f2f2;
 }
 
 h1 {
-  font-size: 3rem;
+    font-size: 3rem;
 }
 
 h2 {
-  font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 p {
-  color: #eee;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #dfe6e9;
 }
 
+
 .lead {
-  font-style: italic;
+    font-size: 1.2rem;
+    color: #a8dadc;
 }
 
 .btn-primary {
-  background-color: #e6b8af;
-  border-color: #e6b8af;
-  color: #1e1e1e;
+    background-color: #00bcd4;
+    border-color: #00bcd4;
+}
+
+.btn-primary:hover {
+    background-color: #009688;
+    border-color: #009688;
 }
 
 .btn-outline-secondary {
-  color: #e6b8af;
-  border-color: #e6b8af;
+    color: #a8dadc;
+    border-color: #a8dadc;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #a8dadc;
+    color: #222831;
+}
+
+#icon-grid {
+  background-color: #393e46;
+  padding: 20px;
 }
 
 
 .icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 15px;
-  vertical-align:middle;
+    width: 75px;
+    height: 75px;
+    margin-right: 15px;
+    fill: white;
 }
 
-.icons:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
+.icons.cxx {
+    fill: #3498db;
 }
 
-#icon-grid {
-  text-align: center;
-}
-
-.row {
-  --bs-gutter-x: 2rem;
+.icons.sql {
+  fill: #007bff;
 }
 
 #welcome-section {
-  text-align: center;
-  padding: 5rem 0;
-  background: url("https://www.transparenttextures.com/patterns/subtle-dots-dark.png"); /* Or a suitable Art Deco background */
-  background-size: cover;
-  color: #eee;
+    background-image: url('organic-background.jpg'); /* Replace with your organic background image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+    color: white;
 }
 
-#projects {
-  padding: 4rem 0;
-  text-align: center;
-}
-
-#project-hail {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-}
-
-.project-tile {
-  border: 2px solid #333;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
-  transition: box-shadow 0.3s ease;
-}
-
-.project-tile:hover {
-  box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
-}
-
-.project-img, .img-proj {
-  width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0;
-}
-
-.code {
-  color: #e6b8af; /* Goldish */
-  font-weight: bold;
+#welcome-section h1, #welcome-section h3 {
+    margin-bottom: 10px;
 }
 
 .pp {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+    font-style: italic;
+    color: #dfe6e9;
 }
 
 .ppicon {
-  margin-top: 1rem;
-  animation: bounce 1.5s infinite; /* Add a subtle animation */
+    margin-top: 20px;
+    animation: rotate 2s linear infinite;
 }
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-.pr-nav {
-    background-color: #1e1e1e;
+#projects {
+    padding: 50px 0;
+}
+
+#project-hail {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.project-tile {
+    border: 2px solid #558b2f;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.project-tile:hover {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.code {
+    color: #00bcd4;
+    font-weight: bold;
 }
 
 .contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .card.ppmid {
-  max-width: 600px;
-  margin: 0 auto;
-  border-radius: 15px; /* Added border radius for curve */
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-  background-color: #282828; /* Darker background for card */
+    margin: auto;
+    max-width: 600px;
+    position: relative;
 }
 
 .card {
-  padding: 20px;
+    background-color: #393e46;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .card-header {
-  background-color: #e6b8af; /* Goldish */
-  color: #1e1e1e;
-  font-size: 1.8rem;
-  text-align: center;
-  border-radius: 10px 10px 0 0; /* Curve the header */
+    background-color: #0056b3;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 10px 10px 0 0;
+    padding: 15px;
 }
 
 .card-body {
-  padding: 30px;
-}
-
-.form-control {
-  background-color: #282828;
-  border: 1px solid #555;
-  color: #eee;
-  border-radius: 5px; /* Added border radius for curve */
+    padding: 30px;
 }
 
 .form-label {
-  color: #e6b8af; /* Goldish */
+    color: white;
+    font-weight: bold;
 }
 
-.btn.btn-primary {
-  background-color: #e6b8af; /* Goldish */
-  color: #1e1e1e;
-  border-radius: 5px; /* Added border radius for curve */
+.form-control {
+    background-color: #303336;
+    color: white;
+    border: 2px solid #0056b3;
+    border-radius: 5px;
 }
 
 .form-text {
-  color: #888;
+    color: #888;
+}
+
+#sub-btn {
+    background-color: #00bcd4;
+    border-color: #00bcd4;
+    color: white;
 }
 
 
 @media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }
 
 @media (max-width: 576px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .card.ppmid {
+        max-width: 90%;
+    }
+}
+
+.img-fluid{
+    max-width:100%;
+    height:auto;
 }
