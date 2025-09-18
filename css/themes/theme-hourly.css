@@ -1,43 +1,107 @@
 body {
-  font-family: 'Merriweather', serif;
-  line-height: 1.6;
-  color: #333;
-  margin: 0;
-  background-color: #f8f8f8;
+  font-family: 'Arial', sans-serif;
+  background: rgba(255, 255, 255, 0.8); /* Light glassmorphism background */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
 }
 
-.pr-nav {
-  background-color: #f0f0f0; /* Light background for Projects page */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.nav-pills .nav-link {
+  color: #333;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
+  background-color: rgba(0, 123, 255, 0.2); /* Light blue hover effect */
+}
+
+
+.display-5 {
+  color: #333;
+}
+
+.lead {
+  color: #555;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.btn-outline-secondary {
+  color: #007bff;
+  border-color: #007bff;
+}
+
+
+#icon-grid {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+}
+
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+}
+
+.icons.cxx{
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+}
+
+.icons.sql{
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
 }
 
 #welcome-section {
   text-align: center;
-  padding: 5rem 0;
-  background: url('https://source.unsplash.com/random/1920x1080/?darkacademia') center center no-repeat;
+  padding: 100px 0;
+  background: url('background.jpg') no-repeat center center; /* Replace with your background image */
   background-size: cover;
   color: white;
+  background-blend-mode: multiply;
+  backdrop-filter: blur(10px);
 }
 
 #welcome-section h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 3em;
+  margin-bottom: 20px;
 }
 
 #welcome-section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  font-size: 1.5em;
+  margin-bottom: 30px;
 }
 
 .pp {
-  font-style: italic;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: 1.2em;
+  color: rgba(255,255,255, 0.8);
 }
 
 .ppicon {
-  fill: white;
+  width: 30px;
+  height: 30px;
+  margin: 20px auto;
   animation: rotate 2s linear infinite;
-  margin-top: 20px;
 }
 
 @keyframes rotate {
@@ -49,68 +113,47 @@ body {
   }
 }
 
+
 #projects {
-  padding: 4rem 0;
+  padding: 50px 0;
 }
 
 #project-hail {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #663399;
+  font-size: 2em;
+  margin-bottom: 30px;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 20px;
 }
 
 .project-tile {
   border: 1px solid #ccc;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.project-img, .img-proj {
+.project-img {
   width: 100%;
   height: auto;
   border-radius: 10px 10px 0 0;
 }
 
 .code {
-  color: #a0522d; /*Sienna*/
+  color: #007bff; /* Accent color for code brackets */
 }
 
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background-color: #663399;
-    color: white;
-}
-
-.nav-pills .nav-link {
-  border-radius: 20px;
-  padding: 10px 20px;
-  margin: 0 10px;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.icons {
-  width: 75px;
-  height: auto;
-  margin-right: 1rem;
+.pr-nav {
+  background: rgba(255, 255, 255, 0.8); /* Light glassmorphism background */
+  backdrop-filter: blur(10px);
 }
 
 
@@ -119,120 +162,76 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .card.ppmid {
-  margin: 0 auto;
+  width: 80%;
   max-width: 600px;
-  width: 100%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .card {
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-  background-color: #663399;
+  background-color: #007bff;
   color: white;
-  font-size: 1.5rem;
   border-radius: 10px 10px 0 0;
-  padding: 1rem;
+  padding: 15px;
   text-align: center;
 }
 
+
 .card-body {
-  padding: 2rem;
+  padding: 20px;
 }
 
 .form-control {
-  border: 1px solid #ccc;
   border-radius: 5px;
+  border: 1px solid #ccc;
   padding: 10px;
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
-
 .form-label {
+  margin-bottom: 5px;
   font-weight: bold;
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #663399;
 }
 
 .btn.btn-primary {
-  background-color: #663399;
-  border: none;
-  color: white;
   padding: 10px 20px;
-  font-size: 1rem;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn.btn-primary:hover {
-  background-color: #532e7e;
+  font-weight: bold;
 }
 
 .form-text {
-  font-size: 0.8rem;
-  color: #666;
-  margin-top: 0.5rem;
+  color: #888;
+  font-size: 0.9em;
 }
 
 @media (max-width: 768px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
-  .contact-wrapper {
-    flex-direction: column;
-  }
   .card.ppmid {
-    margin: 2rem auto;
-  }
-
-}
-
-@media (max-width: 992px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 90%;
   }
 }
 
-
-h1, h2, h3 {
-  font-weight: 700;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-mark {
-  background-color: #FFFFE0; /* LightYellow */
-  padding: 0.2rem;
-}
-
-a {
-  color: #663399;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-hr{
-    border-top: 1px solid #ccc;
+@media (max-width: 576px) {
+  #welcome-section h1 {
+    font-size: 2em;
+  }
+  #welcome-section h3 {
+    font-size: 1.2em;
+  }
+  .pp {
+    font-size: 1em;
+  }
 }
