@@ -1,12 +1,9 @@
 body {
-  background-color: #1e1e1e;
-  color: #fff;
-  font-family: 'Arial', sans-serif;
-  transition: background-color 0.3s ease;
-}
-
-.pr-nav {
-  background-color: #282c34;
+  font-family: 'Merriweather', serif; /* Or a similar elegant serif font */
+  line-height: 1.6;
+  margin: 0;
+  background-color: #f8f8f8; /* Light background for light theme */
+  color: #333; /* Dark text color */
 }
 
 .container {
@@ -15,149 +12,122 @@ body {
 }
 
 header {
-  background-color: #282c34;
-  padding: 20px 0;
+  background-color: #f0f0f0; /* Slightly lighter background for header */
+  padding: 1rem 0;
 }
 
 .nav-pills .nav-link {
-  color: #fff;
-  background-color: #333;
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 0 10px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.3rem;
+  color: #333;
+  background-color: #e0e0e0; /* Slightly darker background for nav links */
   transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active {
-  background-color: #FF5733;
-  color: #1e1e1e;
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #a67c52; /* Dark academia accent color */
+  color: #fff;
 }
 
-.nav-pills .nav-link:hover {
-  background-color: #FFC300;
-}
 
 .display-5 {
-  color: #FFD700;
+  font-family: 'Playfair Display', serif; /* Or a similar elegant serif font for headings */
+  color: #a67c52; /* Dark academia accent color */
 }
 
 .lead {
-  color: #d3d3d3;
+  font-style: italic;
 }
 
 .btn-primary {
-  background-color: #FF5733;
-  border-color: #FF5733;
+  background-color: #a67c52; /* Dark academia accent color */
+  border-color: #a67c52;
+  color: #fff;
 }
 
 .btn-outline-secondary {
-  color: #FF5733;
-  border-color: #FF5733;
-}
-
-.btn-primary:hover, .btn-outline-secondary:hover {
-  background-color: #FFC300;
-  border-color: #FFC300;
-  color: #1e1e1e;
-}
-
-#icon-grid {
-  background-color: #282c34;
-  padding: 20px;
+  border-color: #a67c52;
+  color: #a67c52;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 20px;
-  fill: #fff;
+  margin-right: 1rem;
+  fill: #a67c52; /* Dark academia accent color */
 }
 
-
-.icons.cxx {
-  fill: #fff;
+#icon-grid .icons{
+    fill: #333;
 }
 
-.icons.sql {
-  width: auto;
-  height: auto;
+#icon-grid h2 {
+  color: #a67c52; /* Dark academia accent color */
+  font-family: 'Playfair Display', serif; /* Or a similar elegant serif font */
 }
 
-h2 {
-  color: #FFD700;
-}
-
-h3 {
-  color: #fff;
-}
-
-p {
-  color: #d3d3d3;
-}
 
 #welcome-section {
-  background-image: url("memphis-pattern.svg"); /* Replace with your Memphis pattern */
+  text-align: center;
+  padding: 5rem 0;
+  background-image: url('https://source.unsplash.com/random/1920x1080/?books,study'); /*replace with your image*/
   background-size: cover;
   background-position: center;
-  color: #fff;
-  text-align: center;
-  padding: 100px 0;
+  color: white;
 }
 
-#welcome-section h1, #welcome-section h3 {
-  font-weight: bold;
-  margin-bottom: 10px;
+#welcome-section h1,
+#welcome-section h3 {
+  font-family: 'Playfair Display', serif; /* Or a similar elegant serif font */
 }
 
-#projects {
-  padding: 50px 0;
-}
-
-#project-hail {
-  text-align: center;
-  color: #FFD700;
-  font-size: 3em;
-  margin-bottom: 30px;
+#projects h1 {
+  font-family: 'Playfair Display', serif; /* Or a similar elegant serif font */
+  color: #a67c52; /* Dark academia accent color */
+  margin-bottom: 2rem;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 2rem;
 }
 
 .project-tile {
-  border: 2px solid #FF5733;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 87, 51, 0.5);
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
   overflow: hidden;
-  transition: transform 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.project-img, .img-proj {
-  width: 100%;
+.project-img,
+.img-proj {
+  max-width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 0.5rem;
 }
 
 .code {
-  color: #FF5733;
+  color: #a67c52; /* Dark academia accent color */
   font-weight: bold;
 }
 
+
 .pp {
-  text-align: center;
   font-style: italic;
-  color: #b3b3b3;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .ppicon {
   display: block;
-  margin: 20px auto;
+  margin: 1rem auto;
   animation: rotate 2s linear infinite;
 }
 
@@ -170,6 +140,11 @@ p {
   }
 }
 
+
+.pr-nav {
+  padding-top: 2rem;
+}
+
 .contact-wrapper {
   display: flex;
   justify-content: center;
@@ -178,65 +153,68 @@ p {
 }
 
 .card.ppmid {
-  margin: auto;
+  margin: 0 auto;
   max-width: 600px;
-  width: 100%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .card {
-  background-color: #282c34;
-  border: 2px solid #FF5733;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 87, 51, 0.5);
-  padding: 20px;
+  border-radius: 1rem;
+  padding: 2rem;
   text-align: center;
 }
 
 .card-header {
-  color: #FFD700;
-  font-size: 2em;
-  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif; /* Or a similar elegant serif font */
+  font-size: 2rem;
+  color: #a67c52; /* Dark academia accent color */
+  margin-bottom: 1rem;
 }
 
+
 .card-body {
-  padding: 20px;
+  padding: 2rem;
 }
 
 .form-control {
-  background-color: #333;
-  color: #fff;
-  border: 1px solid #FF5733;
-  border-radius: 5px;
+  border-radius: 0.3rem;
+  border-color: #ddd;
 }
 
 .form-label {
-  color: #fff;
-  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .btn.btn-primary {
-  background-color: #FF5733;
-  color: #fff;
+  background-color: #a67c52;
+  border-color: #a67c52;
+  color: white;
   padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s ease;
 }
 
-
 .form-text {
-  color: #888;
-  font-size: 0.8em;
+  color: #777;
 }
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 576px) {
-  .project-grid {
-    grid-template-columns: 1fr;
+  .contact-wrapper {
+    flex-direction: column;
+  }
+  .card.ppmid {
+    max-width: 100%;
   }
 }
