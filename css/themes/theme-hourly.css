@@ -1,110 +1,101 @@
 body {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-  font-family: 'Roboto', sans-serif;
-  transition: background-color 0.3s ease;
-}
-
-.pr-nav {
-  background-color: #282c34;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #f8f8f8;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
-  background-color: #282c34;
+  background-color: #ffe5b4; /* Memphis style light yellow */
 }
 
 .nav-pills .nav-link {
-  color: #f0f0f0;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  border-radius: 10px; /* Rounded pills */
+  font-weight: bold;
+  color: #333;
   padding: 10px 20px;
-  margin: 0 5px;
   transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
-  background-color: #FF5733;
-  color: #fff;
-}
-
-.display-5 {
-  color: #FFC300;
-}
-
-.lead {
-  color: #d3d3d3;
-}
-
-.btn-primary {
-  background-color: #FF5733;
-  border-color: #FF5733;
-}
-
-.btn-outline-secondary {
-  color: #FFC300;
-  border-color: #FFC300;
-}
-
-.btn-primary:hover, .btn-outline-secondary:hover {
-  background-color: #CC4528;
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background-color: #ff8c00; /* Memphis style orange */
   color: white;
-  border-color: #CC4528;
-}
-
-#icon-grid h2 {
-  color: #FFC300;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
-  border-radius: 50%;
-  background-color: #333;
-  padding: 10px;
+  margin-right: 1rem;
 }
 
 .icons.cxx {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
-  border-radius: 10px;
-  background-color: #333;
-  padding: 10px;
+  margin-right: 1rem;
 }
 
+#icon-grid h2 {
+  color: #ff8c00;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
-.icons.sql {
-  width: 100px;
-  height: 100px;
-  margin-right: 15px;
+.row-cols-1, .row-cols-sm-2, .row-cols-md-3, .row-cols-lg-4 {
+  padding: 0 1rem;
+}
+
+h1, h3, h2 {
+  font-weight: bold;
+  color: #333;
+}
+
+h1 {
+  font-size: 3em;
 }
 
 h3 {
-  color: #f0f0f0;
+  font-size: 1.5em;
 }
 
-p {
-  color: #d3d3d3;
+.lead {
+  font-style: italic;
 }
 
-#welcome-section {
-  text-align: center;
-  padding: 100px 0;
-  background: linear-gradient(to right, #FF5733, #FFC300);
+.btn-primary {
+  background-color: #ff8c00;
+  border-color: #ff8c00;
   color: white;
 }
 
-#welcome-section h1, #welcome-section h3 {
-  margin-bottom: 10px;
+.btn-outline-secondary {
+  color: #ff8c00;
+  border-color: #ff8c00;
 }
 
+.btn-primary:hover {
+  background-color: #e87e00;
+}
+
+.btn-lg {
+  padding: 10px 30px;
+}
+
+#welcome-section {
+  background-image: linear-gradient(to bottom right, #f7e5c6, #f7e5c6), url('memphis-pattern.svg'); /* Example Memphis pattern */
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+  text-align: center;
+  color: white;
+}
+
+
 #projects h1 {
-  color: #FFC300;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -112,37 +103,43 @@ p {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  gap: 30px;
+  margin-top: 20px;
 }
 
 .project-tile {
-  border: 2px solid #FFC300;
+  border: 5px solid #ff8c00;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
 }
 
-.project-img, .img-proj {
+.project-img {
   width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.project-img:hover {
+  transform: scale(1.05);
 }
 
 .code {
-  color: #FF5733;
+  color: #ff8c00; /* Bright orange for code brackets */
+  font-family: monospace;
   font-weight: bold;
 }
 
 .pp {
-  font-style: italic;
-  color: #d3d3d3;
-  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
 }
 
 .ppicon {
@@ -156,59 +153,69 @@ p {
   50% { transform: translateY(-10px); }
 }
 
+.pr-nav {
+  background-color: #fff; /* or your desired background color */
+}
+
+
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #282c34;
+  background-color: #f8f8f8;
 }
 
 .card.ppmid {
-  margin: auto;
   max-width: 500px;
-  background-color: #333;
+  margin: 0 auto;
+  border: 5px solid #ff8c00; /* Memphis style border */
+  border-radius: 15px; /* More rounded corners */
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
 }
 
-
 .card {
-  border: 2px solid #FF5733;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 .card-header {
-  background-color: #FF5733;
+  background-color: #ff8c00; /* Memphis style color */
   color: white;
-  border-radius: 10px 10px 0 0;
   font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
 }
 
 .card-body {
   padding: 30px;
 }
 
-
-.form-control {
-  background-color: #333;
-  color: #f0f0f0;
-  border: 1px solid #FFC300;
-  border-radius: 5px;
+.form-label {
+  font-weight: bold;
+  color: #333;
 }
 
-.form-label {
-  color: #f0f0f0;
+.form-control {
+  border: 2px solid #ff8c00; /* Matching border */
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
 }
 
 .btn.btn-primary {
-  background-color: #FFC300;
-  border-color: #FFC300;
+  background-color: #ff8c00;
+  color: white;
+  padding: 10px 20px;
   border-radius: 5px;
+  font-weight: bold;
 }
 
-
 .form-text {
-  color: #999;
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
 }
 
 @media (max-width: 768px) {
@@ -220,5 +227,8 @@ p {
 @media (max-width: 576px) {
   .project-grid {
     grid-template-columns: 1fr;
+  }
+  .card.ppmid {
+    max-width: 90%;
   }
 }
