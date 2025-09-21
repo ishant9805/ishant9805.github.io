@@ -1,8 +1,12 @@
 body {
-  font-family: 'Playfair Display', serif; /* Or a similar art deco font */
-  background-color: #f8f8f8;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
   color: #333;
-  line-height: 1.6;
+  transition: background-color 0.3s ease;
+}
+
+.pr-nav {
+  background-color: #f9f9f9;
 }
 
 .container {
@@ -11,104 +15,132 @@ body {
 }
 
 header {
-  background-color: #f0e68c; /* Light gold background */
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.9);
 }
 
 .nav-pills .nav-link {
-  color: #333;
-  border-radius: 5px;
+  border-radius: 20px;
   padding: 10px 20px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 0 5px;
+  color: #555;
 }
 
 .nav-pills .nav-link.active, .nav-pills .nav-link:hover {
-  background-color: #FFD700; /* Gold hover effect */
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+  color: #333;
 }
 
-h1, h2, h3 {
+.display-5 {
   font-weight: 700;
   color: #333;
 }
 
-h1 {
-  font-size: 2.5em;
+.lead {
+  font-size: 1.1rem;
 }
 
-h2 {
-  font-size: 2em;
+.btn-primary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.9);
 }
 
-h3 {
-  font-size: 1.5em;
+.btn-primary:hover {
+  background-color: #5a6268;
+  border-color: #5a6268;
 }
 
-p {
-  margin-bottom: 1rem;
+
+.btn-outline-secondary {
+  color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: white;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  fill: #FFD700;
-  border-radius: 5px;
-}
-
-.icons.cxx {
-  fill: #FFD700;
+  margin-right: 10px;
 }
 
 
-.icons.sql {
-  border-radius: 5px;
+#icon-grid h2 {
+  color: #333;
 }
 
-
-#icon-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#icon-grid h3 {
+  color: #333;
 }
 
+#icon-grid p {
+  color: #555;
+}
 
 #welcome-section {
   text-align: center;
-  padding: 5rem 0;
-  background-image: url("https://www.transparenttextures.com/patterns/subtle-dots.png"); /* Or a suitable art deco background */
-  background-size: cover;
-  color: white;
+  padding: 50px 0;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.9);
 }
 
 #welcome-section h1, #welcome-section h3 {
-    color: white;
-    margin-bottom: 10px;
+  color: #333;
 }
 
+#welcome-section .pp {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+#welcome-section .ppicon {
+  margin: 0 auto;
+  display: block;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
 
 #projects h1 {
+  color: #333;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
 }
 
 .project-tile {
   border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.9);
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(255, 255, 255, 0.9);
 }
 
 .project-img, .img-proj {
@@ -117,60 +149,37 @@ p {
   border-radius: 10px 10px 0 0;
 }
 
+
 .code {
-  color: #FFD700; /* Gold accent color */
+  color: #007bff;
 }
 
-.pp {
-  font-style: italic;
-  text-align: center;
-  margin-top: 1rem;
-  color: white;
-}
-
-.ppicon {
-  display: block;
-  margin: 2rem auto;
-  fill: #FFD700; /* Gold scroll icon */
-  animation: rotate 2s infinite;
-}
-
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.pr-nav {
-  background-color: #f8f8f8;
-}
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ensure form is centered vertically */
+  min-height: 100vh;
 }
-
 
 .card.ppmid {
-  margin: auto;
+  width: 80%;
   max-width: 500px;
-  text-align: center;
-  border-radius: 10px;
+  margin: 0 auto;
 }
 
-
 .card {
-  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.9);
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 .card-header {
-  background-color: #FFD700;
-  color: #333;
+  background-color: #6c757d;
+  color: white;
+  border-bottom: none;
   padding: 15px;
-  font-size: 1.2em;
   border-radius: 10px 10px 0 0;
 }
 
@@ -179,44 +188,51 @@ p {
 }
 
 .form-control {
-  border-radius: 5px;
   border: 1px solid #ddd;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1), -1px -1px 3px rgba(255,255,255,0.8);
+  border-radius: 5px;
 }
 
 .form-label {
-  font-weight: 600;
-}
-
-.btn.btn-primary {
-  background-color: #FFD700;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
-}
-
-.btn.btn-primary:hover {
-  background-color: #dda0dd;
+  color: #333;
 }
 
 .form-text {
-  font-size: 0.9em;
-  color: #777;
+  color: #555;
+}
+
+#sub-btn {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.9);
+  margin-top: 20px;
+}
+
+#sub-btn:hover {
+  background-color: #5a6268;
+  border-color: #5a6268;
 }
 
 @media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 992px) {
   .project-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
-@media (max-width: 576px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-  .card.ppmid {
-    max-width: 100%;
-    margin: 20px; /* Adjust margin as needed */
-  }
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+mark {
+  background-color: #f0f0f0;
+  padding: 2px 5px;
+  border-radius: 5px;
 }
