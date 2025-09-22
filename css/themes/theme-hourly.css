@@ -1,261 +1,203 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f8f9fa;
-  color: #343a40;
-  transition: background-color 0.3s ease;
+  font-family: 'Arial', sans-serif;
+  background: rgba(255, 255, 255, 0.8); /* Glassmorphism effect */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  margin: 0;
+  padding:0;
 }
 
 .pr-nav {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1280px-Image_created_with_a_mobile_phone.png"); /* Replace with your desired background image */
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding-bottom: 20px;
+  padding-top: 20px; /*Added padding for better spacing*/
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
-
 header {
-  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.8); /* Glassmorphism effect */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
 }
 
 .nav-pills .nav-link {
-  color: #343a40;
-  padding: 1rem 1.5rem;
-  border-radius: 0.3rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  background-color: #28a745; /* Green for active link */
-  color: white;
+.nav-pills .nav-link.active, .nav-pills .nav-link:hover {
+  background-color: rgba(0, 0, 255, 0.2); /* Light blue hover effect */
+  color: #000;
 }
 
-.nav-pills .nav-link:hover {
-  background-color: #6c757d;
-  color: white;
+.nav-pills .nav-link.active{
+  color: #000;
 }
-
-
-h1, h2, h3 {
-  font-weight: 700;
-  color: #007bff; /* Neon blue */
-}
-
-.lead {
-  font-size: 1.2rem;
-  color: #343a40;
-  line-height: 1.6;
-}
-
-
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
-}
-
-.btn-outline-secondary {
-  border-color: #adb5bd;
-  color: #adb5bd;
-}
-
-.btn-outline-secondary:hover {
-  background-color: #adb5bd;
-  border-color: #adb5bd;
-  color: white;
-}
-
-
-#icon-grid .icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-}
-
-#icon-grid h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #007bff;
-}
-
 
 #welcome-section {
   text-align: center;
-  padding: 5rem 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url("https://source.unsplash.com/random/1920x1080/?cyberpunk") /* Replace with your cyberpunk background */no-repeat center center;
-  background-size: cover;
-  color: white;
+  padding: 50px 0;
+  background: rgba(255, 255, 255, 0.8); /* Glassmorphism effect */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
 }
 
 #welcome-section h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  font-size: 3em;
+  margin-bottom: 10px;
 }
 
 #welcome-section h3 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 1.5em;
+  margin-bottom: 20px;
 }
 
 .pp {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin-bottom: 2rem;
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 30px;
 }
+
 
 .ppicon {
-  width: 30px;
-  height: 30px;
-  fill: white;
-  animation: arrowBounce 1.5s infinite ease-in-out;
+  margin: 0 auto;
+  display: block;
+  animation: rotate 2s linear infinite;
 }
 
-@keyframes arrowBounce {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-  100% { transform: translateY(0); }
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
 
 #projects h1 {
-  font-size: 3rem;
-  margin-bottom: 3rem;
   text-align: center;
-  color: #007bff;
+  margin-bottom: 30px;
 }
-
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  grid-gap: 20px;
 }
 
-
 .project-tile {
-  border: 1px solid #ced4da;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-  overflow: hidden;
+  background: rgba(255, 255, 255, 0.8); /* Glassmorphism effect */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .project-tile:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 
-.project-img, .img-proj {
-  width: 100%;
+.project-img {
+  max-width: 100%;
   height: auto;
-  border-radius: 0.5rem 0.5rem 0 0;
-  object-fit: cover;
+  border-radius: 5px;
 }
+
 
 .code {
-  color: #dc3545; /* Neon red */
-  font-weight: bold;
+  color: #007bff; /* Blue accent color */
 }
 
+#project-hail {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensures contact form centers vertically */
 }
 
 .card.ppmid {
-  width: 80%;
-  max-width: 600px;
-  margin: auto;
+  margin: 0 auto; /* Center the card horizontally */
+  max-width: 600px; /* Added max width for better responsiveness*/
 }
 
 .card {
-  border: 1px solid #007bff; /* Neon blue border */
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8); /* Glassmorphism effect */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-  background-color: #007bff;
+  background-color: #007bff; /* Blue header */
   color: white;
-  font-size: 1.8rem;
-  border-bottom: 1px solid #0056b3; /* Darker neon blue border */
-  padding: 1rem;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-body {
-  padding: 2rem;
+  padding: 20px;
 }
 
 .form-label {
-  color: #343a40;
-  font-weight: 600;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
-
 
 .form-control {
-  border-radius: 0.3rem;
-  border: 1px solid #ced4da;
-  padding: 0.75rem 1rem;
-  box-shadow: none;
-  transition: border-color 0.3s ease;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
 }
-
-.form-control:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
 
 .btn.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  padding: 0.75rem 2rem;
-  font-size: 1.1rem;
+  background-color: #007bff; /* Blue button */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
 }
-
 
 .form-text {
-  color: #6c757d;
-  font-size: 0.9rem;
-  margin-top: 0.2rem;
+  color: #6c757d; /* Gray help text */
+  font-size: 0.8em;
+  margin-top: 5px;
 }
 
-/* Media Queries for Responsiveness */
+.icons {
+    width: 75px;
+    height: auto;
+}
+
+.cxx{
+  width: 50px;
+  height: auto;
+}
+
+.sql{
+    width: auto;
+    height: 75px;
+}
+
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid for tablets */
   }
 }
 
 @media (max-width: 576px) {
   .project-grid {
-    grid-template-columns: 1fr;
-  }
-  .card.ppmid {
-    width: 95%;
-  }
-}
-
-@media (max-width: 400px) {
-  #welcome-section h1 {
-    font-size: 2.5rem;
-  }
-  #welcome-section h3 {
-    font-size: 1.5rem;
+    grid-template-columns: 1fr; /* Responsive grid for mobile */
   }
 }
