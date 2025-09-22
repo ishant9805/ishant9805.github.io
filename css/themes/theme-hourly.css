@@ -1,262 +1,271 @@
 body {
-  background-color: #282c34;
-  color: #d5d5d5;
-  font-family: 'Merriweather', serif;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
 }
 
 .container {
-  max-width: 1200px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 header {
-  background-color: #343a40;
+    background-color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
 }
 
 .nav-pills .nav-link {
-  color: #d5d5d5;
-  border-radius: 5px;
-  margin: 0 5px;
+    border-radius: 0.25rem;
+    color: #333;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    margin: 0 0.5rem;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  background-color: #5c6bc0;
-  color: #fff;
+    background-color: #007bff;
+    color: #fff;
 }
 
 .nav-pills .nav-link:hover {
-  background-color: #495057;
+    background-color: #e9ecef;
+    color: #333;
 }
 
-h1, h3, h2, h4 {
-  font-family: 'Playfair Display', serif;
-  color: #f8f9fa;
+h1, h2, h3 {
+    font-weight: 700;
+    color: #212529;
 }
 
 h1 {
-  font-size: 3rem;
-  font-weight: 700;
+    font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.5rem;
-}
-
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
+    font-size: 1.5rem;
 }
 
 p {
-  line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
 
 .btn-primary {
-  background-color: #5c6bc0;
-  border-color: #5c6bc0;
+    background-color: #007bff;
+    border-color: #007bff;
 }
 
 .btn-primary:hover {
-  background-color: #424a56;
-  border-color: #424a56;
+    background-color: #0069d9;
+    border-color: #0062cc;
 }
 
 .btn-outline-secondary {
-  color: #d5d5d5;
-  border-color: #d5d5d5;
+    color: #333;
+    border-color: #333;
 }
 
 .btn-outline-secondary:hover {
-  color: #f8f9fa;
-  background-color: #495057;
-  border-color: #495057;
+    background-color: #e9ecef;
+    color: #333;
 }
 
 .icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 1rem;
-  fill: #d5d5d5;
+    width: 75px;
+    height: 75px;
+    margin-right: 1rem;
+    vertical-align: middle;
 }
 
-.icons:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
+.icons.cxx {
+    width: 100px;
+    height: 100px;
+    margin-right: 1rem;
+    vertical-align: middle;
+
 }
 
-#icon-grid {
-  background-color: #343a40;
-  padding: 2rem 0;
-  border-radius: 10px;
+
+#icon-grid .icons {
+    margin-right: 1rem;
+}
+
+#icon-grid h2 {
+    margin-bottom: 2rem;
 }
 
 .img-fluid {
-  border-radius: 10px;
+    max-width: 100%;
+    height: auto;
 }
 
 #welcome-section {
-  text-align: center;
-  padding: 5rem 0;
-  background-image: url('https://www.transparenttextures.com/patterns/dark-wood.png'); /* Replace with your background image */
-  background-size: cover;
-  color: #f8f9fa;
+    background-color: #e9ecef;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+#welcome-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#welcome-section h3 {
+    margin-bottom: 2rem;
 }
 
 .pp {
-  font-style: italic;
-  font-size: 1.2rem;
-  margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #5a5a5a;
+    margin-bottom: 2rem;
+
 }
 
-
 .ppicon {
-  margin-top: 1rem;
-  fill: #f8f9fa;
-  animation: rotate 2s linear infinite;
+    width: 30px;
+    height: 30px;
+    animation: rotate 2s infinite linear;
 }
 
 @keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-#projects {
-  padding: 4rem 0;
-}
-
-#project-hail {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+#projects h1 {
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
 }
 
 .project-tile {
-  border: 1px solid #5c6bc0;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .project-img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+    border-radius: 0.5rem;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.project-tile:hover .project-img {
+    transform: scale(1.05);
 }
 
 .code {
-  color: #5c6bc0;
-  font-family: monospace;
+    color: #007bff;
 }
 
 .pr-nav {
-  background-color: #282c34;
+    padding-top: 2rem;
 }
 
 .contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color:#282c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
 }
 
 .card.ppmid {
-  margin: auto;
-  max-width: 600px;
-  width: 100%;
-  border-radius: 10px;
+    margin: 0 auto;
+    max-width: 600px;
 }
 
 .card {
-  background-color: #343a40;
-  padding: 2rem;
-  border-radius: 10px;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-  font-size: 1.8rem;
-  background-color: #5c6bc0;
-  color: white;
-  border-radius: 10px 10px 0 0;
-  padding: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .card-body {
-  padding: 2rem;
-}
-
-.form-label {
-  color: #fff;
-  font-weight: bold;
+    padding: 2rem;
 }
 
 .form-control {
-  background-color: #343a40;
-  color: #fff;
-  border: 1px solid #5c6bc0;
-  border-radius: 5px;
+    border-radius: 0.25rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+    color: #495057;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
 }
 
 .form-control:focus {
-  box-shadow: 0 0 0 0.2rem rgba(92,107,192,0.25);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    border-color: #80bdff;
 }
 
-.btn {
-  padding: 0.8rem 2rem;
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.btn.btn-primary {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+    background-color: #0069d9;
 }
 
 .form-text {
-  color: #a9a9a9;
-  font-size: 0.9rem;
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
 }
 
 @media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
 
 @media (max-width: 576px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-mark {
-  background-color: #5c6bc0;
-  padding: 0.2rem 0.5rem;
-  color: #fff;
-  border-radius: 5px;
-}
-
-.h-100 {
-  height: 100%;
-}
-
-.d-none {
-  display: none !important;
-}
-
-.d-lg-block {
-  display: block !important;
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .card.ppmid {
+        max-width: 100%;
+    }
 }
