@@ -1,8 +1,13 @@
 body {
-  background-color: #222;
-  color: #eee;
-  font-family: 'Courier New', monospace;
-  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  transition: background-color 0.3s ease;
+}
+
+.pr-nav {
+  background-color: #1e212d;
+  color: #fff;
 }
 
 .container {
@@ -10,168 +15,150 @@ body {
 }
 
 header {
-  background-color: #333;
-  padding: 1rem 0;
+  background-color: #1e212d;
+  color: #fff;
 }
 
 .nav-pills .nav-link {
-  color: #eee;
-  background-color: #444;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
   border-radius: 5px;
-  padding: 0.8rem 1.5rem;
-  margin: 0 0.5rem;
+  padding: 10px 20px;
+  margin: 0 5px;
   transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active,
-.nav-pills .nav-link:hover {
-  background-color: #666;
-}
-
 .nav-pills .nav-link.active {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  background-color: #6563ff;
+  color: #fff;
 }
 
-h1, h2, h3 {
-  font-weight: bold;
-  color: #ffcc80; /* Gold color for headings */
+.nav-pills .nav-link:hover {
+  background-color: #6563ff;
+  color: #fff;
 }
 
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
-  font-size: 1rem;
-}
-
-.lead {
-  font-size: 1.25rem;
+.display-5 {
+  color: #6563ff;
 }
 
 .btn-primary {
-  background-color: #ff9800; /* Orange-gold */
-  border-color: #ff9800;
-  color: #222;
-}
-
-.btn-primary:hover {
-  background-color: #cc6600;
+  background-color: #6563ff;
+  border-color: #6563ff;
 }
 
 .btn-outline-secondary {
-  color: #ff9800;
-  border-color: #ff9800;
+  color: #6563ff;
+  border-color: #6563ff;
 }
 
-.btn-outline-secondary:hover {
-  background-color: #ff9800;
-  color: #222;
+.btn-primary:hover, .btn-outline-secondary:hover {
+  background-color: #3949ab;
+  color: #fff;
+  border-color: #3949ab;
+}
+
+
+#icon-grid h2 {
+  color: #6563ff;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 1rem;
-  fill: #eee;
-  transition: transform 0.3s ease;
+  margin-right: 15px;
 }
 
-.icons:hover {
-  transform: scale(1.1);
+.icons.cxx{
+    width: 75px;
+    height: 75px;
+    margin-right: 15px;
 }
 
-
-#icon-grid .icons {
-    fill: #ffcc80;
+.icons.sql {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
 }
-
-#icon-grid h2 {
-    color: #ff9800; /* Orange-gold */
-}
-
 
 #welcome-section {
   text-align: center;
-  background-color: #444;
-  padding: 4rem 0;
+  padding: 100px 0;
+  background: linear-gradient(135deg, #283593, #6563ff);
+  color: white;
 }
 
-#welcome-section h1,
-#welcome-section h3 {
-  color: #ffcc80;
+#welcome-section h1, #welcome-section h3 {
+  margin-bottom: 10px;
 }
 
-#projects h1 {
+
+.pp {
+  font-style: italic;
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: #fff;
+
+}
+
+.ppicon{
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-15px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+}
+
+
+#projects {
+  padding: 50px 0;
+}
+
+#project-hail {
   text-align: center;
-  margin-bottom: 2rem;
+  font-size: 3em;
+  color: #6563ff;
+  margin-bottom: 30px;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 20px;
 }
 
+
 .project-tile {
-  background-color: #333;
-  border: 1px solid #555;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 
-.project-img {
-  max-width: 100%;
+.project-img, .img-proj {
+  width: 100%;
   height: auto;
-  border-radius: 5px;
-  margin-bottom: 1rem;
+  border-radius: 10px 10px 0 0;
 }
-
 
 .code {
-  color: #ff9800; /* Orange-gold */
-}
-
-
-.pp {
-  text-align: center;
-  color: #aaa;
-  margin-bottom: 2rem;
-  font-style: italic;
-}
-
-.ppicon {
-  display: block;
-  margin: 1rem auto;
-  animation: rotate 2s infinite linear;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-.pr-nav {
-    background-color: #222;
+  color: #6563ff;
+  font-weight: bold;
 }
 
 
@@ -183,72 +170,86 @@ p {
 }
 
 .card.ppmid {
-  margin: auto;
   max-width: 600px;
-  background-color: #333;
-  border: 1px solid #555;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
 }
 
 
 .card {
-  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
 }
 
 .card-header {
-  background-color: #ff9800; /* Orange-gold */
-  color: #222;
-  font-weight: bold;
-  padding: 1rem;
-  border-radius: 5px 5px 0 0;
+  background-color: #6563ff;
+  color: #fff;
+  font-size: 1.5em;
+  border-radius: 10px 10px 0 0;
+  padding: 15px;
 }
 
 .card-body {
-  padding: 2rem;
+  padding: 30px;
 }
 
 .form-control {
-  background-color: #333;
-  border: 1px solid #555;
-  color: #eee;
-  padding: 0.8rem;
   border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 10px;
 }
-
 
 .form-label {
-  color: #eee;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.btn.btn-primary {
+  background-color: #6563ff;
+  border-color: #6563ff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 
-.btn.btn-primary {
-  background-color: #ff9800; /* Orange-gold */
-  border-color: #ff9800;
-  color: #222;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
+.btn.btn-primary:hover {
+  background-color: #3949ab;
+  color: #fff;
+  border-color: #3949ab;
 }
 
 .form-text {
-  color: #aaa;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
+  color: #666;
+  font-size: 0.9em;
 }
+
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .project-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
-  .card.ppmid {
-    max-width: 90%;
-  }
+}
+
+.lead{
+    color: #333;
+}
+
+mark{
+    background-color: #6563ff;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.img-fluid{
+    border-radius: 10px;
 }
