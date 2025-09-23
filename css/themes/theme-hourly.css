@@ -1,100 +1,135 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f8f9fa;
-  color: #212529;
-  transition: background-color 0.3s ease;
-}
-
-.pr-nav {
-  background-color: #1e1e1e;
-  color: #fff;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #f8f8f8;
+  color: #333;
 }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 header {
-  background-color: #1e1e1e;
-  color: #fff;
+  background-color: #f0f0f0;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
 }
 
 .nav-pills .nav-link {
-  color: #fff;
-  border-radius: 5px;
   padding: 10px 20px;
-  margin: 0 5px;
+  border-radius: 20px;
   transition: background-color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #673ab7;
+  background-color: #a1d49c;
   color: #fff;
+}
+
+.nav-pills .nav-link:hover{
+  background-color: #a1d49c;
+  color: #fff;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #333;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+.lead {
+  font-weight: 300;
+}
+
+.btn-primary {
+  background-color: #a1d49c;
+  border-color: #a1d49c;
+}
+
+.btn-primary:hover {
+  background-color: #85b97d;
+  border-color: #85b97d;
+}
+
+.btn-outline-secondary {
+  color: #333;
+  border-color: #ddd;
+}
+
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: #ddd;
+  border-color: #ddd;
 }
 
 .icons {
   width: 75px;
   height: 75px;
-  margin-right: 15px;
-  fill: white;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
-.icons.cxx {
-  fill: #007bff;
-}
-
-
-.icons.sql {
-  width: auto;
+.img-fluid {
+  max-width: 100%;
   height: auto;
-  margin-right: 15px;
+  border-radius: 10px;
 }
 
-h1, h2, h3 {
-  font-weight: 700;
-  color: #1e1e1e;
+#icon-grid .icons {
+  fill: #333;
 }
 
-h1 {
-  font-size: 3rem;
+#icon-grid h2 {
+  color: #333;
 }
 
-h2 {
-  font-size: 2rem;
-}
 
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
+/* Projects Page */
 
 #welcome-section {
+  background-image: url('nature-bg.jpg'); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
   text-align: center;
-  padding: 5rem 0;
-  background: linear-gradient(to right, #2196F3, #E91E63);
-  color: white;
+  padding: 100px 0;
 }
 
 #welcome-section h1,
-#welcome-section h3 {
-  color: white;
+#welcome-section h3,
+#welcome-section p {
+  margin-bottom: 10px;
 }
 
 #projects {
-  padding: 4rem 0;
+  padding: 50px 0;
 }
 
 #project-hail {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #1e1e1e;
+  margin-bottom: 30px;
 }
 
 .project-grid {
@@ -106,38 +141,36 @@ p {
 .project-tile {
   border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.project-img,
-.img-proj {
+
+.project-img {
   width: 100%;
   height: auto;
   border-radius: 10px 10px 0 0;
-  object-fit: cover;
 }
 
 .code {
-  color: #673ab7;
-  font-weight: bold;
+  color: #a1d49c;
 }
 
 .pp {
-  font-size: 1.2rem;
-  color: white;
-  margin-bottom: 2rem;
+  text-align: center;
+  font-style: italic;
+  margin-top: 20px;
 }
 
 .ppicon {
   display: block;
-  margin: 2rem auto;
+  margin: 20px auto;
   animation: bounce 1s infinite;
 }
 
@@ -146,38 +179,40 @@ p {
   50% { transform: translateY(-10px); }
 }
 
+.pr-nav {
+  padding-top: 0;
+}
+
+
+
+/* Contact Page */
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #1e1e1e;
-  color: white;
+  background-color: #f8f8f8;
 }
 
 .card.ppmid {
-  width: 80%;
   max-width: 500px;
-  margin: 0 auto;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card {
-  background-color: #212529;
-  color: white;
   padding: 20px;
-  border: none;
-  border-radius: 15px;
 }
 
 .card-header {
-  font-size: 1.8rem;
+  background-color: #a1d49c;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+  padding: 15px;
   font-weight: bold;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #673ab7;
 }
 
 .card-body {
@@ -185,34 +220,29 @@ p {
 }
 
 .form-control {
-  background-color: #343a40;
-  color: #fff;
-  border: none;
+  border: 1px solid #ddd;
   border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .form-label {
-  color: #fff;
-  font-weight: bold;
-  margin-bottom: 5px;
+  font-weight: 500;
 }
 
 .btn.btn-primary {
-  background-color: #673ab7;
-  border-color: #552e8e;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+    background-color: #a1d49c;
+    border-color: #a1d49c;
 }
 
-.btn.btn-primary:hover {
-  background-color: #552e8e;
+.btn.btn-primary:hover{
+    background-color: #85b97d;
+    border-color: #85b97d;
 }
 
 .form-text {
-  color: #888;
-  font-size: 0.9rem;
+  font-size: 0.8em;
+  color: #666;
 }
 
 @media (max-width: 768px) {
@@ -225,4 +255,9 @@ p {
   .project-grid {
     grid-template-columns: 1fr;
   }
+  .card.ppmid {
+    max-width: 90%;
+  }
 }
+
+/* Responsive adjustments for the contact form can be added here if needed*/
