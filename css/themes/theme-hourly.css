@@ -1,69 +1,101 @@
 body {
-  background: rgba(20, 20, 20, 0.8); /* Dark background with slight transparency */
-  color: #eee; /* Light text color */
   font-family: 'Arial', sans-serif;
-  transition: background-color 0.3s ease; /* Smooth transitions for theme changes */
+  background: rgba(255, 255, 255, 0.8); /* Light glassmorphism background */
+  backdrop-filter: blur(10px);
+  color: #333;
+  margin: 0;
 }
 
 .pr-nav {
-  background: rgba(20, 20, 20, 0.8); /* Dark background for projects page nav */
-}
-
-header {
-  background: rgba(20, 20, 20, 0.5); /* Frosted glass effect for header */
-  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
-}
-
-.nav-pills .nav-link {
-  color: #eee;
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 0 5px;
-}
-
-.nav-pills .nav-link.active,
-.nav-pills .nav-link:hover {
-  background-color: rgba(100, 100, 255, 0.3);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding-top: 20px;
 }
 
 .container {
-  max-width: 1200px;
+  padding-top: 20px;
 }
 
+header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.nav-pills .nav-link {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #6563ff;
+  color: white;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+h1, h3, h2, h1 {
+  font-weight: 600;
+  color: #333;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
 
 #welcome-section {
   text-align: center;
   padding: 50px 0;
-  background: rgba(20, 20, 20, 0.5);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
-  margin-bottom: 30px;
 }
 
 #welcome-section h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 #welcome-section h3 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .pp {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  color: #aaa;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
 }
 
 .ppicon {
+  display: block;
+  margin: 20px auto;
   animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0) }
-  50% { transform: translateY(-20px) }
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
 }
+
 
 #projects {
   padding: 40px 0;
@@ -71,7 +103,7 @@ header {
 
 #project-hail {
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   margin-bottom: 30px;
 }
 
@@ -82,15 +114,15 @@ header {
 }
 
 .project-tile {
-  border: 1px solid #555;
+  border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .project-img, .img-proj {
@@ -99,8 +131,10 @@ header {
   border-radius: 10px 10px 0 0;
 }
 
+
 .code {
-  color: #6563ff; /* Accent color for code brackets */
+  color: #6563ff;
+  font-weight: bold;
 }
 
 .contact-wrapper {
@@ -108,77 +142,63 @@ header {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .card.ppmid {
   margin: auto;
+  width: 80%;
   max-width: 600px;
-  background: rgba(20, 20, 20, 0.7);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+
 .card {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
 
 .card-header {
-  font-size: 2em;
-  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: bold;
   margin-bottom: 20px;
-  color: #fff;
 }
 
 .card-body {
-  padding: 30px;
+  padding: 20px;
 }
 
 .form-control {
-  background: rgba(20, 20, 20, 0.5);
-  color: #eee;
-  border: 1px solid #555;
   border-radius: 5px;
+  border-color: #ccc;
   padding: 10px;
-  margin-bottom: 10px;
 }
 
 .form-label {
-  color: #eee;
-  display: block;
-  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
 }
 
 .btn.btn-primary {
   background-color: #6563ff;
-  color: #fff;
-  border: none;
+  border-color: #6563ff;
   padding: 10px 20px;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 .form-text {
-  color: #aaa;
-  font-size: 0.9em;
+  font-size: 0.9rem;
+  color: #555;
 }
 
 .icons {
   width: 75px;
-  height: 75px;
+  height: auto;
   margin-right: 10px;
-}
-
-#icon-grid {
-  background: rgba(20, 20, 20, 0.5);
-  backdrop-filter: blur(10px);
-  padding: 30px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-}
-
-#icon-grid h2 {
-  color: #eee;
+  vertical-align: middle;
 }
 
 @media (max-width: 768px) {
