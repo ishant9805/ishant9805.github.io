@@ -1,12 +1,13 @@
 body {
-  background-color: #1e1e1e;
-  color: #eee;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
   transition: background-color 0.3s ease;
 }
 
 .pr-nav {
-  background-color: #282828;
+  background-color: #1e1e1e;
+  color: #fff;
 }
 
 .container {
@@ -14,36 +15,30 @@ body {
 }
 
 header {
-  background-color: #282828;
+  background-color: #212529;
   padding: 1rem 0;
 }
 
 .nav-pills .nav-link {
-  color: #eee;
-  background-color: #383838;
-  border-radius: 5px;
+  color: #fff;
   padding: 0.8rem 1.5rem;
-  margin: 0 0.5rem;
-  transition: background-color 0.3s ease;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-link:hover {
-  background-color: #666;
-}
-
-.nav-pills .nav-link.active {
-    box-shadow: inset 5px 5px 10px #222, inset -5px -5px 10px #333;
-}
-
-
-h1, h2, h3 {
+  background-color: #673ab7;
   color: #fff;
-  font-weight: 600;
+}
+
+h1, h3, h2 {
+  font-weight: 700;
+  color: #212529;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 h2 {
@@ -56,78 +51,38 @@ h3 {
 
 p {
   line-height: 1.6;
+  color: #212529;
 }
 
-.lead {
-  font-size: 1.25rem;
-}
-
-.btn-primary {
-  background-color: #666;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #888;
-}
-
-.btn-outline-secondary {
-    color: #fff;
-    border: 2px solid #666;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn-outline-secondary:hover{
-    background-color: #666;
-    color: #eee;
-}
-
-
-#icon-grid .icons {
-  width: 75px;
-  height: 75px;
-  margin-right: 1rem;
-  margin-bottom:1rem;
-  border-radius: 10px;
-    box-shadow: 5px 5px 10px #222, -5px -5px 10px #333;
-}
-
-#icon-grid p {
-    color: #ddd;
-}
 
 #welcome-section {
-  background-color: #282828;
+  background: linear-gradient(135deg, #2196F3, #FF9800), url('background.jpg'); /* Replace background.jpg with your actual image */
+  background-size: cover;
+  background-position: center;
+  color: white;
   text-align: center;
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 #welcome-section h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
 }
 
 #welcome-section h3 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 
 .pp {
-  font-size: 1.2rem;
-  color: #aaa;
+  font-style: italic;
+  color: #eee;
   margin-bottom: 2rem;
 }
 
 .ppicon {
-  margin-top: 1rem;
-  fill: #aaa;
-  animation: rotate 2s infinite linear;
+  fill: white;
+  animation: rotate 2s linear infinite;
 }
 
 @keyframes rotate {
@@ -139,39 +94,43 @@ p {
   }
 }
 
-#projects h1 {
+#projects {
+  padding: 4rem 0;
+}
+
+#project-hail {
   text-align: center;
+  font-size: 2.5rem;
   margin-bottom: 3rem;
+  color: #673ab7;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  gap: 2rem;
 }
 
 .project-tile {
-  border: 1px solid #333;
-  border-radius: 10px;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  box-shadow: 5px 5px 10px #222, -5px -5px 10px #333;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .project-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 10px 10px 20px #222, -10px -10px 20px #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .project-img {
   width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
-
 .code {
-  color: #f06;
+  color: #673ab7;
 }
 
 .contact-wrapper {
@@ -179,70 +138,65 @@ p {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: #f8f9fa;
 }
 
 .card.ppmid {
-  margin: auto;
-  max-width: 500px;
-  position: relative;
-  border-radius: 10px;
-    box-shadow: 5px 5px 10px #222, -5px -5px 10px #333;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .card {
-  background-color: #282828;
-  padding: 2rem;
-  border: none;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .card-header {
-  background-color: #383838;
-  color: #fff;
-  font-size: 1.5rem;
-  padding: 1rem;
-  border-radius: 5px 5px 0 0;
+  background-color: #673ab7;
+  color: white;
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
   text-align: center;
 }
 
-
 .card-body {
-  padding: 2rem;
+  padding: 2rem 2.5rem;
 }
 
 .form-label {
-  color: #fff;
+  font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
 .form-control {
-  background-color: #383838;
-  color: #eee;
+  border: 1px solid #ced4da;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+}
+
+.btn.btn-primary {
+  background-color: #673ab7;
   border: none;
-  border-radius: 5px;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-    box-shadow: inset 5px 5px 10px #222, inset -5px -5px 10px #333;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #552e8b;
 }
 
 .form-text {
-  color: #aaa;
-  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: #6c757d;
 }
 
-
-#sub-btn{
-    background-color: #666;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 0.8rem 1.5rem;
-    transition: background-color 0.3s ease;
+.icons {
+  width: 75px;
+  height: 75px;
+  margin-right: 1rem;
 }
-
-#sub-btn:hover{
-    background-color: #888;
-}
-
 
 @media (max-width: 768px) {
   .project-grid {
@@ -254,8 +208,25 @@ p {
   .project-grid {
     grid-template-columns: 1fr;
   }
-
   .card.ppmid {
-      max-width: 90%;
+    max-width: 90%;
   }
+}
+
+.cxx {
+  fill: #007bff;
+}
+
+.sql {
+  fill: #007bff;
+}
+
+mark {
+  background-color: #e9ecef;
+  padding: 0.2em;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
 }
