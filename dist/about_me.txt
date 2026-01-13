@@ -1,0 +1,389 @@
+1. Hero Section (Above the Fold)
+
+This is the first screen — it must immediately establish authority.
+
+Required Content
+
+Full Name
+
+Professional Title
+
+One-line positioning statement
+
+2–3 specialization tags
+
+Call-to-action buttons
+
+Example Structure
+
+Name
+Ishant Kumar
+
+Title
+AI Engineer | Data Scientist | Full Stack Developer | Electrical Engineer
+
+Positioning Statement
+Building intelligent systems at the intersection of AI, software engineering, and embedded technology.
+
+Specialization Tags
+
+Artificial Intelligence & Data Science
+
+Backend & Distributed Systems
+
+Robotics, IoT & Computer Vision
+
+CTA Buttons
+
+View Projects
+
+Download Resume
+
+Contact Me
+
+2. About Me Section
+
+This section establishes your narrative.
+
+Required Content
+
+Academic background
+
+Engineering focus
+
+Technical philosophy
+
+Career objective
+
+Research & innovation mindset
+
+Content Structure
+Professional Summary
+
+A concise but powerful paragraph:
+
+I am a Data Science and Applications student at IIT Madras with a strong foundation in Electrical Engineering from MMMUT. I specialize in backend engineering, AI-driven systems, and data-intensive applications. My work focuses on building scalable platforms, intelligent automation systems, and applied AI products spanning software, robotics, and IoT domains. I am deeply interested in AI research, computer vision, autonomous systems, and high-performance backend architectures.
+
+3. Skills & Technology Stack
+
+This section must be scannable and recruiter-friendly.
+
+Categories
+Programming Languages
+
+Python
+
+Java
+
+JavaScript
+
+SQL
+
+Bash
+
+Backend & APIs
+
+Flask
+
+FastAPI
+
+Django
+
+Django REST Framework
+
+JWT Authentication
+
+Celery & Redis
+
+REST & GraphQL
+
+Frontend
+
+Vue.js (v2 & v3)
+
+Bootstrap 5
+
+Tailwind CSS
+
+Databases
+
+PostgreSQL
+
+MySQL
+
+Redis
+
+AI / Data Science
+
+Machine Learning
+
+Deep Learning
+
+Computer Vision
+
+Web Scraping & Data Pipelines
+
+Prompt Engineering
+
+Data Analysis
+
+Electrical & Embedded
+
+Microprocessors (8085, architecture & interfacing)
+
+Embedded Systems
+
+Sensors & Actuators
+
+Robotics Systems
+
+IoT Architectures
+
+DevOps & Tools
+
+Linux (WSL)
+
+Git & GitHub
+
+Docker
+
+CI/CD
+
+System Design
+
+4. Featured Projects (Most Important Section)
+
+This is the core of your portfolio.
+
+Each project must follow this structure:
+
+Project Card Format
+
+Project Name
+
+One-line description
+
+Problem statement
+
+Solution architecture
+
+Tech stack
+
+Features
+
+Impact / outcome
+
+GitHub + Demo
+
+Project 1 — Quiz Master (Distributed Learning Platform)
+
+Description
+A scalable online quiz and assessment platform with real-time evaluation and background task processing.
+
+Problem
+Traditional quiz platforms fail to scale under high concurrency and lack real-time analytics.
+
+Solution
+Built a distributed backend using asynchronous workers and caching layers.
+
+Tech Stack
+
+Flask
+
+Vue.js
+
+Redis
+
+Celery
+
+PostgreSQL
+
+Features
+
+Role-based authentication
+
+Real-time quiz evaluation
+
+Async result processing
+
+Caching for performance
+
+Admin dashboard
+
+Project 2 — HousyDousy (UrbanClap Clone)
+
+Description
+A service marketplace platform connecting users with verified home service professionals.
+
+Tech Stack
+
+Flask
+
+Bootstrap
+
+PostgreSQL
+
+Features
+
+User & professional onboarding
+
+Booking system
+
+Admin management
+
+Service tracking
+
+Project 3 — Vispr (Media Sharing Platform)
+
+Description
+A modern media-sharing social platform with real-time interactions.
+
+Tech Stack
+
+Django
+
+Tailwind CSS
+
+PostgreSQL
+
+Features
+
+Image & text sharing
+
+Social interactions
+
+User profiles
+
+Feed system
+
+Project 4 — Inventro (Enterprise Inventory & WMS Platform)
+
+Description
+An enterprise-grade inventory and warehouse management backend.
+
+Features
+
+Company & warehouse management
+
+SKU & product tracking
+
+Role-based access control
+
+Audit trails
+
+Order processing
+
+Dispatch & logistics
+
+Project 5 — Agentic AI API Platform
+
+Description
+A deployable agentic AI platform for automated data sourcing, analysis, and visualization.
+
+Capabilities
+
+Web scraping
+
+Data cleaning
+
+Automated analysis
+
+Chart generation
+
+JSON API responses
+
+5. Research & Engineering Interests
+
+This section positions you as a future researcher / deep engineer.
+
+Areas
+
+Artificial Intelligence & Deep Learning
+
+Computer Vision for Robotics
+
+Autonomous Systems
+
+Embedded AI
+
+Cyber-Physical Systems
+
+Optimization & Control
+
+Smart Infrastructure
+
+Edge Computing
+
+6. Education
+IIT Madras
+
+B.Sc. Data Science & Applications
+CGPA: 9.41
+Topper in 14 Subjects
+
+MMMUT
+
+B.Tech Electrical Engineering
+Focus: Microprocessors, Embedded Systems, Control Systems
+
+7. Achievements & Certifications
+Academic
+
+Topper in 14 IIT Madras subjects
+
+Scholarship recipient
+
+Coding
+
+5★ Python on HackerRank
+
+Master Rank on Code360 (12,306 XP)
+
+Certifications
+
+Harvard CS50
+
+freeCodeCamp Full Stack Certification
+
+8. Open Source & GitHub
+Profiles
+
+github.com/ishant9805
+
+github.com/23f2001685
+
+Contributions
+
+Backend systems
+
+AI pipelines
+
+Distributed systems
+
+Automation tools
+
+9. Publications / Blogs (Optional but Powerful)
+
+Technical blogs on backend engineering
+
+AI system design writeups
+
+Research notes on robotics & embedded AI
+
+Project deep dives
+
+10. Contact & Social
+
+Email: ishant9805@gmail.com
+
+LinkedIn: https://linkedin.com/in/ishantkumar9805
+
+GitHub: https://github.com/ishant9805
+
+Resume download: (Will be such that it can be updated)
+
+11. Vision & Roadmap (Unique Differentiator)
+
+Example
+
+My long-term goal is to build intelligent cyber-physical systems that combine AI, robotics, and embedded engineering to solve real-world problems in infrastructure, healthcare, and automation. I am currently building AI-first platforms, learning advanced control systems, and preparing for research internships in applied AI and robotics.
