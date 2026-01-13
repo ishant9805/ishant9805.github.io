@@ -70,7 +70,7 @@ onUnmounted(() => {
                 <h2 class="menu-title neon-text-purple pixel-text-xl">MAIN MENU</h2>
                 <div class="header-right hud-element">
                     <span class="pixel-text-xs">LVL</span>
-                    <span class="neon-text-cyan">99</span>
+                    <span class="neon-text-cyan">35</span>
                 </div>
             </div>
 
@@ -138,7 +138,9 @@ onUnmounted(() => {
       Pixel art developer character in thinking pose, 16-bit RPG style,
       purple hoodie, standing next to menu, idle animation
       -->
-            <div class="character-sprite"></div>
+            <!-- <div class="character-sprite">
+            </div> -->
+            <img src="/thinking_pose.png" alt="thinking character..." width="140" />
             <div class="speech-bubble">
                 <span class="pixel-text-xs">Where shall we go?</span>
             </div>

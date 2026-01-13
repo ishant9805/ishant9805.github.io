@@ -73,7 +73,10 @@ onUnmounted(() => {
                     <span class="title-line title-small">WELCOME TO</span>
                     <span v-if="innerWidth < 768" class="title-line title-main neon-text-cyan">ISH4NT.DEV</span>
                     <img v-else src="/pixil-frame-0.png" alt="title" class="title-line title-main neon-text-cyan" />
-                    <span class="title-line title-subtitle neon-text-pink">PORTFOLIO QUEST</span>
+                    <div style="padding: 0.3em; background-color: #00000055;">
+
+                        <span class="title-line title-subtitle neon-text-pink">PORTFOLIO QUEST</span>
+                    </div>
                 </h1>
 
                 <!-- Subtitle -->
