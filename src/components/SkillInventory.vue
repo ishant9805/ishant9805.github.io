@@ -31,18 +31,18 @@ const onHover = () => playClick();
 <template>
     <section class="screen">
         <header class="top-hud">
+            <button class="pixel-btn" @click="handleBack">BACK</button>
             <div class="hud-element">
                 <span class="neon-text-cyan">INV</span>
                 <span class="pixel-text-xs">SLOTS</span>
                 <span class="neon-text-pink">∞</span>
             </div>
 
+
+        </header>
             <div class="hud-element title">
                 <span class="neon-text-purple">INVENTORY</span>
             </div>
-
-            <button class="pixel-btn" @click="handleBack">BACK</button>
-        </header>
 
         <div class="content game-panel">
             <div class="game-panel-title">SKILLS & TECHNOLOGY STACK</div>
@@ -71,11 +71,11 @@ const onHover = () => playClick();
                 </div>
             </div>
 
-            <div class="legend hud-element">
+            <!-- <div class="legend hud-element">
                 <span class="pixel-text-xs">
                     TIP: Hover items for SFX • This inventory is loaded from about_me.txt
                 </span>
-            </div>
+            </div> -->
         </div>
     </section>
 </template>
@@ -83,7 +83,7 @@ const onHover = () => playClick();
 <style scoped>
 .screen {
     min-height: 100vh;
-    padding: 28px 18px 80px;
+    padding: 4rem 18px 80px;
 }
 
 .top-hud {
@@ -97,6 +97,7 @@ const onHover = () => playClick();
 
 .title {
     flex: 1;
+    margin-bottom: 2em;
     text-align: center;
 }
 

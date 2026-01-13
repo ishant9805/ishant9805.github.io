@@ -25,18 +25,18 @@ const mailto = () => {
 
 <template>
     <section class="screen">
+        <div class="hud-element title">
+            <span class="neon-text-purple">CONTACT PORTAL</span>
+        </div>
         <header class="top-hud">
+            <button class="pixel-btn" @click="handleBack">BACK</button>
             <div class="hud-element">
-                <span class="neon-text-cyan">PORTAL</span>
-                <span class="pixel-text-xs">ONLINE</span>
+                <span class="neon-text-cyan">PORTAL </span>
+                <span class="pixel-text-xs">(ONLINE):</span>
                 <span class="neon-text-green">YES</span>
             </div>
 
-            <div class="hud-element title">
-                <span class="neon-text-purple">CONTACT PORTAL</span>
-            </div>
 
-            <button class="pixel-btn" @click="handleBack">BACK</button>
         </header>
 
         <div class="content game-panel">
@@ -48,7 +48,9 @@ const mailto = () => {
       -->
             <div class="portal">
                 <div class="ring"></div>
-                <div class="core">✦</div>
+                <!-- <div class="core">✦</div> -->
+                <img src="/profile.png" alt="profile picture" class="core"  width="145"/>
+                <!-- <div class="core">📡</div> -->
             </div>
 
             <div class="cards">
@@ -77,9 +79,9 @@ const mailto = () => {
                 </div>
             </div>
 
-            <div class="hint hud-element">
+            <!-- <div class="hint hud-element">
                 <span class="pixel-text-xs">All contact data is loaded from about_me.txt</span>
-            </div>
+            </div> -->
         </div>
     </section>
 </template>

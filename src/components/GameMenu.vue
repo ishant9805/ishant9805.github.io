@@ -19,6 +19,8 @@ const menuItems = [
     { id: 'map', label: 'WORLD MAP', icon: '🗺️', description: 'Education & journey' },
     { id: 'achievements', label: 'ACHIEVEMENTS', icon: '🏆', description: 'Certifications & awards' },
     { id: 'contact', label: 'CONTACT PORTAL', icon: '📡', description: 'Get in touch' },
+    { id: 'start', label: 'HOME', icon: '🏠', description: 'Return to start screen' },
+
 ];
 
 const handleSelect = (item: typeof menuItems[0]) => {

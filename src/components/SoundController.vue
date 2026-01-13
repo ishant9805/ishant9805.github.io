@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted, onUnmounted, ref } from 'vue';
 import { useAudio } from '../composables/useAudio';
 
 const { isSoundEnabled, isMusicEnabled, toggleSound, toggleMusic, playClick } = useAudio();
@@ -6,42 +7,56 @@ const { isSoundEnabled, isMusicEnabled, toggleSound, toggleMusic, playClick } = 
 const handleToggleSound = () => {
     toggleSound();
 };
-
+const innerWidth = ref<number>(window.innerWidth);
+const isExpanded = ref<boolean>(false);
+const handleResize = () => {
+  innerWidth.value = window.innerWidth;
+  if (innerWidth.value >= 768) isExpanded.value = false;
+};
 const handleToggleMusic = () => {
     playClick();
     toggleMusic();
 };
+
+onMounted(() => {
+    window.addEventListener('resize', handleResize);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('resize', handleResize);
+});
+
 </script>
 
 <template>
     <div class="sound-hud game-panel">
-        <div class="game-panel-title">AUDIO</div>
-
         <div class="toggles">
-            <button class="toggle" @click="handleToggleSound">
-                <!-- AI IMAGE PROMPT:
-        Pixel art speaker icon, 16-bit arcade HUD icon, neon cyan glow, crisp pixels
-        -->
-                <span class="icon">🔊</span>
-                <span class="label pixel-text-xs">SFX</span>
-                <span class="state" :class="{ on: isSoundEnabled }">{{ isSoundEnabled ? 'ON' : 'OFF' }}</span>
+            <button v-if="innerWidth < 768" class="toggle" @click="() => { playClick(); isExpanded = !isExpanded; }">
+                <span class="icon">{{ !isExpanded ? "⚙️" : "❌" }}</span>
             </button>
 
-            <button class="toggle" @click="handleToggleMusic">
-                <!-- AI IMAGE PROMPT:
-        Pixel art music note icon, 16-bit arcade HUD icon, neon purple glow, crisp pixels
-        -->
-                <span class="icon">🎵</span>
-                <span class="label pixel-text-xs">MUSIC</span>
-                <span class="state" :class="{ on: isMusicEnabled }">{{ isMusicEnabled ? 'ON' : 'OFF' }}</span>
-            </button>
+            <template v-if="innerWidth >= 768 || isExpanded">
+                <div v-if="innerWidth >= 768" class="game-panel-title">AUDIO</div>
+
+                <button class="toggle" @click="handleToggleSound">
+                    <span class="icon">🔊</span>
+                    <span v-if="innerWidth >= 768" class="label pixel-text-xs">SFX</span>
+                    <span class="state" :class="{ on: isSoundEnabled }">{{ isSoundEnabled ? 'ON' : 'OFF' }}</span>
+                </button>
+
+                <button class="toggle" @click="handleToggleMusic">
+                    <span class="icon">🎵</span>
+                    <span v-if="innerWidth >= 768" class="label pixel-text-xs">MUSIC</span>
+                    <span class="state" :class="{ on: isMusicEnabled }">{{ isMusicEnabled ? 'ON' : 'OFF' }}</span>
+                </button>
+            </template>
         </div>
     </div>
 </template>
 
 <style scoped>
 .sound-hud {
-    padding: 10px 12px;
+    padding: 0;
 }
 
 .toggles {

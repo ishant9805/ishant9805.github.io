@@ -24,18 +24,18 @@ const openProfile = () => {
 <template>
     <section class="screen">
         <header class="top-hud">
+            <button class="pixel-btn" @click="handleBack">BACK</button>
             <div class="hud-element">
-                <span class="neon-text-cyan">QUESTS</span>
-                <span class="pixel-text-xs">COMPLETED</span>
+                <span class="neon-text-cyan">QUESTS </span>
+                <span class="pixel-text-xs">COMPLETED: </span>
                 <span class="neon-text-pink">{{ portfolioData?.projects?.length || 0 }}</span>
             </div>
 
-            <div class="hud-element title">
-                <span class="neon-text-purple">QUEST BOARD</span>
-            </div>
 
-            <button class="pixel-btn" @click="handleBack">BACK</button>
         </header>
+        <div class="hud-element title">
+            <span class="neon-text-purple">QUEST BOARD</span>
+        </div>
 
         <div class="content game-panel">
             <div class="game-panel-title">FEATURED PROJECTS</div>
@@ -95,7 +95,7 @@ const openProfile = () => {
 <style scoped>
 .screen {
     min-height: 100vh;
-    padding: 28px 18px 80px;
+    padding: 4rem 18px 80px;
 }
 
 .top-hud {
@@ -109,6 +109,7 @@ const openProfile = () => {
 
 .title {
     flex: 1;
+    margin-bottom: 1em;
     text-align: center;
 }
 

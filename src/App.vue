@@ -32,6 +32,14 @@ const handleAppKeydown = (e: KeyboardEvent) => {
 provide('portfolioData', portfolioData);
 provide('currentScreen', currentScreen);
 
+const innerWidth = ref<number>(window.innerWidth);
+
+const handleResize = () => {
+  innerWidth.value = window.innerWidth;
+};
+
+window.addEventListener('resize', handleResize);
+
 // Navigation function
 const navigateTo = (screen: string) => {
   if (isTransitioning.value) return;
@@ -79,10 +87,14 @@ onMounted(async () => {
   isLoading.value = false;
 
   window.addEventListener('keydown', handleAppKeydown);
+  window.addEventListener('resize', handleResize);
+
 });
 
 onUnmounted(() => {
   window.removeEventListener('keydown', handleAppKeydown);
+  window.removeEventListener('resize', handleResize);
+
 });
 </script>
 
@@ -94,7 +106,8 @@ onUnmounted(() => {
     floating clouds, twinkling stars, silhouette of temples and lighthouse,
     water reflection, 16-bit arcade game aesthetic, multiple parallax layers
     -->
-    <ParallaxBackground />
+    <ParallaxBackground v-if="innerWidth < 768" />
+    <img v-else src="/background_landscape.png" alt="Background" class="static-background" />
 
     <!-- Sound Controller (Always visible) -->
     <SoundController class="sound-controller" />
@@ -151,7 +164,7 @@ onUnmounted(() => {
     <!-- Footer HUD -->
     <footer v-if="!isLoading && currentScreen !== 'start'" class="footer-hud">
       <div class="hud-element">
-        <span class="neon-text-cyan">◀</span>
+        <span class="neon-text-cyan">◀ </span>
         <span class="pixel-text-xs">PRESS [ESC] OR CLICK BACK TO RETURN</span>
       </div>
     </footer>
@@ -164,6 +177,15 @@ onUnmounted(() => {
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
+}
+
+.static-background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .sound-controller {

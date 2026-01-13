@@ -16,17 +16,17 @@ const handleBack = () => {
 <template>
     <section class="screen">
         <header class="top-hud">
-            <div class="hud-element">
+            <!-- <div class="hud-element">
                 <span class="neon-text-cyan">MAP</span>
                 <span class="pixel-text-xs">PROGRESS</span>
                 <span class="neon-text-pink">99%</span>
-            </div>
+            </div> -->
+            <button class="pixel-btn" @click="handleBack">BACK</button>
 
             <div class="hud-element title">
                 <span class="neon-text-purple">WORLD MAP</span>
             </div>
 
-            <button class="pixel-btn" @click="handleBack">BACK</button>
         </header>
 
         <div class="content">
@@ -82,7 +82,7 @@ const handleBack = () => {
 <style scoped>
 .screen {
     min-height: 100vh;
-    padding: 28px 18px 80px;
+    padding: 3.5rem 18px 80px;
 }
 
 .top-hud {

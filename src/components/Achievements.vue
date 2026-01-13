@@ -19,18 +19,18 @@ const playUnlock = () => {
 
 <template>
     <section class="screen">
+        <div class="hud-element title">
+            <span class="neon-text-purple">ACHIEVEMENTS</span>
+        </div>
         <header class="top-hud">
+            <button class="pixel-btn" @click="handleBack">BACK</button>
             <div class="hud-element">
-                <span class="neon-text-cyan">ACH</span>
-                <span class="pixel-text-xs">BADGES</span>
+                <span class="neon-text-cyan">ACH </span>
+                <span class="pixel-text-xs">BADGES:</span>
                 <span class="neon-text-pink">{{ portfolioData?.achievements?.length || 0 }}</span>
             </div>
 
-            <div class="hud-element title">
-                <span class="neon-text-purple">ACHIEVEMENTS</span>
-            </div>
 
-            <button class="pixel-btn" @click="handleBack">BACK</button>
         </header>
 
         <div class="content game-panel">
@@ -80,6 +80,7 @@ const playUnlock = () => {
 
 .title {
     flex: 1;
+    margin-bottom: 1em;
     text-align: center;
 }
 

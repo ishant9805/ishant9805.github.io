@@ -1,9 +1,22 @@
 <script setup lang="ts">
-import { inject, type Ref } from 'vue';
+import { inject, type Ref, ref, onMounted, onUnmounted } from 'vue';
 import type { PortfolioData } from '../utils/contentParser';
 import { useAudio } from '../composables/useAudio';
 
 const emit = defineEmits<{ back: [] }>();
+const innerWidth = ref<number>(window.innerWidth);
+
+const handleResize = () => {
+  innerWidth.value = window.innerWidth;
+};
+
+onMounted(() => {
+  window.addEventListener('resize', handleResize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize);
+});
 
 const portfolioData = inject<Ref<PortfolioData | null>>('portfolioData');
 const { playNavigate } = useAudio();
@@ -16,7 +29,15 @@ const handleBack = () => {
 
 <template>
     <section class="screen">
-        <header class="top-hud">
+        <header v-if="innerWidth < 768" class="top-hud">
+            <button class="pixel-btn" @click="handleBack">↩</button>
+
+            <div class="hud-element title">
+                <span class="neon-text-purple">CHARACTER INFO</span>
+            </div>
+
+        </header>
+        <header v-else class="top-hud">
             <div class="hud-element">
                 <span class="neon-text-cyan">HP</span>
                 <span class="bar"></span>
@@ -44,7 +65,8 @@ const handleBack = () => {
             Pixel art developer avatar portrait, 16-bit RPG style, purple hoodie,
             confident expression, neon rim light, ultra-detailed pixel portrait
             -->
-                        <div class="portrait-sprite">🧑‍💻</div>
+                        <!-- <div class="portrait-sprite">🧑‍💻</div> -->
+                        <img src="/avatar.png" alt="avatar" class="portrait-sprite avatar" />
                     </div>
 
                     <div class="stats">
@@ -56,10 +78,10 @@ const handleBack = () => {
                             <span class="k pixel-text-xs">CLASS</span>
                             <span class="v">{{ portfolioData?.hero.title || 'AI Engineer | Data Scientist' }}</span>
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <span class="k pixel-text-xs">ALIGN</span>
                             <span class="v neon-text-cyan">BUILDER</span>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="tags">
@@ -102,7 +124,7 @@ const handleBack = () => {
 <style scoped>
 .screen {
     min-height: 100vh;
-    padding: 28px 18px 80px;
+    padding: 3rem 18px 80px;
 }
 
 .top-hud {
@@ -115,6 +137,7 @@ const handleBack = () => {
 }
 
 .title {
+    margin-right: 3rem;
     flex: 1;
     text-align: center;
 }

@@ -32,6 +32,12 @@ const handleKeydown = (e: KeyboardEvent) => {
     }
 };
 
+const innerWidth = ref<number>(window.innerWidth);
+
+const handleResize = () => {
+  innerWidth.value = window.innerWidth;
+};
+
 onMounted(() => {
     // Blink effect for "Press Start"
     blinkInterval = window.setInterval(() => {
@@ -39,10 +45,14 @@ onMounted(() => {
     }, 700);
 
     window.addEventListener('keydown', handleKeydown);
+    window.addEventListener('resize', handleResize);
+
 });
 
 onUnmounted(() => {
     window.removeEventListener('keydown', handleKeydown);
+      window.removeEventListener('resize', handleResize);
+
     if (blinkInterval) {
         window.clearInterval(blinkInterval);
     }
@@ -61,7 +71,8 @@ onUnmounted(() => {
         -->
                 <h1 class="game-title">
                     <span class="title-line title-small">WELCOME TO</span>
-                    <span class="title-line title-main neon-text-cyan">ISHANT.DEV</span>
+                    <span v-if="innerWidth < 768" class="title-line title-main neon-text-cyan">ISH4NT.DEV</span>
+                    <img v-else src="/pixil-frame-0.png" alt="title" class="title-line title-main neon-text-cyan" />
                     <span class="title-line title-subtitle neon-text-pink">PORTFOLIO QUEST</span>
                 </h1>
 
@@ -81,7 +92,7 @@ onUnmounted(() => {
         young male developer with laptop, purple hoodie, standing pose,
         retro game character design, idle animation frames
         -->
-                <div class="character-sprite"></div>
+                <img src="/avatar.png" alt="avatar" class="character-sprite"></img>
                 <div class="character-shadow"></div>
             </div>
 
@@ -225,7 +236,7 @@ onUnmounted(() => {
 
 .character-sprite {
     width: 64px;
-    height: 96px;
+    height: auto;
     margin: 0 auto;
     background: linear-gradient(180deg,
             #2d1b4e 0%,
