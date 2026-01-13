@@ -1,27 +1,30 @@
 {
-  "name": "ishant9805.github.io",
-  "version": "2.0.0",
-  "description": "Portfolio of Ishant Kumar",
-  "main": "index.js",
+  "name": "portfolio",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "python3 -m http.server 8000"
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ishant9805/ishant9805.github.io.git"
+  "dependencies": {
+    "vue": "^3.5.26"
   },
-  "keywords": [
-    "portfolio",
-    "ishant9805",
-    "ishant",
-    "css",
-    "cssgenerator"
-  ],
-  "author": "Ishant Kumar",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ishant9805/ishant9805.github.io/issues"
-  },
-  "homepage": "https://github.com/ishant9805/ishant9805.github.io#readme"
+  "devDependencies": {
+    "@tsconfig/node24": "^24.0.3",
+    "@types/node": "^24.10.4",
+    "@vitejs/plugin-vue": "^6.0.3",
+    "@vue/tsconfig": "^0.8.1",
+    "npm-run-all2": "^8.0.4",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.0",
+    "vite-plugin-vue-devtools": "^8.0.5",
+    "vue-tsc": "^3.2.2"
+  }
 }
