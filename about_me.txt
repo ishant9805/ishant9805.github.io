@@ -4,13 +4,17 @@ This is the first screen — it must immediately establish authority.
 
 Required Content
 
-Full Name
+Ishant Kumar
 
-Professional Title
+AI Engineer | Data Scientist | Full Stack Developer | Electrical Engineer
 
-One-line positioning statement
+Building intelligent systems at the intersection of AI, software engineering, and embedded technology.
 
-2–3 specialization tags
+Artificial Intelligence & Data Science
+
+Backend & Distributed Systems
+
+Robotics, IoT & Computer Vision
 
 Call-to-action buttons
 
@@ -315,21 +319,22 @@ Smart Infrastructure
 Edge Computing
 
 6. Education
-IIT Madras
+IIT Madras (TN)
 
 B.Sc. Data Science & Applications
 CGPA: 9.41
-Topper in 14 Subjects
+Topper in 19 Subjects
 
-MMMUT
+MMMUT Gorakhpur (UP)
 
 B.Tech Electrical Engineering
 Focus: Microprocessors, Embedded Systems, Control Systems
+CGPA: 7.68
 
 7. Achievements & Certifications
 Academic
 
-Topper in 14 IIT Madras subjects
+Topper in 19 IIT Madras subjects
 
 Scholarship recipient
 
